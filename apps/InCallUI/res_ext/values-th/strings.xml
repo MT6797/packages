@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="dm_lock">ล็อก DM แล้ว</string>
+    <string name="dm_unlock">ยกเลิกการล็อก DM</string>
+    <string name="start_record">เริ่มการบันทึก</string>
+    <string name="stop_record">หยุดการบันทึก</string>
+    <string name="str_db_playlist_name">สิ่งที่บันทึกของฉัน</string>
+    <string name="alert_device_error">เกิดความผิดพลาดที่อุปกรณ์เสียง</string>
+    <string name="ext_media_badremoval_notification_title">"การ์ด SD ถูกนำออกโดยไม่คาดหมาย"</string>
+    <string name="error_sdcard_access">"ไม่สามารถเข้าถึง SD การ์ด"</string>
+    <string name="confirm_device_info_full">พื้นที่ SD การ์ดหมด สิ่งที่บันทึกถูกจัดเก็บแล้ว</string>
+    <string name="confirm_save_info_saved">สิ่งที่บันทึกถูกจัดเก็บแล้ว</string>
+    <string name="confirm_save_info_saved_to">สิ่งที่อัดถูกบันทึกไปยัง</string>
+    <string name="recording_saved_sd_full">พื้นที่ SD การ์ดหมด สิ่งที่บันทึกถูกจัดเก็บแล้ว</string>
+    <string name="sd_not_enough">พื้นที่บน SD การ์ดกำลังจะหมด</string>
+    <string name="alert_dialog_dismiss">ยกเลิก</string>
+    <string name="change_my_pic">เปลี่ยน</string>
+    <string name="onscreenHangupAll">วางสายทั้งหมด</string>
+    <string name="onscreenHangupHolding">วางสายที่พักไว้</string>
+    <string name="onscreenHangupActiveAndAnswerWaiting">วางสายที่กำลังโทร รับสายซ้อน</string>
+    <string name="menu_ect">โอนสาย</string>
+    <string name="respond_via_sms_confirmation_format">"ส่งข้อความไปยัง <xliff:g id="PHONE_NUMBER">%s</xliff:g> แล้ว"</string>
+    <string name="volte_add_conference_member_title">เพิ่มไปยังการประชุม</string>
+    <string name="add_member_msg">พิมพ์หมายเลขหรือชื่อ</string>
+    <string name="card_title_incoming_conference">คำเชิญการประชุม</string>
+    <string name="addConferenceMemeberText">เพิ่มสมาชิก</string>
+    <string name="add_conference_member_limit">สามารถเพิ่มได้ครั้งละหนึ่งหมายเลข</string>
+    <string name="conference_member_join"><xliff:g id="member_name">%s</xliff:g> เข้าร่วมการประชุมแล้ว</string>
+    <string name="conference_member_leave"><xliff:g id="member_name">%s</xliff:g> ออกจากการประชุมแล้ว</string>
+    <string name="conference_member_adding">กำลังเพิ่ม <xliff:g id="member_name">%s</xliff:g> ...</string>
+    <string name="conference_member_add_fail">ไม่สามารถเพิ่ม <xliff:g id="member_name">%s</xliff:g> </string>
+    <string name="removeMember">"นำออก"</string>
+    <string name="memberStatus">"สถานะ"</string>
+    <string name="volte_call_waiting_indication_text">อีกฝ่ายหนึ่งใช้สายอยู่ โปรดรอ...</string>
+    <string name="multi_conference_member_adding">กำลังเพิ่มสมาชิก...</string>
+    <string name="call_status_online">ออนไลน์</string>
+    <string name="call_status_onhold">"พักสาย"</string>
+    <string name="call_status_dialing">"กำลังโทรออก"</string>
+    <string name="call_status_disconnecting">"กำลังยกเลิกการเชื่อมต่อ"</string>
+    <string name="call_status_disconnected">"ยกเลิกการเชื่อมต่อแล้ว"</string>
+
+    <string name="accept_incoming_and_disconnect_current">การรับสายนี้ จะวางสายปัจจุบัน</string>
+    <string name="add_voicemail_number">เพิ่มหมายเลข vm</string>
+</resources>

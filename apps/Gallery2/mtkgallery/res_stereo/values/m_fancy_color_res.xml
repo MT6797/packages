@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FancyColorActionBarTheme" parent="@android:style/Theme.Material">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+    <style name="MyActionBar" parent="@android:style/Widget.ActionBar">
+        <item name="android:background">@color/m_dark_transparent_background</item>
+        <item name="android:actionBarDivider">@null</item>
+    </style>
+    <color name="m_dark_transparent_background">#6000</color>
+    <integer name="save_indicater_land_font_size">16</integer>
+    <integer name="save_indicater_port_font_size">18</integer>
+    <integer name="effect_indicater_land_font_size">13</integer>
+    <integer name="effect_indicater_port_font_size">15</integer>
+</resources>

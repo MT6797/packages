@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="m_button_dark_transparent_background">#6000</color>
+	<color name="m_background_thumbnail_track_background">#1a1a1a</color>
+	<color name="m_background_thumbnail_track_text">#a7a7a7</color>
+	<drawable name="m_button_refine_pressed">#ff333333</drawable>
+	<drawable name="m_button_refine_unpressed">#99333333</drawable>
+	<drawable name="m_button_refine_disabled">#cc999999</drawable>
+</resources>
+

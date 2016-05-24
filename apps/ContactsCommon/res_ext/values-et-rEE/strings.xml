@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Öelge nimi, et leida kontakte.\nProovige seda!</string>
+    <string name="vcs_guide_title">Kontaktide häälotsing</string>
+    
+    <string name="vcs_guide_title1">Kontakti leidmiseks ütle nimi.</string>
+    <string name="vcs_guide_title2">Koputa siin funktsiooni lubamiseks.\nProovi seda!</string>
+    <string name="can_not_switch_account_during_call">Ei saa helistamise ajal lülitada eelistatud SIM-i kõnedele.</string>
+    <string name="can_not_switch_account_temporarily">Ei saa eelistatud SIM-i ajutiselt kõnedele lülitada.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> ei tööta ajutiselt ja kui mis tahes vaikekõne, -SMS ja -andmed üksuses <xliff:g id="name2" example="CT1">^2</xliff:g> muutuvad vastavalt väärtuseks <xliff:g id="name3" example="CT2">^3</xliff:g>.</string>
+</resources>

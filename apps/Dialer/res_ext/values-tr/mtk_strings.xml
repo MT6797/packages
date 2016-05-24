@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP Çağrı  <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g>  </string>
+    <string name="select_account">"Hesap Seçin"</string>
+    <string name="all_accounts">"Tüm hesaplar"</string>
+    <string name="imei_invalid">Geçersiz</string>
+    <string name="conf_call_member_list">Üye Listesi</string>
+    <string name="conf_call_participant_answered">Yanıtlanan</string>
+    <string name="conf_call_participant_missed">"Cevapsız"</string>
+    <string name="can_not_switch_account_during_call">Arama sırasında aramalar için tercih edilen SIM değiştirilemez.</string>
+    <string name="can_not_switch_account_temporarily">Aramalar için tercih edilen SIM geçici olarak değiştirilemiyor.</string>
+</resources>

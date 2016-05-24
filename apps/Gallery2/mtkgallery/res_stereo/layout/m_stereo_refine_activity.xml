@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/mainView"
+             android:background="@android:color/black">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            <ProgressBar
+                    android:id="@+id/loading"
+                    style="@android:style/Widget.Holo.ProgressBar.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:indeterminateOnly="true"
+                    android:background="@null"/>
+
+                <com.mediatek.galleryfeature.stereo.segment.refine.ImageShowPick
+                        android:id="@+id/imageShowPick"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"/>
+                <com.mediatek.galleryfeature.stereo.segment.refine.ImageShowZoomPan
+                        android:id="@+id/imageShowZoomPan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"/>
+                <com.mediatek.galleryfeature.stereo.segment.refine.ImageShowRefine
+                        android:id="@+id/imageShowRefine"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"/>
+
+            <RelativeLayout
+                        android:id="@+id/refine_bottom_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:id="@+id/refine_bottom_controls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="0px"
+                    android:padding="0px">
+                <Button
+                        android:id="@+id/button_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/m_refine_cancel"
+                        android:visibility="gone"
+                        android:layout_marginTop="0px"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:padding="0px"
+                        android:background="@color/button_bg"/>
+                <Button
+                        android:id="@+id/button_refine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/m_refine_refine"
+                        android:visibility="gone"
+                        android:layout_marginTop="0px"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:padding="0px"
+                        android:background="@color/button_bg"/>
+                <Button
+                        android:id="@+id/button_undo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/m_refine_undo"
+                        android:visibility="gone"
+                        android:layout_marginTop="0px"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:padding="0px"
+                        android:background="@color/button_bg"/>
+                <Button
+                        android:id="@+id/button_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/m_refine_done"
+                        android:visibility="gone"
+                        android:layout_marginTop="0px"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:padding="0px"
+                        android:background="@color/button_bg"/>
+                <ImageView
+                        android:id="@+id/button_more"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="0px"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:padding="0px"
+                        android:background="@color/button_bg"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/m_more"/>                        
+            </LinearLayout>
+            
+            <Button
+                    android:id="@+id/button_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="@string/m_refine_save_clipping"
+                    android:visibility="invisible"
+                    android:layout_above="@id/refine_bottom_controls"
+                    android:layout_alignRight="@id/refine_bottom_controls"
+                    android:layout_margin="0px"
+                    android:layout_marginBottom="0px"
+                    android:padding="0px"
+                    android:paddingLeft="2px"
+                    android:paddingRight="2px"
+                    android:background="@color/button_bg"/>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+<com.mediatek.galleryfeature.stereo.segment.refine.FocusIndicatorLayout
+             android:id="@+id/focus_indicator_layout"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:visibility="visible"
+             android:layout_centerInParent="true">
+             <View android:id="@+id/focus_indicator"
+                android:layout_height="80dp"
+                android:layout_width="80dp"/>
+</com.mediatek.galleryfeature.stereo.segment.refine.FocusIndicatorLayout>
+</FrameLayout>

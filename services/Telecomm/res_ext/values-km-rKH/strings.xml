@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="str_db_playlist_name">ការថតសម្លេងរបស់ខ្ញុំ</string>
+    <string name="alert_device_error">កំហុសកើតឡើងក្នុងឧបករណ៍អូឌីអូ</string>
+    <string name="ext_media_badremoval_notification_title">"បាន​ដក​កាត​អេសឌី​ដោយ​មិន​រំពឹង​ទុក"</string>
+    <string name="error_sdcard_access">មិនអាចបើកមើលកាត SD បានទេ</string>
+    <string name="confirm_device_info_full">កាត SD អស់កន្លែងទំនេរហើយ ការថតសម្លេងត្រូវបានរក្សាទុក ។</string>
+    <string name="confirm_save_info_saved">ការថតសម្លេងត្រូវបានរក្សាទុក</string>
+    <string name="confirm_save_info_saved_to">បាន​រក្សាទុក​ឯកសារ​ថត​ចូល​ទៅ​កាន់</string>
+    <string name="select_account_dialog_title">"ជ្រើស​គណនី"</string>
+    <string name="reminder">អ្នករម្លឹក</string>
+    <string name="enable_ims_dialog_message">មាន​បិទមុខ​ហៅ​តាម IMS តើ​អ្នកចង់​បើក​វា​ឬ?</string>
+    <string name="ip_dial_error_for_sip_call">មុខងារការរវៃ IP មិនអាចប្រើបានចំពោះការហៅអ៊ិនថឺណិតទេ ។</string>
+    <string name="call_duration_title">"បាន​បញ្ចប់​ការ​ហៅ"</string>
+    <string name="call_duration_format">"<xliff:g id="HOURS">%1$s</xliff:g> ម៉ោង <xliff:g id="MINUTES">%2$s</xliff:g> នាទី <xliff:g id="SECONDS">%3$s</xliff:g> វិនាទី"</string>
+    <string name="volte_ss_not_avaliable_tips">ដើម្បី​បញ្ចប់ប្រតិបត្តិការ​បាន អ្នក​ចាំបាច់​ត្រូវបើក​ការភ្ជាប់​ទិន្នន័យ។</string>
+    <string name="outgoing_call_failed">"មិន​បាន​ផ្ញើ​ការ​ហៅ។"</string>
+    <string name="volte_ss_not_available_tips">ដើម្បីបញ្ចប់ប្រតិបត្តិការ​នេះ​បាន អ្នកចាំបាច់ត្រូវបើក​ការភ្ជាប់​ទិន្នន័យ​របស់ <xliff:g id="sub_name">%s</xliff:g>។</string>
+    <string name="call_waiting_indication">អ្នកម្ខាង​ទៀត​កំពុង​មាន​ការហៅ សូម​រង់ចាំ...</string>
+    <string name="outgoing_call_error_limit_exceeded">ការហៅមិនបានបញ្ជូន, លើសដែនកំណត់។</string>
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"សេវាកម្ម​​ដែល​មិន​បាន​គាំទ្រ​។"</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"មិន​អាច​ប្ដូរ​ការ​ហៅ។"</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"មិន​អាច​បែងចែក​​ការ​ហៅ។"</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"មិន​អាច​ផ្ទេរ​ការ​ហៅ​។"</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"មិន​អាច​ហៅ​ជា​សន្និសីទ។"</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"មិន​អាច​បដិសេធ​ការ​ហៅ​។"</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"មិន​អាច​ហៅ​បាន​ទេ។"</string>
+    <string name="mo_code_unconditional_cf_active">ការបញ្ចូនការហៅ\nធ្វើឲ្យសកម្មក្រៅផ្លូវការ</string>
+    <string name="mo_code_some_cf_active">ការបញ្ជូនការហៅ\nលើលក្ខ័ណ្ឌ</string>
+    <string name="mo_code_call_forwarded">ការហៅបានបញ្ជូន</string>
+    <string name="mo_code_call_is_waiting">ការហៅរងចាំ</string>
+    <string name="mo_code_cug_call">បិទក្រុមអ្នកប្រើ</string>
+    <string name="mo_code_outgoing_calls_barred">រារាំងការហៅចេញ</string>
+    <string name="mo_code_incoming_calls_barred">ការហៅចូលត្រូវរារាំងនៅផ្នែកម្ខាងទៀត </string>
+    <string name="mo_code_clir_suppression_rejected">ឆែកមើលអត្តសញ្ញាណអ្នកហៅ សេវាកម្មការផ្ញើ</string>
+    <string name="mo_code_call_deflected">បានផ្ទេរការហៅ</string>
+    <string name="mt_code_forwarded_call">វាជាការហៅដែលបានបញ្ជូន</string>
+    <string name="mt_code_cug_call">បិទក្រុមអ្នកប្រើ</string>
+    <string name="mt_code_call_on_hold">ចាំការហៅ</string>
+    <string name="mt_code_call_retrieved">ទាញយកការហៅ</string>
+    <string name="mt_code_multi_party_call">ការហៅជាខនហ្វឺរេន</string>
+    <string name="mt_code_on_hold_call_released">កាន់ការបញ្ចេញការហៅ</string>
+    <string name="mt_code_forward_check_received">បញ្ជូនការឆែកមើលសារ SS ដែលបានទទួល</string>
+    <string name="mt_code_call_connecting_ect">ការផ្ទេរការហៅ</string>
+    <string name="mt_code_call_connected_ect">ការផ្ទេរការហៅសកម្ម</string>
+    <string name="mt_code_deflected_call">វាជាការឡងចំពោះការហៅ</string>
+    <string name="mt_code_additional_call_forwarded">ការហៅចូលបន្ថែមត្រូវបានបញ្ជូន</string>
+    <string name="mt_code_forwarded_cf">ការហៅបានបញ្ជូន</string>
+    <string name="mt_code_forwarded_cf_uncond">បញ្ជូនការហៅដោយគ្មានលក្ខ័ណ្ឌ</string>
+    <string name="mt_code_forwarded_cf_cond">បញ្ជូនការហៅដោយមានលក្ខ័ណ្ឌ</string>
+    <string name="mt_code_forwarded_cf_busy">បញ្ជូនការហៅជាប់រវល់</string>
+    <string name="mt_code_forwarded_cf_no_reply">ការបញ្ជូនការហៅមិនបានឆ្លើយតប</string>
+    <string name="mt_code_forwarded_cf_not_reachable">ការបញ្ជូនការហៅមិនអាចចូលបាន</string>
+</resources>

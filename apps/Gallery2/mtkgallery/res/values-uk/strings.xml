@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="m_share_format_choose_title">"Виберіть формат"</string>
+    <string name="m_share_format_image">"Зображення"</string>
+    <string name="m_share_format_video">Відео</string>
+    <string name="m_generating_tip">"Створення відео..."</string>
+    <string name="m_generate_video_fail">"Не створено відео"</string>
+    <string name="m_generating_gif_tip">"Створення Gif..."</string>
+    <string name="m_generate_gif_fail">"Не створено Gif"</string>
+    <string name="m_share_limit">Неможливо ділитися понад 300 файлами.</string>
+    <string name="m_demo_off">Вимкнути демо</string>
+    <string name="m_vertical_demo">Вертикальне демо</string>
+    <string name="m_horizontal_demo">Горизонтальне демо</string>
+    <string name="m_storage_not_enough">"Мало місця в пам'яті."</string>
+    <string name="m_saving_image">"Зображення зберігається в альбом <xliff:g id="ALBUM_NAME">%1$s</xliff:g>..."</string>
+    <string name="m_drm_protected_warning1">"Зміст захищений від копіювання,"</string>
+    <string name="m_drm_protected_warning2">"Щоб побачити його на телефоні,"</string>
+    <string name="m_wfd_protected_warning">"будь ласка, відключіть бездротовий дисплей."</string>
+    <string name="m_hdmi_protected_warning">"будь ласка, відключіть з HDMI."</string>
+    <string name="m_please_wait">Будь ласка, почекайте</string>
+    <string name="m_insufficient_space_one">Не встановлено спільний доступ, мало місця.</string>
+    <string name="m_insufficient_space_some">Не встановлено спільний доступ до деяких сповільнених відео, мало місця.</string>
+    <string name="m_insufficient_space_all">Не встановлено спільний доступ до всіх сповільнених відео, мало місця.</string>
+    <string name="not_avaliable_16x_multi_share">Не доступно для спільного доступу до сповільненого відео 1/16x. Спільний доступ до відео як 1/4x</string>
+    <string name="not_avaliable_16x_single_share">Не доступно для спільного доступу до сповільненого відео 1/16x. Поділіться відео на інших швидкостях</string>
+    <string name="m_raw_reminder">"Можна переглянути файл RAW цього фото, підключившися до комп'ютера."</string>
+</resources>

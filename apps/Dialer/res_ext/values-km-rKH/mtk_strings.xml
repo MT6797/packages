@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">ការហៅ IP <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"ជ្រើស​គណនី"</string>
+    <string name="all_accounts">គណនីទាំងអស់</string>
+    <string name="imei_invalid">មិនមានសុពលភាព</string>
+    <string name="conf_call_member_list">បញ្ជីឈ្មោះសមាជិក</string>
+    <string name="conf_call_participant_answered">បានឆ្លើយ</string>
+    <string name="conf_call_participant_missed">"ខកខាន​ទទួល"</string>
+    <string name="can_not_switch_account_during_call">មិន​អាច​ប្ដូរ​ស៊ីម​អាទិភាព​សម្រាប់​​ហៅ​បាន​ទេ ពេល​កំពុង​ហៅ។</string>
+    <string name="can_not_switch_account_temporarily">មិន​អាច​ផ្លាស់ប្ដូរ​ស៊ីម​ដែលចង់ប្តូរសម្រាប់​ការ​ហៅ​​បណ្ដោះ​អាសន្នបានឡើយ។</string>
+</resources>

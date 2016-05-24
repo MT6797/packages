@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">اتصال IP من  <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g>  </string>
+    <string name="conf_call_member_list">قائمة الأعضاء</string>
+    <string name="conf_call_participant_answered">تم الرد عليه</string>
+    <string name="conf_call_participant_missed">"فائتة"</string>
+    <string name="can_not_switch_account_during_call">لا يمكن تحويل بطاقة SIM المفضلة للمكالمات أثناء المكالمة.</string>
+    <string name="can_not_switch_account_temporarily"> تعذر تبديل SIM المفضلة للمكالمات مؤقتًا.</string>
+</resources>

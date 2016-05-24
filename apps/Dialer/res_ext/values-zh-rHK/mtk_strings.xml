@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP通話 <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"選取帳戶"</string>
+    <string name="all_accounts">所有帳戶</string>
+    <string name="imei_invalid">不正確</string>
+    <string name="conf_call_member_list">會員清單</string>
+    <string name="conf_call_participant_answered">已答覆</string>
+    <string name="conf_call_participant_missed">"未接來電"</string>
+    <string name="can_not_switch_account_during_call">不能於通話期間切換建議通話SIM卡。</string>
+    <string name="can_not_switch_account_temporarily">暫時不能切換建議通話SIM卡。</string>
+</resources>

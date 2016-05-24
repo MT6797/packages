@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">Połączenie IP z <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"Wybierz konto"</string>
+    <string name="all_accounts">"Wszystkie konta"</string>
+    <string name="imei_invalid">Nieprawidłowo</string>
+    <string name="conf_call_member_list">Lista uczestników</string>
+    <string name="conf_call_participant_answered">Odebrano</string>
+    <string name="conf_call_participant_missed">"Nieodebrane"</string>
+    <string name="can_not_switch_account_during_call">Nie można przełączyć na preferowaną kartę SIM na potrzeby połączeń w trakcie prowadzenia rozmowy.</string>
+    <string name="can_not_switch_account_temporarily">Nie można przełączyć tymczasowo preferowanej karty SIM do obsługi połączeń.</string>
+</resources>

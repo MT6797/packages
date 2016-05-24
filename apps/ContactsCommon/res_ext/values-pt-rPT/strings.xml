@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Diga o nome para encontrar contactos.\nExperimente!</string>
+    <string name="vcs_guide_title">Pesquisa de contactos por voz</string>
+    <string name="vcs_guide_title1">Diga o nome para encontrar contactos.</string>
+    <string name="vcs_guide_title2">Toque aqui para ativar a função.\nExperimente!</string>
+    <string name="can_not_switch_account_during_call">Não é possível mudar o SIM preferido para chamadas durante uma chamada.</string>
+    <string name="can_not_switch_account_temporarily">Não é possível mudar temporariamente o SIM preferido para chamadas.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> deixará de funcionar temporariamente, e qualquer Chamada, SMS e Dados em <xliff:g id="name2" example="CT1">^2</xliff:g> serão alterados para <xliff:g id="name3" example="CT2">^3</xliff:g> em conformidade.</string>
+</resources>

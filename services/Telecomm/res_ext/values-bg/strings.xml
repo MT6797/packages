@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="str_db_playlist_name">"Моите записи"</string>
+    <string name="alert_device_error">Грешка в аудио у-вото</string>
+    <string name="ext_media_badremoval_notification_title">"SD картата бе премахната неочаквано."</string>
+    <string name="error_sdcard_access">Достъпът до SD карта невъзможен</string>
+    <string name="confirm_device_info_full">SD картата е пълна, записът е запаметен.</string>
+    <string name="confirm_save_info_saved">Записът е запаметен</string>
+    <string name="confirm_save_info_saved_to">Записът е запаметен на</string>
+    <string name="select_account_dialog_title">"Избиране на профил"</string>
+    <string name="reminder">Напомняне</string>
+    <string name="enable_ims_dialog_message">IMS повикванията са изключени. Искате ли да ги включите?</string>
+    <string name="ip_dial_error_for_sip_call">Функцията за ІР набиране не се прилага за интернет повикване.</string>
+    <string name="call_duration_title">"Обаждането завърши"</string>
+    <string name="call_duration_format"><xliff:g id="HOURS">%1$s</xliff:g> часа <xliff:g id="MINUTES">%2$s</xliff:g> минути <xliff:g id="SECONDS">%3$s</xliff:g> секунди"</string>
+    <string name="volte_ss_not_avaliable_tips">За завършване на операцията трябва да отворите връзка за данни.</string>
+    <string name="outgoing_call_failed">"Обаждането не е изпратено."</string>
+    <string name="volte_ss_not_available_tips">За завършване на операцията трябва да отворите връзката за данни на <xliff:g id="sub_name">%s</xliff:g>.</string>
+    <string name="call_waiting_indication">Абонатът разговаря, изчакайте…</string>
+    <string name="outgoing_call_error_limit_exceeded">Повикването не е изпратено - надхвърлен лимит.</string>
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Неподдържана услуга."</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Обажданията не могат да се превключат."</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Обаждането не може да се отдели."</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"Обаждането не може да се прехвърли."</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"Не могат да се правят конферентни обаждания."</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Обаждането не може да се отхвърли."</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Обаждането или съответно обажданията не могат да се освободят."</string>
+    <string name="mo_code_unconditional_cf_active">Активирано\nбезусловно препращане на повиквания</string>
+    <string name="mo_code_some_cf_active">\nУсловно препращане на повиквания</string>
+    <string name="mo_code_call_forwarded">Препратено повикване</string>
+    <string name="mo_code_call_is_waiting">Чакащо повикване</string>
+    <string name="mo_code_cug_call">Затворена група потребители</string>
+    <string name="mo_code_outgoing_calls_barred">Забрана на изходящо повикване</string>
+    <string name="mo_code_incoming_calls_barred">Входящо повикване блокирано от другата страна</string>
+    <string name="mo_code_clir_suppression_rejected">Проверка изпращането на ИД на търсещия</string>
+    <string name="mo_code_call_deflected">повикване Повикването пренесено</string>
+    <string name="mt_code_forwarded_call">Това е прехвърлено повикване</string>
+    <string name="mt_code_cug_call">Затворена група потребители</string>
+    <string name="mt_code_call_on_hold">Задържано повикване</string>
+    <string name="mt_code_call_retrieved">Възстановено повикване</string>
+    <string name="mt_code_multi_party_call">Конферентно повикване</string>
+    <string name="mt_code_on_hold_call_released">Освободено задържано повикване</string>
+    <string name="mt_code_forward_check_received">Получено SS съобщение за проверка на препращане</string>
+    <string name="mt_code_call_connecting_ect">Трансфер на повиквания</string>
+    <string name="mt_code_call_connected_ect">Активен трансфер на повиквания</string>
+    <string name="mt_code_deflected_call">Това е отклонено повикване</string>
+    <string name="mt_code_additional_call_forwarded">Препратено допълнително входящо повикване</string>
+    <string name="mt_code_forwarded_cf">Повикването препратено</string>
+    <string name="mt_code_forwarded_cf_uncond">Повикването препратено безусловно</string>
+    <string name="mt_code_forwarded_cf_cond">Повикването препратено условно</string>
+    <string name="mt_code_forwarded_cf_busy">Препращане повикване при заето</string>
+    <string name="mt_code_forwarded_cf_no_reply">Препращане повикване при липса на отговор</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Препращане повикване при недостъпен</string>
+</resources>

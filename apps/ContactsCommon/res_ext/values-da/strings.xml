@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Sig navnet for at finde kontakten.\nPrøv det!</string>
+    <string name="vcs_guide_title">Stemmesøgning efter kontakter</string>
+    <string name="vcs_guide_title1">Sig navnet for at finde kontakten.</string>
+    <string name="vcs_guide_title2">Tryk her for at aktiveree funktionen.\nPrøv det!</string>
+    <string name="can_not_switch_account_during_call">Kan ikke skifte foretrukket SIM-kort til opkald under et opkald.</string>
+    <string name="can_not_switch_account_temporarily">Kan ikke midlertidigt skifte foretrukket SIM-kort for opkald.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> virker midlertidig ikke, og hvis nogen standard opkald, SMS, data på <xliff:g id="name2" example="CT1">^2</xliff:g> ændres disse <xliff:g id="name3" example="CT2">^3</xliff:g> i henhold hertil.</string>
+</resources>

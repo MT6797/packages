@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">تماس IP  <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g>  </string>
+    <string name="select_account">"انتخاب حساب"</string>
+    <string name="all_accounts">"همه حساب‌ها"</string>
+    <string name="imei_invalid">Invalid</string>
+    <string name="conf_call_member_list">لیست اعضا</string>
+    <string name="conf_call_participant_answered">پاسخ داده شد</string>
+    <string name="conf_call_participant_missed">"بی‌پاسخ"</string>
+    <string name="can_not_switch_account_during_call">سیم کارت برگزیده برای تماس ها درحین تماس تغیر نمی کند.</string>
+    <string name="can_not_switch_account_temporarily">سیم کارت برگزیده برای تماس موقتاً جابجا نمی شود.</string>
+</resources>

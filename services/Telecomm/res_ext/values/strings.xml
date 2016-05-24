@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <!-- voice recorder -->
+    <string name="str_db_playlist_name">My recordings</string>
+    <string name="alert_device_error">Error occurred on audio device</string>
+    <string name="ext_media_badremoval_notification_title">SD card unexpectedly removed</string>
+    <string name="error_sdcard_access">Unable to access SD card</string>
+    <string name="confirm_device_info_full">SD card is out of space, the recording has been saved.</string>
+    <string name="confirm_save_info_saved">The recording has been saved</string>
+    <string name="confirm_save_info_saved_to">The recording has been saved to</string>
+    <!-- select account -->
+    <string name="select_account_dialog_title">Select account</string>
+    <!-- volte ims call -->
+    <string name="reminder">Reminder</string>
+    <string name="enable_ims_dialog_message">IMS call is disabled, would you like to enable it?</string>
+    <string name="outgoing_call_failed">Call not sent.</string>
+    <string name="ip_dial_error_for_sip_call">IP dial function is not applicable to internet call.</string>
+    <!-- call duration -->
+    <string name="call_duration_title">Call ended</string>
+    <string name="call_duration_format">"<xliff:g id="HOURS">%1$s</xliff:g> hours <xliff:g id="MINUTES">%2$s</xliff:g> minutes <xliff:g id="SECONDS">%3$s</xliff:g> seconds"</string>
+    <!-- Add for [VoLTE_SS] -->
+    <string name="volte_ss_not_available_tips">To complete the operation, you need to open data connection of <xliff:g id="sub_name">%s</xliff:g>.</string>
+    <string name="call_waiting_indication">The other side is in call, please wait...</string>
+    <string name="outgoing_call_error_limit_exceeded">Call not sent, limit exceeded.</string>
+            <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_unknown">Unsupported service.</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_switch">Unable to switch calls.</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_separate">Unable to separate call.</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_transfer">Unable to transfer call.</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_conference">Unable to conference calls.</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_reject">Unable to reject call.</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_hangup">Unable to release call(s).</string>
+    <!-- call settings toast, MO -->
+    <string name="mo_code_unconditional_cf_active">Call forwarding\nunconditional activated</string>
+    <string name="mo_code_some_cf_active">Call Forwarding\nOn Conditional</string>
+    <string name="mo_code_call_forwarded">Call forwarded</string>
+    <string name="mo_code_call_is_waiting">Waiting call</string>
+    <string name="mo_code_cug_call">Closed User Group</string>
+    <string name="mo_code_outgoing_calls_barred">Outgoing call barred</string>
+    <string name="mo_code_incoming_calls_barred">Incoming call barred in the other side</string>
+    <string name="mo_code_clir_suppression_rejected">Check caller ID sending service</string>
+    <string name="mo_code_call_deflected">call Call transferred</string>
+    <string name="mo_code_call_forwarding">Call forwarding...</string>
+    <!-- call settings toast, MT -->
+    <string name="mt_code_forwarded_call">It is a forwarded call</string>
+    <string name="mt_code_cug_call">Closed User Group</string>
+    <string name="mt_code_call_on_hold">Call held</string>
+    <string name="mt_code_call_retrieved">Call retrieved</string>
+    <string name="mt_code_multi_party_call">Conference call</string>
+    <string name="mt_code_on_hold_call_released">Held call released</string>
+    <string name="mt_code_forward_check_received">Forward check SS message received</string>
+    <string name="mt_code_call_connecting_ect">Call transferring</string>
+    <string name="mt_code_call_connected_ect">Call transfer active</string>
+    <string name="mt_code_deflected_call">It is a deflected call</string>
+    <string name="mt_code_additional_call_forwarded">Additional incoming call forwarded</string>
+    <string name="mt_code_forwarded_cf">Call forwarded</string>
+    <string name="mt_code_forwarded_cf_uncond">Call forwarded on unconditional</string>
+    <string name="mt_code_forwarded_cf_cond">Call forwarded on conditional</string>
+    <string name="mt_code_forwarded_cf_busy">Call busy forwarded</string>
+    <string name="mt_code_forwarded_cf_no_reply">Call forwarded on not reply</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Call forwarded on not reachable</string>
+</resources>

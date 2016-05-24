@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2008 The Android Open Source Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <skip/>
+    <string name="application_name">Launcher3</string>
+    <string name="folder_name"/>
+    <string name="work_folder_name">Work</string>
+    <string name="activity_not_found">App isn\'t installed.</string>
+    <string name="activity_not_available">App isn\'t available</string>
+    <string name="safemode_shortcut_error">Downloaded app disabled in Safe mode</string>
+    <string name="safemode_widget_error">Widgets disabled in Safe mode</string>
+    <string name="toggle_weight_watcher">Show Mem</string>
+    <string name="long_press_widget_to_add">Touch &amp; hold to pick up a widget.</string>
+    <string name="widget_dims_format">%1$d \u00d7 %2$d</string>
+    <string name="all_apps_search_bar_hint">Search Apps</string>
+    <string name="all_apps_loading_message"/>
+    <string name="all_apps_no_search_results">No Apps found matching \"<xliff:g id="query" example="Android">%1$s</xliff:g>\"</string>
+    <skip/>
+    <string name="out_of_space">No more room on this Home screen.</string>
+    <string name="hotseat_out_of_space">No more room in the Favorites tray</string>
+    <string name="all_apps_button_label">apps</string>
+    <string name="all_apps_home_button_label">Home</string>
+    <string name="delete_target_label">Remove</string>
+    <string name="delete_target_uninstall_label">Uninstall</string>
+    <string name="info_target_label">App info</string>
+    <skip/>
+    <string name="permlab_install_shortcut">install shortcuts</string>
+    <string name="permdesc_install_shortcut">Allows an app to add shortcuts without user intervention.</string>
+    <string name="permlab_read_settings">read Home settings and shortcuts</string>
+    <string name="permdesc_read_settings">Allows the app to read the settings and shortcuts in Home.</string>
+    <string name="permlab_write_settings">write Home settings and shortcuts</string>
+    <string name="permdesc_write_settings">Allows the app to change the settings and shortcuts in Home.</string>
+    <skip/>    
+    <string name="gadget_error_text">Problem loading widget</string>
+    <string name="gadget_setup_text">Setup</string>
+    <string name="uninstall_system_app_text">This is a system app and can\'t be uninstalled.</string>
+    <string name="folder_hint_text">Unnamed Folder</string>
+    <skip/>
+    <string name="default_scroll_format">Page %1$d of %2$d</string>
+    <string name="workspace_scroll_format">Home screen %1$d of %2$d</string>
+    <string name="first_run_cling_title">Welcome</string>
+    <string name="migration_cling_title">Copy your app icons</string>
+    <string name="migration_cling_description">Import icons and folders from your old Home screens?</string>
+    <string name="migration_cling_copy_apps">COPY ICONS</string>
+    <string name="migration_cling_use_default">START FRESH</string>
+    <string name="workspace_cling_longpress_title">Wallpapers, widgets, &amp; settings</string>
+    <string name="workspace_cling_longpress_description">Touch &amp; hold background to customize</string>
+    <string name="workspace_cling_longpress_dismiss">GOT IT</string>
+    <string name="folder_opened">Folder opened, <xliff:g id="width" example="5">%1$d</xliff:g> by <xliff:g id="height" example="3">%2$d</xliff:g></string>
+    <string name="folder_tap_to_close">Touch to close folder</string>
+    <string name="folder_tap_to_rename">Touch to save rename</string>
+    <string name="folder_closed">Folder closed</string>
+    <string name="folder_renamed">Folder renamed to <xliff:g id="name" example="Games">%1$s</xliff:g></string>
+    <string name="folder_name_format">Folder: <xliff:g id="name" example="Games">%1$s</xliff:g></string>
+    <string name="debug_memory_activity"/>
+    <string name="widget_button_text">Widgets</string>
+    <string name="wallpaper_button_text">Wallpapers</string>
+    <string name="settings_button_text">Settings</string>
+    <string name="allow_rotation_title">Allow rotation</string>
+    <string name="package_state_unknown">Unknown</string>
+    <string name="abandoned_clean_this">Remove</string>
+    <string name="abandoned_search">Search</string>
+    <string name="abandoned_promises_title">This app is not installed</string>
+    <string name="abandoned_promise_explanation">The app for this icon isn\'t installed. You can remove it, or search for the app and install it manually.</string>
+    <string name="action_add_to_workspace">Add to Home screen</string>
+    <string name="action_move_here">Move item here</string>
+    <string name="item_added_to_workspace">Item added to home screen</string>
+    <string name="item_removed">Item removed</string>
+    <string name="action_move">Move item</string>
+    <string name="move_to_empty_cell">Move to row <xliff:g id="number" example="1">%1$s</xliff:g> column <xliff:g id="number" example="1">%2$s</xliff:g></string>
+    <string name="move_to_position">Move to position <xliff:g id="number" example="1">%1$s</xliff:g></string>
+    <string name="move_to_hotseat_position">Move to favorites position <xliff:g id="number" example="1">%1$s</xliff:g></string>
+    <string name="item_moved">Item moved</string>
+    <string name="add_to_folder">Add to folder: <xliff:g id="name" example="Games">%1$s</xliff:g></string>
+    <string name="add_to_folder_with_app">Add to folder with <xliff:g id="name" example="Messenger">%1$s</xliff:g></string>
+    <string name="added_to_folder">Item added to folder</string>
+    <string name="create_folder_with">Create folder with: <xliff:g id="name" example="Game">%1$s</xliff:g></string>
+    <string name="folder_created">Folder created</string>
+    <string name="action_move_to_workspace">Move to Home screen</string>
+    <string name="action_move_screen_left">Move screen to left</string>
+    <string name="action_move_screen_right">Move screen to right</string>
+    <string name="screen_moved">Screen moved</string>
+    <string name="action_resize">Resize</string>
+    <string name="action_increase_width">Increase width</string>
+    <string name="action_increase_height">Increase height</string>
+    <string name="action_decrease_width">Decrease width</string>
+    <string name="action_decrease_height">Decrease height</string>
+    <string name="widget_resized">Widget resized to width <xliff:g id="number" example="2">%1$s</xliff:g> height <xliff:g id="number" example="1">%2$s</xliff:g></string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_tap_to_search_again">Klepnutím zopakujte hledání</string>
+    <string name="batch_merge_sim_contacts_warning">Kontakty na kartě SIM nelze sloučit.</string>
+</resources>

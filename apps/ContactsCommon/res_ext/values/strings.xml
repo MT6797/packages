@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Say the name to find contacts.\nTry it!</string>
+    <string name="vcs_guide_title1">Say the name to find contacts.</string>
+    <string name="vcs_guide_title2">Tap here to enable the function.\nTry it!</string>    
+    <string name="vcs_guide_title">Voice Contact Search</string>
+    <!-- The percentage, used for expressing the progress of vCard import/export. -->
+    <string name="percentage" translate="false">
+        <xliff:g id="percentage" example="50">%s</xliff:g>
+        <xliff:g id="percentsign" example="%">%%</xliff:g>
+    </string>
+    <!-- The message of toast when switch account between two CDMA cards during a call -->
+    <string name = "can_not_switch_account_during_call">Can not switch preferred SIM for calls during the call.</string>
+    <!-- The message of alert dialog when switch account but it is not allowed -->
+    <string name = "can_not_switch_account_temporarily">Can not switch preferred SIM for calls temporarily.</string>
+    <!-- The message of alert dialog when switch account between two CDMA sim cards -->
+    <string name="call_account_switch_tips"><xliff:g id="name" example="CT1">^1</xliff:g> will not work temporarily, and if any default Call,
+        SMS, Data on <xliff:g id="name" example="CT1">^2</xliff:g> will be changed into <xliff:g id="name" example="CT2">^3</xliff:g> accordingly.</string>
+</resources>

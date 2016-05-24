@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="m_share_format_choose_title">"Scegli formato"</string>
+    <string name="m_share_format_image">"Immagine"</string>
+    <string name="m_share_format_video">Video</string>
+    <string name="m_generating_tip">"Generazione video..."</string>
+    <string name="m_generate_video_fail">"Generazione video non riuscita"</string>
+    <string name="m_generating_gif_tip">"Generazione Gif..."</string>
+    <string name="m_generate_gif_fail">"Generazione Gif non riuscita"</string>
+    <string name="m_share_limit">Impossibile condividere più di 300 file.</string>
+    <string name="m_demo_off">Demo disattivo</string>
+    <string name="m_vertical_demo">Demo verticale</string>
+    <string name="m_horizontal_demo">Demo orizzontale</string>
+    <string name="m_storage_not_enough">"Spazio insufficiente di memoria"</string>
+    <string name="m_saving_image">"Salvataggio immagine in <xliff:g id="ALBUM_NAME">%1$s</xliff:g> …"</string>
+    <string name="m_drm_protected_warning1">"I contenuti sono protetti da copia,"</string>
+    <string name="m_drm_protected_warning2">"per vederli sul telefono,"</string>
+    <string name="m_wfd_protected_warning">"disconnettere il display wireless"</string>
+    <string name="m_hdmi_protected_warning">"Scollegare HDMI."</string>
+    <string name="m_please_wait">Attendere</string>
+    <string name="m_insufficient_space_one">Condivisione non riuscita, spazio insufficiente.</string>
+    <string name="m_insufficient_space_some">Condivisione di alcuni video slow motion non riuscita, spazio insufficiente.</string>
+    <string name="m_insufficient_space_all">Condivisione di tutti i video slow motion non riuscita, spazio insufficiente.</string>
+    <string name="not_avaliable_16x_multi_share">Non disponibile per la condivisione di video slow motion 1/16x. Il video è condiviso a 1/4x</string>
+    <string name="not_avaliable_16x_single_share">Non disponibile per la condivisione di video slow motion 1/16x. Condividere il video ad altre velocità</string>
+    <string name="m_raw_reminder">"È possibile visualizzare il file RAW della foto collegandosi al computer."</string>
+</resources>

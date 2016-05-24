@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">"Скажіть ім'я, щоб знайти контакти.\nСпробуйте!"</string>
+    <string name="vcs_guide_title">Голосовий пошук контактів</string>
+    <string name="vcs_guide_title1">"Назвіть ім'я, щоб знайти контакти."</string>
+    <string name="vcs_guide_title2">Натисніть тут, щоб активувати функцію.\nСпробуйте!</string>    
+    <string name="can_not_switch_account_during_call">Під час виклику неможливо перемкнути пріоритетну SIM для викликів.</string>
+    <string name="can_not_switch_account_temporarily">Тимчасово неможливо перемкнути пріоритетну SIM для викликів.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> тимчасово не працюватиме, і в разі будь-якого виклику чи SMS-повідомлення за промовчанням, дані у <xliff:g id="name2" example="CT1">^2</xliff:g> буде змінено на <xliff:g id="name3" example="CT2">^3</xliff:g> відповідно.</string>
+</resources>

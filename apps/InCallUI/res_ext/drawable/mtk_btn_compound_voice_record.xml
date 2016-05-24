@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layers used to render the in-call "record voice" compound button. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The standard "compound button" background. -->
+    <item android:id="@+id/compoundBackgroundItem"
+          android:drawable="@drawable/btn_compound_background" />
+
+    <!--A attached compound background drawable, support switch to "start" and "stop" state-->
+    <item android:id="@+id/compoundBackgroundIcon"
+          android:drawable="@drawable/mtk_btn_voice_record_drawable_selector" />
+</layer-list>

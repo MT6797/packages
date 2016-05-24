@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- MTK Wi-Fi settings start -->
+   <string name="wifi_advanced_ipv4_address_title">IPv4-osoite</string>
+  <string name="wifi_advanced_ipv6_address_title">IPv6-osoite</string>
+  <string name="wifi_ipv4_address">IPv4-osoite</string>
+  <string name="wifi_ipv6_address">IPv6-osoite</string>
+  <string name="wifi_security_wapi_certificate">WAPI-sertifikaatti</string>
+  <string name="wapi_user_certificate">"Käyttäjävarmenne"</string>
+  <string name="wapi_as_certificate">ASE-sertifikaatti</string>
+  <string name="wifi_hex_password">Heksadesimaalisalasana.</string>
+  <string name="wifi_no_cert_for_wapi">Parhaillaan yhdistettävälle tukiasemalle ei löydy sertifikaattia</string>
+  <string name="sim_slot">SIM-korttipaikka</string>
+  <string name="wifi_tether_auto_channel_text">"auto"</string>
+  <string name="wifi_tether_auto_channel_width_text">Automaattinen 20/40 MHz</string>
+  <!-- MTK Wi-Fi settings end -->
+ 
+  <!-- MTK Wi-Fi hotspot client start -->
+   <string name="wifi_tether_auto_disable_title">Pidä Wi-Fi-verkkopiste päällä</string>
+  <string name="wifi_tether_setting_title">Perusasetukset</string>
+  <string name="wifi_tether_wps_connect_title">Yhdistä WPS</string>
+  <string name="wifi_tether_wps_connect_summary">Valitse suojattu Wi-Fi-asetustila jatkaaksesi</string>
+  <string name="wifi_tether_wps_pin_error">PIN ei kelpaa</string>
+  <string name="wifi_tethering_title">Wi-Fi-verkkopiste</string>
+  <string name="wifi_ap_wps_dialog_title">Yhdistä WPS</string>
+  <string name="wifi_ap_wps_mode_title">WPS-tila</string>
+  <string name="wifi_ap_wps_pin_title">Näppäile PIN asiakkaasta</string>
+  <string name="wifi_ap_reset_OOB_title">Nollaa verkko-SSID, suojaus ja salasana oletuksiin (heti käytettävissä oleva WPS-määritys)</string>
+  <string name="wifi_ap_reset_OOB">Nollaa OOB</string>
+  <string name="wifi_ap_max_connection_title">Yhteyksien enimmäismäärä</string>
+  <string name="wifi_ap_connected_title">Yhdistetyt käyttäjät</string>
+  <string name="wifi_ap_blocked_title">Estetyt käyttäjät</string>
+  <string name="wifi_ap_client_block_title">Estä</string>
+  <string name="wifi_ap_client_unblock_title">Kumoa esto</string>
+  <string name="wifi_ap_client_details_title">Tiedot</string>
+  <string name="wifi_ap_client_mac_label">MAC-osoite:</string>
+  <string name="wifi_ap_client_ip_label">IP-osoite:</string>
+  <string name="wifi_ap_bandwidth_title">Kaistanleveyden käyttö</string>
+  <string name="wifi_ap_bandwidth_enable">Ota käyttöön kaistanleveyden rajoittaminen</string>
+  <string name="wifi_ap_bandwidth_chart_title">Reaaliaikainen datanopeus</string>
+  <string name="wifi_ap_bandwidth_chart_summary">Puhelimesi mittaama. Palveluntarjoajan datanopeustulokset voivat olla erilaisia.</string>
+  <string name="wifi_wps_fail_error">Wi-Fi-suojattu asetus epäonnistui. Yritä uudelleen.</string>
+  <string name="wifi_ap_title">Tilastot</string>
+  <string name="wifi_ap_time_duration">Kesto:<xliff:g id="time">%1$s</xliff:g></string>
+  <string name="wifi_ap_total_data">Käytetty data yhteensä:<xliff:g id="time">%1$s</xliff:g></string>
+  <string name="wifi_ap_no_connected">0 yhdistettyä käyttäjää</string>
+  <string name="wifi_ap_no_blocked">0 estettyä käyttäjää</string>
+  <!-- MTK Wi-Fi hotspot client end -->
+ 
+  <!-- MTK WFD start -->
+   <string name="wfd_change_resolution_menu_title">Muuta kuvatarkkuutta</string>
+  <string name="wfd_sink_summary">Muiden löydettävissä</string>
+  <string name="wfd_device_category">LAITELUETTELO</string>
+  <string name="wfd_sink_toast_enjoy">Nauti muiden laitteiden ruutukaappausvideoista</string>
+  <string name="wfd_sink_toast_disconnect">Ruutukaappausnäytön yhteys katkaistu</string>
+  <string name="wfd_sink_disconnecting">Katkaistaan yhteyttä…</string>
+  <string name="wfd_sink_guide_btn">Hae se</string>
+  <string name="wfd_sink_guide_title">Kuinka poistutaan?</string>
+  <string name="wfd_sink_guide_content">Paina näyttöä pitkään <xliff:g id="seconds">%s</xliff:g> sekuntia poistuaksesi toisen laitteen näytöltä.</string>
+  <!-- MTK WFD end -->
+ 
+  <!-- MTK Wireless settings start -->
+   <string name="tethered_ipv6_title">Verkkopiste- ja jakamisasetukset</string>
+  <string name="tethered_ipv4v6">(IPv6 käytettävissä)</string>
+  <string name="tethered_ipv6">(Vain IPv6 käytettävissä)</string>
+  <string name="tethered_ipv4">(IPv6 ei käytettävissä)</string>
+  <string name="tethering_apn_settings_title">APN-asetukset</string>
+  <string name="tethering_apn_settings_summary">Määritä APN jakamista varten</string>
+  <string name="usb_tether_type_title">USB-jakamistyyppi</string>
+  <string name="usb_tethering_select_version">Valitse PC-järjestelmäversio</string>
+  <string name="lockdown_vpn_already_connected">VPN-aina päällä on jo otettu käyttöön yhteyttä varten.</string>
+  <!-- MTK Wireless settings end -->
+ 
+  <!-- AudioProfile Settings start -->
+   <string name="ring_summary">Soita</string>
+  <string name="ring_vibrate_summary">Soitto ja värinä</string>
+  <string name="silent_summary">Vain äänetön</string>
+  <string name="meeting_summary">Vain värinä</string>
+  <string name="outdoor_summary">Voimakkain soitto ja värinä</string>
+  <string name="audio_profile_reset">"Palauta"</string>
+  <string name="audio_profile_add">"Lisää"</string>
+  <string name="audio_profile_enable">"Ota käyttöön"</string>
+  <string name="audio_profile_rename">"Nimeä uudelleen"</string>
+  <string name="audio_profile_delete">"Poista"</string>
+  <string name="audio_profile_message_reset">Kaikki audioprofiiliasetukset nollataan oletuksiin</string>
+  <string name="audio_profile_message_rename">Syötä uusi profiilinimi</string>
+  <string name="audio_profile_message_name_error">Syötetty nimi on jo olemassa</string>
+  <string name="audio_profile_message_name_length_wrong">Nimessä on oltava vähintään yksi kirjain</string>
+  <string name="audio_profile_message_delete">Profiili <xliff:g id="profile">%s</xliff:g> on poistettu</string>
+  <string name="audio_profile_message_overflow">Sinulle on sallittu vain 6 mukautetun profiilin lisääminen</string>
+  <string name="audio_profile_category_custom_title">Käyttäjän määrittämät profiilit</string>
+  <string name="audio_profile_category_predefine_title">Esiasetetut profiilit</string>
+  <string name="audio_profile_error">"Virhe"</string>
+  <string name="audio_profile_others">Ilmoitus ja muut</string>
+  <string name="general_settings_title">"Yleiset"</string>
+  <string name="silent_settings_title">"Äänetön"</string>
+  <string name="meeting_settings_title">Kokous</string>
+  <string name="outdoor_settings_title">Ulkoilma</string>
+  <string name="sound_category_feedback_title">"Järjestelmä"</string>
+  <string name="sound_category_calls_title">Tulevat puhelut</string>
+  <string name="voice_call_title">Äänipuhelun soittoääni</string>
+  <string name="voice_call_summary">"Aseta äänipuheluiden oletussoittoääni"</string>
+  <string name="video_call_title">Videopuhelun soittoääni</string>
+  <string name="video_call_summary">Aseta videopuheluiden oletussoittoääni</string>
+  <string name="sip_call_title">SIP-puhelun soittoääni</string>
+  <string name="sip_call_summary">Aseta SIP-puheluiden oletussoittoääni</string>
+  <string name="Phone_vibrate_summary">Laitteen värinä puheluiden tullessa</string>
+  <string name="vibrate_title">"Värinä"</string>
+  <string name="audio_profile_settings_title">Audioprofiilit</string>
+  <string name="audio_profile_bes_loudness_summary">Tilavuus tehosterokotus kaiuttimelle</string>
+  <string name="sound_enhancement_title">Äänen parannus</string>
+  <string name="music_plus_summary">Kuulokkeiden äänenparannus</string>
+  <string name="lossless_title">Häviötön BT-tila</string>
+  <string name="lossless_summary">Korkealaatuinen BT-audio</string>
+  <string name="lossless_connect_summary">Wi-Fi-suorituskyky heikkenee, jos Häviötön BT-tila kytketään päälle. Haluatko varmasti ottaa sen käyttöön?</string>
+  <string name="lossless_on">Häviötön BT-tila PÄÄLLÄ</string>
+  <string name="lossless_playing">Häviötön musiikintoisto</string>
+  <string name="lossless_toastmessage">Järjestelmän äänet toistetaan puhelimen kaiuttimella</string>
+  <string name="lossless_volume_max">Pidä järjestelmän äänenvoimakkuus maksimissa</string>
+  <string name="lossless_cannot_found_device">Häviötöntä BT-laitetta ei löydy</string>
+  <string name="audio_profile_bes_surround_title">BesSurround</string>
+  <string name="audio_profile_bes_surround_summary">Audio Surrounding</string>
+  <string name="audio_profile_bes_surround_mode_movie">Elokuvatila</string>
+  <string name="audio_profile_bes_surround_mode_music">Musiikkitila</string>
+  <string name="sms_vibrate_summary">värisytä laitetta tekstiviestin saapuessa</string>
+  <string name="zen_mode_option_title_novoice">"Kun ilmoituksia saapuu"</string>
+  <!-- AudioProfile Settings end -->
+ 
+  <!-- MTK NFC settings start -->
+   <string name="nfc_p2p_mode">P2P-tila</string>
+  <string name="nfc_p2p_mode_summary">Lähetä tai vastaanota Sovellus-sisältö</string>
+  <string name="nfc_tag_mode_category">Tunnistetila</string>
+  <string name="nfc_rw_tag_title">Tunnisteen lukeminen ja kirjoittaminen</string>
+  <string name="nfc_rw_tag_summary">Lue tai kirjoita tunnisteeseen</string>
+  <string name="nfc_card_emulation_category_title">kortin emulointitila</string>
+  <string name="nfc_card_emulation">Kortin emulointi</string>
+  <string name="card_emulation_settings_category_title">käytettävissä oleva turvallisuuselementti</string>
+  <string name="card_emulation_settings_no_element_found">Ei käytettävissä olevaa turvallisuuselementtiä.</string>
+  <string name="card_emulation_settings_off_text">Nähdäksesi käytettävissä olevat turvallisuuselementit, kytke Kortin emulointi päälle.</string>
+  <string name="card_emulation_turning_off_text">Kytketään Kortin emulointia pois päältä...</string>
+  <string name="card_emulation_turning_on_text">Kytketään Kortin emulointia päälle...</string>
+  <string name="card_emulation_switch_error_title">"Virhe"</string>
+  <string name="card_emulation_switch_error_message">Vaihtaminen <xliff:g id="card_mode">%1$s</xliff:g>-tilaan epäonnistui.</string>
+  <string name="card_emulation_sim_not_supported_message"><xliff:g id="sim_description">%1$s</xliff:g> ei tue NFC-kortin emulointitoimintoa.</string>
+  <string name="card_emulation_two_sim_not_supported_message">SIM1,SIM2 do not support NFC Card emulation function.</string>
+  <string name="nfc_hce_pay_summary">Laitteen käyttö NAPAUTA JA MAKSA -toimintoon Google wallet -sovelluksessa, luottokortilla jne.</string>
+  <!-- MTK NFC settings end -->
+ 
+  <!-- MTK Beam plus start -->
+   <string name="beam_mgmt_tab_download_title">Lähetä edelleen tarkista SS-viesti vastaanotettu</string>
+  <string name="beam_mgmt_tab_upload_title">"Toiminto kerää tietoja nykyisestä laitteen tilasta ja lähettää ne sähköpostitse. Kestää hetken aikaa, ennen kuin virheraportti on valmis lähetettäväksi, ole kärsivällinen."</string>
+  <string name="beam_share_mgmt_notification_ticker">Langattoman jakamisen historia</string>
+  <string name="beam_share_mgmt_notification_title">Langattoman jakamisen historia</string>
+  <string name="beam_share_mgmt_notification_message">"Valitse näyttääksesi Langattoman jakamisen historian."</string>
+  <string name="beam_share_mgmt_tab_menu_clear">Tyhjennetäänkö koko historia?</string>
+  <string name="beam_share_open_file_dialog_title">Tiedostoa ei voida avata</string>
+  <string name="beam_share_open_file_unsupported_message">Tiedostomuoto ei ole tuettu.</string>
+  <string name="beam_share_open_file_not_found_message">"Tiedostoa ei löydy: <xliff:g id="file_name">%1$s</xliff:g></string>
+  <string name="beam_share_transfer_fail_dialog_title">"Langaton siirtäminen epäonnistui"</string>
+  <string name="beam_share_resend_dialog_message">"<xliff:g id="file_name">%1$s</xliff:g>-kohteen lähettäminen epäonnistui."</string>
+  <string name="beam_share_resend_dialog_ok_button">"Yritä uudelleen"</string>
+  <string name="beam_share_show_received_files_menu">"Näytä vastaanotetut tiedostot"</string>
+  <string name="beam_share_history_title">Langattoman jakamisen historia</string>
+  <string name="beam_share_clear_confirm_dialog_title">Tyhjennä kaikki</string>
+  <string name="beam_share_clear_confirm_dialog_message">Tyhjennetäänkö koko historia?</string>
+  <string name="beam_share_receive_fail_dialog_message">"<xliff:g id="file_name">%1$s</xliff:g>-kohteen vastaanottaminen epäonnistui."</string>
+  <string name="beam_share_clear_item_dailog_title">"Poista"</string>
+  <string name="beam_share_clear_item_dailog_message">Kohde poistetaan.</string>
+  <!-- MTK Beam plus end -->
+ 
+  <!-- MTK HDMI start -->
+   <string name="hdmi_settings">HDMI-asetukset</string>
+  <string name="hdmi_settings_summary">Napsauta määrittääksesi HDMI:n</string>
+  <string name="hdmi_video_resolution">Videon resoluutio</string>
+  <string name="hdmi_auto">"auto"</string>
+  <string name="hdmi_scale_control">Videon skaalausasetukset</string>
+  <string name="hdmi_scale_no_scale">Ei skaalausta</string>
+  <string name="hdmi_scale_scale_down">Skaalaa alas <xliff:g id="scale_percent">%s</xliff:g>%%</string>
+  <string name="hdmi_audio_output">Garso signalų išvestis</string>
+  <string name="hdmi_audio_output_stereo">Stereo</string>
+  <string name="hdmi_audio_output_multi_channel">Daugiakanalis</string>
+  <!-- MTK HDMI end -->
+ 
+  <!-- MTK Data usage  start -->
+   <string name="datausage_overview_tab">Yleiskatsaus</string>
+  <string name="datausage_overview_wifi_today">"Tämä päivä"</string>
+  <string name="datausage_overview_wifi_total">"Yhteensä"</string>
+  <string name="datausage_overview_mobile_title">"Mobiili"</string>
+  <string name="datausage_overview_mobile_usage"><xliff:g id="actual">%s</xliff:g> pois <xliff:g id="limit">%s</xliff:g></string>
+  <string name="datausage_overview_mobile_usage_warning">Rajan ulkopuolella <xliff:g xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
+  <string name="data_saving_title">Tietojen tallennus</string>
+  <string name="default_data_switch_err_msg1">Ei voi vaihtaa ensisijaista SIM-korttia matkapuhelindataa varten puhelun aikana.</string>
+  <!-- MTK Dta usage  end -->
+ 
+  <!-- MTK About phone start -->
+   <string name="status_imei_slot1">IMEI (Paikka1)</string>
+  <string name="status_imei_slot2">IMEI (Paikka2)</string>
+  <string name="custom_build_version">Mukautettu koontiversio</string>
+  <string name="mota_system_update_summary">"Tarkista järjestelmäpäivitys palvelimella"</string>
+  <string name="software_updates_more_title">Ohjelmistopäivitykset</string>
+  <string name="software_updates_more_summary">Tarkista ohjelmiston uusi versio</string>
+  <!-- MTK About phone end -->
+ 
+  <!-- APN Settings start  -->
+   <string name="mvno_type_none">"-"</string>
+  <string name="apn_predefine_change_dialog_notice">Haluatko varmasti tallentaa? Mukautukset oletus APN-nimiin voi aiheuttaa yhteysongelmia!"</string>
+  <string name="apn_port_warning">Porttiarvon on oltava välillä 1–65535!</string>
+  <!-- APN Settings end -->
+ 
+  <!--MTK DRM settings start -->
+   <string name="drm_settings_title">DRM-nollaus</string>
+  <string name="drm_settings_summary">Poistaa kaikki DRM-lisenssit</string>
+  <string name="drm_reset_dialog_msg">Tämä toiminta poistaa kaikki lisenssit tältä laitteelta. Haluatko jatkaa?</string>
+  <string name="drm_reset_toast_msg">Lisenssien poistaminen onnistui.</string>
+  <!--MTK DRM settings end -->
+ 
+  <!--MTK HotKnot start -->
+   <string name="hotknot_explained_description">Salli tietojen vaihto, kun näyttö koskettaa toista laitetta</string>
+  <string name="hotknot_charging_warning"><xliff:g id="title">%s</xliff:g>-toiminto saattaa  heikentyä USB-latauksen aikana</string>
+  <!--MTK HotKnot end -->
+ 
+  <!-- ClearMotion start -->
+   <string name="clear_motion_summary">Videon sujuvuuden parannusohjelma</string>
+  <string name="on_text">"käytössä"</string>
+  <string name="off_text">"himmein"</string>
+  <!-- ClearMotion end -->
+ 
+  <!-- MiraVision start -->
+   <string name="mira_vision_summary">Parhaiden visuaalisten tehosteiden tarjoaja</string>
+  <!-- MiraVision end -->
+ 
+  <!--MTK DateTime start-->
+   <string name="gps_time_sync_attention_gps_on">GPS-kiinnityksen saaminen kestää enintään 1 minuutin. Lisäksi GPS ei ehkä pysty tarjoamaan aikaa heikon signaaliympäristön vuoksi.\n\nHaluatko varmasti käyttää GPS:n tarjoamaa aikaa?</string>
+  <string name="gps_time_sync_attention_gps_off">Voidaksesi käyttää GPS:n tarjoamaa aikaa, GPS on otettava ensin käyttöön. GPS-kiinnityksen saaminen kestää sen jälkeen enintään 1 minuutin. Lisäksi GPS ei ehkä pysty tarjoamaan aikaa heikon signaaliympäristön vuoksi. \n\nHaluatko varmasti ottaa  GPS:n nyt ja odottaa GPS:n tarjoamaa aikaa?</string>
+  <!--MTK DateTime end-->
+ 
+  <!-- MTK IPO settings start -->
+   <string name="ipo_title">Pikakäynnistys</string>
+  <string name="ipo_summary_off">Ota pikakäynnistys käyttöön</string>
+  <!-- MTK IPO settings end -->
+ 
+  <!-- Storage & USB settings start -->
+   <string name="select_memory">Oletuskirjoituslevy</string>
+  <string name="usb_use_built_in_cd_rom">Sisäinen CD-ROM</string>
+  <string name="usb_use_mass_storage">USB-tila</string>
+  <!-- Storage & USB settings end -->
+ 
+  <!-- MTK Storage Settings start -->
+   <string name="launch_error">"Sovellusta ei voi käynnistää!"</string>
+  <!-- MTK Storage Settings end -->
+ 
+  <!--MTK Security Settings start -->
+   <string name="security_not_set">Suojausta ei ole asetettu</string>
+  <!--MTK Security Settings end -->
+ 
+  <!-- Voice UI start -->
+   <string name="voice_ui_title">"Ääniohjaus"</string>
+  <!-- Voice UI end -->
+ 
+  <!-- Voice unlock start -->
+   <string name="unlock_set_unlock_mode_voice_weak">Ääniavaus</string>
+   <string name="voice_unlock_backup_info_summary">Kun Ääniavaus ei tunnista sinua, kuinka haluat avata?</string>
+  <!-- Voice unlock end -->
+ 
+  <!-- MTK Bluetooth Settings start -->
+   <string name="bluetooth_advanced_settings">"Lisäasetukset"</string>
+  <!-- MTK Bluetooth Settings end -->
+ 
+  <!-- MTK schedule power start -->
+   <string name="schedule_power_on_off_settings_title">Ajastettu virta päälle ja pois päältä</string>
+  <!-- MTK schedule power end -->
+ 
+  <!-- MTK Hetcomm start -->
+   <string name="hetcom_setting_title">Turbo-lataus</string>
+  <!-- MTK Hetcomm end -->
+ 
+  <!-- Background power saving start -->
+   <string name="bg_power_saving_title">Valmiustilan älykäs virransäästö</string>
+  <!-- Background power saving end -->
+
+    <string name="two_cdma_dialog_msg">Paikka 1 ja paikka 2 eivät voi tukea CDMA:ta samanaikaisesti.</string>
+    <string name="c2k_cdma_card_competion_message">%1$s ei väliaikaisesti toimi, ja jos tulee jokin oletuspuhelu tai SMS-viesti, tiedot %2$s:ssa muutetaan %3$s:ksi tilanteen mukaan.</string>
+    <string name="c2k_gsm_cdma_sim_message">"KYLLÄ"-valinnan napauttaminen myös 4G:n vaihtamiseksi %1$s:ksi, %2$s ei toimi, ja jos tulee jokin oletuspuhelu tai SMS-viesti, tiedot %3$s:ssa muutetaan %4$s:ksi tilanteen mukaan. "EI"-valinnan napauttaminen vain matkapuhelindatan muuttamiseen.</string>
+    <string name="default_calls_switch_err_msg1">Ensisijaista SIM:iä puheluja varten ei voi vaihtaa puhelun aikana.</string>
+    <string name="default_sms_switch_err_msg1">Ensisijaista SIM:iä SMS:ää varten ei voi vaihtaa puhelun aikana.</string>
+
+  <!-- Performance and power start -->
+  <string name="performance_and_power_title">Suorituskyky ja virransäästö</string>
+  <!-- Performance and power end -->
+
+    <string name="wakeup_interaction">Herätä vuorovaikutus</string>
+    <string name="voice_wakeup">Ääniherätys</string>
+    <string name="voice_wakeup_confirm">Valitse komento ennen käyttöä.</string>
+    <string name="omh_warning_dialog_msg">R-UIM-korttisi ei välttämättä pysty käyttämään datapalvelua. Päivitä R-UIM-korttisi OMH R-UIM -kortiksi.</string>
+    <string name="omh_data_pick_dialog_msg">R-UIM-korttisi ei välttämättä pysty käyttämään datapalvelua. Päivitä R-UIM-korttisi OMH R-UIM -kortiksi. Asetetaanko tämä R-UIM silti oletusdatakortiksi?</string>
+</resources>

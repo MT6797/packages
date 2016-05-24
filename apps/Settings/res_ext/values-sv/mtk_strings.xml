@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- MTK Wi-Fi settings start -->
+   <string name="wifi_advanced_ipv4_address_title">IPv4-adress</string>
+  <string name="wifi_advanced_ipv6_address_title">IPv6-adress</string>
+  <string name="wifi_ipv4_address">IPv4-adress</string>
+  <string name="wifi_ipv6_address">IPv6-adress</string>
+  <string name="wifi_security_wapi_certificate">WAPI-certifikat</string>
+  <string name="wapi_user_certificate">"Användarcertifikat"</string>
+  <string name="wapi_as_certificate">ASE-certifikat</string>
+  <string name="wifi_hex_password">Hexadecimalt lösenord.</string>
+  <string name="wifi_no_cert_for_wapi">Kunde inte hitta certifiering för befintligt ansluten AP</string>
+  <string name="sim_slot">SIM-kortplats</string>
+  <string name="wifi_tether_auto_channel_text">"automatiskt"</string>
+  <string name="wifi_tether_auto_channel_width_text">Auto 20/40 MHz</string>
+  <!-- MTK Wi-Fi settings end -->
+ 
+  <!-- MTK Wi-Fi hotspot client start -->
+   <string name="wifi_tether_auto_disable_title">Behåll Wi-Fi-hotspot på</string>
+  <string name="wifi_tether_setting_title">Allmänna inställningar</string>
+  <string name="wifi_tether_wps_connect_title">Anslut WPS</string>
+  <string name="wifi_tether_wps_connect_summary">Välj skyddat läge för Wi-Fi-konfiguration för att fortsätta</string>
+  <string name="wifi_tether_wps_pin_error">Ogiltig PIN-kod</string>
+  <string name="wifi_tethering_title">Wi-Fi-hotspot</string>
+  <string name="wifi_ap_wps_dialog_title">Anslut WPS</string>
+  <string name="wifi_ap_wps_mode_title">WPS-läge</string>
+  <string name="wifi_ap_wps_pin_title">Ange PIN-kod från klient</string>
+  <string name="wifi_ap_reset_OOB_title">Återställ nätverks-SSID och lösenord till standardinställningen (fabrikskonfiguration för WPS)</string>
+  <string name="wifi_ap_reset_OOB">Återställ OOB</string>
+  <string name="wifi_ap_max_connection_title">Högsta antal anslutningar</string>
+  <string name="wifi_ap_connected_title">Anslutna användare</string>
+  <string name="wifi_ap_blocked_title">Blockerade användare</string>
+  <string name="wifi_ap_client_block_title">Blockera</string>
+  <string name="wifi_ap_client_unblock_title">Häv blockering</string>
+  <string name="wifi_ap_client_details_title">Information</string>
+  <string name="wifi_ap_client_mac_label">MAC-adress:</string>
+  <string name="wifi_ap_client_ip_label">IP-adress:</string>
+  <string name="wifi_ap_bandwidth_title">Bandbreddsanvändning</string>
+  <string name="wifi_ap_bandwidth_enable">Aktivera bandbreddsbegränsning</string>
+  <string name="wifi_ap_bandwidth_chart_title">Datahastighet i realtid</string>
+  <string name="wifi_ap_bandwidth_chart_summary">Mäts av din telefon, din mobiloperatörs datahastighet kan däremot skilja sig.</string>
+  <string name="wifi_wps_fail_error">Wi-FI-protokoll (Wi-Fi protected setup) misslyckades, försök igen.</string>
+  <string name="wifi_ap_title">Statistik</string>
+  <string name="wifi_ap_time_duration">Tid för varaktighet:<xliff:g id="time">%1$s</xliff:g></string>
+  <string name="wifi_ap_total_data">Totalt använd data:<xliff:g id="time">%1$s</xliff:g></string>
+  <string name="wifi_ap_no_connected">0 anslutna användare</string>
+  <string name="wifi_ap_no_blocked">0 blockerade användare</string>
+  <!-- MTK Wi-Fi hotspot client end -->
+ 
+  <!-- MTK WFD start -->
+   <string name="wfd_change_resolution_menu_title">Ändra upplösning</string>
+  <string name="wfd_sink_summary">Kan upptäckas av andra</string>
+  <string name="wfd_device_category">ENHETSLISTA</string>
+  <string name="wfd_sink_toast_enjoy">Njut av skärmsändning från den andra enheten</string>
+  <string name="wfd_sink_toast_disconnect">Skärmsändning frånkopplad</string>
+  <string name="wfd_sink_disconnecting">Kopplar från…</string>
+  <string name="wfd_sink_guide_btn">Hämta den</string>
+  <string name="wfd_sink_guide_title">Hur avslutar man?</string>
+  <string name="wfd_sink_guide_content">Håll intryckt i <xliff:g id="seconds">%s</xliff:g> sekunder på skärmen för att avsluta visning från en annan enhet.</string>
+  <!-- MTK WFD end -->
+ 
+  <!-- MTK Wireless settings start -->
+   <string name="tethered_ipv6_title">Inställningar för surfpunkt och Internetdelning</string>
+  <string name="tethered_ipv4v6">(IPv6 tillgängligt)</string>
+  <string name="tethered_ipv6">(Endast IPv6 tillgängligt)</string>
+  <string name="tethered_ipv4">(IPv6 ej tillgänligt)</string>
+  <string name="tethering_apn_settings_title">APN-inställningar</string>
+  <string name="tethering_apn_settings_summary">Konfigurera APN för Internetdelning</string>
+  <string name="usb_tether_type_title">Typ av USB-Internetdelning</string>
+  <string name="usb_tethering_select_version">Välj PC-systemversion</string>
+  <string name="lockdown_vpn_already_connected">Alltid på för VPN har redan aktiverats vid anslutning.</string>
+  <!-- MTK Wireless settings end -->
+ 
+  <!-- AudioProfile Settings start -->
+   <string name="ring_summary">Ring</string>
+  <string name="ring_vibrate_summary">Ring och vibrera</string>
+  <string name="silent_summary">Endast tyst</string>
+  <string name="meeting_summary">Endast vibration</string>
+  <string name="outdoor_summary">Högsta ringsignal och vibrera</string>
+  <string name="audio_profile_reset">"Återställ"</string>
+  <string name="audio_profile_add">"Lägg till"</string>
+  <string name="audio_profile_enable">"Aktivera"</string>
+  <string name="audio_profile_rename">"Byt namn"</string>
+  <string name="audio_profile_delete">"Ta bort"</string>
+  <string name="audio_profile_message_reset">Alla ljudprofilsinställningar kommer att återställas till standard.</string>
+  <string name="audio_profile_message_rename">Ange ett nytt profilnamn</string>
+  <string name="audio_profile_message_name_error">Angivet namn finns redan</string>
+  <string name="audio_profile_message_name_length_wrong">Namnet måste innehålla minst ett tecken</string>
+  <string name="audio_profile_message_delete">Profilen <xliff:g id="profile">%s</xliff:g> kommer att raderas</string>
+  <string name="audio_profile_message_overflow">Du kan endast lägga till 6 anpassade profiler</string>
+  <string name="audio_profile_category_custom_title">Användardefinierade profiler</string>
+  <string name="audio_profile_category_predefine_title">Fördefinierade profiler</string>
+  <string name="audio_profile_error">"Fel"</string>
+  <string name="audio_profile_others">Meddelanden och övrigt</string>
+  <string name="general_settings_title">"Allmänt"</string>
+  <string name="silent_settings_title">"Tyst"</string>
+  <string name="meeting_settings_title">Möte</string>
+  <string name="outdoor_settings_title">Utomhus</string>
+  <string name="sound_category_feedback_title">"System"</string>
+  <string name="sound_category_calls_title">Inkommande samtal</string>
+  <string name="voice_call_title">Ringsignal för röstsamtal</string>
+  <string name="voice_call_summary">"Ställ in standardsignal för videosamtal"</string>
+  <string name="video_call_title">Ringsignal för videosamtal</string>
+  <string name="video_call_summary">Ställ in standardsignal för videosamtal</string>
+  <string name="sip_call_title">Ringsignal för SIP-samtal</string>
+  <string name="sip_call_summary">Ställ in standardsignal för SIP-samtal</string>
+  <string name="Phone_vibrate_summary">Enheterna vibrerar för inkommande samtal</string>
+  <string name="vibrate_title">"Vibration"</string>
+  <string name="audio_profile_settings_title">Ljudprofiler</string>
+  <string name="audio_profile_bes_loudness_summary">Volume booster för högtalare</string>
+  <string name="sound_enhancement_title">Ljudförbättring</string>
+  <string name="music_plus_summary">Ljudförbättring för hörlurar</string>
+  <string name="lossless_title">Förlustfritt BT-läge</string>
+  <string name="lossless_summary">BT-ljud i hög kvalitet</string>
+  <string name="lossless_connect_summary">Wi-Fi kommer att påverkas vid aktivering av Förlustfritt BT-läge. Är du säker på att du vill aktivera det?</string>
+  <string name="lossless_on">Förlustfritt BT-läge PÅ</string>
+  <string name="lossless_playing">Förlustfri musikuppspelning</string>
+  <string name="lossless_toastmessage">Systemljud spelas upp via telefonens högtalare</string>
+  <string name="lossless_volume_max">Håll systemets ljudvolym på max.</string>
+  <string name="lossless_cannot_found_device">Kan inte hitta förlustfri BT-enhet</string>
+  <string name="audio_profile_bes_surround_title">BesSurround</string>
+  <string name="audio_profile_bes_surround_summary">Surroundljud</string>
+  <string name="audio_profile_bes_surround_mode_movie">Filmläge</string>
+  <string name="audio_profile_bes_surround_mode_music">Musikläge</string>
+  <string name="sms_vibrate_summary">vibrera enheter vid sms</string>
+  <string name="zen_mode_option_title_novoice">"När aviseringar tas emot"</string>
+  <!-- AudioProfile Settings end -->
+ 
+  <!-- MTK NFC settings start -->
+   <string name="nfc_p2p_mode">P2P-läge</string>
+  <string name="nfc_p2p_mode_summary">Skicka eller ta emot programinnehåll</string>
+  <string name="nfc_tag_mode_category">Taggläge</string>
+  <string name="nfc_rw_tag_title">Taggläsning och taggskrivning</string>
+  <string name="nfc_rw_tag_summary">Läs från eller skriv till en tagg</string>
+  <string name="nfc_card_emulation_category_title">Kortemuleringsläge</string>
+  <string name="nfc_card_emulation">Kortemulering</string>
+  <string name="card_emulation_settings_category_title">tillgängliga säkerhetselement</string>
+  <string name="card_emulation_settings_no_element_found">Inga tillgängliga säkerhetselement.</string>
+  <string name="card_emulation_settings_off_text">Aktivera kortemulering för att visa tillgängliga säkerhetselement.</string>
+  <string name="card_emulation_turning_off_text">Inaktiverar kortemulering…</string>
+  <string name="card_emulation_turning_on_text">Aktiverar kortemulering…</string>
+  <string name="card_emulation_switch_error_title">"Fel"</string>
+  <string name="card_emulation_switch_error_message">Kunde inte växla till <xliff:g id="card_mode">%1$s</xliff:g>.</string>
+  <string name="card_emulation_sim_not_supported_message"><xliff:g id="sim_description">%1$s</xliff:g> stöder inte funktionen NFC-kortemulering.</string>
+  <string name="card_emulation_two_sim_not_supported_message">SIM1,SIM2 do not support NFC Card emulation function.</string>
+  <string name="nfc_hce_pay_summary">Använda enheten för att TRYCKA OCH BETALA via Googles plånbok, kreditkort osv.</string>
+  <!-- MTK NFC settings end -->
+ 
+  <!-- MTK Beam plus start -->
+   <string name="beam_mgmt_tab_download_title">SS-meddelande för vidarekoppling har tagits emot</string>
+  <string name="beam_mgmt_tab_upload_title">"Nu hämtas information om aktuell status för enheten, som sedan skickas i ett e-postmeddelade. Det tar en liten stund innan felrapporten är färdig och kan skickas, så vi ber dig ha tålamod."</string>
+  <string name="beam_share_mgmt_notification_ticker">Beam-delning historik</string>
+  <string name="beam_share_mgmt_notification_title">Beam-delning historik</string>
+  <string name="beam_share_mgmt_notification_message">"Välj för att visa Beam-delningens historik"</string>
+  <string name="beam_share_mgmt_tab_menu_clear">Rensa all historik</string>
+  <string name="beam_share_open_file_dialog_title">Kan inte öppna filen</string>
+  <string name="beam_share_open_file_unsupported_message">Filformatet stöds inte</string>
+  <string name="beam_share_open_file_not_found_message">"Filen hittades inte: <xliff:g id="file_name">%1$s</xliff:g></string>
+  <string name="beam_share_transfer_fail_dialog_title">"Beam misslyckades"</string>
+  <string name="beam_share_resend_dialog_message">"<xliff:g id="file_name">%1$s</xliff:g> skickades inte."</string>
+  <string name="beam_share_resend_dialog_ok_button">"Försök igen"</string>
+  <string name="beam_share_show_received_files_menu">"Visa mottagna filer"</string>
+  <string name="beam_share_history_title">Beam-delning historik</string>
+  <string name="beam_share_clear_confirm_dialog_title">Rensa alla</string>
+  <string name="beam_share_clear_confirm_dialog_message">Rensa all historik</string>
+  <string name="beam_share_receive_fail_dialog_message">"<xliff:g id="file_name">%1$s</xliff:g> skickades inte."</string>
+  <string name="beam_share_clear_item_dailog_title">"Delete"</string>
+  <string name="beam_share_clear_item_dailog_message">Objektet kommer att raderas</string>
+  <!-- MTK Beam plus end -->
+ 
+  <!-- MTK HDMI start -->
+   <string name="hdmi_settings">HDMI-inställningar</string>
+  <string name="hdmi_settings_summary">Klicka för att konfigurera HDMI</string>
+  <string name="hdmi_video_resolution">Videoupplösning</string>
+  <string name="hdmi_auto">"automatiskt"</string>
+  <string name="hdmi_scale_control">Inställningar för videoskalning</string>
+  <string name="hdmi_scale_no_scale">Ingen skalning</string>
+  <string name="hdmi_scale_scale_down">Skala ned <xliff:g id="scale_percent">%s</xliff:g>%%</string>
+  <string name="hdmi_audio_output">Ljuduppspelning</string>
+  <string name="hdmi_audio_output_stereo">Stereo</string>
+  <string name="hdmi_audio_output_multi_channel">Flerkanalsljud</string>
+  <!-- MTK HDMI end -->
+ 
+  <!-- MTK Data usage  start -->
+   <string name="datausage_overview_tab">Översikt</string>
+  <string name="datausage_overview_wifi_today">"Idag"</string>
+  <string name="datausage_overview_wifi_total">"Totalt"</string>
+  <string name="datausage_overview_mobile_title">"Mobil"</string>
+  <string name="datausage_overview_mobile_usage"><xliff:g id="actual">%s</xliff:g> av <xliff:g id="limit">%s</xliff:g></string>
+  <string name="datausage_overview_mobile_usage_warning">Out of limit <xliff:g xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
+  <string name="data_saving_title">Data sparning</string>
+  <string name="default_data_switch_err_msg1">Kan inte växla önskat SIM för mobildata under samtal.</string>
+  <!-- MTK Dta usage  end -->
+ 
+  <!-- MTK About phone start -->
+   <string name="status_imei_slot1">IMEI (kortplats1)</string>
+  <string name="status_imei_slot2">IMEI (kortplats2)</string>
+  <string name="custom_build_version">Anpassad build-version</string>
+  <string name="mota_system_update_summary">"Sök efter systemuppdateringar på servern"</string>
+  <string name="software_updates_more_title">Programuppdateringar</string>
+  <string name="software_updates_more_summary">Sök efter ny programversion</string>
+  <!-- MTK About phone end -->
+ 
+  <!-- APN Settings start  -->
+   <string name="mvno_type_none">"Inga"</string>
+  <string name="apn_predefine_change_dialog_notice">Är du säker på att du vill spara? Ändringar på standard-APN kan orsaka anslutningsproblem!"</string>
+  <string name="apn_port_warning">Portvärdet måste vara 1-65535!</string>
+  <!-- APN Settings end -->
+ 
+  <!--MTK DRM settings start -->
+   <string name="drm_settings_title">DRM-återställning</string>
+  <string name="drm_settings_summary">Raderar alla DRM-licenser</string>
+  <string name="drm_reset_dialog_msg">Denna åtgärd raderar alla licenser på denna enhet. Vill du fortsätta?</string>
+  <string name="drm_reset_toast_msg">Licenserna har raderats.</string>
+  <!--MTK DRM settings end -->
+ 
+  <!--MTK HotKnot start -->
+   <string name="hotknot_explained_description">Tillåt datautbyte när skärmen vidrör en annan enhet</string>
+  <string name="hotknot_charging_warning"><xliff:g id="title">%s</xliff:g>-funktionen kan påverkas vid USB-laddning.</string>
+  <!--MTK HotKnot end -->
+ 
+  <!-- ClearMotion start -->
+   <string name="clear_motion_summary">Förstärkare för videoflöde</string>
+  <string name="on_text">"på"</string>
+  <string name="off_text">"av"</string>
+  <!-- ClearMotion end -->
+ 
+  <!-- MiraVision start -->
+   <string name="mira_vision_summary">Ger bästa visuella effekter</string>
+  <!-- MiraVision end -->
+ 
+  <!--MTK DateTime start-->
+   <string name="gps_time_sync_attention_gps_on">Det tar högst 1 minut att erhålla en GPS-fixering. Dessutom kan GPS:n tappa tiden på grund av svag täckning.\n\nÄr du säker på att du vill använda GPS-försedd tid?</string>
+  <string name="gps_time_sync_attention_gps_off">För att använda GPS-försedd tid måste du först aktivera GPS:n. Det tar sedan högst 1 minut att erhålla en GPS-fixering. Dessutom kan GPS:n tappa tiden på grund av svag täckning. \n\nÄr du säker på att du vill aktivera GPS:n och vänta på GPS-försedd tid?</string>
+  <!--MTK DateTime end-->
+ 
+  <!-- MTK IPO settings start -->
+   <string name="ipo_title">Snabb uppstart</string>
+  <string name="ipo_summary_off">Aktivera snabb uppstart</string>
+  <!-- MTK IPO settings end -->
+ 
+  <!-- Storage & USB settings start -->
+   <string name="select_memory">Standard lässkiva</string>
+  <string name="usb_use_built_in_cd_rom">Inbyggd CD-ROM</string>
+  <string name="usb_use_mass_storage">USB-lagring</string>
+  <!-- Storage & USB settings end -->
+ 
+  <!-- MTK Storage Settings start -->
+   <string name="launch_error">"Kunde inte starta programmet!"</string>
+  <!-- MTK Storage Settings end -->
+ 
+  <!--MTK Security Settings start -->
+   <string name="security_not_set">Säkerhet har inte ställts in</string>
+  <!--MTK Security Settings end -->
+ 
+  <!-- Voice UI start -->
+   <string name="voice_ui_title">"Röststyrning"</string>
+  <!-- Voice UI end -->
+ 
+  <!-- Voice unlock start -->
+   <string name="unlock_set_unlock_mode_voice_weak">Röstupplåsning</string>
+   <string name="voice_unlock_backup_info_summary">När upplåsning via röst inte känner igen dig, hur vill du låsa upp enheten?</string>
+  <!-- Voice unlock end -->
+ 
+  <!-- MTK Bluetooth Settings start -->
+   <string name="bluetooth_advanced_settings">"Avancerade inställningar"</string>
+  <!-- MTK Bluetooth Settings end -->
+ 
+  <!-- MTK schedule power start -->
+   <string name="schedule_power_on_off_settings_title">Schemalagd på- och avslagning</string>
+  <!-- MTK schedule power end -->
+ 
+  <!-- MTK Hetcomm start -->
+   <string name="hetcom_setting_title">Turbohämtning</string>
+  <!-- MTK Hetcomm end -->
+ 
+  <!-- Background power saving start -->
+   <string name="bg_power_saving_title">Intelligent energispar i vänteläge</string>
+  <!-- Background power saving end -->
+
+    <string name="two_cdma_dialog_msg">Kortplats 1 och kortplats 2 kan inte stödja CDMA samtidigt.</string>
+    <string name="c2k_cdma_card_competion_message"><xliff:g id="current_sim">%1$s</xliff:g> fungerar inte temporärt, och om något standardsamtal, SMS, data på <xliff:g id="now_sim">%2$s</xliff:g> ändras i enlighet till <xliff:g id="target_sim">%3$s</xliff:g>.</string>
+    <string name="c2k_gsm_cdma_sim_message">Tryck på "JA" för att även växla 4G till <xliff:g id="sim1">%1$s</xliff:g>, <xliff:g id="sim2">%2$s</xliff:g> kommer inte att fungera och och eventuella standardsamtal och SMS på <xliff:g id="sim3">%3$s</xliff:g> ändras till <xliff:g id="sim4">%4$s</xliff:g>. Tryck enbart på "NEJ" för att ändra mobildata.</string>
+    <string name="default_calls_switch_err_msg1">Kan inte växla önskat SIM-kort för samtal under samtalet.</string>
+    <string name="default_sms_switch_err_msg1">Kan inte växla önskat SIM-kort för SMS under samtalet.</string>
+
+  <!-- Performance and power start -->
+  <string name="performance_and_power_title">Prestanda och energisparfunktioner</string>
+  <!-- Performance and power end -->
+
+    <string name="wakeup_interaction">Väck upp-interaktion</string>
+    <string name="voice_wakeup">Röstväckning</string>
+    <string name="voice_wakeup_confirm">Ställ in kommandot före användning.</string>
+    <string name="omh_warning_dialog_msg">Ditt R-UIM kanske inte kommer åt datatjänsten. Uppgradera din R-UIM till ett OMH R-UIM.</string>
+    <string name="omh_data_pick_dialog_msg">Ditt R-UIM kanske inte kommer åt datatjänsten. Uppgradera din R-UIM till ett OMH R-UIM. Vill du fortfarande ställa in detta R-UIM som standard datakort?</string>
+</resources>

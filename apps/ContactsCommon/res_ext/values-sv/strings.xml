@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Säg namnet för att hitta kontakter.\nTesta det!</string>
+    <string name="vcs_guide_title">Röstsökning efter kontakt</string>
+    <string name="vcs_guide_title1">Säg namnet för att hitta kontakterna.</string>
+    <string name="vcs_guide_title2">Tryck här för att aktivera funktionen.\nProva den!</string>
+    <string name="can_not_switch_account_during_call">Det går inte att växla föredraget SIM för samtal under samtalet.</string>
+    <string name="can_not_switch_account_temporarily">Det går inte att tillfälligt växla föredraget SIM för samtal.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> fungerar inte för tillfället, och om standardsamtal, SMS, data finns på <xliff:g id="name2" example="CT1">^2</xliff:g> ändras det följdaktligen till <xliff:g id="name3" example="CT2">^3</xliff:g>.</string>
+</resources>

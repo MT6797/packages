@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="m_stereo_refocus">对焦重调</string>
+    <string name="m_stereo_copy_paste">拷贝粘贴</string>
+    <string name="m_stereo_background">背景替换</string>
+    <string name="m_stereo_fancy_color">色彩特效</string>
+
+    <string name="m_refine_obj">精修主体</string>
+    <string name="m_fancy_color_effect_normal">正常</string>
+    <string name="m_fancy_color_effect_monochrome">单色</string>
+    <string name="m_fancy_color_effect_posterize">色调分离</string>
+    <string name="m_fancy_color_effect_radial_blur">径向模糊</string>
+    <string name="m_fancy_color_effect_stroke">描边</string>
+    <string name="m_fancy_color_effect_silhouette">剪影</string>
+    <string name="m_fancy_color_effect_whiteboard">白板</string>
+    <string name="m_fancy_color_effect_blackboard">黑板</string>
+    <string name="m_fancy_color_effect_negative">反色</string>
+
+    <!-- Segment Part begin -->
+    <string name="m_refine_cancel">取消</string>
+    <string name="m_refine_refine">精修</string>
+    <string name="m_refine_undo">撤销</string>
+    <string name="m_refine_done">完成</string>
+    <string name="m_refine_save_clipping">另存为模板</string>
+    <string name="m_refine_saved_clipping">已将图片保存到“模板”</string>
+    <string name="m_refine_select_obj_title">选择对象</string>
+    <string name="m_refine_refine_obj_title">精修对象</string>
+    <string name="m_save">保存</string>
+    <string name="m_stereo_refine_original_photo">精修原照片</string>
+    <string name="m_stereo_refine_foreground">精修前景</string>
+    <string name="m_pick_photo_to_copy">选择需要复制的照片</string>
+    <string name="m_clippings">剪辑夹</string>
+    <string name="m_original">原图</string>
+    <string name="m_gallery">图库</string>
+    <string name="m_no_stereo_image">没有立体图片。</string>
+    <string name="m_stereo_refine_zoom">缩放</string>
+    <string name="m_stereo_refine_add_detail">增加细节</string>
+    <string name="m_stereo_refine_subtract_detail">减少细节</string>
+    <string name="m_stereo_synth_move_front">移至前端</string>
+    <string name="m_stereo_synth_move_back">移至后端</string>
+    <!-- Segment Part end -->
+
+    <string name="m_general_err_tip">发生错误，退出应用。</string>
+</resources>
+

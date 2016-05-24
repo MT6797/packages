@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">အဆက္အသြယ္မ်ားကို ရွာရန္ အမည္ကို ေျပာပါ။\n၎ကို ႀကိဳးစားပါ။</string>
+    <string name="vcs_guide_title">အသံျဖင့္ အဆက္အသြယ္ရွာျခင္း</string>
+    
+    <string name="vcs_guide_title1">အဆက္အသြယ္မ်ား ရွာရန္ အမည္ေျပာပါ။</string>
+    <string name="vcs_guide_title2">လုပ္ေဆာင္မႈကို ဖြင့္ရန္ ဒီေနရာကို ပုတ္ပါ။\nႀကိဳးစားပါ။</string>
+    <string name="can_not_switch_account_during_call">ေခၚဆိုေနစဥ္အတြင္း ေခၚဆိုမႈမ်ားအတြက္ ပိုႏွစ္သက္ေသာ SIM သို႔ မေျပာင္းႏိုင္ပါ။</string>
+    <string name="can_not_switch_account_temporarily">ေခၚဆိုမႈမ်ားအတြက္ ႏွစ္သက္ေသာ SIM သို႔ေျပာင္းရန္ ယာယီမရႏိုင္ပါ။</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> သည္ ယာယီ လုပ္ေဆာင္လိမ့္မည္ မဟုတ္ပါ၊ <xliff:g id="name2" example="CT1">^2</xliff:g> ရွိ မည္သည့္ ပံုေသေခၚဆိုမႈ၊ SMS၊ ေဒတာကိုမဆို <xliff:g id="name3" example="CT2">^3</xliff:g> သို႔ သင့္ေလ်ာ္သလို ေျပာင္းလိမ့္မည္။</string>
+</resources>

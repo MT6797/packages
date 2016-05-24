@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:tools="http://schemas.android.com/tools">
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"असमर्थित सेवा।"</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"कलहरू स्विच गर्न असमर्थ ।"</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"कल अलग गर्न असमर्थ ।"</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"कल हस्तान्तरण गर्न असमर्थ"</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"सम्मेलन कलहरू गर्न असमर्थ।"</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"कल अस्वीकार गर्न असमर्थ।"</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"कल(हरू) छुटाउन असमर्थ।"</string>
+</resources>

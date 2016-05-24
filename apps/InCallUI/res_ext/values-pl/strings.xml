@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="dm_lock">Blokada DM</string>
+    <string name="dm_unlock">Odblokowanie DM</string>
+    <string name="start_record">Rozpocznij nagrywanie</string>
+    <string name="stop_record">Zatrzymaj nagrywanie</string>
+    <string name="str_db_playlist_name">"Moje nagrania"</string>
+    <string name="alert_device_error">Wystąpił błąd w urządzeniu audio</string>
+    <string name="ext_media_badremoval_notification_title">"Karta SD została nieoczekiwanie wyjęta"</string>
+    <string name="error_sdcard_access">Nie można uzyskać dostępu do karty SD</string>
+    <string name="confirm_device_info_full">Brak miejsca na karcie SD; nagranie zostało zapisane.</string>
+    <string name="confirm_save_info_saved">Nagranie zostało zapisane</string>
+    <string name="confirm_save_info_saved_to">Nagranie zostało zapisane w</string>
+    <string name="recording_saved_sd_full">Brak miejsca na karcie SD; nagranie zostało zapisane.</string>
+    <string name="sd_not_enough">Kończy się miejsce\nna karcie SD</string>
+    <string name="alert_dialog_dismiss">Odrzuć</string>
+    <string name="change_my_pic">Zmień</string>
+    <string name="onscreenHangupAll">Rozłącz wszystkie</string>
+    <string name="onscreenHangupHolding">Rozłącz zawieszone</string>
+    <string name="onscreenHangupActiveAndAnswerWaiting">Rozłącz aktywne, odbierz oczekujące</string>
+    <string name="menu_ect">Transfer</string>
+    <string name="respond_via_sms_confirmation_format">"Wiadomość wysłano na numer <xliff:g id="PHONE_NUMBER">%s</xliff:g>."</string>
+    <string name="volte_add_conference_member_title">Dodaj do konferencji</string>
+    <string name="add_member_msg">Numer typu lub nazwa</string>
+    <string name="card_title_incoming_conference">Zaproszenie do konferencji</string>
+    <string name="addConferenceMemeberText">Dodaj członka</string>
+    <string name="add_conference_member_limit">Można dodać tylko jeden numer w danym momencie.</string>
+    <string name="conference_member_join"><xliff:g id="member_name">%s</xliff:g> dołączył do konferencji.</string>
+    <string name="conference_member_leave"><xliff:g id="member_name">%s</xliff:g> opuścił konferencję.</string>
+    <string name="conference_member_adding">Dodawanie <xliff:g id="member_name">%s</xliff:g> ...</string>
+    <string name="conference_member_add_fail">Niepowodzenie dodania <xliff:g id="member_name">%s</xliff:g>.</string>
+    <string name="removeMember">"Usuń"</string>
+    <string name="memberStatus">"Informacje o telefonie"</string>
+    <string name="volte_call_waiting_indication_text">Dzwoni inna osoba, proszę czekać...</string>
+    <string name="multi_conference_member_adding">Trwa dodawanie uczestników...</string>
+    <string name="call_status_online">Online</string>
+    <string name="call_status_onhold">"Oczekujące"</string>
+    <string name="call_status_dialing">"Trwa wybieranie numeru"</string>
+    <string name="call_status_disconnecting">"Rozłączam"</string>
+    <string name="call_status_disconnected">"Odłączone"</string>
+
+    <string name="accept_incoming_and_disconnect_current">Zaakceptowanie tego połączenia spowoduje zakończenie bieżącego połączenia.</string>
+    <string name="add_voicemail_number">Dodaj numer poczty głosowej</string>
+</resources>

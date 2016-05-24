@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="str_db_playlist_name">Înregistrările mele</string>
+    <string name="alert_device_error">S-a produs o eroare pe dispozitivul audio</string>
+    <string name="ext_media_badremoval_notification_title">"Card SD eliminat în mod neaşteptat"</string>
+    <string name="error_sdcard_access">Imposibil de accesat cartela SD</string>
+    <string name="confirm_device_info_full">Spaţiu insuficient pe cartela SD, înregistrarea s-a salvat.</string>
+    <string name="confirm_save_info_saved">Înregistrarea s-a salvat</string>
+    <string name="confirm_save_info_saved_to">Înregistrarea a fost salvată în</string>
+    <string name="select_account_dialog_title">"Selectați un cont"</string>
+    <string name="reminder">Memento</string>
+    <string name="enable_ims_dialog_message">Caracteristica de apelare IMS este dezactivată. Doriţi să o activaţi acum?</string>
+    <string name="ip_dial_error_for_sip_call">Funcţia de apelare IP nu se aplică la apelul prin Internet.</string>
+    <string name="call_duration_title">"Apel încheiat"</string>
+    <string name="call_duration_format">"<xliff:g id="HOURS">%1$s</xliff:g> (de) ore <xliff:g id="MINUTES">%2$s</xliff:g> (de) minute <xliff:g id="SECONDS">%3$s</xliff:g> (de) secunde"</string>
+    <string name="volte_ss_not_avaliable_tips">Pentru a finaliza operaţia, trebuie să activaţi conexiunea de date.</string>
+    <string name="outgoing_call_failed">"Apelul nu a fost trimis."</string>
+    <string name="volte_ss_not_available_tips">Pentru a finaliza operaţia, trebuie să activaţi conexiunea de date a <xliff:g id="sub_name">%s</xliff:g>.</string>
+    <string name="call_waiting_indication">Cealaltă parte se află în apel. Aşteptaţi...</string>
+    <string name="outgoing_call_error_limit_exceeded">Apelul nu a fost efectuat, a fost atinsă limita.</string>
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Serviciu neacceptat."</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Apelurile nu pot fi comutate."</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Apelul nu poate fi separat."</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"Apelul nu poate fi transferat."</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"Teleconferinţa nu se poate efectua."</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Apelul nu poate fi respins."</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Apelul (apelurile) nu poate (pot) fi eliberat (eliberate)."</string>
+    <string name="mo_code_unconditional_cf_active">Redirecţionare apel\nnecondiţionat activată</string>
+    <string name="mo_code_some_cf_active">Redirecţionare apel\nla apel condiţionat</string>
+    <string name="mo_code_call_forwarded">Apel redirecţionat</string>
+    <string name="mo_code_call_is_waiting">Apel în aşteptare</string>
+    <string name="mo_code_cug_call">Grup utilizator închis</string>
+    <string name="mo_code_outgoing_calls_barred">Apel efectuat barat</string>
+    <string name="mo_code_incoming_calls_barred">Apelul a fost refuzat la destinaţie</string>
+    <string name="mo_code_clir_suppression_rejected">Verificare serviciu de trimitere ID apelant</string>
+    <string name="mo_code_call_deflected">apel Apel transferat</string>
+    <string name="mt_code_forwarded_call">Este un apel redirecţionat</string>
+    <string name="mt_code_cug_call">Grup utilizator închis</string>
+    <string name="mt_code_call_on_hold">Apel reţinut</string>
+    <string name="mt_code_call_retrieved">Apel regăsit</string>
+    <string name="mt_code_multi_party_call">Apel de conferinţă</string>
+    <string name="mt_code_on_hold_call_released">Apel reţinut eliberat</string>
+    <string name="mt_code_forward_check_received">Mesaj SS de verificare a redirecţionării primit</string>
+    <string name="mt_code_call_connecting_ect">Transferare apel</string>
+    <string name="mt_code_call_connected_ect">Transfer apel activ</string>
+    <string name="mt_code_deflected_call">Este un apel deviat</string>
+    <string name="mt_code_additional_call_forwarded">Redirecţionare apel primit suplimentar</string>
+    <string name="mt_code_forwarded_cf">Apel redirecţionat</string>
+    <string name="mt_code_forwarded_cf_uncond">Redirecţionare apel la apel necondiţionat</string>
+    <string name="mt_code_forwarded_cf_cond">Redirecţionare apel la apel condiţionat</string>
+    <string name="mt_code_forwarded_cf_busy">Redirecţionare apel ocupat</string>
+    <string name="mt_code_forwarded_cf_no_reply">Redirecţionare apel când nu există răspuns</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Redirecţionare apel când este inaccesibil</string>
+</resources>

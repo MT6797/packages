@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Background resource for "compound buttons" in the in-call UI.
+     These buttons have two states (selected and unselected). -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--Use a switch drawable for clicking the voice record toggle button.-->
+    <item android:state_selected="true">
+        <!-- Use an explicit <bitmap> to avoid scaling the icon up to the full size of the button. -->
+        <bitmap android:src="@drawable/mtk_ic_toolbar_stop_voice_record"
+                android:gravity="center"
+                android:tint="@color/selectable_icon_tint"/>
+    </item>
+
+    <item>
+        <!-- Use an explicit <bitmap> to avoid scaling the icon up to the full size of the button. -->
+        <bitmap android:src="@drawable/mtk_ic_toolbar_start_voice_record"
+                android:gravity="center"
+                android:tint="@color/selectable_icon_tint"/>
+    </item>
+</selector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Bulunacak kişilerin ismini söyleyin.\nYeniden Dene!</string>
+    <string name="vcs_guide_title">Sesli Kişi Arama</string>
+    <string name="vcs_guide_title1">Kişileri bulmak için adı söyleyin.</string>
+    <string name="vcs_guide_title2">İşlevi etkinleştirmek için buraya dokunun.\nDeneyin!</string>
+    <string name="can_not_switch_account_during_call">Arama sırasında aramalar için tercih edilen SIM değiştirilemez.</string>
+    <string name="can_not_switch_account_temporarily">Aramalar için tercih edilen SIM geçici olarak değiştirilemiyor.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> geçici olarak çalışmayacak ve bundan dolayı <xliff:g id="name2" example="CT1">^2</xliff:g> üzerindeki herhangi bir varsayılan Arama, SMS, Veri <xliff:g id="name3" example="CT2">^3</xliff:g> olarak değiştirilecektir.</string>
+</resources>

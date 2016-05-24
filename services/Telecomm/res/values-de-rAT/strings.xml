@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="telecommAppLabel" product="default">Telefon</string>
+    <string name="unknown">"Unbekannt"</string>
+    <string name="notification_missedCallTitle">Verpasster Anruf</string>
+    <string name="notification_missedCallsTitle">Verpasste Anrufe</string>
+    <string name="notification_missedCallsMsg"><xliff:g id="num_missed_calls">%s</xliff:g> verpasste Anrufe</string>
+    <string name="notification_missedCallTicker">Verpasster Anruf von <xliff:g id="missed_call_from">%s</xliff:g></string>
+    <string name="notification_missedCall_call_back">Rückruf</string>
+    <string name="notification_missedCall_message">NACHRICHT</string>
+    <string name="accessibility_call_muted">Anruf stumm geschaltet</string>
+    <string name="accessibility_speakerphone_enabled">Lautsprecher aktiviert</string>
+    <string name="respond_via_sms_canned_response_1">Kann nicht sprechen. Was ist?</string>
+    <string name="respond_via_sms_canned_response_2">Rufe gleich zurück.</string>
+    <string name="respond_via_sms_canned_response_3">Rufe Dich später an.</string>
+    <string name="respond_via_sms_canned_response_4">Kann nicht sprechen. Ruf später an?</string>
+    <string name="respond_via_sms_setting_title">Schnellantworten</string>
+    <string name="respond_via_sms_setting_title_2">Schnellantworten editieren</string>
+    <string name="respond_via_sms_setting_summary"></string>
+    <string name="respond_via_sms_edittext_dialog_title">Schnellantwort</string>
+    <string name="respond_via_sms_menu_reset_default_activity">Standardeinstellungen wiederherstellen</string>
+    <string name="respond_via_sms_confirmation_format">Nachricht gesendet an <xliff:g id="phone_number">%s</xliff:g>.</string>
+    <string name="phone_account_preferences_title">Einstellung Telefonkonto</string>
+    <string name="default_outgoing_account_title">Vorgabekonto ausgehend</string>
+    <string name="sim_call_manager_account">Wi-Fi-Anrufs-Konto</string>
+    <string name="account_ask_every_time">Jedesmal fragen</string>
+    <string name="do_not_use_sim_call_manager">Wi-Fi-Anrufe nicht verwenden</string>
+    <string name="outgoing_call_not_allowed">Dieser Benutzer darf nur Notrufe tätigen.</string>
+    <string name="outgoing_call_error_no_phone_number_supplied">Anruf nicht gesendet, keine gültige Nummer eingegeben.</string>
+    <string name="duplicate_video_call_not_allowed">Kann im Moment nicht hinzugefügt werden.</string>
+    <string name="no_vm_number">Fehlende Voicemail-Nummer</string>
+    <string name="no_vm_number_msg">Auf der SIM-Karte ist keine Voicemail-Nummer gespeichert.</string>
+    <string name="add_vm_number_str">Nummer hinzufügen</string>
+    <string name="handle_restricted">Beschränkt</string>
+</resources>

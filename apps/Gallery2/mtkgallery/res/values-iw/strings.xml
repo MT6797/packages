@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="m_share_format_choose_title">"בחר תבנית"</string>
+    <string name="m_share_format_image">"תמונה"</string>
+    <string name="m_share_format_video">וידאו</string>
+    <string name="m_generating_tip">"יוצר סרטון..."</string>
+    <string name="m_generate_video_fail">"יצירת הסרטון נכשלה"</string>
+    <string name="m_generating_gif_tip">"יוצר קובץ GIF..."</string>
+    <string name="m_generate_gif_fail">"יצירת קובץ GIF נכשלה"</string>
+    <string name="m_share_limit">לא ניתן לשתף יותר מ-300 קבצים.</string>
+    <string name="m_demo_off">הדגמה כבויה</string>
+    <string name="m_vertical_demo">הדגמה אנכית</string>
+    <string name="m_horizontal_demo">הדגמה אופקית</string>
+    <string name="m_storage_not_enough">"אין מספיק מקום בזיכרון."</string>
+    <string name="m_saving_image">"שומר את התמונה ב-<xliff:g id="ALBUM_NAME">%1$s</xliff:g>…"</string>
+    <string name="m_drm_protected_warning1">"תוכן זה מוגן מפני העתקה,"</string>
+    <string name="m_drm_protected_warning2">"כדי להציגו בטלפון,"</string>
+    <string name="m_wfd_protected_warning">"נתק את הצג האלחוטי"</string>
+    <string name="m_hdmi_protected_warning">"נתק מ-HDMI."</string>
+    <string name="m_please_wait">"המתן"</string>
+    <string name="m_insufficient_space_one">השיתוף נכשל, אין מספיק מקום.</string>
+    <string name="m_insufficient_space_some">השיתוף של מספר סרטונים בהילוך אטי נכשל, אין מספיק מקום.</string>
+    <string name="m_insufficient_space_all">השיתוף של כל הסרטונים בהילוך אטי נכשל, אין מספיק מקום.</string>
+    <string name="not_avaliable_16x_multi_share">לא זמין לשיתוף של סרטון בהילוך אטי 1/16x. הסרטון שותף בתור 1/4x</string>
+    <string name="not_avaliable_16x_single_share">לא זמין לשיתוף של סרטון בהילוך אטי 1/16x. שתף את הסרטון במהירויות אחרות</string>
+    <string name="m_raw_reminder">"ניתן להציג את קובץ ה-RAW של תמונה זו על ידי התחברות למחשב."</string>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="str_db_playlist_name">Rekaman saya</string>
+    <string name="alert_device_error">Terjadi kesalahan pada perangkat audio</string>
+    <string name="ext_media_badremoval_notification_title">"Kartu SD tiba-tiba dicabut"</string>
+    <string name="error_sdcard_access">"Tidak dapat mengakses kartu SD"</string>
+    <string name="confirm_device_info_full">Kartu SD kehabisan ruang, rekaman telah disimpan.</string>
+    <string name="confirm_save_info_saved">Rekaman telah disimpan</string>
+    <string name="confirm_save_info_saved_to">Rekaman telah disimpan ke</string>
+    <string name="select_account_dialog_title">"Pilih Akun"</string>
+    <string name="reminder">Pengingat</string>
+    <string name="enable_ims_dialog_message">Panggilan IMS nonaktif, apakah Anda ingin mengaktifkannya?</string>
+    <string name="ip_dial_error_for_sip_call">Fungsi panggilan IP tidak tersedia untuk Panggilan disengaja.</string>
+    <string name="call_duration_title">"Panggilan diakhiri"</string>
+    <string name="call_duration_format"><xliff:g id="HOURS">%1$s</xliff:g> hours <xliff:g id="MINUTES">%2$s</xliff:g> menit <xliff:g id="SECONDS">%3$s</xliff:g> detik"</string>
+    <string name="volte_ss_not_avaliable_tips">Untuk menyelesaikan operasi, Anda harus mengaktifkan sambungan data.</string>
+    <string name="outgoing_call_failed">"Panggilan tidak terkirim."</string>
+    <string name="volte_ss_not_available_tips">Untuk menyelesaikan operasi, Anda harus membuka sambungan data <xliff:g id="sub_name">%s</xliff:g>.</string>
+    <string name="call_waiting_indication">Bagian lain sedang dalam panggilan, tunggu...</string>
+    <string name="outgoing_call_error_limit_exceeded">Panggilan tidak terkirim, batas terlampaui.</string>
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Layanan tidak didukung."</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Tidak dapat mengalihkan panggilan."</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Tidak dapat memisahkan panggilan."</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"Tidak dapat mentransfer panggilan."</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"Tidak dapat melakukan telewicara."</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Tidak dapat menolak panggilan."</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Tidak dapat melepaskan panggilan."</string>
+    <string name="mo_code_unconditional_cf_active">Penerusan panggilan\ntidak bersyarat diaktifkan</string>
+    <string name="mo_code_some_cf_active">Panggilan Diteruskan Bersyarat</string>
+    <string name="mo_code_call_forwarded">Panggilan diteruskan</string>
+    <string name="mo_code_call_is_waiting">Panggilan tunggu</string>
+    <string name="mo_code_cug_call">Grup Pengguna Tertutup</string>
+    <string name="mo_code_outgoing_calls_barred">Panggilan keluar dibatasi</string>
+    <string name="mo_code_incoming_calls_barred">Panggilan masuk dibatasi di pihak lawan bicara</string>
+    <string name="mo_code_clir_suppression_rejected">Periksa layanan pengiriman ID pemanggil</string>
+    <string name="mo_code_call_deflected">Panggilan diteruskan</string>
+    <string name="mt_code_forwarded_call">Ini adalah panggilan yang dialihkan</string>
+    <string name="mt_code_cug_call">Grup Pengguna Tertutup</string>
+    <string name="mt_code_call_on_hold">Panggilan ditahan</string>
+    <string name="mt_code_call_retrieved">Panggilan diulang</string>
+    <string name="mt_code_multi_party_call">Panggilan konferensi</string>
+    <string name="mt_code_on_hold_call_released">Panggilan tahan dilepas</string>
+    <string name="mt_code_forward_check_received">Teruskan pesan pemeriksaan SS yang diterima</string>
+    <string name="mt_code_call_connecting_ect">Panggilan mentransfer</string>
+    <string name="mt_code_call_connected_ect">Transfer panggilan aktif</string>
+    <string name="mt_code_deflected_call">Ini adalah panggilan yang dialihkan</string>
+    <string name="mt_code_additional_call_forwarded">Panggilan masuk tambahan diteruskan</string>
+    <string name="mt_code_forwarded_cf">Panggilan diteruskan</string>
+    <string name="mt_code_forwarded_cf_uncond">Panggilan diteruskan tidak bersyarat</string>
+    <string name="mt_code_forwarded_cf_cond">Panggilan Diteruskan Bersyarat</string>
+    <string name="mt_code_forwarded_cf_busy">Panggilan sibuk diteruskan</string>
+    <string name="mt_code_forwarded_cf_no_reply">Panggilan diteruskan bila tidak dijawab</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Panggilan diteruskan bila di luar jangkauan</string>
+</resources>

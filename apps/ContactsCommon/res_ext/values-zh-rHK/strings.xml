@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">說出名字來搜尋聯絡人。 \n試試看吧！</string>
+    <string name="vcs_guide_title">語音聯絡人搜尋</string>
+    <string name="vcs_guide_title1">說出名字來搜尋聯絡人。 \n試試看吧！</string>
+    <string name="vcs_guide_title2">點擊這裡以啟用此功能。\n試試看吧！</string>
+    <string name="can_not_switch_account_during_call">不能於通話期間切換建議通話SIM卡。</string>
+    <string name="can_not_switch_account_temporarily">暫時不能切換建議通話SIM卡。</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> 將暫時不能使用，如於<xliff:g id="name2" example="CT1">^2</xliff:g>上有任何預設通話，短訊，數據將切换为 <xliff:g id="name3" example="CT2">^3</xliff:g>。</string>
+</resources>

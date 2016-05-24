@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP skambutis <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"Pasirinkite paskyrą"</string>
+    <string name="all_accounts">"Visos paskyros"</string>
+    <string name="imei_invalid">Klaidinga</string>
+    <string name="can_not_switch_account_during_call">Negalima perjungti pageidaujamos SIM skambučiams skambučio metu.</string>
+    <string name="can_not_switch_account_temporarily">Laikinai negalima perjungti pageidaujamos SIM skambučiams.</string>
+</resources>

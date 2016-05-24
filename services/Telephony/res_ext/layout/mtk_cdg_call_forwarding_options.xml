@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Title use Google default one, this is nearly
+     the same as mtk_cdma_callforward_options -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/labelCF">
+    <!-- Always -->
+    <Preference
+        android:key="button_cfu_key"
+        android:title="@string/cdma_labelCFU"
+        android:persistent="false"/>
+    <!-- Busy -->
+    <Preference
+        android:key="button_cfb_key"
+        android:title="@string/cdma_labelCFB"
+        android:persistent="false"/>
+    <!-- unanswered -->
+    <Preference
+        android:key="button_cfnry_key"
+        android:title="@string/cdma_labelCFNRy"
+        android:persistent="false"/>
+    <!-- Default -->
+    <Preference
+        android:key="button_cfnrc_key"
+        android:title="@string/cdma_labelCFD"
+        android:persistent="false"/>
+</PreferenceScreen>
+

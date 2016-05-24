@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP zvans <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"Konta atlase"</string>
+    <string name="all_accounts">"Visi konti"</string>
+    <string name="imei_invalid">Nederīgs</string>
+    <string name="can_not_switch_account_during_call">Nevar pārslēgt vēlamo SIM zvaniem, kad notiek zvans.</string>
+    <string name="can_not_switch_account_temporarily">Nevar uz laiku pārslēgt vēlamo SIM karti zvaniem.</string>
+</resources>

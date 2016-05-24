@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="dm_lock">DM ေသာ့ခတ္ျပီး</string>
+    <string name="dm_unlock">DM ေသာ့ဖြင့္ျခင္း</string>
+    <string name="start_record">အသံဖမ္းယူျခင္းစတင္ပါ</string>
+    <string name="stop_record">အသံဖမ္းယူျခင္းရပ္ပါ</string>
+    <string name="str_db_playlist_name">မိမိအသံဖမ္းယူျခင္းမ်ား</string>
+    <string name="alert_device_error">အသံဆိုင္ရာပစၥည္းတြင္အမွားျဖစ္ေပၚသြားသည္</string>
+    <string name="ext_media_badremoval_notification_title">SD ကတ္အား မေမွ်ာ္လင့္ဘဲ ဖယ္ရွားျပီးျဖစ္သည္</string>
+    <string name="error_sdcard_access">SD ကတ္သို႔ ဝင္ေရာက္၍ မရႏိုင္ပါ</string>
+    <string name="confirm_device_info_full">SD ကတ္ေနရာလြတ္ မရွိပါ၊ အသံဖမ္းယူျခင္းအား သိမ္းဆည္းျပီး ျဖစ္သည္။</string>
+    <string name="confirm_save_info_saved">အသံဖမ္းယူျခင္းအား သိမ္းဆည္းျပီးျဖစ္သည္</string>
+    <string name="confirm_save_info_saved_to">သို႔မွတ္တမ္းတင္ျခင္းကို သိမ္းျပီးျပီ</string>
+    <string name="recording_saved_sd_full">SD ကတ္ေနရာလြတ္ မရွိပါ၊ အသံဖမ္းယူျခင္းအား သိမ္းဆည္းျပီး ျဖစ္သည္။</string>
+    <string name="sd_not_enough">SD ကဒ္မွာ \nေနရာကုန္ခါနီးျပီ</string>
+    <string name="alert_dialog_dismiss">"ပယ္ခ်ပါ"</string>
+    <string name="change_my_pic">ေျပာင္းပါ</string>
+    <string name="onscreenHangupAll">ဖုန္းအားလံုးကို ခ်ပါ</string>
+    <string name="onscreenHangupHolding">ဖုန္းကိုင္ထားျခင္းကို ခ်ပါ</string>
+    <string name="onscreenHangupActiveAndAnswerWaiting">ဖုန္းခ်ျခင္း လုပ္ေဆာင္ႏိုင္သည္၊ အေျဖေစာင့္ဆိုင္းေနဆဲ</string>
+    <string name="menu_ect">ေပးပို႔ပါ</string>
+    <string name="respond_via_sms_confirmation_format">  <xliff:g id="phone_number">%s</xliff:g> သို႔ မက္ေဆ့ခ်္ေပးပို႔ျပီး။ </string>
+    <string name="volte_add_conference_member_title">ကြန္ဖရင့္စ္သို႔ ထပ္ထည့္ပါ</string>
+    <string name="add_member_msg">နံပါတ္ သို႔မဟုတ္ အမည္ကို ႐ိုက္ထည့္ပါ။</string>
+    <string name="card_title_incoming_conference">ကြန္ဖရင့္စ္ ဖိတ္ၾကားျခင္း</string>
+    <string name="addConferenceMemeberText">အဖြဲ႕ဝင္ကို ထပ္ထည့္ပါ</string>
+    <string name="add_conference_member_limit">တစ္ႀကိမ္တြင္ နံပါတ္တစ္ခုသာ ထည့္ႏိုင္သည္။</string>
+    <string name="conference_member_join"><xliff:g id="member_name">%s</xliff:g> သည္ ကြန္ဖရင့္စ္ကို ပူးေပါင္းခဲ့သည္။</string>
+    <string name="conference_member_leave"><xliff:g id="member_name">%s</xliff:g> သည္ ကြန္ဖရင့္စ္မွ ထြက္သြားၿပီ။</string>
+    <string name="conference_member_adding"><xliff:g id="member_name">%s</xliff:g> ကို ထပ္ထည့္ေနသည္…</string>
+    <string name="conference_member_add_fail"><xliff:g id="member_name">%s</xliff:g> ကို ထပ္ထည့္ရန္ မေအာင္ျမင္ပါ။</string>
+    <string name="removeMember">ဖယ္ရွားပါ</string>
+    <string name="memberStatus">အေျခအေန</string>
+    <string name="volte_call_waiting_indication_text">အျခားဘက္တြင္ ေခၚဆိုမႈျပဳလုပ္ေနသည္၊ ေက်းဇူးျပဳ၍ ေစာင့္ပါ…</string>
+    <string name="multi_conference_member_adding">အဖြဲ႕ဝင္(မ်ား) ထပ္ထည့္ေနသည္...</string>
+   <string name="call_status_online">အြန္လိုင္း</string>
+    <string name="call_status_onhold">ကိုင္ထားဆဲ</string>
+    <string name="call_status_dialing">ဖုန္းေခၚဆိုေနဆဲ</string>
+    <string name="call_status_disconnecting">ခ်ိတ္ဆက္ျခင္းျဖဳတ္ေနသည္</string>
+    <string name="call_status_disconnected">ခ်ိတ္ဆက္မႈျပတ္ေတာက္ခဲ့သည္</string>
+
+    <string name="accept_incoming_and_disconnect_current">ဤေခၚဆိုမႈကို လက္ခံပါက လက္ရွိေခၚဆိုမႈ ျပီးဆံုးသြားမည္။</string>
+</resources>

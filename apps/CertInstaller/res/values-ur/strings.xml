@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+--><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="app_name">سند نصب کنندہ</string>  
+    <string name="pick_file_title">ایک سند چنیں</string>  
+    <string name="pkcs12_password_dialog_title">سند حاصل کریں</string>  
+    <string name="extracting_pkcs12">حاصل کر رہا ہے\u2026</string>  
+    <string name="pkcs12_file_password_dialog_title">%s سے حاصل کریں</string>  
+    <string name="name_credential_dialog_title">سند کو نام دیں</string>  
+    <string name="credential_name">سند کا نام:</string>  
+    <string name="credential_password">اسناد حاصل کرنے کیلئے پاس ورڈ ٹائپ کریں۔</string>  
+    <string name="credential_info">"پیکیج میں مندرجہ ذیل شامل ہیں:"</string>  
+    <string name="p12_description">PKCS12 کے اسٹور میں اسناد۔</string>  
+    <string name="one_userkey">ایک صارف والی کلید</string>  
+    <string name="one_usercrt">ایک صارف والی سند</string>  
+    <string name="one_cacrt">ایک CA سند</string>  
+    <string name="n_cacrts">%d CA اسناد</string>  
+    <string name="password_error">صحیح پاس ورڈ ٹائپ کریں۔</string>  
+    <string name="password_empty_error">پاس ورڈ ٹائپ کریں۔</string>  
+    <string name="name_empty_error">کوئی نام ٹائپ کریں۔</string>  
+    <string name="name_char_error">صرف حروف اور اعداد پر مشتمل نام ٹائپ کریں۔</string>  
+    <string name="storage_error">سند محفوظ نہیں کرسکا۔ دوبارہ کوشش کرنے کیلئے اوکے کو چھوئیں۔</string>  
+    <string name="unable_to_save_cert">سند محفوظ نہیں ہوسکا۔ اسناد کے اسٹوریج کو فعال نہیں کیا گیا یا مناسب طریقے سے شروع نہیں کیا گیا ہے۔</string>  
+    <string name="cert_not_saved">سند نصب نہيں ہوئی ہے۔</string>  
+    <string name="no_cert_to_saved">نصب کرنے کیلئے کوئی سند نہیں ہے۔</string>  
+    <string name="invalid_cert">سند غلط ہے۔</string>  
+    <string name="cert_is_added">  <xliff:g id="credential">%s</xliff:g> نصب ہوگیا ہے۔ </string>  
+    <string name="cert_too_large_error">نصب نہیں کرسکا کیونکہ سند کا سائز کافی بڑا ہے۔</string>  
+    <string name="cert_missing_error">نصب نہیں کرسکا کیونکہ سند کی فائل کی نشاندہی نہیں ہوسکی۔</string>  
+    <string name="cert_read_error">نصب نہیں کرسکا کیونکہ سند کی فائل پڑھی نہیں جاسکی۔</string>  
+    <string name="no_cert_file_found" product="nosdcard">USB اسٹوریج میں سند والی کوئی فائل نہيں ملی۔</string>  
+    <string name="no_cert_file_found" product="default">فون اسٹوریج میں کوئی سرٹیفکٹ فائل نہیں ملی۔</string>  
+    <string name="sdcard_not_present" product="nosdcard">USB اسٹوریج دستیاب نہیں ہے۔</string>  
+    <string name="sdcard_not_present" product="default">SD کارڈ موجود نہیں ہے۔</string> 
+<string name="only_primary_user_allowed">صرف اس آلہ کا مالک اسناد انسٹال کر سکتے ہیں.</string><string name="credential_usage_label">اسناد کا استعمال:</string>
+    <string-array name="credential_usage">
+     <item>VPN اور ایپلیکیشنز</item>
+     <item>Wi-Fi</item>
+     </string-array>
+    <string name="wifi_detail_label">تفصیلات</string>
+    <string name="wifi_install_label">نصب کرنا</string>
+    <string name="wifi_installing_label">"انسٹال کیا جا رہا ہے"</string>
+    <string name="wifi_cancel_label">منسوخکریں</string>
+    <string name="wifi_dismiss_label">برخاستکریں</string>
+    <string name="wifi_no_config">﻿کوئینہيں</string>
+    <string name="done_label">ہوگيا</string>
+    <string name="wifi_title">Wi-Fi پروفائل</string>
+    <string name="wifi_detail_title">%s کی تفصیلات</string>
+    <string name="wifi_config_text">نام: %1$s\nFQDN: %2$s\nرومنگ کنسورشیمس: %3$s\nریام: %4$s\nتصدیق کا طریقہ: EAP-%5$s\n</string>
+    <string name="wifi_ttls_config_text">صارف نام %s\n</string>
+    <string name="wifi_tls_config_text">مؤکل کا سرٹیفکٹ:\n%1$s\nکلید: %2$s\n</string>
+    <string name="wifi_sim_config_text">SIM: %s\n</string>
+    <string name="wifi_trust_config_text">اعتماد کا سرٹیفکٹ:\n%s\n</string>
+    <string name="install_done_title">نصب شدہ اسناد</string>
+    <string name="install_done"><xliff:g id="name">%1$s</xliff:g> اسناد کو Wi-Fi کے محفوظ کردہ نیٹ ورکس میں شامل کردیا گیا ہے۔</string>
+    <string name="wifi_installer_detail">بذریعہ <xliff:g id="name">%1$s</xliff:g> دستیاب نیٹ ورکس سے جڑنے کے لیے Wi-Fi اسناد نصب کریں۔</string>
+    <string name="wifi_installer_download_error">ڈاؤن لوڈ کردہ فائل میں مسائل ہیں اور اسے نصب نہیں کیا جاسکتا۔ یہ یقینی بنائیں کہ آپ نے درست ذریعہ سے فائل ڈاؤن لوڈ کیا ہے۔</string>
+    <string name="wifi_installer_fail">Wi-Fi اسناد نصب نہیں کرسکتا۔ فائل دوبارہ ڈاؤن لوڈ کرنے کی کوشش کریں۔</string>
+    <string name="wifi_installer_fail_no_wifi_title">تنصیب منسوخ ہوگئی</string>
+    <string name="wifi_installer_fail_title">نصب نہیں کرسکتا</string>
+    <string name="wifi_installer_fail_no_wifi">Wi-Fi آن کریں اور دوبارہ کوشش کریں۔</string>
+</resources>

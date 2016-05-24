@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:tools="http://schemas.android.com/tools">
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Дэмжигдээгүй үйлчилгээ."</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Дуудлагыг шилжүүлэх боломжгүй."</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Дуудлагыг тусгаарлах боломжгүй."</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"Дуудлагыг дамжуулах боломжгүй."</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"Утсан хурал хийх боломжгүй."</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Дуудлагыг таслах боломжгүй."</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Дуудлагыг нээх боломжгүй."</string>
+</resources>

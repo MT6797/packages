@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Sprechen Sie zum Finden von Kontakten einfach den gewünschten Namen.\nProbieren Sie es aus!</string>
+    <string name="vcs_guide_title">Sprachkontaktsuche</string>
+    <string name="vcs_guide_title1">Namen zur Suche nach Kontakten aussprechen.</string>
+    <string name="vcs_guide_title2">Zum Aktivieren der Funktion hier tippen.\nJetzt ausprobieren!</string>
+    <string name="can_not_switch_account_during_call">Wechsel zur bevorzugten SIM für Anrufe während des Anrufs nicht möglich.</string>
+    <string name="can_not_switch_account_temporarily">Bevorzugte SIM für Anrufe kann vorübergehend nicht gewechselt werden.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> funktioniert vorübergehend nicht; bei jeglichen standardmäßigen Anrufen, SMS oder Daten an <xliff:g id="name2" example="CT1">^2</xliff:g> erfolgt entsprechender Wechsel in <xliff:g id="name3" example="CT2">^3</xliff:g>.</string>
+</resources>

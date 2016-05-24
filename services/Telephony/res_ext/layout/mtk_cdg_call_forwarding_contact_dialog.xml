@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout used for selecting contact form contacts app. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/edit_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dip"
+        android:layout_marginBottom="18dip"
+        android:layout_marginStart="20dip"
+        android:orientation="horizontal">
+
+        <EditText android:id="@+id/edt_contact"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:phoneNumber="true" />
+        <ImageButton android:id="@+id/select_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dip"
+            android:src="@drawable/ic_add_contact_holo_dark"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="40dip"
+        android:layout_marginEnd="40dip">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:background="@android:color/transparent"
+            android:text="@android:string/cancel"
+            android:textColor="@color/dialer_theme_color"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/button_ok"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:text="@android:string/ok"
+            android:gravity="right"
+            android:textColor="@color/dialer_theme_color"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

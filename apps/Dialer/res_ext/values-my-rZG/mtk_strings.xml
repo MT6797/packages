@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP ေခၚဆိုမႈ<xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">အေကာင့္ကို ေရြးခ်ယ္ပါ</string>
+    <string name="all_accounts">အေကာင့္မ်ား အားလံုး</string>
+    <string name="imei_invalid">မမွန္ကန္ပါ</string>
+    <string name="conf_call_member_list">အဖြဲ႕ဝင္စာရင္း</string>
+    <string name="conf_call_participant_answered">ေျဖၿပီးၿပီ</string>
+    <string name="conf_call_participant_missed">လြတ္သြားေသာ</string>
+    <string name="can_not_switch_account_during_call">ေခၚဆိုေနစဥ္အတြင္း ေခၚဆိုမႈမ်ားအတြက္ ပိုႏွစ္သက္ေသာ SIM သို႔ မေျပာင္းႏိုင္ပါ။</string>
+    <string name="can_not_switch_account_temporarily">ေခၚဆိုမႈမ်ားအတြက္ ႏွစ္သက္ေသာ SIM သို႔ေျပာင္းရန္ ယာယီမရႏိုင္ပါ။</string>
+</resources>

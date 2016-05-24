@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Ak chcete nájsť kontakt, vyslovte meno\nSkúste to!</string>
+    <string name="vcs_guide_title">Hlasové vyhľadávanie kontaktu</string>
+    <string name="vcs_guide_title1">Ak chcete nájsť kontakty, vyslovte meno.</string>
+    <string name="vcs_guide_title2">Ak chcete zapnúť funkciu, ťuknite sem.\nSkúste to!</string>
+    <string name="can_not_switch_account_during_call">Preferovanú kartu SIM nemožno prepnúť na volania počas hovoru.</string>
+    <string name="can_not_switch_account_temporarily">Preferovanú kartu SIM nemožno dočasne prepnúť na volania.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> nebude dočasne fungovať, a ak dôjde k omeškaniu akéhokoľvek hovoru, karta SMS a údaje v <xliff:g id="name2" example="CT1">^2</xliff:g> budú podľa toho zmenené na <xliff:g id="name3" example="CT2">^3</xliff:g>.</string>
+</resources>

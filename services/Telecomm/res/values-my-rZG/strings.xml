@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="telecommAppLabel" product="default">ဖုန္း</string>
+    <string name="unknown">မသိေသာ</string>
+    <string name="notification_missedCallTitle">လြတ္သြားေသာ ေခၚဆိုမႈ</string>
+    <string name="notification_missedCallsTitle">မေျဖဆိုထားေသာ ဖုန္းမ်ား</string>
+    <string name="notification_missedCallsMsg">ေျဖဆိုထားေသာဖုန္း  <xliff:g id="num_missed_calls">%s</xliff:g> ခု </string>
+    <string name="notification_missedCallTicker">  <xliff:g id="missed_call_from">%s</xliff:g> ထံမွ မေျဖဆိုထားေသာဖုန္း </string>
+    <string name="notification_missedCall_call_back">ျပန္လည္ေခၚဆိုပါ</string>
+    <string name="notification_missedCall_message">မက္ေဆ့ခ်္</string>
+    <string name="accessibility_call_muted">ဖုန္းေခၚဆိုမႈအား အသံေဖ်ာက္ထားျပီး။</string>
+    <string name="accessibility_speakerphone_enabled">စပီကာဖုန္း ဖြင့္ထားျပီးျဖစ္သည္။</string>
+    <string name="respond_via_sms_canned_response_1">ယခု မေျပာႏိုင္ပါ။ ဘာအေၾကာင္းအရာလဲ။</string>
+    <string name="respond_via_sms_canned_response_2">ကၽြႏ္ုပ္ သင့္အား ယခု ျပန္ေခၚမည္။</string>
+    <string name="respond_via_sms_canned_response_3">သင့္အား ေနာက္မွ ျပန္ေခၚမည္။</string>
+    <string name="respond_via_sms_canned_response_4">ယခုမေျပာႏိုင္။ ေနာက္မွျပန္ေခၚမလား။</string>
+    <string name="respond_via_sms_setting_title">အျမန္ျပန္ၾကားခ်က္မ်ား</string>
+    <string name="respond_via_sms_setting_title_2">အျမန္ ျပန္ၾကားခ်က္မ်ားကို တည္းျဖတ္ပါ</string>
+    <string name="respond_via_sms_setting_summary"></string>
+    <string name="respond_via_sms_edittext_dialog_title">အျမန္ျပန္ၾကားခ်က္မ်ား</string>
+    <string name="respond_via_sms_menu_reset_default_activity">မူလအေျခအေနမ်ားသို႔ ျပန္ထားသည္</string>
+    <string name="respond_via_sms_confirmation_format">  <xliff:g id="phone_number">%s</xliff:g> သို႔ မက္ေဆ့ခ်္ေပးပို႔ျပီး။ </string>
+    <string name="phone_account_preferences_title">ဖုန္းအေကာင့္ဆက္တင္မ်ား</string>
+    <string name="default_outgoing_account_title">ပံုေသ အထြက္အေကာင့္</string>
+    <string name="sim_call_manager_account">Wi-Fi ေခၚဆိုျခင္း အေကာင့္</string>
+    <string name="account_ask_every_time">အျမဲတမ္း ေမးပါ</string>
+    <string name="do_not_use_sim_call_manager">Wi-Fi ေခၚဆိုျခင္းကို အသံုးမျပဳပါႏွင့္</string>
+    <string name="outgoing_call_not_allowed">ဤအသံုးျပဳသူကို အေရးေပၚမဟုတ္ေသာ ဖုန္းေခၚဆိုမႈမ်ား ျပဳလုပ္ခြင့္မျပဳပါ။</string>
+    <string name="outgoing_call_error_no_phone_number_supplied">ဖုန္းမေခၚဆိုပါ၊ မမွန္ေသာ နံပါတ္ ထည့္သြင္းထားသည္။</string>
+    <string name="duplicate_video_call_not_allowed">ေခၚဆိုမႈကို ဤအခ်ိန္တြင္ မထည့္ႏိုင္ပါ။</string>
+    <string name="no_vm_number">အသံေမးလ္နံပါတ္မရွိပါ</string>
+    <string name="no_vm_number_msg">မည္သည့္ အသံေမးလ္နံပါတ္မွ SIM ကဒ္တြင္ မသိမ္းထားပါ။</string>
+    <string name="add_vm_number_str">နံပါတ္ထည့္ပါ</string>
+    <string name="handle_restricted">ကန္႔သတ္ထားၿပီး</string>
+</resources>

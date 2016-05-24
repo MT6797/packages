@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">โทรผ่าน IP  <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g>  </string>
+    <string name="select_account">"เลือกบัญชี"</string>
+    <string name="all_accounts">"บัญชีทั้งหมด"</string>
+    <string name="imei_invalid">ไม่ถูกต้อง</string>
+    <string name="conf_call_member_list">รายชื่อสมาชิก</string>
+    <string name="conf_call_participant_answered">รับสาย</string>
+    <string name="conf_call_participant_missed">"ไม่ได้รับ"</string>
+    <string name="can_not_switch_account_during_call">ไม่สามารถสลับ SIM ที่เลือกใช้สำหรับสายต่าง ๆ ระหว่างการโทรได้</string>
+    <string name="can_not_switch_account_temporarily">ไม่สามารถสลับ SIM ที่เลือกใช้สำหรับสายต่าง ๆ ชั่วคราว</string>
+</resources>

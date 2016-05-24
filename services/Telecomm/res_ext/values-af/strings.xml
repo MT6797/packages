@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Nieondersteunde diens."</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Kan nie oproepe wissel nie."</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Kan nie oproep verdeel nie."</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"Onmoontlik om oproep deur te skakel."</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"Kan nie konferensie-oproepe doen nie."</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Kan nie oproep verwerp nie."</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Kan nie oproepe los nie."</string>
+</resources>

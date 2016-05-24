@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="str_db_playlist_name">"Le mie Registrazione"</string>
+    <string name="alert_device_error">Errore su dispositivo audio</string>
+    <string name="ext_media_badremoval_notification_title">"Rimozione imprevista della scheda SD"</string>
+    <string name="error_sdcard_access">"Impossibile accedere alla scheda SD"</string>
+    <string name="confirm_device_info_full">Assenza di spazio su scheda SD. Registrazione salvata.</string>
+    <string name="confirm_save_info_saved">Registrazione salvata.</string>
+    <string name="confirm_save_info_saved_to">La registrazione è stata salvata su</string>
+    <string name="select_account_dialog_title">"Seleziona account"</string>
+    <string name="reminder">Promemoria</string>
+    <string name="enable_ims_dialog_message">La chiamata IMS è disabilitata; abilitarla?</string>
+    <string name="ip_dial_error_for_sip_call">La funzione Composizione IP non è applicabile alla chiamata Internet.</string>
+    <string name="call_duration_title">"Chiamata terminata"</string>
+    <string name="call_duration_format">"<xliff:g id="HOURS">%1$s</xliff:g> ore <xliff:g id="MINUTES">%2$s</xliff:g> minuti <xliff:g id="SECONDS">%3$s</xliff:g> secondi"</string>
+    <string name="volte_ss_not_avaliable_tips">"Per completare l'operazione è necessario aprire una connessione di dati."</string>
+    <string name="outgoing_call_failed">"Chiamata non inviata."</string>
+    <string name="volte_ss_not_available_tips">Per completare l’operazione è necessario aprire una connessione dati <xliff:g id="sub_name">%s</xliff:g>.</string>
+    <string name="call_waiting_indication">"Chiamata in corso sull'altro lato, attendere..."</string>
+    <string name="outgoing_call_error_limit_exceeded">Chiamata non eseguita, limite ecceduto.</string>
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Servizio non supportato."</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Impossibile passare all\'altra chiamata."</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Impossibile separare le chiamate."</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"Impossibile trasferire la chiamata."</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"Audioconferenze non disponibili"</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Impossibile rifiutare la chiamata."</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Impossibile riprendere le chiamate."</string>
+    <string name="mo_code_unconditional_cf_active">Trasferimento incondizionale\nchiamata attivato</string>
+    <string name="mo_code_some_cf_active">"Inoltro chiamata con condizione"</string>
+    <string name="mo_code_call_forwarded">"Chiamata inoltrata"</string>
+    <string name="mo_code_call_is_waiting">"Chiamata in attesa"</string>
+    <string name="mo_code_cug_call">"Gruppo utenti chiuso"</string>
+    <string name="mo_code_outgoing_calls_barred">"Chiamata in uscita vietata"</string>
+    <string name="mo_code_incoming_calls_barred">"Chiamata in arrivo bloccata dall'altra parte"</string>
+    <string name="mo_code_clir_suppression_rejected">"Controllo servizio invio ID chiamante"</string>
+    <string name="mo_code_call_deflected">"Chiamata inoltrata"</string>
+    <string name="mt_code_forwarded_call">"È una chiamata reindirizzata"</string>
+    <string name="mt_code_cug_call">"Gruppo utenti chiuso"</string>
+    <string name="mt_code_call_on_hold">"Chiamata sospesa"</string>
+    <string name="mt_code_call_retrieved">"Chiamata ripresa"</string>
+    <string name="mt_code_multi_party_call">""Audioconferenza""</string>
+    <string name="mt_code_on_hold_call_released">"Chiamata sospesa svincolata"</string>
+    <string name="mt_code_forward_check_received">"L'impostazione SS è stata modificata"</string>
+    <string name="mt_code_call_connecting_ect">"Trasferimento chiamata"</string>
+    <string name="mt_code_call_connected_ect">"Trasferimento chiamata attivo"</string>
+    <string name="mt_code_deflected_call">"È una chiamata reindirizzata"</string>
+    <string name="mt_code_additional_call_forwarded">"Nuova chiamata in arrivo inoltrata"</string>
+    <string name="mt_code_forwarded_cf">"Chiamata inoltrata"</string>
+    <string name="mt_code_forwarded_cf_uncond">"Chiamata inoltrata senza condizione"</string>
+    <string name="mt_code_forwarded_cf_cond">"Chiamata inoltrata con condizione"</string>
+    <string name="mt_code_forwarded_cf_busy">"Chiamata occupata inoltrata"</string>
+    <string name="mt_code_forwarded_cf_no_reply">"Chiamata inoltrata perché senza risposta"</string>
+    <string name="mt_code_forwarded_cf_not_reachable">"Chiamata inoltrata perché non raggiungibile"</string>
+</resources>

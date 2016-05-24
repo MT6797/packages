@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Արտաբերեք անունը` կոնտակտների մեջ գտնելու համար:\nՓորձեք կրկին:</string>
+    <string name="vcs_guide_title">Ձայնով կոնտակտի որոնում</string>
+    
+    <string name="vcs_guide_title1">Արտաբերեք անունը` կոնտակտների մեջ գտնելու համար:</string>
+    <string name="vcs_guide_title2">Հպեք այստեղ` գործառույթն ակտիվացնելու համար:\nՓորձեք այն:</string>
+    <string name="can_not_switch_account_during_call">Զանգի ընթացքում հնարավոր չէ անցնել զանգերի համար նախընտրած SIM-ին:</string>
+    <string name="can_not_switch_account_temporarily">Ժամանակավորապես հնարավոր չէ անցնել զանգերի համար նախընտրած SIM-ին:</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g>-ը ժամանակավորապես չի աշխատի, և եթե որևէ կանխադրված Կանչ, SMS, Տվյալ միացված է, <xliff:g id="name2" example="CT1">^2</xliff:g>-ը համապատասխանաբար կփոխվի <xliff:g id="name3" example="CT2">^3</xliff:g>-ի:</string>
+</resources>

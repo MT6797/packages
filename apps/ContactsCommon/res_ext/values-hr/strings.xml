@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Izgovorite ime za traženje kontakata.\nIsprobajte!</string>
+    <string name="vcs_guide_title">Glasovno pretraživanje kontakata</string>
+    <string name="vcs_guide_title1">Izgovorite ime za traženje kontakata.</string>
+    <string name="vcs_guide_title2">Kucnite ovdje za aktiviranje funkcije.\nProbajte!</string>
+    <string name="can_not_switch_account_during_call">Ne može se pretvoriti željeni SIM radi poziva tijekom poziva.</string>
+    <string name="can_not_switch_account_temporarily">Željeni SIM ne može se privremeno prebaciti na pozive.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> privremeno neće raditi, i ako su zadano Pozivi, SMS, Podaci uključeni <xliff:g id="name2" example="CT1">^2</xliff:g> sukladno će biti promijenjeni u <xliff:g id="name3" example="CT2">^3</xliff:g>.</string>
+</resources>

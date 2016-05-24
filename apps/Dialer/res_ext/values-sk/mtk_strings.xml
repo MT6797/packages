@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP hovor <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"Výber účtu"</string>
+    <string name="all_accounts">"Všetky účty"</string>
+    <string name="imei_invalid">Neplatné</string>
+    <string name="conf_call_member_list">Zoznam členov</string>
+    <string name="conf_call_participant_answered">Prijatý</string>
+    <string name="conf_call_participant_missed">"Zmeškané"</string>
+    <string name="can_not_switch_account_during_call">Preferovanú kartu SIM nemožno prepnúť na volania počas hovoru.</string>
+    <string name="can_not_switch_account_temporarily">Preferovanú kartu SIM nemožno dočasne prepnúť na volania.</string>
+</resources>

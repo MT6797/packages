@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- MTK Wi-Fi settings start -->
+   <string name="wifi_advanced_ipv4_address_title">IPv4-cím</string>
+  <string name="wifi_advanced_ipv6_address_title">IPv6-cím</string>
+  <string name="wifi_ipv4_address">IPv4-cím</string>
+  <string name="wifi_ipv6_address">IPv6-cím</string>
+  <string name="wifi_security_wapi_certificate">WAPI-tanúsítvány</string>
+  <string name="wapi_user_certificate">Felhasználói tanúsítvány</string>
+  <string name="wapi_as_certificate">ASE tanúsítvány</string>
+  <string name="wifi_hex_password">Hexadecimális jelszó.</string>
+  <string name="wifi_no_cert_for_wapi">Nem található tanúsítvány a jelenleg kapcsolódó AP-hez</string>
+  <string name="sim_slot">SIM-nyílás</string>
+  <string name="wifi_tether_auto_channel_text">Auto.</string>
+  <string name="wifi_tether_auto_channel_width_text">Auto. 20/40 MHz</string>
+  <!-- MTK Wi-Fi settings end -->
+ 
+  <!-- MTK Wi-Fi hotspot client start -->
+   <string name="wifi_tether_auto_disable_title">Wi-Fi hotspot bekapcsolva tartása</string>
+  <string name="wifi_tether_setting_title">Alapbeállítások</string>
+  <string name="wifi_tether_wps_connect_title">WPS csatlakozás</string>
+  <string name="wifi_tether_wps_connect_summary">Válassza a Wi-Fi védett beállítás módot a folytatáshoz</string>
+  <string name="wifi_tether_wps_pin_error">Érvénytelen PIN</string>
+  <string name="wifi_tethering_title">Wi-Fi hotspot</string>
+  <string name="wifi_ap_wps_dialog_title">WPS csatlakozás</string>
+  <string name="wifi_ap_wps_mode_title">WPS mód</string>
+  <string name="wifi_ap_wps_pin_title">Gépelje meg az ügyfél által megadott PIN-t</string>
+  <string name="wifi_ap_reset_OOB_title">A hálózati SSID, biztonság és jelszó alapértelmezettre állítása („dobozból kivéve” WPS-konfiguráció)</string>
+  <string name="wifi_ap_reset_OOB">OOB alaphelyzet</string>
+  <string name="wifi_ap_max_connection_title">Maximális kapcsolatszám</string>
+  <string name="wifi_ap_connected_title">Csatlakoztatott felhasználók</string>
+  <string name="wifi_ap_blocked_title">Tiltott felhasználók</string>
+  <string name="wifi_ap_client_block_title">"Letiltás"</string>
+  <string name="wifi_ap_client_unblock_title">Tiltás feloldása</string>
+  <string name="wifi_ap_client_details_title">Részletek</string>
+  <string name="wifi_ap_client_mac_label">MAC-cím:</string>
+  <string name="wifi_ap_client_ip_label">IP-cím:</string>
+  <string name="wifi_ap_bandwidth_title">Sávszélesség-használat</string>
+  <string name="wifi_ap_bandwidth_enable">Sávszélesség-szabályozás engedélyezése</string>
+  <string name="wifi_ap_bandwidth_chart_title">Valós idejű adatsebesség</string>
+  <string name="wifi_ap_bandwidth_chart_summary">A telefon által mért érték. A szolgáltató adatsebesség-elszámolása eltérhet.</string>
+  <string name="wifi_wps_fail_error">A Wi-Fi Protected Setup sikertelen. Próbálja újra.</string>
+  <string name="wifi_ap_title">Statisztika</string>
+  <string name="wifi_ap_time_duration">Időtartam: 
+        <xliff:g id="time">%1$s</xliff:g></string>
+  <string name="wifi_ap_total_data">Felhasznált adatok összesen:
+        <xliff:g id="time">%1$s</xliff:g></string>
+  <string name="wifi_ap_no_connected">0 csatlakoztatott felhasználók</string>
+  <string name="wifi_ap_no_blocked">0 tiltott felhasználók</string>
+  <!-- MTK Wi-Fi hotspot client end -->
+ 
+  <!-- MTK WFD start -->
+   <string name="wfd_change_resolution_menu_title">Felbontás módosítása</string>
+  <string name="wfd_sink_summary">Mások által felderíthető</string>
+  <string name="wfd_device_category">ESZKÖZLISTA</string>
+  <string name="wfd_sink_toast_enjoy">A másik eszköz által közvetített kép megtekintése</string>
+  <string name="wfd_sink_toast_disconnect">Közvetített kép leválasztva</string>
+  <string name="wfd_sink_disconnecting">Kapcsolat bontása...</string>
+  <string name="wfd_sink_guide_btn">Beszerzés</string>
+  <string name="wfd_sink_guide_title">Hogyan lehet kilépni?</string>
+  <string name="wfd_sink_guide_content">Tartsa lenyomva <xliff:g id="seconds">%s</xliff:g> másodpercig a képernyőt, hogy kilépjen a másik eszköz képének megjelenítéséből.</string>
+  <!-- MTK WFD end -->
+ 
+  <!-- MTK Wireless settings start -->
+   <string name="tethered_ipv6_title">Hotspot és kapcsolat-megosztás beállításai</string>
+  <string name="tethered_ipv4v6">(IPv6 elérhető)</string>
+  <string name="tethered_ipv6">(Csak IPv6 elérhető)</string>
+  <string name="tethered_ipv4">(IPv6 nem elérhető)</string>
+  <string name="tethering_apn_settings_title">APN-beállítások</string>
+  <string name="tethering_apn_settings_summary">APN beállítása internet-megosztáshoz</string>
+  <string name="usb_tether_type_title">USB tethering típusa</string>
+  <string name="usb_tethering_select_version">Válassza ki a számítógép verzióját</string>
+  <string name="lockdown_vpn_already_connected">A mindig bekapcsolt VPN már engedélyezett a kapcsolódáshoz.</string>
+  <!-- MTK Wireless settings end -->
+ 
+  <!-- AudioProfile Settings start -->
+   <string name="ring_summary">Csengés</string>
+  <string name="ring_vibrate_summary">Csengés és rezgés</string>
+  <string name="silent_summary">Csak néma</string>
+  <string name="meeting_summary">Csak rezgés</string>
+  <string name="outdoor_summary">Leghangosabb csengés és rezgés</string>
+  <string name="audio_profile_reset">Alaphelyzet</string>
+  <string name="audio_profile_add">Hozzáadás</string>
+  <string name="audio_profile_enable">Engedélyezés</string>
+  <string name="audio_profile_rename">Átnevezés</string>
+  <string name="audio_profile_delete">Törlés</string>
+  <string name="audio_profile_message_reset">Megtörténik valamennyi audió profilbeállítás alapértékre állítása</string>
+  <string name="audio_profile_message_rename">Adja meg az új profilnevet</string>
+  <string name="audio_profile_message_name_error">Ez a név már létezik</string>
+  <string name="audio_profile_message_name_length_wrong">A névnek legalább egy karaktert kell tartalmaznia</string>
+  <string name="audio_profile_message_delete">Megtörténik a(z) 
+        <xliff:g id="profil">%s</xliff:g> törlése</string>
+  <string name="audio_profile_message_overflow">Legfeljebb 6 egyéni profilt adhat hozzá</string>
+  <string name="audio_profile_category_custom_title">Egyedileg megadott profilok</string>
+  <string name="audio_profile_category_predefine_title">Előre meghatározott profilok</string>
+  <string name="audio_profile_error">Hiba</string>
+  <string name="audio_profile_others">Értesítés és egyebek</string>
+  <string name="general_settings_title">"Általános"</string>
+  <string name="silent_settings_title">Néma</string>
+  <string name="meeting_settings_title">Találkozó</string>
+  <string name="outdoor_settings_title">Kültéri</string>
+  <string name="sound_category_feedback_title">"Rendszer"</string>
+  <string name="sound_category_calls_title">"Beérkező hívások"</string>
+  <string name="voice_call_title">Beszédhívás csengőhang</string>
+  <string name="voice_call_summary">"A beszédhívások alapértelmezett csengőhangjának beállítása"</string>
+  <string name="video_call_title">Videohívás csengőhang</string>
+  <string name="video_call_summary">A videohívások alapértelmezett csengőhangjának beállítása</string>
+  <string name="sip_call_title">SIP-hívás csengőhangja</string>
+  <string name="sip_call_summary">A SIP-hívások alapértelmezett csengőhangjának beállítása</string>
+  <string name="Phone_vibrate_summary">Telefon rezgő hívásjelzőjének aktiválása bejövő hívás esetén</string>
+  <string name="vibrate_title">Rezgés</string>
+  <string name="audio_profile_settings_title">Audió profilok</string>
+  <string name="audio_profile_bes_loudness_summary">Hangerőfokozó a hangszóróhoz</string>
+  <string name="sound_enhancement_title">Hangzásjavítás</string>
+  <string name="music_plus_summary">Hangzásjavítás fülhallgatóhoz</string>
+  <string name="lossless_title">Veszteségmentes BT mód</string>
+  <string name="lossless_summary">Nagy hanghűségű BT audió</string>
+  <string name="lossless_connect_summary">A Veszteségmentes BT mód bekapcsolása hatással van a Wi-Fi-re. Biztosan engedélyezni akarja?</string>
+  <string name="lossless_on">Veszteségmentes BT mód BE</string>
+  <string name="lossless_playing">Veszteségmentes zene lejátszása</string>
+  <string name="lossless_toastmessage">A rendszerhangok lejátszása a telefon hangszóróján történik</string>
+  <string name="lossless_volume_max">A rendszerhangerőt tartsa maximális értéken</string>
+  <string name="lossless_cannot_found_device">Nem található veszteségmentes BT eszköz</string>
+  <string name="audio_profile_bes_surround_title">BesSurround</string>
+  <string name="audio_profile_bes_surround_summary">Audió térhangzás</string>
+  <string name="audio_profile_bes_surround_mode_movie">Film mód</string>
+  <string name="audio_profile_bes_surround_mode_music">Zene mód</string>
+  <string name="sms_vibrate_summary">sms jelzése rezgéssel az eszközökön</string>
+  <string name="zen_mode_option_title_novoice">"Értesítés érkezésekor"</string>
+  <!-- AudioProfile Settings end -->
+ 
+  <!-- MTK NFC settings start -->
+   <string name="nfc_p2p_mode">P2P mód</string>
+  <string name="nfc_p2p_mode_summary">App tartalom küldése vagy fogadása</string>
+  <string name="nfc_tag_mode_category">Címke mód</string>
+  <string name="nfc_rw_tag_title">Címkeolvasás és -írás</string>
+  <string name="nfc_rw_tag_summary">Címkéről olvasás vagy címkére írás</string>
+  <string name="nfc_card_emulation_category_title">kártyaemulációs mód</string>
+  <string name="nfc_card_emulation">Kártya-emuláció</string>
+  <string name="card_emulation_settings_category_title">választható biztonsági elem</string>
+  <string name="card_emulation_settings_no_element_found">Nem áll rendelkezésre biztonsági elem</string>
+  <string name="card_emulation_settings_off_text">A választható biztonsági elemek megtekintéséhez kapcsolja be a kártyaemulációt.</string>
+  <string name="card_emulation_turning_off_text">A kártyaemuláció kikapcsolása...</string>
+  <string name="card_emulation_turning_on_text">A kártyaemuláció bekapcsolása...</string>
+  <string name="card_emulation_switch_error_title">Hiba</string>
+  <string name="card_emulation_switch_error_message">Nem sikerült átváltani a következőre: <xliff:g id="card_mode">%1$s</xliff:g>.</string>
+  <string name="card_emulation_sim_not_supported_message">A(z) <xliff:g id="sim_description">%1$s</xliff:g> nem támogatja az NFC-kártya emulációját.</string>
+  <string name="card_emulation_two_sim_not_supported_message">SIM1, SIM2 nem támogatja az NFC-kártya emulációs funkciót.</string>
+  <string name="nfc_hce_pay_summary">Eszköz használata ÉRINT ÉS FIZET szolgáltatásra mint Google-pénztárca, bankkártya stb.</string>
+  <!-- MTK NFC settings end -->
+ 
+  <!-- MTK Beam plus start -->
+   <string name="beam_mgmt_tab_download_title">Fogadott hívások</string>
+  <string name="beam_mgmt_tab_upload_title">"3. Kattintson a megosztás fülre, majd válassza az 'Engedély megadása a hálózat egyéb felhasználóinak, hogy e számítógép internetkapcsolatán kapcsolódjanak'(válassza az újonnan hozzáadott hálózatot, amely az USB-internetet képviseli, ha megjelenik a 'Otthoni hálózati kapcsolat' elem)."</string>
+  <string name="beam_share_mgmt_notification_ticker">Átsugárzás megosztási előzmények</string>
+  <string name="beam_share_mgmt_notification_title">Átsugárzás megosztási előzmények</string>
+  <string name="beam_share_mgmt_notification_message">"Jelölje ki az átsugárzás megosztási előzmények megtekintéséhez."</string>
+  <string name="beam_share_mgmt_tab_menu_clear">"Törli az összes webhely beállítását?"</string>
+  <string name="beam_share_open_file_dialog_title">A fájl nem nyitható meg</string>
+  <string name="beam_share_open_file_unsupported_message">Nem támogatott fájlformátum.</string>
+  <string name="beam_share_open_file_not_found_message">"A fájl nem található: <xliff:g id="file_name">%1$s</xliff:g></string>
+  <string name="beam_share_transfer_fail_dialog_title">"Sikertelen átsugárzás"</string>
+  <string name="beam_share_resend_dialog_message">"A(z)<xliff:g id="file_name">%1$s</xliff:g> fájl elküldése nem sikerült."</string>
+  <string name="beam_share_resend_dialog_ok_button">"Újrapróbálkozás"</string>
+  <string name="beam_share_show_received_files_menu">"Beérkező fájlok megjelenítése"</string>
+  <string name="beam_share_history_title">Átsugárzás megosztási előzmények</string>
+  <string name="beam_share_clear_confirm_dialog_title">"Az összes törlése"</string>
+  <string name="beam_share_clear_confirm_dialog_message">Törli az összes előzményt?</string>
+  <string name="beam_share_receive_fail_dialog_message">"A(z)<xliff:g id="file_name">%1$s</xliff:g> fájl fogadása nem sikerült."</string>
+  <string name="beam_share_clear_item_dailog_title">TÖRLÉS</string>
+  <string name="beam_share_clear_item_dailog_message">Az elem törlésre kerül.</string>
+  <!-- MTK Beam plus end -->
+ 
+  <!-- MTK HDMI start -->
+   <string name="hdmi_settings">HDMI-beállítások</string>
+  <string name="hdmi_settings_summary">Kattintson rá a HDMI konfigurálásához</string>
+  <string name="hdmi_video_resolution">Videó felbontás</string>
+  <string name="hdmi_auto">Auto.</string>
+  <string name="hdmi_scale_control">Videó méretezési beállítások</string>
+  <string name="hdmi_scale_no_scale">Nincs átméretezés</string>
+  <string name="hdmi_scale_scale_down">Leméretezés: <xliff:g id="scale_percent">%s</xliff:g>%%</string>
+  <string name="hdmi_audio_output">Audió kimenet</string>
+  <string name="hdmi_audio_output_stereo">Sztereó</string>
+  <string name="hdmi_audio_output_multi_channel">Többcsatornás</string>
+  <!-- MTK HDMI end -->
+ 
+  <!-- MTK Data usage  start -->
+   <string name="datausage_overview_tab">Áttekintés</string>
+  <string name="datausage_overview_wifi_today">Ma</string>
+  <string name="datausage_overview_wifi_total">"Összes"</string>
+  <string name="datausage_overview_mobile_title">MOBIL</string>
+  <string name="datausage_overview_mobile_usage"><xliff:g id="actual">%s</xliff:g> kívül 
+        <xliff:g id="limit">%s</xliff:g></string>
+  <string name="datausage_overview_mobile_usage_warning"><xliff:g xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g> tartományon kívül</string>
+  <string name="data_saving_title">Adatmentés</string>
+  <string name="default_data_switch_err_msg1">Nem lehet a preferált SIM-et hívás közben mobiladatra váltani.</string>
+  <!-- MTK Dta usage  end -->
+ 
+  <!-- MTK About phone start -->
+   <string name="status_imei_slot1">IMEI(1. nyílás)</string>
+  <string name="status_imei_slot2">IMEI(2. nyílás)</string>
+  <string name="custom_build_version">Egyéni build verzió</string>
+  <string name="mota_system_update_summary">"Rendszerfrissítés keresése a szerveren"</string>
+  <string name="software_updates_more_title">Szoftverfrissítések</string>
+  <string name="software_updates_more_summary">Új szoftververzió keresése</string>
+  <!-- MTK About phone end -->
+ 
+  <!-- APN Settings start  -->
+   <string name="mvno_type_none">Nincs</string>
+  <string name="apn_predefine_change_dialog_notice">Biztosan menteni akarja? Az alapértelmezett APN-ek módosítása kapcsolódási problémákat okozhat!</string>
+  <string name="apn_port_warning">A port értékének 1-65535-nek kell lennie.</string>
+  <!-- APN Settings end -->
+ 
+  <!--MTK DRM settings start -->
+   <string name="drm_settings_title">DRM alaphelyzet</string>
+  <string name="drm_settings_summary">Törli az összes DRM-licenet</string>
+  <string name="drm_reset_dialog_msg">Ez a művelet törli az eszközön tárolt összes licencet. Folytatja?</string>
+  <string name="drm_reset_toast_msg">A licencek törlése sikeresen megtörtént.</string>
+  <!--MTK DRM settings end -->
+ 
+  <!--MTK HotKnot start -->
+   <string name="hotknot_explained_description">Adatcsere engedélyezése, ha a kijelző másik eszközt érint</string>
+  <string name="hotknot_charging_warning"><xliff:g id="title">%s</xliff:g> funkció működésére hatással lehet az USB-töltés</string>
+  <!--MTK HotKnot end -->
+ 
+  <!-- ClearMotion start -->
+   <string name="clear_motion_summary">Videofolytonosság-javító</string>
+  <string name="on_text">"be"</string>
+  <string name="off_text">"ki"</string>
+  <!-- ClearMotion end -->
+ 
+  <!-- MiraVision start -->
+   <string name="mira_vision_summary">A legjobb vizuális effektusok szállítója</string>
+  <!-- MiraVision end -->
+ 
+  <!--MTK DateTime start-->
+   <string name="gps_time_sync_attention_gps_on">A GPS-helymeghatározás legfeljebb 1 percet vesz igénybe. Ezenkívül előfordulhat, hogy a GPS nem ad időinformációt a gyenge jel miatt.\n\nBiztosan a GPS által biztosított időt akarja használni?</string>
+  <string name="gps_time_sync_attention_gps_off">A GPS által biztosított idő használatához engedélyeznie kell a GPS-t. A GPS-helymeghatározás legfeljebb 1 percet vesz igénybe. Ezenkívül előfordulhat, hogy a GPS nem ad időinformációt a gyenge jel miatt. \n\nBiztosan engedélyezni akarja a GPS-t és várakozik a GPS által biztosított időadatokra?</string>
+  <!--MTK DateTime end-->
+ 
+  <!-- MTK IPO settings start -->
+   <string name="ipo_title">Gyorsindítás</string>
+  <string name="ipo_summary_off">Gyorsindítás engedélyezése</string>
+  <!-- MTK IPO settings end -->
+ 
+  <!-- Storage & USB settings start -->
+   <string name="select_memory">Alapértelmezet írás-lemez</string>
+  <string name="usb_use_built_in_cd_rom">Beépített CD-ROM</string>
+  <string name="usb_use_mass_storage">USB-tároló</string>
+  <!-- Storage & USB settings end -->
+ 
+  <!-- MTK Storage Settings start -->
+   <string name="launch_error">"Az alkalmazás elindítása sikertelen!"</string>
+  <!-- MTK Storage Settings end -->
+ 
+  <!--MTK Security Settings start -->
+   <string name="security_not_set">A biztonság nincs beállítva</string>
+  <!--MTK Security Settings end -->
+ 
+  <!-- Voice UI start -->
+   <string name="voice_ui_title">Hangvezérlés</string>
+  <!-- Voice UI end -->
+ 
+  <!-- Voice unlock start -->
+   <string name="unlock_set_unlock_mode_voice_weak">Hangkioldás</string>
+   <string name="voice_unlock_backup_info_summary">Ha a Voice Unlock nem ismeri fel Önt, hogyan szeretné kioldani?</string>
+  <!-- Voice unlock end -->
+ 
+  <!-- MTK Bluetooth Settings start -->
+   <string name="bluetooth_advanced_settings">Bluetooth speciális beállítások</string>
+  <!-- MTK Bluetooth Settings end -->
+ 
+  <!-- MTK schedule power start -->
+   <string name="schedule_power_on_off_settings_title">Be-/kikapcsolás ütemezése</string>
+  <!-- MTK schedule power end -->
+ 
+  <!-- MTK Hetcomm start -->
+   <string name="hetcom_setting_title">Turbó letöltés</string>
+  <!-- MTK Hetcomm end -->
+ 
+  <!-- Background power saving start -->
+   <string name="bg_power_saving_title">Intelligens energiatakarékoság készenlétben</string>
+  <!-- Background power saving end -->
+
+    <string name="two_cdma_dialog_msg">Az 1. és a 2. nyílás nem teszi lehetővé egyidejűleg a CDMA használatát.</string>
+    <string name="c2k_cdma_card_competion_message"><xliff:g id="current_sim">%1$s</xliff:g>-kártya átmenetileg nem fog működni, és a(z) <xliff:g id="now_sim">%2$s</xliff:g>-kártyán lévő alapértelmezett hívások, SMS-ek és adatok a(z) <xliff:g id="target_sim">%3$s</xliff:g>-kártyára váltanak át.</string>
+    <string name="c2k_gsm_cdma_sim_message">A „Igen” elem megérintésével átválthatja a 4G-t a(z) <xliff:g id="sim1">%1$s</xliff:g>-kártyára. A(z) <xliff:g id="sim2">%2$s</xliff:g>-kártya nem fog működni, és a(z) <xliff:g id="sim3">%3$s</xliff:g>-kártyán lévő alapértelmezett hívások és SMS-ek a(z) <xliff:g id="sim4">%4$s</xliff:g>-kártyára váltanak át. A „Nem" elem megérintésével kizárólag a mobilhálózati adatokat módosíthatja.</string>
+    <string name="default_calls_switch_err_msg1">Hívás közben nem módosíthatja a hívásokhoz elsődlegesen használt SIM-kártyát.</string>
+    <string name="default_sms_switch_err_msg1">Hívás közben nem módosíthatja az SMS-üzenetekhez elsődlegesen használt SIM-kártyát.</string>
+
+  <!-- Performance and power start -->
+  <string name="performance_and_power_title">Teljesítmény és energiatakarékosság</string>
+  <!-- Performance and power end -->
+
+    <string name="wakeup_interaction">Reagálás felébredésre</string>
+    <string name="voice_wakeup">Ébresztés beszédhanggal</string>
+    <string name="voice_wakeup_confirm">Kérjük, állítsa be a parancsot a használat előtt.</string>
+    <string name="omh_warning_dialog_msg">Előfordulhat, hogy R-UIM eszköze nem tudja elérni az adatszolgáltatást. Kérjük, frissítse R-UIM eszközét OMH R-UIM eszközre.</string>
+    <string name="omh_data_pick_dialog_msg">Előfordulhat, hogy R-UIM eszköze nem tudja elérni az adatszolgáltatást. Kérjük, frissítse R-UIM eszközét OMH R-UIM eszközre. Mégis ezt az R-UIM eszközt állítja be mint alapértelmezett adatkártya?</string>
+</resources>

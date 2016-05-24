@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layers used to render the in-call "hang up active and answer waiting" button. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/backgroundItem"
+          android:drawable="@drawable/btn_background" />
+
+    <item>
+        <bitmap android:src="@drawable/mtk_ic_toolbar_hangup_active_answer_waiting"
+            android:gravity="center"
+            android:tint="@color/selectable_icon_tint" />
+    </item>
+
+</layer-list>

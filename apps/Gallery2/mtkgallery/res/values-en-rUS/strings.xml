@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="m_share_format_choose_title">"Choose format"</string>
+    <string name="m_share_format_image">"Picture"</string>
+    <string name="m_share_format_video">"Video"</string>
+    <string name="m_generating_tip">"Generating video..."</string>
+    <string name="m_generate_video_fail">"Failed to generate video"</string>
+    <string name="m_generating_gif_tip">"Generating Gif..."</string>
+    <string name="m_generate_gif_fail">"Failed to generate Gif"</string>
+    <string name="m_share_limit">Cannot share more than 300 files.</string>
+    <string name="m_demo_off">Demo off</string>
+    <string name="m_vertical_demo">Vertical Demo</string>
+    <string name="m_horizontal_demo">Horizontal Demo</string>
+    <string name="m_storage_not_enough">"The storage does not have enough space."</string>
+    <string name="m_saving_image">Saving picture to <xliff:g id="album_name">%1$s</xliff:g> \u2026</string>
+    <string name="m_drm_protected_warning1">"The content is copy-protected,"</string>
+    <string name="m_drm_protected_warning2">"To see it on the phone,"</string>
+    <string name="m_wfd_protected_warning">"please disconnect Wireless Display"</string>
+    <string name="m_hdmi_protected_warning">"please disconnect with HDMI."</string>
+    <string name="m_please_wait">"Please wait"</string>
+    <string name="m_insufficient_space_one">Failed to share, insufficient space.</string>
+    <string name="m_insufficient_space_some">Failed to share some of slow motion videos, insufficient space.</string>
+    <string name="m_insufficient_space_all">Failed to share all slow motion videos, insufficient space.</string>
+    <string name="not_avaliable_16x_multi_share">Not available for 1/16x slow motion video sharing. Video is shared as 1/4x</string>
+    <string name="not_avaliable_16x_single_share">Not available for 1/16x slow motion video sharing. Please share video as other speeds</string>
+    <string name="m_raw_reminder">"You can view the RAW file of this photo by connecting to computer."</string>
+</resources>

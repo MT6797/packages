@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="dm_lock">DM je zablokovaný</string>
+    <string name="dm_unlock">DM je odblokovaný</string>
+    <string name="start_record">Spustiť nahrávanie</string>
+    <string name="stop_record">Zastaviť nahrávanie</string>
+    <string name="str_db_playlist_name">"Moje záznamy"</string>
+    <string name="alert_device_error">Vo zvukovom zariadení došlo k chybe</string>
+    <string name="ext_media_badremoval_notification_title">"Karta SD bola neočakávane odobraná"</string>
+    <string name="error_sdcard_access">Nemožno získať prístup ku karte SD</string>
+    <string name="confirm_device_info_full">Karta SD je plná. Záznam je uložený.</string>
+    <string name="confirm_save_info_saved">Záznam je uložený</string>
+    <string name="confirm_save_info_saved_to">Záznam je uložený v </string>
+    <string name="recording_saved_sd_full">Karta SD je plná. Záznam je uložený.</string>
+    <string name="sd_not_enough">Karta SD bude\nčoskoro plná</string>
+    <string name="alert_dialog_dismiss">Zamietnuť</string>
+    <string name="change_my_pic">Zmeniť</string>
+    <string name="onscreenHangupAll">Zavesiť všetky</string>
+    <string name="onscreenHangupHolding">Zavesiť zadržané</string>
+    <string name="onscreenHangupActiveAndAnswerWaiting">Zavesiť aktívne, prijať čakajúce</string>
+    <string name="menu_ect">Prenos</string>
+    <string name="respond_via_sms_confirmation_format">"Správa bola odoslaná na číslo <xliff:g id="PHONE_NUMBER">%s</xliff:g>."</string>
+    <string name="volte_add_conference_member_title">Pridať do konferencie</string>
+    <string name="add_member_msg">Zadajte číslo alebo meno</string>
+    <string name="card_title_incoming_conference">Pozvanie na konferenciu</string>
+    <string name="addConferenceMemeberText">Pridať číslo</string>
+    <string name="add_conference_member_limit">Naraz možno pridať iba jedno číslo.</string>
+    <string name="conference_member_join"><xliff:g id="member_name">%s</xliff:g> sa zapojil do konferencie.</string>
+    <string name="conference_member_leave"><xliff:g id="member_name">%s</xliff:g> opustil konferenciu.</string>
+    <string name="conference_member_adding">Pridáva sa <xliff:g id="member_name">%s</xliff:g> ...</string>
+    <string name="conference_member_add_fail">Nepodarilo sa pridať <xliff:g id="member_name">%s</xliff:g> .</string>
+    <string name="removeMember">"Odstrániť"</string>
+    <string name="memberStatus">"Stav"</string>
+    <string name="volte_call_waiting_indication_text">Na druhom konci prebieha hovor, čakajte prosím ...</string>
+    <string name="multi_conference_member_adding">Pridávajú sa členovia...</string>
+    <string name="call_status_online">On-line</string>
+    <string name="call_status_onhold">"Podržaný hovor"</string>
+    <string name="call_status_dialing">"Vytáčanie"</string>
+    <string name="call_status_disconnecting">"Odpája sa"</string>
+    <string name="call_status_disconnected">"Odpojené"</string>
+
+    <string name="accept_incoming_and_disconnect_current">Prijatím tohto hovoru bude ukončený aktuálny hovor.</string>
+    <string name="add_voicemail_number">Pridať číslo vm</string>
+</resources>

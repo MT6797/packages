@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Контактілерді табу үшін аттарын атаңыз.\nҚайталаңыз!</string>
+    <string name="vcs_guide_title">Voice Contact Search</string>
+    <string name="vcs_guide_title1">Контактілерді табу үшін аттарын атаңыз.</string>
+    <string name="vcs_guide_title2">Функцияны іске қосу үшін осы жерді түртіңіз.\nӘрекетті қайталаңыз!</string>
+    <string name="can_not_switch_account_during_call">Қоңыраулар үшін қажетті SIM картасына қоңырау кезінде ауыстыру мүмкін емес.</string>
+    <string name="can_not_switch_account_temporarily">Қоңыраулар үшін қажетті SIM картасына уақытша ауыстыру мүмкін емес.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> уақытша жұмыс істемейді және <xliff:g id="name2" example="CT1">^2</xliff:g> жүйесіндегі әдепкі қоңырау, SMS, деректер <xliff:g id="name3" example="CT2">^3</xliff:g> күйіне өзгереді.</string>
+</resources>

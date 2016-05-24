@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="m_stereo_refocus">"refocus"</string>
+    <string name="m_stereo_copy_paste">"copy&amp;paste"</string>
+    <string name="m_stereo_background">"background"</string>
+    <string name="m_stereo_fancy_color">"fancy color"</string>
+
+    <string name="m_refine_obj">"Refine the main object"</string>
+    <string name="m_fancy_color_effect_normal">"Normal"</string>
+    <string name="m_fancy_color_effect_monochrome">"Monochrome"</string>
+    <string name="m_fancy_color_effect_posterize">"Posterize"</string>
+    <string name="m_fancy_color_effect_radial_blur">"Radial blur"</string>
+    <string name="m_fancy_color_effect_stroke">"Stroke"</string>
+    <string name="m_fancy_color_effect_silhouette">"Silhouette"</string>
+    <string name="m_fancy_color_effect_whiteboard">"Whiteboard"</string>
+    <string name="m_fancy_color_effect_blackboard">"Blackboard"</string>
+    <string name="m_fancy_color_effect_negative">"Negative"</string>
+
+    <!-- Segment Part begin -->
+    <string name="m_refine_cancel">CANCEL</string>
+    <string name="m_refine_refine">REFINE</string>
+    <string name="m_refine_undo">UNDO</string>
+    <string name="m_refine_done">DONE</string>
+    <string name="m_refine_save_clipping">Save to Clippings</string>
+    <string name="m_refine_saved_clipping">Saved picture to Clippings.</string>
+    <string name="m_refine_select_obj_title">Select object</string>
+    <string name="m_refine_refine_obj_title">Refine object</string>
+    <string name="m_save">Save</string>
+    <string name="m_stereo_refine_original_photo">Refine the original photo</string>
+    <string name="m_stereo_refine_foreground">Refine the foreground</string>
+    <string name="m_pick_photo_to_copy">Pick a photo to copy</string>
+    <string name="m_clippings">Clippings</string>
+    <string name="m_original">Original</string>
+    <string name="m_gallery">Gallery</string>
+    <string name="m_stereo_refine_video_effect">"Refine the effects"</string>
+    <string name="m_no_stereo_image">No stereo images.</string>
+    <string name="m_stereo_refine_zoom">Zoom</string>
+    <string name="m_stereo_refine_add_detail">Add detail</string>
+    <string name="m_stereo_refine_subtract_detail">Subtract detail</string>
+    <string name="m_stereo_synth_move_front">Move to front</string>
+    <string name="m_stereo_synth_move_back">Move to back</string>
+    <!-- Segment Part end -->
+
+    <string name="m_general_err_tip">Error occurs. App will quit.</string>
+</resources>
+

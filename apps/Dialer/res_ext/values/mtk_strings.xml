@@ -1,0 +1,27 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- M: [IP Dial] add IP Call -->
+    <string name="description_ip_call_action">Ip Call <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+
+    <!-- M: [Call Log Account Filter] display when choose account @{-->
+    <string name="select_account">Select Account</string>
+    <string name="all_accounts">All Accounts</string>
+    <string name="call_log_via_sim_name_notice">CALL LOGS VIA \"<xliff:g id="sim_name">%s</xliff:g>\"</string>
+    <!-- @} -->
+
+    <!-- M: [VoLTE ConfCallLog] For Volte Conference callLog @{ -->
+    <string name="conf_call_member_list">Member List</string>
+    <string name="conf_call_participant_answered">Answered</string>
+    <string name="conf_call_participant_missed">Missed</string>
+    <!-- @} -->
+    <!-- M: [WFC] For WFC call @{ -->
+    <string name="calls_over_wifi">Calls will be made over Wi-Fi</string>
+    <string name="connect_to_wifi">Connect to Wi-Fi to make calls</string>
+    <string name="wfc_notification_summary">Tap here to access preferences</string>
+    <string name="wfc_notification_summary_fail">Tap Here to View Available Networks</string>
+     <!-- @} -->
+
+    <!-- The message of toast when switch account between two CDMA cards during a call -->
+    <string name = "can_not_switch_account_during_call">Can not switch preferred SIM for calls during the call.</string>
+    <!-- The message of alert dialog when switch account but it is not allowed -->
+    <string name = "can_not_switch_account_temporarily">Can not switch preferred SIM for calls temporarily.</string>
+</resources>

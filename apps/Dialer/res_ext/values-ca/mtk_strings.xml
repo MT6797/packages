@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">Trucada IP <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"Selecció d\'un compte"</string>
+    <string name="all_accounts">"Tots els comptes"</string>
+    <string name="imei_invalid">No vàlid</string>
+    <string name="conf_call_member_list">Llista de membres</string>
+    <string name="conf_call_participant_answered">Respostes</string>
+    <string name="conf_call_participant_missed">"Perdudes"</string>
+    <string name="can_not_switch_account_during_call">No es pot canviar de SIM preferit per a les trucades durant la trucada.</string>
+    <string name="can_not_switch_account_temporarily">Temporalment, no es pot canviar de SIM preferit per a les trucades.</string>
+</resources>

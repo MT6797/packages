@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP-Anruf  <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g>  </string>
+    <string name="select_account">"Konto auswählen"</string>
+    <string name="all_accounts">"Alle Konten"</string>
+    <string name="imei_invalid">Invalid</string>
+    <string name="conf_call_member_list">Mitgliederliste</string>
+    <string name="conf_call_participant_answered">Beantwortet</string>
+    <string name="conf_call_participant_missed">"Entgangen"</string>
+    <string name="can_not_switch_account_during_call">Wechsel zur bevorzugten SIM für Anrufe während des Anrufs nicht möglich.</string>
+    <string name="can_not_switch_account_temporarily">Bevorzugte SIM für Anrufe kann vorübergehend nicht gewechselt werden.</string>
+</resources>

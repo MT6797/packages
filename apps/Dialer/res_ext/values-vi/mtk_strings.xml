@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">Gọi IP  <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g>  </string>
+    <string name="select_account">"Chọn tài khoản"</string>
+    <string name="all_accounts">"Tất cả các tài khoản"</string>
+    <string name="imei_invalid">Không hợp lệ</string>
+    <string name="conf_call_member_list">DS thành viên</string>
+    <string name="conf_call_participant_answered">Đã trả lời</string>
+    <string name="conf_call_participant_missed">"Bị nhỡ"</string>
+    <string name="can_not_switch_account_during_call">Ko thể chuyển SIM ưu tiên cho các c.gọi trong khi gọi.</string>
+    <string name="can_not_switch_account_temporarily">Tạm thời không thể chuyển SIM ưu tiên cho các cuộc gọi.</string>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="telecommAppLabel" product="default">ফোন</string>
+    <string name="unknown">অজ্ঞাত</string>
+    <string name="notification_missedCallTitle">ব্যর্থ কল</string>
+    <string name="notification_missedCallsTitle">ব্যর্থ কল</string>
+    <string name="notification_missedCallsMsg"><xliff:g id="num_missed_calls">%s</xliff:g> ব্যর্থ কল</string>
+    <string name="notification_missedCallTicker"><xliff:g id="missed_call_from">%s</xliff:g>থেকে ব্যর্থ কল</string>
+    <string name="notification_missedCall_call_back">কলব্যাক</string>
+    <string name="notification_missedCall_message">বার্তা</string>
+    <string name="accessibility_call_muted">কল নিঃশব্দ</string>
+    <string name="accessibility_speakerphone_enabled">স্পিকারফোন সক্রিয়।</string>
+    <string name="respond_via_sms_canned_response_1">এখন কথা বলতে পারছি না। কি করছেন?</string>
+    <string name="respond_via_sms_canned_response_2">আপনি এখনই আপনাকে কল করব।</string>
+    <string name="respond_via_sms_canned_response_3">আমি আপনাকে পরে কল করব।</string>
+    <string name="respond_via_sms_canned_response_4">এখন কথা বলতে পারছি না। পরে কল করুন?</string>
+    <string name="respond_via_sms_setting_title">দ্রুত উত্তরদান</string>
+    <string name="respond_via_sms_setting_title_2">দ্রুত উত্তরদান সম্পাদনা করুন</string>
+    <string name="respond_via_sms_setting_summary"></string>
+    <string name="respond_via_sms_edittext_dialog_title">দ্রুত উত্তরদান</string>
+    <string name="respond_via_sms_menu_reset_default_activity">ডিফল্ট পূর্বাবস্থায় আনুন</string>
+    <string name="respond_via_sms_confirmation_format">বার্তা পাঠানো হয়েছে <xliff:g id="phone_number">%s</xliff:g>।</string>
+    <string name="phone_account_preferences_title">ফোন একাউন্ট সেটিং</string>
+    <string name="default_outgoing_account_title">ডিফল্ট আউটগোয়িং একাউন্ট</string>
+    <string name="sim_call_manager_account">ওয়াই-ফাই কলিং একাউন্ট</string>
+    <string name="account_ask_every_time">প্রতিবার জিজ্ঞেস করুন</string>
+    <string name="do_not_use_sim_call_manager">ওয়াই-ফাই কলিং ব্যবহার করবেন না</string>
+    <string name="outgoing_call_not_allowed">এই ব্যবহারকারীর অজরুরি ফোন কল করার অনুমতি নেই</string>
+    <string name="outgoing_call_error_no_phone_number_supplied">কল পাঠানো হয়নি। কোন কার্যকর নম্বর প্রবেশ করানো হয়নি।</string>
+    <string name="duplicate_video_call_not_allowed">এই সময়ে কল যোগ করা যাবে না।</string>
+    <string name="no_vm_number">হারিয়ে যাওয়া ভয়েসমেইল নম্বর</string>
+    <string name="no_vm_number_msg">সিমকার্ডে কোন ভয়েসমেইল নম্বর মজুত নেই।</string>
+    <string name="add_vm_number_str">নম্বর যোগ করুন</string>
+    <string name="handle_restricted">সংরক্ষিত</string>
+</resources>

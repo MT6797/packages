@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP-klic <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"Izbira računa"</string>
+    <string name="all_accounts">"Vsi računi"</string>
+    <string name="imei_invalid">Neveljavno</string>
+    <string name="conf_call_member_list">Seznam članov</string>
+    <string name="conf_call_participant_answered">Odgovorjeno</string>
+    <string name="conf_call_participant_missed">"Neodgovorjeni"</string>
+    <string name="can_not_switch_account_during_call">Med klicem ni mogoče preklopiti prednostne SIM za klice.</string>
+    <string name="can_not_switch_account_temporarily">Prednostne SIM za klice trenutno ni mogoče preklopiti.</string>
+</resources>

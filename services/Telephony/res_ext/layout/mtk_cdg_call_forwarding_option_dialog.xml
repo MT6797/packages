@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout used as the dialog's content View for call forwarding options. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/cf_options"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dip"
+        android:layout_marginBottom="18dip"
+        android:layout_marginStart="20dip">
+        <!-- Forwarding to phone number -->
+        <RadioButton android:id="@+id/cf_option_phone_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:layout_marginBottom="8dip"
+            android:textSize="18dip"
+            android:text="@string/title_cf_option_phone_number"
+            android:checked="true"/>
+        <!-- Forwarding to phone voice mail -->
+        <RadioButton android:id="@+id/cf_option_voice_mail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dip"
+            android:textSize="18dip"
+            android:paddingLeft="10dip"
+            android:text="@string/title_cf_option_voice_mail"/>
+        <!-- Stop forwarding -->
+        <RadioButton android:id="@+id/cf_option_stop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dip"
+            android:paddingLeft="10dip"
+            android:text="@string/title_cf_option_stop"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="40dip"
+        android:layout_marginEnd="40dip">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="right"
+            android:text="@android:string/cancel"
+            android:textColor="@color/dialer_theme_color"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/button_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:background="@android:color/transparent"
+            android:textColor="@color/dialer_theme_color"
+            android:text="@android:string/ok"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

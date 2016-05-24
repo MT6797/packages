@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">ІР-виклик <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"Вибрати обліковий запис"</string>
+    <string name="all_accounts">"Усі облікові записи"</string>
+    <string name="imei_invalid">Недійсно</string>
+    <string name="conf_call_member_list">Список учасників</string>
+    <string name="conf_call_participant_answered">Дано відповідь</string>
+    <string name="conf_call_participant_missed">"Пропущені"</string>
+    <string name="can_not_switch_account_during_call">Під час виклику неможливо перемкнути пріоритетну SIM для викликів.</string>
+    <string name="can_not_switch_account_temporarily">Тимчасово неможливо перемкнути пріоритетну SIM для викликів.</string>
+</resources>

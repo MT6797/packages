@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="str_db_playlist_name">Saját felvételek</string>
+    <string name="alert_device_error">Hiba történt az audió eszközön</string>
+    <string name="ext_media_badremoval_notification_title">"Az SD-kártya váratlanul eltávolításra került"</string>
+    <string name="error_sdcard_access">Az SD-kártya elérése nem lehetséges</string>
+    <string name="confirm_device_info_full">Az SD-kártyán kevés a hely. A felvétel mentése megtörtént.</string>
+    <string name="confirm_save_info_saved">A felvétel mentése megtörtént</string>
+    <string name="confirm_save_info_saved_to">A felvétel ide lett mentve:</string>
+    <string name="select_account_dialog_title">"Fiók kiválasztása"</string>
+    <string name="reminder">Emlékeztető</string>
+    <string name="enable_ims_dialog_message">Az IMS-hívás le van tiltva. Szeretné engedélyezni?</string>
+    <string name="ip_dial_error_for_sip_call">Az IP-tárcsázás funkció nem érvényes internethívásra.</string>
+    <string name="call_duration_title">"A hívás befejeződött"</string>
+    <string name="call_duration_format">"<xliff:g id="HOURS">%1$s</xliff:g> óra <xliff:g id="MINUTES">%2$s</xliff:g> perc <xliff:g id="SECONDS">%3$s</xliff:g> másodperc"</string>
+    <string name="volte_ss_not_avaliable_tips">A művelet elvégzéséhez adatkapcsolatot kell megnyitnia.</string>
+    <string name="outgoing_call_failed">"A hívás nem indítható."</string>
+    <string name="volte_ss_not_available_tips">A művelet befejezéséhez nyissa meg a(z) <xliff:g id="sub_name">%s</xliff:g> adatkapcsolatát.</string>
+    <string name="call_waiting_indication">A másik fél foglalt. Kérjük, várjon…</string>
+    <string name="outgoing_call_error_limit_exceeded">A hívás elküldése nem történt meg, korlát túllépve.</string>
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Nem támogatott szolgáltatás"</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Nem lehet váltani a hívások között."</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Nem lehet elkülöníteni a hívást."</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"Nem lehet továbbítani a hívást."</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"Nem lehet konferenciahívást folytatni."</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Nem lehet elutasítani a hívást."</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Nem lehet befejezni a hívás(oka)t."</string>
+    <string name="mo_code_unconditional_cf_active">Hívástovábbítás\nfeltétel nélkül aktiválva</string>
+    <string name="mo_code_some_cf_active">Hívástovábbítás\nBe feltételesen</string>
+    <string name="mo_code_call_forwarded">Hívás továbbítva</string>
+    <string name="mo_code_call_is_waiting">Várakoztatott hívás</string>
+    <string name="mo_code_cug_call">Zárt felhasználói csoport</string>
+    <string name="mo_code_outgoing_calls_barred">Kimenő hívások tiltva</string>
+    <string name="mo_code_incoming_calls_barred">Bejövő hívások tiltva a másik félnél</string>
+    <string name="mo_code_clir_suppression_rejected">Hívószám-azonosító szolgáltatást ellenőrzése</string>
+    <string name="mo_code_call_deflected">Összes hívás átirányítva</string>
+    <string name="mt_code_forwarded_call">Továbbított hívás</string>
+    <string name="mt_code_cug_call">Zárt felhasználói csoport</string>
+    <string name="mt_code_call_on_hold">Tartott hívás</string>
+    <string name="mt_code_call_retrieved">Visszakapcsolt hívás</string>
+    <string name="mt_code_multi_party_call">Konferenciahívás</string>
+    <string name="mt_code_on_hold_call_released">Tartott hívás feloldva</string>
+    <string name="mt_code_forward_check_received">Továbbítás ellenőrzés SS üzenet fogadva</string>
+    <string name="mt_code_call_connecting_ect">Hívás átirányítása</string>
+    <string name="mt_code_call_connected_ect">Hívásátirányítás aktív</string>
+    <string name="mt_code_deflected_call">Átirányított hívás</string>
+    <string name="mt_code_additional_call_forwarded">További bejövő hívás továbbítva</string>
+    <string name="mt_code_forwarded_cf">Hívás továbbítva</string>
+    <string name="mt_code_forwarded_cf_uncond">Feltétel nélküli hívástovábbítás</string>
+    <string name="mt_code_forwarded_cf_cond">Feltételes hívástovábbítás</string>
+    <string name="mt_code_forwarded_cf_busy">Foglalt hívás továbbítva</string>
+    <string name="mt_code_forwarded_cf_no_reply">Hívástovábbítás, ha nincs válasz</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Hívástovábbítás, ha nem elérhető</string>
+</resources>

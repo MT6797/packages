@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP 통화  <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g>  </string>
+    <string name="select_account">"계정 선택"</string>
+    <string name="all_accounts">"모든 계정"</string>
+    <string name="imei_invalid">유효하지 않음</string>
+    <string name="conf_call_member_list">구성원 목록</string>
+    <string name="conf_call_participant_answered">응답됨</string>
+    <string name="conf_call_participant_missed">"부재중 전화"</string>
+    <string name="can_not_switch_account_during_call">통화 중에는 통화에 기본 설정된 SIM을 전환할 수 없습니다.</string>
+    <string name="can_not_switch_account_temporarily">일시적으로 통화에 기본 설정된 SIM을 전환할 수 없습니다.</string>
+</resources>

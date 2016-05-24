@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="str_db_playlist_name">Οι εγγραφές μου</string>
+    <string name="alert_device_error">Παρουσιάστηκε σφάλμα στη συσκευή ήχου</string>
+    <string name="ext_media_badremoval_notification_title">"Μη αναμενόμενη αφαίρεση κάρτας SD"</string>
+    <string name="error_sdcard_access">"Δεν είναι δυνατή η πρόσβαση στην κάρτα SD"</string>
+    <string name="confirm_device_info_full">Δεν υπάρχει χώρος στην κάρτα SD, η εγγραφή έχει αποθηκευτεί.</string>
+    <string name="confirm_save_info_saved">Η εγγραφή έχει αποθηκευτεί</string>
+    <string name="confirm_save_info_saved_to">Η εγγραφή έχει αποθηκευτεί σε</string>
+    <string name="select_account_dialog_title">"Επιλογή λογαριασμού"</string>
+    <string name="reminder">Υπενθύμιση</string>
+    <string name="enable_ims_dialog_message">Η κλήση IMS είναι απενεργοποιημένη, θα θέλατε να την ενεργοποιήσετε;</string>
+    <string name="ip_dial_error_for_sip_call">Η λειτουργία κλήσης IP δεν εφαρμόζεται σε κλήσεις Ιnternet.</string>
+    <string name="call_duration_title">"Η κλήση τερματίστηκε"</string>
+    <string name="call_duration_format">"<xliff:g id="HOURS">%1$s</xliff:g> ώρες <xliff:g id="MINUTES">%2$s</xliff:g> λεπτά <xliff:g id="SECONDS">%3$s</xliff:g> δευτερόλεπτα"</string>
+    <string name="volte_ss_not_avaliable_tips">Για να ολοκληρωθεί η λειτουργία πρέπει να ανοίξετε τη σύνδεση δεδομένων.</string>
+    <string name="outgoing_call_failed">"H κλήση δεν πραγματοποιήθηκε."</string>
+    <string name="volte_ss_not_available_tips">Για να ολοκληρώσετε την ενέργειά σας, πρέπει να ανοίξετε τη σύνδεση δεδομένων <xliff:g id="sub_name">%s</xliff:g>.</string>
+    <string name="call_waiting_indication">Η άλλη πλευρά είναι σε κλήση, περιμένετε…</string>
+    <string name="outgoing_call_error_limit_exceeded">Η κλήση δεν προωθήθηκε, υπέρβαση ορίου.</string>
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Μη υποστηριζόμενη υπηρεσία."</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Αδύνατη η εναλλαγή κλήσεων."</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Δεν ήταν δυνατός ο διαχωρισμός της κλήσης."</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"Δεν ήταν δυνατή η μεταφορά της κλήσης."</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"Αδύνατη η πραγματοποίηση κλήσεων συνδιάσκεψης."</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Δεν ήταν δυνατή η απόρριψη της κλήσης."</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Αδύνατη η επαναφορά κλήσης (κλήσεων)."</string>
+    <string name="mo_code_unconditional_cf_active">Η προώθηση κλήσεων\nχωρίς όρους είναι ενεργοποιημένη</string>
+    <string name="mo_code_some_cf_active">Προώθηση κλήσεων\nχωρίς όρους</string>
+    <string name="mo_code_call_forwarded">Η κλήση έχει προωθηθεί</string>
+    <string name="mo_code_call_is_waiting">Κλήση σε αναμονή</string>
+    <string name="mo_code_cug_call">Κλειστή ομάδα χρηστών</string>
+    <string name="mo_code_outgoing_calls_barred">Οι εισερχόμενες κλήσεις έχουν αποκλειστεί</string>
+    <string name="mo_code_incoming_calls_barred">Η εισερχόμενη κλήση έχει αποκλειστεί από την άλλη πλευρά</string>
+    <string name="mo_code_clir_suppression_rejected">Υπηρεσία αποστολής ελέγχου αναγνώρισης κλήσης</string>
+    <string name="mo_code_call_deflected">Η κλήση μεταβιβάστηκε</string>
+    <string name="mt_code_forwarded_call">Πρόκειται για κλήση που έχει προωθηθεί</string>
+    <string name="mt_code_cug_call">Κλειστή ομάδα χρηστών</string>
+    <string name="mt_code_call_on_hold">Κρατημένη κλήση</string>
+    <string name="mt_code_call_retrieved">Έγινε ανάκτηση κλήσης</string>
+    <string name="mt_code_multi_party_call">Κλήση συνδιάσκεψης</string>
+    <string name="mt_code_on_hold_call_released">Τερματίστηκε κρατημένη κλήση</string>
+    <string name="mt_code_forward_check_received">Έγινε λήψη μηνύματος SS ελέγχου προώθησης</string>
+    <string name="mt_code_call_connecting_ect">Μεταβίβαση κλήσης</string>
+    <string name="mt_code_call_connected_ect">Μεταβίβαση κλήσης ενεργή</string>
+    <string name="mt_code_deflected_call">Πρόκειται για εκτρεπόμενη κλήση</string>
+    <string name="mt_code_additional_call_forwarded">Έχει προωθηθεί πρόσθετη εισερχόμενη κλήση</string>
+    <string name="mt_code_forwarded_cf">Η κλήση έχει προωθηθεί</string>
+    <string name="mt_code_forwarded_cf_uncond">Η κλήση έχει προωθηθεί χωρίς όρους</string>
+    <string name="mt_code_forwarded_cf_cond">Η κλήση έχει προωθηθεί με όρους</string>
+    <string name="mt_code_forwarded_cf_busy">Η κλήση έχει προωθηθεί λόγου κατειλημμένου</string>
+    <string name="mt_code_forwarded_cf_no_reply">Η κλήση έχει προωθηθεί επειδή δεν υπάρχει απάντηση</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Η κλήση έχει προωθηθεί επειδή δεν είναι εφικτή η σύνδεση</string>
+</resources>

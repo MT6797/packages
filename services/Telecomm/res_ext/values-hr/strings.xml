@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="str_db_playlist_name">"Moji snimci"</string>
+    <string name="alert_device_error">Došlo je do greške na audio uređaju</string>
+    <string name="ext_media_badremoval_notification_title">"SD kartica neočekivano je uklonjena"</string>
+    <string name="error_sdcard_access">Pristup SD kartici nije moguć</string>
+    <string name="confirm_device_info_full">Na SD kartici nema mjesta, snimka je spremljena.</string>
+    <string name="confirm_save_info_saved">Snimka je spremljena</string>
+    <string name="confirm_save_info_saved_to">Snimka je spremljena na</string>
+    <string name="select_account_dialog_title">"Odaberite račun"</string>
+    <string name="reminder">Podsjetnik</string>
+    <string name="enable_ims_dialog_message">IMS poziv je onemogućen, želite li ga omogućiti?</string>
+    <string name="ip_dial_error_for_sip_call">Funkcija IP biranja ne primjenjuje se na internetski poziv.</string>
+    <string name="call_duration_title">"Poziv je završio"</string>
+    <string name="call_duration_format">"<xliff:g id="HOURS">%1$s</xliff:g> sati <xliff:g id="MINUTES">%2$s</xliff:g> minuta <xliff:g id="SECONDS">%3$s</xliff:g> sekundi"</string>
+    <string name="volte_ss_not_avaliable_tips">Za dovršavanje radnje potrebno je otvoriti podatkovnu vezu.</string>
+    <string name="outgoing_call_failed">"Poziv nije poslan."</string>
+    <string name="volte_ss_not_available_tips">Ako želite dovršiti radnju, trebate otvoriti podatkovnu vezu od <xliff:g id="sub_name">%s</xliff:g>.</string>
+    <string name="call_waiting_indication">Druga strana je u pozivu, pričekajte malo…</string>
+    <string name="outgoing_call_error_limit_exceeded">Poziv nije upućen, ograničenje je prekoračeno.</string>
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Nepodržana usluga."</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Nije moguće prebaciti pozive."</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Nije moguće odvojiti poziv."</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"Nije moguće prenijeti poziv."</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"Nije moguće uspostaviti konferencijske pozive."</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Nije moguće odbiti poziv."</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Nije moguće ostvariti pozi(e)."</string>
+    <string name="mo_code_unconditional_cf_active">Aktivirano prosljeđivanje poziva\nbezuvjetno</string>
+    <string name="mo_code_some_cf_active">Prosljeđivanje poziva\nuvjetno</string>
+    <string name="mo_code_call_forwarded">Poziv preusmjeren</string>
+    <string name="mo_code_call_is_waiting">Poziv na čekanju</string>
+    <string name="mo_code_cug_call">Zatvorena grupa korisnika</string>
+    <string name="mo_code_outgoing_calls_barred">Odlazni poziv je zabranjen</string>
+    <string name="mo_code_incoming_calls_barred">Dolazni poziv je zabranjen na drugoj strani</string>
+    <string name="mo_code_clir_suppression_rejected">Provjera usluge slanja ID pozivatelja</string>
+    <string name="mo_code_call_deflected">poziv prebačen</string>
+    <string name="mt_code_forwarded_call">To je proslijeđen poziv</string>
+    <string name="mt_code_cug_call">Zatvorena grupa korisnika</string>
+    <string name="mt_code_call_on_hold">Poziv na čekanju</string>
+    <string name="mt_code_call_retrieved">Poziv dohvaćen</string>
+    <string name="mt_code_multi_party_call">Konferencijski poziv</string>
+    <string name="mt_code_on_hold_call_released">Poziv na čekanju je pušten</string>
+    <string name="mt_code_forward_check_received">Prosljeđivanje provjere primljene SS poruke</string>
+    <string name="mt_code_call_connecting_ect">Prijenos poziva</string>
+    <string name="mt_code_call_connected_ect">Prijenos poziva aktivan</string>
+    <string name="mt_code_deflected_call">To je skrenut poziv</string>
+    <string name="mt_code_additional_call_forwarded">Proslijeđen je dodatni dolazni poziv</string>
+    <string name="mt_code_forwarded_cf">Poziv preusmjeren</string>
+    <string name="mt_code_forwarded_cf_uncond">Poziv preusmjeren bezuvjetno</string>
+    <string name="mt_code_forwarded_cf_cond">Poziv preusmjeren uvjetno</string>
+    <string name="mt_code_forwarded_cf_busy">Proslijeđen zauzet poziv</string>
+    <string name="mt_code_forwarded_cf_no_reply">Poziv proslijeđen nakon izostanka odgovora</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Poziv proslijeđen nakon nedostupnosti</string>
+</resources>

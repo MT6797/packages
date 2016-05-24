@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="dm_lock">DM закључано</string>
+    <string name="dm_unlock">DM откључај</string>
+    <string name="start_record">Почни снимање</string>
+    <string name="stop_record">Заустави снимање</string>
+    <string name="str_db_playlist_name">"Моји снимци"</string>
+    <string name="alert_device_error">Дошло је до грешке на аудио уређају</string>
+    <string name="ext_media_badremoval_notification_title">"SD је неочекивано уклоњена"</string>
+    <string name="error_sdcard_access">Није могуће приступити SD картици</string>
+    <string name="confirm_device_info_full">Нема више простора на SD картици, снимак је сачуван.</string>
+    <string name="confirm_save_info_saved">Снимак је сачуван</string>
+    <string name="confirm_save_info_saved_to">Снимак је сачуван на</string>
+    <string name="recording_saved_sd_full">Нема више простора на SD картици, снимак је сачуван.</string>
+    <string name="sd_not_enough">На SD картици понестаје\n простора</string>
+    <string name="alert_dialog_dismiss">Одбаци</string>
+    <string name="change_my_pic">Промени</string>
+    <string name="onscreenHangupAll">Прекини све</string>
+    <string name="onscreenHangupHolding">Прекини на чекању</string>
+    <string name="onscreenHangupActiveAndAnswerWaiting">Прекини активни позив, одговори на позив на чекању</string>
+    <string name="menu_ect">Пренеси</string>
+    <string name="respond_via_sms_confirmation_format">"Порука је послата на број <xliff:g id="PHONE_NUMBER">%s</xliff:g>."</string>
+    <string name="volte_add_conference_member_title">Додај конференцијском позиву</string>
+    <string name="add_member_msg">Укуцајте број или име</string>
+    <string name="card_title_incoming_conference">Позивница за конференцијски позив</string>
+    <string name="addConferenceMemeberText">Додај члана</string>
+    <string name="add_conference_member_limit">Може се додати само један по један број.</string>
+    <string name="conference_member_join"><xliff:g id="member_name">%s</xliff:g> се придружио/ла конференцијском позиву.</string>
+    <string name="conference_member_leave"><xliff:g id="member_name">%s</xliff:g> је напустио/ла конференцијски позив.</string>
+    <string name="conference_member_adding">Додавање <xliff:g id="member_name">%s</xliff:g> ...</string>
+    <string name="conference_member_add_fail">Није успело додавање <xliff:g id="member_name">%s</xliff:g> .</string>
+    <string name="removeMember">"Уклони"</string>
+    <string name="memberStatus">"Статус"</string>
+    <string name="volte_call_waiting_indication_text">Друга страна има позив, сачекајте…</string>
+    <string name="multi_conference_member_adding">Додавање учесника...</string>
+    <string name="call_status_online">На мрежи</string>
+    <string name="call_status_onhold">"На чекању"</string>
+    <string name="call_status_dialing">"Бирање"</string>
+    <string name="call_status_disconnecting">"Прекидање везе"</string>
+    <string name="call_status_disconnected">"Веза је прекинута"</string>
+
+    <string name="accept_incoming_and_disconnect_current">Прихватање овог позива ће прекинути тренутни позив.</string>
+    <string name="add_voicemail_number">Додај број говорне поште</string>
+</resources>

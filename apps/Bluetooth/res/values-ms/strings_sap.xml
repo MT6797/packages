@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="bluetooth_sap_notif_title">Akses SIM Bluetooth</string>
+    <string name="bluetooth_sap_notif_ticker">Akses SIM Bluetooth</string>
+    <string name="bluetooth_sap_notif_message">Minta klien putuskan sambungan?</string>
+    <string name="bluetooth_sap_notif_disconnecting">Menunggu klien memutuskan sambungan</string>
+    <string name="bluetooth_sap_notif_disconnect_button">"Putuskansambungan"</string>
+    <string name="bluetooth_sap_notif_force_disconnect_button">Paksa putuskan sambungan</string>
+</resources>

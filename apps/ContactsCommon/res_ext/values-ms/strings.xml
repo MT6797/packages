@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Sebutkan nama untuk mencari kenalan.\nCubalah!</string>
+    <string name="vcs_guide_title">Carian Suara Kenalan</string>
+    <string name="vcs_guide_title1">Sebutkan nama untuk mencari kenalan.</string>
+    <string name="vcs_guide_title2">Ketik di sini untuk mendayakan fungsi ini.\nCuba sekarang!</string>
+    <string name="can_not_switch_account_during_call">Tidak boleh menukar SIM pilihan untuk memanggil semasa dalam panggilan.</string>
+    <string name="can_not_switch_account_temporarily">Tidak boleh menukar SIM pilihan untuk memanggil buat sementara waktu.</string>
+    <string name="call_account_switch_tips"> <xliff:g id="name1" example="CT1">^1</xliff:g> tidak akan berfungsi buat sementara waktu dan jika terdapat sebarang Panggilan, SMS, Data lalai pada <xliff:g id="name2" example="CT1">^2</xliff:g> akan ditukar kepada <xliff:g id="name3" example="CT2">^3</xliff:g> dengan sewajarnya.</string>
+</resources>

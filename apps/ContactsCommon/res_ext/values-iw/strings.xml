@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">אמור את השם כדי למצוא אנשי קשר.\nנסה זאת!</string>
+    <string name="vcs_guide_title">חיפוש קולי של אנשי קשר</string>
+    <string name="vcs_guide_title1">אמור את השם כדי לחפש אנשי קשר.</string>
+    <string name="vcs_guide_title2">הקש כאן כדי להפעיל את הפונקציה.\nנסה זאת!</string>
+    <string name="can_not_switch_account_during_call">לא ניתן להחליף את ה-SIM המועדף לשיחות במהלך שיחה.</string>
+    <string name="can_not_switch_account_temporarily">זמנית לא ניתן לעבור לכרטיס ה-SIM המועדף לשיחות.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> לא יפעל זמנית וכל שיחה, SMS או נתונים של ברירת מחדל ב-<xliff:g id="name2" example="CT1">^2</xliff:g> ישתנו ל-<xliff:g id="name3" example="CT2">^3</xliff:g> בהתאם.</string>
+</resources>

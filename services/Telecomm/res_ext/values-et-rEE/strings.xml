@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="str_db_playlist_name">Minu salvestused</string>
+    <string name="alert_device_error">Audioseadmel ilmnes tõrge</string>
+    <string name="ext_media_badremoval_notification_title">"SD-kaart on ootamatult eemaldatud"</string>
+    <string name="error_sdcard_access">Ei saa juurdepääsu SD kaardile</string>
+    <string name="confirm_device_info_full">SD kaardil pole ruumi, salvestus on salvestatud.</string>
+    <string name="confirm_save_info_saved">Salvestus on salvestatud</string>
+    <string name="confirm_save_info_saved_to">Salvestis talletati</string>
+    <string name="select_account_dialog_title">"Konto valimine"</string>
+    <string name="reminder">Meeldetuletus</string>
+    <string name="enable_ims_dialog_message">IMS kõned on keelatud, kas soovid need lubada?</string>
+    <string name="ip_dial_error_for_sip_call">IP-valimise funktsioon ei ole Interneti-helistamisel rakendatav.</string>
+    <string name="call_duration_title">"Kõne lõppes"</string>
+    <string name="call_duration_format">"<xliff:g id="HOURS">%1$s</xliff:g> tundi <xliff:g id="MINUTES">%2$s</xliff:g> minutit <xliff:g id="SECONDS">%3$s</xliff:g> sekundit"</string>
+    <string name="volte_ss_not_avaliable_tips">Toimingu lõpetamiseks peate te avama andmeühenduse.</string>
+    <string name="outgoing_call_failed">"Kõnet ei tehtud."</string>
+    <string name="volte_ss_not_available_tips">Toimingu lõpetamiseks peate te avama <xliff:g id="sub_name">%s</xliff:g> andmeühenduse.</string>
+    <string name="call_waiting_indication">Teisel poolel on kõne pooleli, palun oota…</string>
+    <string name="outgoing_call_error_limit_exceeded">Kõnet ei tehtud, piirang ületatud.</string>
+    <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Toetamata teenus."</string>
+    <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Kõnesid ei saa vahetada."</string>
+    <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Kõne ei saa eraldada."</string>
+    <string name="incall_error_supp_service_transfer" msgid="2509871374644921632">"Kõne ei saa üle kanda."</string>
+    <string name="incall_error_supp_service_conference" msgid="2505727299596357312">"Konverentskõnesid ei saa teha."</string>
+    <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Kõnest ei saa keelduda."</string>
+    <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Kõne(sid) ei saa vabastada"</string>
+    <string name="mo_code_unconditional_cf_active">Kõnede suunamine\ntingimusteta aktiveeritud</string>
+    <string name="mo_code_some_cf_active">Kõnede suunamine\ntingimustega</string>
+    <string name="mo_code_call_forwarded">Kõned suunatud</string>
+    <string name="mo_code_call_is_waiting">Kõne ootel</string>
+    <string name="mo_code_cug_call">Suletud kasutajagrupp</string>
+    <string name="mo_code_outgoing_calls_barred">Väljuv kõne blokeeritud</string>
+    <string name="mo_code_incoming_calls_barred">Sisenev kõne blokeeritud teisel pool</string>
+    <string name="mo_code_clir_suppression_rejected">Kontrolli numbrinäidu saatmisteenust</string>
+    <string name="mo_code_call_deflected">Kõne edastatud</string>
+    <string name="mt_code_forwarded_call">See on suunatud kõne</string>
+    <string name="mt_code_cug_call">Suletud kasutajagrupp</string>
+    <string name="mt_code_call_on_hold">Kõne ootel</string>
+    <string name="mt_code_call_retrieved">Kõne toodud</string>
+    <string name="mt_code_multi_party_call">Konverentskõne</string>
+    <string name="mt_code_on_hold_call_released">Ootel kõne vabastatud</string>
+    <string name="mt_code_forward_check_received">Suunamise kontrollimise SS teade vastu võetud</string>
+    <string name="mt_code_call_connecting_ect">Kõne edastamine</string>
+    <string name="mt_code_call_connected_ect">Kõneedastus aktiivne</string>
+    <string name="mt_code_deflected_call">See on automaatselt ümber suunatud kõne</string>
+    <string name="mt_code_additional_call_forwarded">Täiendav sisenev kõne on suunatud</string>
+    <string name="mt_code_forwarded_cf">Kõne suunatud</string>
+    <string name="mt_code_forwarded_cf_uncond">Kõne suunati tingimusteta</string>
+    <string name="mt_code_forwarded_cf_cond">Kõne suunati tingimuslikult</string>
+    <string name="mt_code_forwarded_cf_busy">Number hõivatud, kõne suunati</string>
+    <string name="mt_code_forwarded_cf_no_reply">Ei vasta, kõne suunati</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Kättesaamatu, kõne suunati</string>
+</resources>

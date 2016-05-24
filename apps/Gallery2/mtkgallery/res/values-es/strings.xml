@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="m_share_format_choose_title">"Elegir formato"</string>
+    <string name="m_share_format_image">"Imagen"</string>
+    <string name="m_share_format_video">Vídeo</string>
+    <string name="m_generating_tip">"Generando vídeo..."</string>
+    <string name="m_generate_video_fail">"No se pudo descargar el vídeo"</string>
+    <string name="m_generating_gif_tip">"Generando Gif..."</string>
+    <string name="m_generate_gif_fail">"No se pudo generar el Gif"</string>
+    <string name="m_share_limit">No se pueden compartir más de 300 archivos.</string>
+    <string name="m_demo_off">Demostración desactivada</string>
+    <string name="m_vertical_demo">Demostración vertical</string>
+    <string name="m_horizontal_demo">Demostración horizontal</string>
+    <string name="m_storage_not_enough">"El almacenamiento no tiene espacio suficiente."</string>
+    <string name="m_saving_image">"Guardando imagen en <xliff:g id="ALBUM_NAME">%1$s</xliff:g> …"</string>
+    <string name="m_drm_protected_warning1">"El contenido está protegido contra copia,"</string>
+    <string name="m_drm_protected_warning2">"Para verlo en el teléfono,"</string>
+    <string name="m_wfd_protected_warning">"Desconecte la visualización inalámbrica"</string>
+    <string name="m_hdmi_protected_warning">"desconéctese de HDMI."</string>
+    <string name="m_please_wait">Espere...</string>
+    <string name="m_insufficient_space_one">No se pudo compartir. Espacio insuficiente.</string>
+    <string name="m_insufficient_space_some">No se pudieron compartir algunos vídeos a cámara lenta. Espacio insuficiente.</string>
+    <string name="m_insufficient_space_all">No se pudieron compartir todos los vídeos a cámara lenta. Espacio insuficiente.</string>
+    <string name="not_avaliable_16x_multi_share">No disponible para compartir vídeo a cámara lenta 1/16x. El vídeo se comparte como 1/4x</string>
+    <string name="not_avaliable_16x_single_share">
+      No disponible para compartir vídeo a cámara lenta 1/16x. Comparta el vídeo en otras velocidades
+    </string>
+    <string name="m_raw_reminder">"Puede ver el archivo RAW de esta fotografía conectándose a un ordenador."</string>
+</resources>

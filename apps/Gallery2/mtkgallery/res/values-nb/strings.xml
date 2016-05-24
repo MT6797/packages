@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="m_share_format_choose_title">"Velg format"</string>
+    <string name="m_share_format_image">"Bilde"</string>
+    <string name="m_share_format_video">Video</string>
+    <string name="m_generating_tip">"Oppretter video …"</string>
+    <string name="m_generate_video_fail">"Klarte ikke å opprette video"</string>
+    <string name="m_generating_gif_tip">"Generer Gif …"</string>
+    <string name="m_generate_gif_fail">"Kunne ikke generere Gif"</string>
+    <string name="m_share_limit">Kan ikke dele mer enn 300 filer.</string>
+    <string name="m_demo_off">Demo av</string>
+    <string name="m_vertical_demo">Vertikal demo</string>
+    <string name="m_horizontal_demo">Horisontal demo</string>
+    <string name="m_storage_not_enough">"Lagringsområdet har ikke nok plass."</string>
+    <string name="m_saving_image">"Lagrer bildet i <xliff:g id="ALBUM_NAME">%1$s</xliff:g> …"</string>
+    <string name="m_drm_protected_warning1">"Innholdet er kopibeskyttet,"</string>
+    <string name="m_drm_protected_warning2">"For å se det på telefonen må du,"</string>
+    <string name="m_wfd_protected_warning">"koble fra trådløs visning."</string>
+    <string name="m_hdmi_protected_warning">"koble fra med HDMI."</string>
+    <string name="m_please_wait">"Vent litt"</string>
+    <string name="m_insufficient_space_one">Klarte ikke å dele; det er for lite plass.</string>
+    <string name="m_insufficient_space_some">Klarte ikke å dele noen videoer i saktefilm; det er for lite plass.</string>
+    <string name="m_insufficient_space_all">Klarte ikke å dele alle videoer i saktefilm; det er for lite plass.</string>
+    <string name="not_avaliable_16x_multi_share">Ikke tilgjengelig for 1/16 ganger saktefilm videodeling. Video deles som 1/4 ganger</string>
+    <string name="not_avaliable_16x_single_share">Ikke tilgjengelig for 1/16 ganger saktefilm videodeling. Del video med en annen hastighet</string>
+    <string name="m_raw_reminder">"Du kan se RAW-filen av dette bildet ved å koble til en datamaskin."</string>
+</resources>

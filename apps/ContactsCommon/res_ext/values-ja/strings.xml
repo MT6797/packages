@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">連絡先を検索する名前を言ってください。\n試してください！</string>
+    <string name="vcs_guide_title">音声連絡先検索</string>
+    
+    <string name="vcs_guide_title1">連絡先を検索するために、名前を言ってください。</string>
+    <string name="vcs_guide_title2">機能を有効にするために、ここをタップします。\n試してください。</string>
+    <string name="can_not_switch_account_during_call">通話中は、通話優先SIMに切り替えできません。</string>
+    <string name="can_not_switch_account_temporarily">一時的に、通話優先SIMに切り替えられません。</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g>は一時的に動作しません。そのため、<xliff:g id="name2" example="CT1">^2</xliff:g>のデフォルトの通話、SMS、データは<xliff:g id="name3" example="CT2">^3</xliff:g>に変更されます。</string>
+</resources>

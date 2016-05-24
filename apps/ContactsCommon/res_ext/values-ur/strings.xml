@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">رابطے تلاش کرنے کیلئے ان کا نام لیں۔\n اسے آزمائیں!</string>
+    <string name="vcs_guide_title">وائس کنٹیکٹ سرچ</string>
+    <string name="vcs_guide_title1">رابطے تلاش کرنے کے لیے نام بولیں۔</string>
+    <string name="vcs_guide_title2">فنکشن فعال کرنے کے لیے یہاں ٹیپ کریں۔\nاسے آزمائیں!</string>
+
+    <string name="can_not_switch_account_during_call">کال کے دوران کالوں کے لیے ترجیحی SIM کو سوئچ نہیں کیا جاسکتا۔</string>
+    <string name="can_not_switch_account_temporarily">عارضی طور پر کالوں کے لیے ترجیحی SIM کو تبدیل نہیں کیا جاسکتا۔</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> عارضی طور پر کام نہیں کرے گا، اور اگر  <xliff:g id="name2" example="CT1">^2</xliff:g> پر کوئی ڈیفالٹ کال، ایس ایم ایس، ڈیٹا ہوگا تو وہ بھی اسی طرح<xliff:g id="name3" example="CT2">^3</xliff:g> تبدیل ہوجائے گا۔</string>
+
+</resources>

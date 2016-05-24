@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP позив <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"Изаберите налог"</string>
+    <string name="all_accounts">"Сви налози"</string>
+    <string name="imei_invalid">Неважеће</string>
+    <string name="conf_call_member_list">Lista članova</string>
+    <string name="conf_call_participant_answered">Odgovoreno</string>
+    <string name="conf_call_participant_missed">"Пропуштени"</string>
+    <string name="can_not_switch_account_during_call">Током позива није могуће променити жељену SIM картицу за позиве.</string>
+    <string name="can_not_switch_account_temporarily">Привремено није могуће променити жељену SIM картицу за позиве.</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Sabihin ang pangalan para hanapin ang mga kontak.\nSubukan ito!</string>
+    <string name="vcs_guide_title">Paghahanap ng Kontak Gamit ang Boses</string>
+    <string name="vcs_guide_title1">Sabihin ang pangalan upang mahanap ang mga contact.</string>
+    <string name="vcs_guide_title2">I-tap dito para paganahin ang pagana.\nSubukan ito!</string>
+    <string name="can_not_switch_account_during_call">Hindi maililipat ang nais na SIM para sa mga tawag habang tumatawag.</string>
+    <string name="can_not_switch_account_temporarily">Pansamantalang hindi mailipat ang nais na SIM para sa mga tawag.</string>
+    <string name="call_account_switch_tips">Ang <xliff:g id="name1" example="CT1">^1</xliff:g> ay hindi pansamantalang gagana at kung may anumang default na Tawag, SMS, Data sa <xliff:g id="name2" example="CT1">^2</xliff:g> ay babaguhin sa <xliff:g id="name3" example="CT2">^3</xliff:g> nang naaayon.</string>
+</resources>

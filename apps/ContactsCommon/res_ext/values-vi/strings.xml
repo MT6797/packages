@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Đọc tên để tìm số liên lạc.\nThử ngay!</string>
+    <string name="vcs_guide_title">Tìm số liên lạc thoại</string>
+    <string name="vcs_guide_title1">Đọc tên để tìm số liên lạc</string>
+    <string name="vcs_guide_title2">Chạm đây để bật chức năng.\nHãy thử!</string>
+    <string name="can_not_switch_account_during_call">Ko thể chuyển SIM ưu tiên cho các c.gọi trong khi gọi.</string>
+    <string name="can_not_switch_account_temporarily">Tạm thời không thể chuyển SIM ưu tiên cho các cuộc gọi.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> tạm thời sẽ không hoạt động, và nếu có bất kỳ Cuộc gọi, SMS và Dữ liệu mặc định nào trên <xliff:g id="name2" example="CT1">^2</xliff:g> sẽ được đổi thành <xliff:g id="name3" example="CT2">^3</xliff:g> tương ứng.</string>
+</resources>

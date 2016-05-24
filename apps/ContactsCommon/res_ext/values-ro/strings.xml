@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Rostiţi numele pentru a găsi contacte.\nÎncercaţi această funcţie!</string>
+    <string name="vcs_guide_title">Căutare vocală contacte</string>
+    <string name="vcs_guide_title1">Rostiţi numele pentru a găsi persoana de contact dorită.</string>
+    <string name="vcs_guide_title2">Atingeţi aici pentru a activa funcţia.\nÎncercaţi-o!</string>
+    <string name="can_not_switch_account_during_call">Nu se poate comuta cartela SIM preferată pentru apeluri în timpul apelului.</string>
+    <string name="can_not_switch_account_temporarily">Nu se poate comuta temporar cartela SIM preferată pentru apeluri.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> nu va funcţiona temporar, iar dacă oricare dintre opţiunile implicite Apel, SMS, Date de pe <xliff:g id="name2" example="CT1">^2</xliff:g> se vor modifica în mod corespunzător în <xliff:g id="name3" example="CT2">^3</xliff:g>.</string>
+</resources>

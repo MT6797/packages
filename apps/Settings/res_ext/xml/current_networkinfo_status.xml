@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        style="?android:attr/preferenceInformationStyle"
+        android:key="current_operators_mccmnc"
+        android:persistent="false"
+        android:summary="@string/device_info_default"
+        android:title="@string/current_operators_mccmnc" />
+
+    <Preference
+        style="?android:attr/preferenceInformationStyle"
+        android:key="current_sidnid"
+        android:persistent="false"
+        android:summary="@string/device_info_default"
+        android:title="@string/status_current_sidnid" />
+
+	<Preference android:key="current_cellid"
+        style="?android:attr/preferenceInformationStyle"
+        android:title="@string/status_current_cellid"
+        android:summary="@string/device_info_default"
+        android:persistent="false" />
+
+</PreferenceScreen>

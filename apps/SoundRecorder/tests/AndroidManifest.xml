@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.soundrecorder.tests"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <application>
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+    <instrumentation
+        android:name=".SoundRecorderTestRunner"
+        android:label="SoundRecorder function auto-tests"
+        android:targetPackage="com.android.soundrecorder" />
+    <instrumentation
+        android:name=".SoundRecorderPerformanceRunner"
+        android:label="SoundRecorder performance auto-tests"
+        android:targetPackage="com.android.soundrecorder" />
+    <instrumentation
+        android:name="com.android.soundrecorder.tests.SoundRecorderLaunchPerformance"
+        android:label="SoundRecorder Launch Performance"
+        android:targetPackage="com.android.soundrecorder" />
+    <instrumentation
+        android:name="com.android.soundrecorder.tests.RecordingFileListLaunchPerformance"
+        android:label="RecordingFileList Launch Performance"
+        android:targetPackage="com.android.soundrecorder" />
+    <instrumentation
+        android:name=".SoundRecorderStressTestRunner"
+        android:label="SoundRecorder stress auto-tests"
+        android:targetPackage="com.android.soundrecorder" />
+
+    <instrumentation
+        android:name=".SoundRecorderTestByAnnotationTestRunner"
+        android:label="SoundRecorder auto test by annotation"
+        android:targetPackage="com.android.soundrecorder" />
+
+    <uses-permission android:name="android.permission.RUN_INSTRUMETATION" />
+
+</manifest>

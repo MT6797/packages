@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP کال \u200e <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g>  </string>
+    <string name="select_account">اکاؤنٹ منتخب کریں</string>
+    <string name="all_accounts">سبھی اکاؤنٹس</string>
+    <string name="imei_invalid">غلط</string>
+    <string name="conf_call_member_list">ممبر کی فہرست</string>
+    <string name="conf_call_participant_answered">جواب دیا ہوا</string>
+    <string name="conf_call_participant_missed">چھوٹا ہوا</string>
+    <string name="can_not_switch_account_during_call">کال کے دوران کالوں کے لیے ترجیحی SIM کو سوئچ نہیں کیا جاسکتا۔</string>
+    <string name="can_not_switch_account_temporarily">عارضی طور پر کالوں کے لیے ترجیحی SIM کو تبدیل نہیں کیا جاسکتا۔</string>
+</resources>

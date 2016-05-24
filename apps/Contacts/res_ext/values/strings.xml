@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_tap_to_search_again">Tap to search again</string>
+    <string name="hotknot" translatable="false">HotKnot</string>
+
+    <!-- Warning dialog. Shown if user selected contacts contained ICCcard contact. [CHAR LIMIT=NONE]  -->
+    <string name="batch_merge_sim_contacts_warning">SIM contacts can not be merged.</string>
+
+</resources>

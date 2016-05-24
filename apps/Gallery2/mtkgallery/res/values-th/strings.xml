@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="m_share_format_choose_title">"เลือกรูปแบบ"</string>
+    <string name="m_share_format_image">"รูปภาพ"</string>
+    <string name="m_share_format_video">วิดีโอ</string>
+    <string name="m_generating_tip">"กำลังสร้างวิดีโอ..."</string>
+    <string name="m_generate_video_fail">"ไม่สามารถสร้างวิดีโอ"</string>
+    <string name="m_generating_gif_tip">"กำลังสร้าง Gif…"</string>
+    <string name="m_generate_gif_fail">"ไม่สามารถสร้าง Gif"</string>
+    <string name="m_share_limit">ไม่สามารถแชร์มากกว่า 300 ไฟล์ได้</string>
+    <string name="m_demo_off">ปิดการสาธิต</string>
+    <string name="m_vertical_demo">สาธิตแนวตั้ง</string>
+    <string name="m_horizontal_demo">สาธิตแนวนอน</string>
+    <string name="m_storage_not_enough">"หน่วยจัดเก็บไม่มีพื้นที่เพียงพอ"</string>
+    <string name="m_saving_image">"กำลังบันทึกภาพลงใน <xliff:g id="ALBUM_NAME">%1$s</xliff:g>…"</string>
+    <string name="m_drm_protected_warning1">"เนื้อหามีการป้องกันการคัดลอก"</string>
+    <string name="m_drm_protected_warning2">"เพื่อดูบนโทรศัพท์"</string>
+    <string name="m_wfd_protected_warning">"โปรดตัดการเชื่อมต่อการแสดงผลไร้สาย"</string>
+    <string name="m_hdmi_protected_warning">"โปรดตัดการเชื่อมต่อกับ HDMI"</string>
+    <string name="m_please_wait">โปรดรอ</string>
+    <string name="m_insufficient_space_one">ไม่สามารถแชร์ได้ พื้นที่ไม่เพียงพอ</string>
+    <string name="m_insufficient_space_some">ไม่สามารถแชร์วิดีโอสโลว์โมชั่นบางไฟล์ได้ พื้นที่ไม่เพียงพอ</string>
+    <string name="m_insufficient_space_all">ไม่สามารถแชร์วิดีโอสโลว์โมชั่นทั้งหมดได้ พื้นที่ไม่เพียงพอ</string>
+    <string name="not_avaliable_16x_multi_share">ใช้ไม่ได้สำหรับการแชร์วิดีโอสโลว์โมชั่น 1/16x วิดีโอถูกแชร์เป็น 1/4x</string>
+    <string name="not_avaliable_16x_single_share">ใช้ไม่ได้สำหรับการแชร์วิดีโอสโลว์โมชั่น 1/16x โปรดแชร์วิดีโอเป็นความเร็วอื่น ๆ</string>
+    <string name="m_raw_reminder">"คุณสามารถดูไฟล์ RAW ของภาพนี้โดยการเชื่อมต่อไปยังคอมพิวเตอร์"</string>
+</resources>

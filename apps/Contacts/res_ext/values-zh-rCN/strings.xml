@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_tap_to_search_again">点这里再搜一次哦</string>
+
+    <!-- Warning dialog. Shown if user selected contacts contained ICCcard contact. [CHAR LIMIT=NONE]  -->
+    <string name="batch_merge_sim_contacts_warning">SIM卡联系人不可以合并.</string>
+
+</resources>

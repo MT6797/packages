@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">Digues el nom per cercar contactes.\nProva-ho!</string>
+    <string name="vcs_guide_title">Cerca de contactes per veu</string>
+    <string name="vcs_guide_title1">Digueu el nom del contacte per cercar-lo.</string>
+    <string name="vcs_guide_title2">Toqueu aquí per activar la funció.\nProveu-ho!!</string>
+    <string name="can_not_switch_account_during_call">No es pot canviar de SIM preferit per a les trucades durant la trucada.</string>
+    <string name="can_not_switch_account_temporarily">Temporalment, no es pot canviar de SIM preferit per a les trucades.</string>
+    <string name="call_account_switch_tips"><xliff:g id="name1" example="CT1">^1</xliff:g> no funcionarà temporalment, i en cas de produir-se una trucada, SMS o dades preteterminades en <xliff:g id="name2" example="CT1">^2</xliff:g>, es canviarà a <xliff:g id="name3" example="CT2">^3</xliff:g>, segons correspongui.</string>
+</resources>

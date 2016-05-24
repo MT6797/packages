@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="m_share_format_choose_title">"Alegere format"</string>
+    <string name="m_share_format_image">"Imagine"</string>
+    <string name="m_share_format_video">Video</string>
+    <string name="m_generating_tip">"Se generează videoclipul..."</string>
+    <string name="m_generate_video_fail">"Nu s-a putut genera clipul video"</string>
+    <string name="m_generating_gif_tip">"Se generează fişierul GIF..."</string>
+    <string name="m_generate_gif_fail">"Nu s-a putut genera fişierul GIF"</string>
+    <string name="m_share_limit">Nu se pot partaja mai mult de 300 de fişiere.</string>
+    <string name="m_demo_off">Demonstraţie dezactivată</string>
+    <string name="m_vertical_demo">Demonstraţie verticală</string>
+    <string name="m_horizontal_demo">Demonstraţie orizontală</string>
+    <string name="m_storage_not_enough">"Nu există suficient spaţiu de stocare."</string>
+    <string name="m_saving_image">"Se salvează imaginea în <xliff:g id="ALBUM_NAME">%1$s</xliff:g> ..."</string>
+    <string name="m_drm_protected_warning1">"Conţinutul este protejat împotriva copierii,"</string>
+    <string name="m_drm_protected_warning2">"Pentru a-l vedea pe telefon,"</string>
+    <string name="m_wfd_protected_warning">"deconectaţi afişajul wireless"</string>
+    <string name="m_hdmi_protected_warning">"deconectaţi-vă de la HDMI."</string>
+    <string name="m_please_wait">"Aşteptaţi"</string>
+    <string name="m_insufficient_space_one">Nu s-a reuşit partajarea deoarece spaţiul este insuficient.</string>
+    <string name="m_insufficient_space_some">Nu s-a reuşit partajarea unor videoclipuri redate la viteză redusă deoarece spaţiul este insuficient.</string>
+    <string name="m_insufficient_space_all">Nu s-a reuşit partajarea tuturor videoclipuri redate la viteză redusă deoarece spaţiul este insuficient.</string>
+    <string name="not_avaliable_16x_multi_share">Indisponibil pentru partajarea videoclipurilor redate la viteza de 1/16x. Videoclipul este partajat la viteza de 1/4x</string>
+    <string name="not_avaliable_16x_single_share">Indisponibil pentru partajarea videoclipurilor redate la viteza de 1/16x. Partajaţi videoclipul folosind alte viteze</string>
+    <string name="m_raw_reminder">"Puteţi vizualiza fişierul RAW aferent acestei fotografii după conectarea la computer."</string>
+</resources>

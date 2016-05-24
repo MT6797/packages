@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- MTK Wi-Fi settings start -->
+   <string name="wifi_advanced_ipv4_address_title">Địa chỉ IPv4</string>
+  <string name="wifi_advanced_ipv6_address_title">Địa chỉ IPv6</string>
+  <string name="wifi_ipv4_address">Địa chỉ IPv4</string>
+  <string name="wifi_ipv6_address">Địa chỉ IPv6</string>
+  <string name="wifi_security_wapi_certificate">Giấy phép WAPI</string>
+  <string name="wapi_user_certificate">Giấy phép n.dùng</string>
+  <string name="wapi_as_certificate">Giấy phép ASE</string>
+  <string name="wifi_hex_password">Mật khẩu thập lục phân.</string>
+  <string name="wifi_no_cert_for_wapi">Không thể tìm chứng nhận cho AP kết nối hiện hành</string>
+  <string name="sim_slot">Khe lắp SIM</string>
+  <string name="wifi_tether_auto_channel_text">Tự động</string>
+  <string name="wifi_tether_auto_channel_width_text">Tự động 20/40 MHz</string>
+  <!-- MTK Wi-Fi settings end -->
+ 
+  <!-- MTK Wi-Fi hotspot client start -->
+   <string name="wifi_tether_auto_disable_title">Luôn bật trạm phát Wi-Fi</string>
+  <string name="wifi_tether_setting_title">Cài đặt cơ bản</string>
+  <string name="wifi_tether_wps_connect_title">"Kết nối WPS"</string>
+  <string name="wifi_tether_wps_connect_summary">Đã chọn chế độ cài đặt bảo vệ Wi-Fi để tiếp tục</string>
+  <string name="wifi_tether_wps_pin_error">Mã PIN ko hợp lệ</string>
+  <string name="wifi_tethering_title">Trạm phát Wi-Fi</string>
+  <string name="wifi_ap_wps_dialog_title">"Kết nối WPS"</string>
+  <string name="wifi_ap_wps_mode_title">Chế độ WPS</string>
+  <string name="wifi_ap_wps_pin_title">Nhập mã PIN từ ứ.dụng khách</string>
+  <string name="wifi_ap_reset_OOB_title">Cài lại mã SSID mạng, bảo mật và mật khẩu về mặc định (cấu hình mặc định cho WPS )</string>
+  <string name="wifi_ap_reset_OOB">Cài lại OOB</string>
+  <string name="wifi_ap_max_connection_title">Các kết nối tối đa</string>
+  <string name="wifi_ap_connected_title">Người dùng đã kết nối</string>
+  <string name="wifi_ap_blocked_title">Người dùng bị chặn</string>
+  <string name="wifi_ap_client_block_title">Chặn</string>
+  <string name="wifi_ap_client_unblock_title">Hủy chặn</string>
+  <string name="wifi_ap_client_details_title">Chi tiết</string>
+  <string name="wifi_ap_client_mac_label">Địa chỉ MAC:</string>
+  <string name="wifi_ap_client_ip_label">Địa chỉ IP:</string>
+  <string name="wifi_ap_bandwidth_title">Sử dụng băng thông</string>
+  <string name="wifi_ap_bandwidth_enable">Bật điều chỉnh băng thông</string>
+  <string name="wifi_ap_bandwidth_chart_title">Tốc độ dữ liệu thời gian thực</string>
+  <string name="wifi_ap_bandwidth_chart_summary">Được đo bởi điện thoại của bạn, nên việc tính tốc độ dữ liệu từ nhà khai thác mạng có thể khác nhau.</string>
+  <string name="wifi_wps_fail_error">Không thể cài đặt bảo vệ Wi-Fi, thử lại.</string>
+  <string name="wifi_ap_title">Thống kê</string>
+  <string name="wifi_ap_time_duration">Thời lượng: 
+        <xliff:g id="time">%1$s</xliff:g></string>
+  <string name="wifi_ap_total_data">Tổng dữ liệu sử dụng:
+        <xliff:g id="time">%1$s</xliff:g></string>
+  <string name="wifi_ap_no_connected">0 người dùng đã kết nối</string>
+  <string name="wifi_ap_no_blocked">0 người dùng bị chặn</string>
+  <!-- MTK Wi-Fi hotspot client end -->
+ 
+  <!-- MTK WFD start -->
+   <string name="wfd_change_resolution_menu_title">Đổi độ phân giải</string>
+  <string name="wfd_sink_summary">Có thể phát hiện bởi các thiết bị khác</string>
+  <string name="wfd_device_category">D.SÁCH THIẾT BỊ</string>
+  <string name="wfd_sink_toast_enjoy">Tận hưởng kiểu đổi màn hình từ thiết bị kia</string>
+  <string name="wfd_sink_toast_disconnect">Đã ngắt màn hình đổi kiểu</string>
+  <string name="wfd_sink_disconnecting">"Đang ngắt k.nối…"</string>
+  <string name="wfd_sink_guide_btn">Truy cập nó</string>
+  <string name="wfd_sink_guide_title">Cách thoát?</string>
+  <string name="wfd_sink_guide_content">Nhấn giữ trong <xliff:g id="seconds">%s</xliff:g> giây trên màn hình để thoát chế độ hiển thị của thiết bị kia.</string>
+  <!-- MTK WFD end -->
+ 
+  <!-- MTK Wireless settings start -->
+   <string name="tethered_ipv6_title">Cài đặt điểm thu phát không dây &amp; kết nối</string>
+  <string name="tethered_ipv4v6">(IPv6 có sẵn)</string>
+  <string name="tethered_ipv6">(Chỉ IPv6 có sẵn)</string>
+  <string name="tethered_ipv4">(IPv6 không có sẵn)</string>
+  <string name="tethering_apn_settings_title">Cài đặt APN</string>
+  <string name="tethering_apn_settings_summary">Định cấu hình APN để kết nối</string>
+  <string name="usb_tether_type_title">Kiểu kết nối USB</string>
+  <string name="usb_tethering_select_version">Chọn phiên bản hệ thống PC</string>
+  <string name="lockdown_vpn_already_connected">Đã bật chế độ Luôn kết nối VPN để kết nối.</string>
+  <!-- MTK Wireless settings end -->
+ 
+  <!-- AudioProfile Settings start -->
+   <string name="ring_summary">Chuông</string>
+  <string name="ring_vibrate_summary">Chuông và rung</string>
+  <string name="silent_summary">Chỉ im lặng</string>
+  <string name="meeting_summary">Chỉ rung</string>
+  <string name="outdoor_summary">Chuông to nhất và rung</string>
+  <string name="audio_profile_reset">Cài lại</string>
+  <string name="audio_profile_add">Thêm</string>
+  <string name="audio_profile_enable">Bật</string>
+  <string name="audio_profile_rename">"Đổi tên"</string>
+  <string name="audio_profile_delete">"Xóa"</string>
+  <string name="audio_profile_message_reset">Mọi cài đặt cấu hình âm thanh sẽ được cài về mặt định</string>
+  <string name="audio_profile_message_rename">Hãy nhập tên cấu hình mới</string>
+  <string name="audio_profile_message_name_error">Tên vừa nhập đã có</string>
+  <string name="audio_profile_message_name_length_wrong">Tên phải chứa ít nhất một ký tự</string>
+  <string name="audio_profile_message_delete">Cấu hình 
+        <xliff:g id="profile">%s</xliff:g> sẽ bị xóa</string>
+  <string name="audio_profile_message_overflow">Bạn chỉ được phép thêm 6 cấu hình tùy chỉnh</string>
+  <string name="audio_profile_category_custom_title">Cấu hình tự chọn</string>
+  <string name="audio_profile_category_predefine_title">Cấu hình cài sẵn</string>
+  <string name="audio_profile_error">"Lỗi"</string>
+  <string name="audio_profile_others">Thông báo &amp; Mục khác</string>
+  <string name="general_settings_title">"Chung"</string>
+  <string name="silent_settings_title">Im lặng</string>
+  <string name="meeting_settings_title">Hội nghị</string>
+  <string name="outdoor_settings_title">Ngoài trời</string>
+  <string name="sound_category_feedback_title">"Hệ thống"</string>
+  <string name="sound_category_calls_title">"Cuộc gọi đến"</string>
+  <string name="voice_call_title">Nhạc chuông c.gọi thoại</string>
+  <string name="voice_call_summary">Cài nhạc chuông c.gọi thoại đến mặc định</string>
+  <string name="video_call_title">Nhạc chuông c.gọi video</string>
+  <string name="video_call_summary">Cài nhạc chuông c.gọi video đến mặc định</string>
+  <string name="sip_call_title">Nhạc chuông gọi SIP</string>
+  <string name="sip_call_summary">Cài nhạc chuông gọi SIP mặc định</string>
+  <string name="Phone_vibrate_summary">ĐT báo rung khi có cuộc gọi đến</string>
+  <string name="vibrate_title">Rung</string>
+  <string name="audio_profile_settings_title">C.hình âm thanh</string>
+  <string name="audio_profile_bes_loudness_summary">Bộ tăng cường âm lượng cho loa</string>
+  <string name="sound_enhancement_title">Tăng cường âm thanh</string>
+  <string name="music_plus_summary">Bộ tăng cường âm thanh cho tai nghe</string>
+  <string name="lossless_title">Chế độ BT hoàn hảo</string>
+  <string name="lossless_summary">Âm thanh BT chất lượng cao</string>
+  <string name="lossless_connect_summary">Wi-Fi sẽ bị ảnh hưởng khi bật Chế độ BT hoàn hảo. Bạn chắc chắn muốn bật?</string>
+  <string name="lossless_on">Chế độ BT hoàn hảo BẬT</string>
+  <string name="lossless_playing">Phát nhạc hoàn hảo</string>
+  <string name="lossless_toastmessage">Âm thanh hệ thống sẽ được phát qua loa điện thoại</string>
+  <string name="lossless_volume_max">Hãy duy trì âm lượng hệ thống ở mức tối đa</string>
+  <string name="lossless_cannot_found_device">Không tìm thấy thiết bị BT ko mất</string>
+  <string name="audio_profile_bes_surround_title">BesSurround</string>
+  <string name="audio_profile_bes_surround_summary">Âm thanh xung quanh</string>
+  <string name="audio_profile_bes_surround_mode_movie">Chế độ quay phim</string>
+  <string name="audio_profile_bes_surround_mode_music">Chế độ nghe nhạc</string>
+  <string name="sms_vibrate_summary">rung máy khi có sms</string>
+  <string name="zen_mode_option_title_novoice">"Khi thông báo đến"</string>
+  <!-- AudioProfile Settings end -->
+ 
+  <!-- MTK NFC settings start -->
+   <string name="nfc_p2p_mode">Chế độ P2P</string>
+  <string name="nfc_p2p_mode_summary">Gửi hoặc nhận nội dung ứ.dụng</string>
+  <string name="nfc_tag_mode_category">C.độ nhãn</string>
+  <string name="nfc_rw_tag_title">Đọc &amp; ghi nhãn</string>
+  <string name="nfc_rw_tag_summary">Đọc từ hoặc ghi sang nhãn</string>
+  <string name="nfc_card_emulation_category_title">chế độ mô phỏng thẻ</string>
+  <string name="nfc_card_emulation">Mô phỏng thẻ</string>
+  <string name="card_emulation_settings_category_title">có yếu tố bảo mật</string>
+  <string name="card_emulation_settings_no_element_found">Không có yếu tố bảo mật</string>
+  <string name="card_emulation_settings_off_text">Để xem các yếu tố bảo mật hiện có, hãy bật chức năng mô phỏng thẻ.</string>
+  <string name="card_emulation_turning_off_text">Đang tắt mô phỏng thẻ…</string>
+  <string name="card_emulation_turning_on_text">Đang bật mô phỏng thẻ…</string>
+  <string name="card_emulation_switch_error_title">Lỗi</string>
+  <string name="card_emulation_switch_error_message">Không thể chuyển sang chế độ <xliff:g id="card_mode">%1$s</xliff:g>.</string>
+  <string name="card_emulation_sim_not_supported_message"><xliff:g id="sim_description">%1$s</xliff:g> không hỗ trợ chức năng mô phỏng thẻ NFC.</string>
+  <string name="card_emulation_two_sim_not_supported_message">SIM1, SIM2 không hỗ trợ chức năng mô phỏng thẻ NFC.</string>
+  <string name="nfc_hce_pay_summary">Dùng thiết bị để CHẠM &amp; THANH TOÁN như ví Google, thẻ tín dụng, v.v</string>
+  <!-- MTK NFC settings end -->
+ 
+  <!-- MTK Beam plus start -->
+   <string name="beam_mgmt_tab_download_title">Cuộc gọi đến</string>
+  <string name="beam_mgmt_tab_upload_title">"3. Nhấp thẻ Chia sẻ và chọn 'Cho phép các người dùng mạng khác kết nối qua internet trên máy tính này'(chọn mạng vừa thêm vốn đại diện cho kết nối internet qua USB nếu mục 'Kết nối mạng gia đình' hiển thị)."</string>
+  <string name="beam_share_mgmt_notification_ticker">Lược sử chia sẻ tín hiệu</string>
+  <string name="beam_share_mgmt_notification_title">Lược sử chia sẻ tín hiệu</string>
+  <string name="beam_share_mgmt_notification_message">"Chọn xem Lược sử chia sẻ tín hiệu."</string>
+  <string name="beam_share_mgmt_tab_menu_clear">Xóa mọi cài đặt trên website?</string>
+  <string name="beam_share_open_file_dialog_title">Không thể mở file.</string>
+  <string name="beam_share_open_file_unsupported_message">Định dạng file không hỗ trợ.</string>
+  <string name="beam_share_open_file_not_found_message">"Không tìm thấy file: <xliff:g id="file_name">%1$s</xliff:g></string>
+  <string name="beam_share_transfer_fail_dialog_title">"Tín hiệu bị lỗi"</string>
+  <string name="beam_share_resend_dialog_message">"<xliff:g id="file_name">%1$s</xliff:g> đã không được gửi thành công."</string>
+  <string name="beam_share_resend_dialog_ok_button">"Thử lại"</string>
+  <string name="beam_share_show_received_files_menu">"Hiển thị các tệp đã nhận"</string>
+  <string name="beam_share_history_title">Lược sử chia sẻ tín hiệu</string>
+  <string name="beam_share_clear_confirm_dialog_title">Xóa tất cả</string>
+  <string name="beam_share_clear_confirm_dialog_message">Xóa hết lược sử?</string>
+  <string name="beam_share_receive_fail_dialog_message">"<xliff:g id="file_name">%1$s</xliff:g> đã không được nhận thành công."</string>
+  <string name="beam_share_clear_item_dailog_title">"Xóa"</string>
+  <string name="beam_share_clear_item_dailog_message">Sẽ xóa mục này.</string>
+  <!-- MTK Beam plus end -->
+ 
+  <!-- MTK HDMI start -->
+   <string name="hdmi_settings">Cài đặt HDMI</string>
+  <string name="hdmi_settings_summary">Click để định cấu hình HDMI</string>
+  <string name="hdmi_video_resolution">Độ phân giải video</string>
+  <string name="hdmi_auto">Tự động</string>
+  <string name="hdmi_scale_control">Cài đặt tỉ lệ video</string>
+  <string name="hdmi_scale_no_scale">Không chia ti lệ</string>
+  <string name="hdmi_scale_scale_down">Giảm tỉ lệ <xliff:g id="scale_percent">%s</xliff:g>%%</string>
+  <string name="hdmi_audio_output">Đầu ra âm thanh</string>
+  <string name="hdmi_audio_output_stereo">"Âm thanh nổi"</string>
+  <string name="hdmi_audio_output_multi_channel">Nhiều kênh</string>
+  <!-- MTK HDMI end -->
+ 
+  <!-- MTK Data usage  start -->
+   <string name="datausage_overview_tab">Tổng quan</string>
+  <string name="datausage_overview_wifi_today">Hôm nay</string>
+  <string name="datausage_overview_wifi_total">"Tổng số"</string>
+  <string name="datausage_overview_mobile_title">DI ĐỘNG</string>
+  <string name="datausage_overview_mobile_usage"><xliff:g id="actual">%s</xliff:g> trong 
+        <xliff:g id="limit">%s</xliff:g></string>
+  <string name="datausage_overview_mobile_usage_warning">Quá giới hạn <xliff:g xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
+  <string name="data_saving_title">Đang lưu dữ liệu</string>
+  <string name="default_data_switch_err_msg1">Không thể chuyển SIM yêu thích cho dữ liệu di động khi đang gọi điện.</string>
+  <!-- MTK Dta usage  end -->
+ 
+  <!-- MTK About phone start -->
+   <string name="status_imei_slot1">IMEI (Khe 1)</string>
+  <string name="status_imei_slot2">IMEI (Khe 2)</string>
+  <string name="custom_build_version">Tùy chỉnh Xây dựng Phiên bản</string>
+  <string name="mota_system_update_summary">"Kiểm tra cập nhật hệ thống trên máy chủCheck system update on server"</string>
+  <string name="software_updates_more_title">Cập nhật phần mềm</string>
+  <string name="software_updates_more_summary">Kiểm tra phiên bản mới của phần mềm</string>
+  <!-- MTK About phone end -->
+ 
+  <!-- APN Settings start  -->
+   <string name="mvno_type_none">"Không có"</string>
+  <string name="apn_predefine_change_dialog_notice">Bạn chắc chắn muốn lưu? Sửa đổi cho các APN mặc định có thể gây ra các sự cố kết nối!</string>
+  <string name="apn_port_warning">Giá trị cổng phải là 1-65535!</string>
+  <!-- APN Settings end -->
+ 
+  <!--MTK DRM settings start -->
+   <string name="drm_settings_title">Cài lại DRM</string>
+  <string name="drm_settings_summary">Xóa mọi giấy phép DRM</string>
+  <string name="drm_reset_dialog_msg">Thao tác này sẽ xóa mọi giấy phép trên thiết bị này. Tiếp tục?</string>
+  <string name="drm_reset_toast_msg">Các giấy phép đã được xóa thành công.</string>
+  <!--MTK DRM settings end -->
+ 
+  <!--MTK HotKnot start -->
+   <string name="hotknot_explained_description">Cho phép trao đổi dữ liệu khi màn hình chạm vào thiết bị khác</string>
+  <string name="hotknot_charging_warning">Chức năng <xliff:g id="title">%s</xliff:g> có thể bị ảnh hưởng khi đang sạc qua USB.</string>
+  <!--MTK HotKnot end -->
+ 
+  <!-- ClearMotion start -->
+   <string name="clear_motion_summary">Bộ tăng cường chất lượng video</string>
+  <string name="on_text">"bật"</string>
+  <string name="off_text">"tối thiểu"</string>
+  <!-- ClearMotion end -->
+ 
+  <!-- MiraVision start -->
+   <string name="mira_vision_summary">Mang lại hiệu ứng hình ảnh tốt nhất</string>
+  <!-- MiraVision end -->
+ 
+  <!--MTK DateTime start-->
+   <string name="gps_time_sync_attention_gps_on">Nó sẽ mất tối đa một phút để vào chức năng hiệu chỉnh GPS. Ngoài ra, GPS không thể cung cấp giờ do tín hiệu môi trường yếu.\n\nBạn chắc chắn sử dụng giờ được cấp bởi GPS?</string>
+  <string name="gps_time_sync_attention_gps_off">Để sử dụng giờ được cấp bởi GPS, bạn phải bật GPS trước. Sau đó, nó sẽ mất tối đa một phút để vào chức năng hiệu chỉnh GPS. Ngoài ra, GPS có thể không cung cấp giờ do tín hiệu môi trường yếu. \n\nBạn chắc chắn muốn bật GPS ngay và đợi giờ được cấp bởi GPS?</string>
+  <!--MTK DateTime end-->
+ 
+  <!-- MTK IPO settings start -->
+   <string name="ipo_title">Khởi động nhanh</string>
+  <string name="ipo_summary_off">Bật khởi động nhanh</string>
+  <!-- MTK IPO settings end -->
+ 
+  <!-- Storage & USB settings start -->
+   <string name="select_memory">Đĩa chép mặc định</string>
+  <string name="usb_use_built_in_cd_rom">CD-ROM tích hợp</string>
+  <string name="usb_use_mass_storage">Bộ nhớ USB</string>
+  <!-- Storage & USB settings end -->
+ 
+  <!-- MTK Storage Settings start -->
+   <string name="launch_error">"Không thể bật ứng dụng!"</string>
+  <!-- MTK Storage Settings end -->
+ 
+  <!--MTK Security Settings start -->
+   <string name="security_not_set">Chưa cài bảo mật</string>
+  <!--MTK Security Settings end -->
+ 
+  <!-- Voice UI start -->
+   <string name="voice_ui_title">Điều khiển giọng nói</string>
+  <!-- Voice UI end -->
+ 
+  <!-- Voice unlock start -->
+   <string name="unlock_set_unlock_mode_voice_weak">Mở Khóa Thoại</string>
+   <string name="voice_unlock_backup_info_summary">Khi Mở Khóa Thoại nhận dạng giọng nói của bạn, bạn muốn mở khóa bằng cách nào?</string>
+  <!-- Voice unlock end -->
+ 
+  <!-- MTK Bluetooth Settings start -->
+   <string name="bluetooth_advanced_settings">"Cài đặt nâng cao qua Bluetooth"</string>
+  <!-- MTK Bluetooth Settings end -->
+ 
+  <!-- MTK schedule power start -->
+   <string name="schedule_power_on_off_settings_title">Lịch bật/tắt nguồn</string>
+  <!-- MTK schedule power end -->
+ 
+  <!-- MTK Hetcomm start -->
+   <string name="hetcom_setting_title">Tải Turbo</string>
+  <!-- MTK Hetcomm end -->
+ 
+  <!-- Background power saving start -->
+   <string name="bg_power_saving_title">Tiết kiệm pin thông minh ở chế độ chờ</string>
+  <!-- Background power saving end -->
+
+    <string name="two_cdma_dialog_msg">Khe cắm 1 và 2 không thể hỗ trợ CDMA cùng lúc.</string>
+    <string name="c2k_cdma_card_competion_message"><xliff:g id="current_sim">%1$s</xliff:g> tạm thời sẽ ko hoạt động, và nếu có bất kỳ c.gọi, SMS, Dữ liệu mặc định nào <xliff:g id="now_sim">%2$s</xliff:g> sẽ được đổi thành <xliff:g id="target_sim">%3$s</xliff:g> tương ứng.</string>
+    <string name="c2k_gsm_cdma_sim_message">Ngoài ra khi chạm "CÓ" để chuyển 4G thành <xliff:g id="sim1">%1$s</xliff:g>, <xliff:g id="sim2">%2$s</xliff:g> sẽ ko hoạt động, và nếu có bất kỳ c.gọi, SMS mặc định nào <xliff:g id="sim3">%3$s</xliff:g> sẽ được đổi thành <xliff:g id="sim4">%4$s</xliff:g> tương ứng. Chạm "KHÔNG" chỉ để đổi Dữ liệu di động.</string>
+    <string name="default_calls_switch_err_msg1">Ko thể chuyển SIM ưu tiên cho các c.gọi trong khi gọi.</string>
+    <string name="default_sms_switch_err_msg1">Ko thể chuyển SIM ưu tiên cho SMS trong khi gọi.</string>
+
+  <!-- Performance and power start -->
+  <string name="performance_and_power_title">Hiệu suất và tiết kiệm pin</string>
+  <!-- Performance and power end-->
+
+    <string name="wakeup_interaction">Khởi động tương tác</string>
+    <string name="voice_wakeup">Bật bằng lệnh thoại</string>
+    <string name="voice_wakeup_confirm">Hãy cài lệnh trước khi bạn sử dụng.</string>
+    <string name="omh_warning_dialog_msg">R-UIM của bạn không thể truy cập dịch vụ dữ liệu. Hãy nâng cấp R-UIM lên OMH R-UIM.</string>
+    <string name="omh_data_pick_dialog_msg">R-UIM của bạn không thể truy cập dịch vụ dữ liệu. Hãy nâng cấp R-UIM lên OMH R-UIM. Vẫn muốn cài R-UIM này làm thẻ dữ liệu mặc định?</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">IP-oproep <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"Account selecteren"</string>
+    <string name="all_accounts">"Alle accounts"</string>
+    <string name="imei_invalid">Ongeldig</string>
+    <string name="conf_call_member_list">Ledenlijst</string>
+    <string name="conf_call_participant_answered">Beantwoord</string>
+    <string name="conf_call_participant_missed">"Gemist"</string>
+    <string name="can_not_switch_account_during_call">Kan tijdens een gesprek niet wisselen naar voorkeurs-SIM voor oproepen.</string>
+    <string name="can_not_switch_account_temporarily">Kan voorkeurs-SIM niet tijdelijk voor gesprekken wisselen.</string>
+</resources>

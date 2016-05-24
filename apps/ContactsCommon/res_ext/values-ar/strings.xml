@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="vcs_guide_summary">اذكر الاسم لتحديد جهة الاتصال وحاول الاتصال به!</string>
+    <string name="vcs_guide_title">البحث الصوتي عن جهة الاتصال</string>
+    <string name="vcs_guide_title1">انطق أسماء جهات الاتصال للبحث عنها.</string>
+    <string name="vcs_guide_title2">اضغط هنا لتمكين الوظيف.\nجربها!</string>
+    <string name="can_not_switch_account_during_call">لا يمكن تحويل بطاقة SIM المفضلة للمكالمات أثناء المكالمة.</string>
+    <string name="can_not_switch_account_temporarily"> تعذر تبديل SIM المفضلة للمكالمات مؤقتًا.</string>
+    <string name="call_account_switch_tips">لن يعمل <xliff:g id="name1" example="CT1">^1</xliff:g> مؤقتًا, وسيتم تغيير كل المكالمات الافتراضية ورسائل , SMS والبيانات الموجودة في <xliff:g id="name2" example="CT1">^2</xliff:g> إلى <xliff:g id="name3" example="CT2">^3</xliff:g> حسب ذلك.</string>
+
+</resources>

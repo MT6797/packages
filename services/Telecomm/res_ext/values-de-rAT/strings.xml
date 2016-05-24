@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="str_db_playlist_name">Meine Aufnahmen</string>
+    <string name="alert_device_error">Fehler am Audiogerät</string>
+    <string name="ext_media_badremoval_notification_title">SD-Karte unerwartet entfernt</string>
+    <string name="error_sdcard_access">Kann nicht auf SD-Karte zugreifen.</string>
+    <string name="confirm_device_info_full">Kein Platz mehr auf SD-Karte, die Aufnahme wurde gespeichert.</string>
+    <string name="confirm_save_info_saved">Aufnahmedatei wurde gespeichert</string>
+    <string name="confirm_save_info_saved_to">Aufnahmedatei wurde gespeichert auf</string>
+    <string name="select_account_dialog_title">Konto wählen</string>
+    <string name="reminder">Erinnerung</string>
+    <string name="enable_ims_dialog_message">IMS-Anruf ist deaktiviert. Wollen Sie die Funktion aktivieren?</string>
+    <string name="ip_dial_error_for_sip_call">IP-Anwählverfahren ist für Internet-Anrufe nicht anwendbar</string>
+    <string name="call_duration_title">Anruf beendet</string>
+    <string name="call_duration_format">"<xliff:g id="HOURS">%1$s</xliff:g> Stunden <xliff:g id="MINUTES">%2$s</xliff:g> Minuten <xliff:g id="SECONDS">%3$s</xliff:g> Sekunden"</string>
+    <string name="volte_ss_not_avaliable_tips">Sie müssen eine Datenverbindung aufbauen, um den Vorgang abzuschließen.</string>
+    <string name="outgoing_call_failed">Anruf nicht gesendet.</string>
+    <string name="volte_ss_not_available_tips">Um die Funktion abzuschließen, müssen Sie eine Datenverbindung mit  <xliff:g id="sub_name">%s</xliff:g> herstellen.</string>
+    <string name="call_waiting_indication">Die andere Seite telefoniert, bitte warten...</string>
+    <string name="outgoing_call_error_limit_exceeded">Anruf nicht gesendet, Limit überschritten.</string>
+    <string name="incall_error_supp_service_unknown">Dienst nicht unterstützt</string>
+    <string name="incall_error_supp_service_switch">Umschalten der Anrufe nicht möglich</string>
+    <string name="incall_error_supp_service_separate">Trennen der Anrufe nicht möglich</string>
+    <string name="incall_error_supp_service_transfer">Übertragen der Anrufe nicht möglich</string>
+    <string name="incall_error_supp_service_conference">Konferenzschaltung der Anrufe nicht möglich</string>
+    <string name="incall_error_supp_service_reject">Zurückweisen des Anrufs nicht möglich</string>
+    <string name="incall_error_supp_service_hangup">Freigabe des (der) Anrufs(e) nicht möglich</string>
+    <string name="mo_code_unconditional_cf_active">Anrufweiterleitung\nvorbehaltlos aktiviert</string>
+    <string name="mo_code_some_cf_active">Anrufweiterleitung\nunter Bedingungen</string>
+    <string name="mo_code_call_forwarded">Anruf weitergeleitet</string>
+    <string name="mo_code_call_is_waiting">Wartender Anruf</string>
+    <string name="mo_code_cug_call">Geschlossene Benutzergruppe</string>
+    <string name="mo_code_outgoing_calls_barred">Ausgehender Anruf gesperrt</string>
+    <string name="mo_code_incoming_calls_barred">Eingehender Anruf auf der anderen Seite gesperrt</string>
+    <string name="mo_code_clir_suppression_rejected">Anruferkennung prüfen</string>
+    <string name="mo_code_call_deflected">call Call transferred</string>
+    <string name="mt_code_forwarded_call">Es ist ein weitergeleiteter Anruf</string>
+    <string name="mt_code_cug_call">Geschlossene Benutzergruppe</string>
+    <string name="mt_code_call_on_hold">Anruf gehalten</string>
+    <string name="mt_code_call_retrieved">Anruf abgerufen</string>
+    <string name="mt_code_multi_party_call">Konferenzanruf</string>
+    <string name="mt_code_on_hold_call_released">Gehaltener Anruf freigegeben</string>
+    <string name="mt_code_forward_check_received">Weiterleitungsprüfung SS-Nachricht erhalten</string>
+    <string name="mt_code_call_connecting_ect">Anruf wird übermittelt</string>
+    <string name="mt_code_call_connected_ect">Anrufübermittlung aktiviert</string>
+    <string name="mt_code_deflected_call">Es ist ein umgeleiteter Anruf</string>
+    <string name="mt_code_additional_call_forwarded">Zusätzlichen eingehenden Anruf weitergeleitet</string>
+    <string name="mt_code_forwarded_cf">Anruf weitergeleitet</string>
+    <string name="mt_code_forwarded_cf_uncond">Anruf vorbehaltlos weitergeleitet</string>
+    <string name="mt_code_forwarded_cf_cond">Anruf mit Vorbehalt weitergeleitet</string>
+    <string name="mt_code_forwarded_cf_busy">Besetzt, Anruf weitergeleitet</string>
+    <string name="mt_code_forwarded_cf_no_reply">Keine Antwort, Anruf weitergeleitet</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Nicht erreichbar, Anruf weitergeleitet</string>
+</resources>

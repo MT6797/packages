@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="description_ip_call_action">ІР повикване <xliff:g id="nameOrNumber" example="John Smith">%1$s</xliff:g></string>
+    <string name="select_account">"Избиране на профил"</string>
+    <string name="all_accounts">"Всички профили"</string>
+    <string name="imei_invalid">Невалидно</string>
+    <string name="conf_call_member_list">Списък членове</string>
+    <string name="conf_call_participant_answered">Отговорено</string>
+    <string name="conf_call_participant_missed">"Пропуснати"</string>
+    <string name="can_not_switch_account_during_call">Не може да превключи SIM за повиквания по време на повикване.</string>
+    <string name="can_not_switch_account_temporarily">Не може да превключа желаната SIM карта за обаждания временно.</string>
+</resources>
