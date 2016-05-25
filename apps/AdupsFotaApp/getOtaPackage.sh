@@ -24,8 +24,8 @@ cp -u system/extras/verity/build_verity_metadata.py $ROOTPATH/system/extras/veri
 mkdir -p $ROOTPATH/vendor/mediatek/proprietary/custom/$3/
 cp -ur vendor/mediatek/proprietary/custom/$3/security/  $ROOTPATH/vendor/mediatek/proprietary/custom/$3/
 #device
-mkdir -p $ROOTPATH/device/mediatek/common/
-cp -ur device/mediatek/common/security/  $ROOTPATH/device/mediatek/common/
+mkdir -p $ROOTPATH/build/target/product/
+cp -ur build/target/product/security/  $ROOTPATH/build/target/product/
 mkdir -p $ROOTPATH/device/mediatek/build/
 cp -ur device/mediatek/build/releasetools/  $ROOTPATH/device/mediatek/build/
 #system_image_info
@@ -60,7 +60,12 @@ echo "">$ROOTPATH/configure.xml
 echo "<root>">>$ROOTPATH/configure.xml
 
 #buildnumber
-var=$(grep  "ro.fota.version=" "$1/system/build.prop" )
+CUSTPROPPATH="custom/customprop/custom.prop"
+if [ -f $1/$CUSTPROPPATH ] ; then
+  var=$(grep  "ro.fota.version=" "$1/$CUSTPROPPATH" )
+else
+  var=$(grep  "ro.fota.version=" "$1/system/build.prop" )
+fi
 buildnumber=${var##"ro.fota.version="}
 echo "<buildnumber>$buildnumber</buildnumber>">>$ROOTPATH/configure.xml
 
@@ -96,7 +101,11 @@ fi
 echo "<operator>${var##"ro.operator.optr="}</operator>">>$ROOTPATH/configure.xml
 
 #model
-var=$(grep  "ro.fota.device=" "$1/system/build.prop" )
+if [ -f $1/$CUSTPROPPATH ] ; then
+  var=$(grep  "ro.fota.device=" "$1/$CUSTPROPPATH" )
+else
+  var=$(grep  "ro.fota.device=" "$1/system/build.prop" )
+fi
 product=${var##"ro.fota.device="}
 echo "<product>$product</product>">>$ROOTPATH/configure.xml
 
