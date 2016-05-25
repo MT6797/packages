@@ -258,7 +258,7 @@
                 android:id="@+id/navigation_bar_settings"
                 android:title="@string/navigation_bar_title"
                 android:fragment="com.android.settings.NavigationBarSettings"
-                android:icon="@drawable/ic_settings_hotknot" 
+                android:icon="@drawable/ic_sim_tsk" 
                 />              
         <!-- Print -->
         <dashboard-tile
