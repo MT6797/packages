@@ -172,9 +172,12 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         // These are contained by the root preference screen
         PreferenceGroup parentPreference = getPreferenceScreen();
         if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
-            Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference,
-                    KEY_SYSTEM_UPDATE_SETTINGS,
-                    Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
+        	//modified by liliang.bao begin
+          //  Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference,
+          //          KEY_SYSTEM_UPDATE_SETTINGS,
+          //          Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
+        	removePreference(KEY_SYSTEM_UPDATE_SETTINGS);
+        	//modified by liliang.bao end
         } else {
             // Remove for secondary users
             removePreference(KEY_SYSTEM_UPDATE_SETTINGS);
@@ -346,9 +349,14 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
 
     private void setValueSummary(String preference, String property) {
         try {
-            findPreference(preference).setSummary(
-                    SystemProperties.get(property,
-                            getResources().getString(R.string.device_info_default)));
+        	//modified by liliang.bao begin 
+        	String baseband = SystemProperties.get(property,
+                    getResources().getString(R.string.device_info_default));
+        	int index = baseband.indexOf(',');
+        	if(index >0)
+        		baseband = baseband.substring(0, index);
+            findPreference(preference).setSummary(baseband);
+          //modified by liliang.bao end
         } catch (RuntimeException e) {
             // No recovery
         }
@@ -415,9 +423,16 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                     + " groups");
             return "Unavailable";
         }
-        return m.group(1) + "\n" +                 // 3.0.31-g6fb96c9
-            m.group(2) + " " + m.group(3) + "\n" + // x@y.com #1
-            m.group(4);                            // Thu Jun 28 11:02:39 PDT 2012
+        //modified by liliang.bao begin
+        String kernelVersion = m.group(1);
+        int pos = kernelVersion.indexOf('+');
+        if(pos > 0)
+        	kernelVersion = kernelVersion.substring(0, pos);
+        return kernelVersion;
+       // return m.group(1) + "\n" +                 // 3.0.31-g6fb96c9
+          //  m.group(2) + " " + m.group(3) + "\n" + // x@y.com #1
+           // m.group(4);                            // Thu Jun 28 11:02:39 PDT 2012
+      //modified by liliang.bao end
     }
 
     /**

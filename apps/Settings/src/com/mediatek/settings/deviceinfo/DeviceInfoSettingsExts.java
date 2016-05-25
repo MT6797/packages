@@ -36,7 +36,7 @@ public class DeviceInfoSettingsExts {
     private static final String KEY_MTK_SOFTWARE_UPDATE = "mtk_software_update";
     private static final String KEY_BASEBAND_VERSION_2 = "baseband_version_2";
     private static final String KEY_CUSTOM_BUILD_VERSION = "custom_build_version";
-    private static final String PROPERTY_CUSTOM_BUILD_VERSION = "ro.mediatek.version.release";
+    private static final String PROPERTY_CUSTOM_BUILD_VERSION = "ro.custom.build.version";
     private static final String KEY_CDMA_EPUSH = "cdma_epush";
     private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
 
@@ -161,8 +161,14 @@ public class DeviceInfoSettingsExts {
 
     private void setValueSummary(String preference, String property) {
         try {
-            findPreference(preference).setSummary(
-                    SystemProperties.get(property, getString(R.string.device_info_default)));
+	    //modified by liliang.bao begin 
+        	String baseband = SystemProperties.get(property,getString(R.string.device_info_default));
+        	int index = baseband.indexOf(',');
+        	if(index >0)
+        		baseband = baseband.substring(0, index);
+
+            findPreference(preference).setSummary(baseband);
+          //modified by liliang.bao end
         } catch (RuntimeException e) {
             // No recovery
         }

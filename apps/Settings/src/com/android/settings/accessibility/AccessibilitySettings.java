@@ -446,7 +446,7 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
                 com.android.internal.R.integer.config_longPressOnPowerBehavior);
         final int LONG_PRESS_POWER_GLOBAL_ACTIONS = 1;
         if (!KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_POWER)
-                || longPressOnPowerBehavior != LONG_PRESS_POWER_GLOBAL_ACTIONS) {
+                || longPressOnPowerBehavior != LONG_PRESS_POWER_GLOBAL_ACTIONS||true) {//fix bug3388 by liliang.bao 
             // Remove accessibility shortcut if power key is not present
             // nor long press power does not show global actions menu.
             mSystemsCategory.removePreference(mGlobalGesturePreferenceScreen);
