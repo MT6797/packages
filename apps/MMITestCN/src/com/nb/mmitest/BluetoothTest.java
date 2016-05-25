@@ -407,7 +407,7 @@ class BluetoothTest extends Test {
     			Log.i(TAG, "waiting BT ends");
     			mBtAdapter.disable();
     		}
-
+		onExit();
     	}
     };
 
@@ -420,7 +420,7 @@ class BluetoothTest extends Test {
     			Log.i(TAG, "waiting BT ends");
     			mBtAdapter.disable();
     		}
-
+		onExit();
     	}
     };
     
