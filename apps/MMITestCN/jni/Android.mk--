@@ -1,0 +1,41 @@
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
+
+
+commonIncludes += $(LOCAL_PATH)/..
+
+
+LOCAL_MODULE_TAGS := optional
+
+# This is the target being built.
+LOCAL_MODULE:= libjrdrapijni
+
+
+
+# All of the source files that we will compile.
+LOCAL_SRC_FILES:= \
+  wxkjrapi.cpp
+
+# All of the shared libraries we link against.
+LOCAL_SHARED_LIBRARIES := \
+	libutils \
+	libnvram
+
+
+# No static libraries.
+LOCAL_STATIC_LIBRARIES :=
+
+# Also need the JNI headers.
+LOCAL_C_INCLUDES += \
+	$(JNI_H_INCLUDE) \
+	$(commonIncludes)\
+	external/mediatek/nvram/libnvram \
+	mediatek/custom/jrd73_gb/cgen/cfgdefault/cfgfileinc \
+	mediatek/custom/jrd73_gb/cgen/cfgdefault
+
+# No special compiler flags.
+LOCAL_CFLAGS += -DFEATURE_VOC_PCM_INTERFACE -DFEATURE_VOICE_PLAYBACK
+
+LOCAL_PRELINK_MODULE := false
+
+include $(BUILD_SHARED_LIBRARY)

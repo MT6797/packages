@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.nb.mmitest"
+      android:sharedUserId="android.uid.system">   
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.HARDWARE_TEST" />
+    <uses-permission android:name="android.permission.FACTORY_TEST" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+     
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FM_RADIO" />
+    <uses-permission android:name="android.permission.ACCESS_MTK_MMHW"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    
+    <application android:icon="@drawable/icon" android:label="@string/app_name" >
+        <!--uses-library
+                     android:name="com.android.qualcomm.qcrilhook"></uses-library-->
+        <!--uses-library
+                     android:name="com.android.qualcomm.qcnvitems"></uses-library-->
+        
+        <!--uses-library
+                     android:name="com.android.versionapi"></uses-library-->
+        
+        <activity android:name="com.nb.mmitest.MMITest"
+                  android:screenOrientation="portrait"
+                  android:label="@string/app_name"
+                  android:configChanges="keyboardHidden">
+            <!--android:launchMode="singleTop"-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!--category android:name="android.intent.category.LAUNCHER" /-->
+                <!--category android:name="android.intent.category.HOME"/-->
+                <category android:name="android.intent.category.DEFAULT"/>
+                <!--category android:name="android.intent.category.DEFAULT" /-->
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.nb.mmitest.ManuList"
+                  android:label="Manual "
+                  android:screenOrientation="portrait"
+                  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.nb.mmitest.AutoTest"
+                  android:label="Auto "
+                  android:screenOrientation="portrait"
+		    android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+         
+        
+        <activity android:name="com.nb.mmitest.ExecuteTest"
+                  android:label="@string/app_name"                  
+                  android:screenOrientation="portrait"
+		  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+        <receiver android:name="com.nb.mmitest.StartupIntentReceiver" >
+            <intent-filter android:priority="2">
+                <action android:name="android.intent.action.MMITEST" />
+				<!--action android:name="android.intent.action.BOOT_COMPLETED" /-->
+                <category android:name="android.intent.category.HOME" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </receiver>
+         
+        
+    </application>
+</manifest>
+ 

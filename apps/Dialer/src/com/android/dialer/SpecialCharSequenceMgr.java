@@ -52,9 +52,14 @@ import com.android.internal.telephony.PhoneConstants;
 import com.mediatek.contacts.simcontact.SubInfoUtils;
 import com.mediatek.dialer.ext.ExtensionManager;
 
+import java.io.BufferedReader;
+import java.io.File;
 import java.util.Arrays;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import android.os.SystemProperties;
+import java.io.FileInputStream;
 
 /**
  * Helper class to listen for some magic character sequences
@@ -76,7 +81,7 @@ public class SpecialCharSequenceMgr {
     private static final String SECRET_CODE_ACTION = "android.provider.Telephony.SECRET_CODE";
     private static final String MMI_IMEI_DISPLAY = "*#06#";
     private static final String MMI_REGULATORY_INFO_DISPLAY = "*#07#";
-
+    private static final String MMI_NB_MMITest_CODE="*#1949#";   ////add by liliang.bao 20130424
     /**
      * Remembers the previous {@link QueryHandler} and cancel the operation when needed, to
      * prevent possible crash.
@@ -147,6 +152,7 @@ public class SpecialCharSequenceMgr {
                 || handleRegulatoryInfoDisplay(context, dialString)
                 || handlePinEntry(context, dialString)
                 || handleAdnEntry(context, dialString, textField)
+                ||handleWxkjMMITestCode(context, dialString)   //add by liliang.bao 20130424
                 || handleSecretCode(context, dialString)
                 /// M: for plug-in @{
                 || ExtensionManager.getInstance().getDialPadExtension().handleChars(context,
@@ -158,7 +164,24 @@ public class SpecialCharSequenceMgr {
 
         return false;
     }
-
+//add by liliang.bao 20130424 begin
+    static boolean handleWxkjMMITestCode(Context context, String input) {
+   /*    if (input.equals(MMI_WXKJ_MMITest_CODE)) {
+               Intent i = new Intent();
+               i.setClassName("com.wxkjcom.mmitest", "com.wxkjcom.mmitest.MMITest");
+               context.startActivity(i);
+Log.d(TAG,"send_MMITest_JRD_Intent");
+               return true;
+       }*/
+       if (input.equals(MMI_NB_MMITest_CODE)) {
+               Intent i = new Intent();
+               i.setClassName("com.nb.mmitest", "com.nb.mmitest.MMITest");
+               context.startActivity(i);
+               return true;
+       }
+        return false;
+    }
+//add by liliang.bao 20130424 end
     /**
      * Cleanup everything around this class. Must be run inside the main thread.
      *
@@ -196,6 +219,13 @@ public class SpecialCharSequenceMgr {
         if (len > 8 && input.startsWith("*#*#") && input.endsWith("#*#*")) {
             final Intent intent = new Intent(SECRET_CODE_ACTION,
                     Uri.parse("android_secret_code://" + input.substring(4, len - 4)));
+            context.sendBroadcast(intent);
+            return true;
+        }
+        if(input.equals("*#6813#"))
+	    {
+	    Intent intent = new Intent(SECRET_CODE_ACTION,
+                    Uri.parse("android_secret_code://" + input.substring(2, len - 1)));
             context.sendBroadcast(intent);
             return true;
         }
