@@ -1198,18 +1198,7 @@ public class Launcher extends Activity
                     + mOrientationChanged + ",mPagesAreRecreated = " + mPagesWereRecreated
                     + ", this = " + this);
         }
-         if(mPageIndicators != null)
-        LauncherLog.d(TAG, "  page_ind: "+mPageIndicators.getVisibility());
-        LauncherLog.d(TAG,"  isAllAppsVisible: "+isAllAppsVisible());
-        if(isAllAppsVisible())
-        {
-        	 mWorkspace.setVisibility(View.INVISIBLE);
-        	 if(mPageIndicators != null)
-        		 mPageIndicators.setVisibility(View.GONE);
-        }
-        else
-        	 mWorkspace.setVisibility(View.VISIBLE);
-        LauncherLog.d(TAG, "workspace visibile: "+mWorkspace.getVisibility()+"  apps_view: "+mAppsView.getVisibility());
+       
         // Restore the previous launcher state
         if (mOnResumeState == State.WORKSPACE) {
             showWorkspace(false);
@@ -1307,6 +1296,23 @@ public class Launcher extends Activity
         if (mLauncherCallbacks != null) {
             mLauncherCallbacks.onResume();
         }
+        LauncherLog.d(TAG, "workspace visibile: "+mWorkspace.getVisibility()+"  apps_view: "+mAppsView.getVisibility());
+        if(mPageIndicators != null)
+            LauncherLog.d(TAG, "  page_ind: "+mPageIndicators.getVisibility());
+            LauncherLog.d(TAG,"  isAllAppsVisible: "+isAllAppsVisible());
+            if(isAllAppsVisible())
+            {
+            	 mAppsView.setVisibility(View.VISIBLE);
+            	 mWorkspace.setVisibility(View.INVISIBLE);
+            	 if(mPageIndicators != null)
+            		 mPageIndicators.setVisibility(View.GONE);
+            }
+           else
+           {
+            	 mWorkspace.setVisibility(View.VISIBLE);
+            	 mAppsView.setVisibility(View.GONE);
+           }
+            LauncherLog.d(TAG, "workspace visibile: "+mWorkspace.getVisibility()+"  apps_view: "+mAppsView.getVisibility());  
     }
 
     @Override

@@ -313,7 +313,7 @@ public class RecordingFileList extends Activity implements ImageButton.OnClickLi
                         MediaStore.Audio.Media.DATA, MediaStore.Audio.Media.DURATION,
                         MediaStore.Audio.Media.DISPLAY_NAME, MediaStore.Audio.Media.DATE_ADDED,
                         MediaStore.Audio.Media.TITLE, MediaStore.Audio.Media._ID
-                }, selection, null, null);
+                },selection, null, MediaStore.Audio.Media.DISPLAY_NAME + " DESC");
         try {
             if ((null == recordingFileCursor) || (0 == recordingFileCursor.getCount())) {
                 LogUtils.i(TAG, "<queryData> the data return by query is null");
