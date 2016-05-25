@@ -136,7 +136,7 @@ public class HelpUtils {
                 return getHelpIntent(context, intent.getStringExtra(EXTRA_BACKUP_URI),
                         backupContext);
             } else {
-                return null;
+                return intent;//TODO FIXME cz
             }
         } catch (URISyntaxException e) {
         }

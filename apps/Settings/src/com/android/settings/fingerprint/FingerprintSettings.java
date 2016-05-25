@@ -721,6 +721,7 @@ public class FingerprintSettings extends SubSettings {
         @Override
         public void updateDrawState(TextPaint ds) {
             super.updateDrawState(ds);
+            ds.setAlpha(0);//TODO FIXME cz
             ds.setUnderlineText(false);
             ds.setTypeface(TYPEFACE_MEDIUM);
         }
