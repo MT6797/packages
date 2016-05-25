@@ -382,9 +382,16 @@ public class MediaScannerService extends Service implements Runnable
 
             if (MediaProvider.INTERNAL_VOLUME.equals(volume)) {
                 // scan internal media storage
-                directories = new String[] {
+                //modify by liliang.bao begin
+                 File dirname = new File("/custom/media/audio");
+		 if (dirname.isDirectory()) 
+                	directories = new String[] {
                         Environment.getRootDirectory() + "/media",
-                };
+			  "/custom/media/audio",};
+		 else
+		 	directories = new String[] {
+                       Environment.getRootDirectory() + "/media",};
+		 //modify by liliang.bao end
             } else if (MediaProvider.EXTERNAL_VOLUME.equals(volume)) {
                 // scan external storage volumes
                 directories = mExternalStoragePaths;
@@ -395,7 +402,14 @@ public class MediaScannerService extends Service implements Runnable
                     directories = new String[] {mExternalStoragePaths[0]};
                 }
                 /// @}
-
+			//modify by lilinag.bao begin
+	      	File dirname = new File("/custom/media/demo");
+			 if (dirname.isDirectory()) 
+		        	directories = insertToArray(directories, "/custom/media/demo"); 
+			 dirname = new File("/data/media/demo");
+			  if (dirname.isDirectory()) 
+		        	directories = insertToArray(directories, "/data/media/demo"); 
+		      //modify by lilinag.bao  end
                 /// M: MediaScanner Performance turning {@
                 /// Thread pool enable, use threadpool to scan.
                 if (mIsThreadPoolEnable) {
@@ -629,5 +643,17 @@ public class MediaScannerService extends Service implements Runnable
     private boolean isLowRamDevice() {
         final ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
         return am.isLowRamDevice();
+    }
+ private String[] insertToArray(String[] arr, String str)
+   {
+        int size = arr.length;
+        
+       String[] tmp = new String[size + 1];
+        
+       System.arraycopy(arr, 0, tmp, 0, size);
+       
+        tmp[size] = str;
+        
+        return tmp;
     }
 }
