@@ -2868,4 +2868,9 @@
     <string name="write_settings_description" msgid="6868293938839954623">"此权限允许应用修改系统设置。"</string>
     <string name="write_settings_on" msgid="8230580416068832239">"允许"</string>
     <string name="write_settings_off" msgid="5156104383386336233">"不允许"</string>
+   <string name="navigation_bar_setting">导航栏</string>
+   <string name="navigation_bar_hide">导航栏能被隐藏</string>
+   <string name="navigation_bar_title">导航栏</string>
+   <string name="navigation_bar_select">设置虚拟导航栏组合</string>
+   <string name="navigation_bar_drop_status_bar">:下拉通知栏</string>
 </resources>

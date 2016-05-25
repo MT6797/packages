@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/navigation_bar_setting" >
+
+    <SwitchPreference
+        android:key="navigation_switch"
+        android:title="@string/navigation_bar_hide" />
+
+    <PreferenceCategory
+        android:key="profile_container1"
+        android:title="@string/navigation_bar_select" >
+        <com.android.settings.widget.RadioPreference android:key="navigation_mode1" />
+        <com.android.settings.widget.RadioPreference android:key="navigation_mode2" />
+        <com.android.settings.widget.RadioPreference android:key="navigation_mode3" />
+        <com.android.settings.widget.RadioPreference android:key="navigation_mode4" />
+    </PreferenceCategory>
+   <!--  <PreferenceCategory
+        android:icon="@drawable/ic_drop_down_toolbox"
+        android:key="profile_container2"
+        android:title="@string/navigation_bar_drop_status_bar" >
+    </PreferenceCategory> -->
+
+</PreferenceScreen>

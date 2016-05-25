@@ -253,7 +253,13 @@
                 android:fragment="com.android.settings.accessibility.AccessibilitySettings"
                 android:icon="@drawable/ic_settings_accessibility"
                 />
-
+          <!-- Navigation Bar -->
+        <dashboard-tile
+                android:id="@+id/navigation_bar_settings"
+                android:title="@string/navigation_bar_title"
+                android:fragment="com.android.settings.NavigationBarSettings"
+                android:icon="@drawable/ic_settings_hotknot" 
+                />              
         <!-- Print -->
         <dashboard-tile
                 android:id="@+id/print_settings"
