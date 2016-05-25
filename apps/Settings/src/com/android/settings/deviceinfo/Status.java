@@ -209,7 +209,7 @@ public class Status extends InstrumentedPreferenceActivity {
 
         updateConnectivity();
 
-        String serial = Build.SERIAL;
+        String serial = SystemProperties.get("persist.radio.serial","NB45071511001");//Build.SERIAL;
         if (serial != null && !serial.equals("")) {
             setSummaryText(KEY_SERIAL_NUMBER, serial);
         } else {
