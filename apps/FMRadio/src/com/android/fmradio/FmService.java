@@ -75,6 +75,7 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
 
     // Broadcast messages from other sounder APP to FM service
     private static final String SOUND_POWER_DOWN_MSG = "com.android.music.musicservicecommand";
+    private static final String SOUND_POWER_ON_MSG = "com.android.mmitest.command";
     private static final String FM_SEEK_PREVIOUS = "fmradio.seek.previous";
     private static final String FM_SEEK_NEXT = "fmradio.seek.next";
     private static final String FM_TURN_OFF = "fmradio.turnoff";
@@ -253,8 +254,18 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
             String action = intent.getAction();
             String command = intent.getStringExtra("command");
             Log.d(TAG, "onReceive, action = " + action + " / command = " + command);
+	      if(SOUND_POWER_ON_MSG.equals(action))
+		{
+		   initService(975);
+		   if (!mIsServiceInited) {
+                    	Log.d(TAG, "===onReceive, mIsServiceInited is false");
+                    	return;
+                	}
+                   powerUpAsync(FmUtils.computeFrequency(mCurrentStation));
+                 
+		}
             // other app want FM stop, stop FM
-            if ((SOUND_POWER_DOWN_MSG.equals(action) && CMDPAUSE.equals(command))) {
+            else if ((SOUND_POWER_DOWN_MSG.equals(action) && CMDPAUSE.equals(command))) {
                 // need remove all messages, make power down will be execute
                 mFmServiceHandler.removeCallbacksAndMessages(null);
                 exitFm();
@@ -1824,6 +1835,7 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
         filter.addAction(Intent.ACTION_SCREEN_ON);
         filter.addAction(Intent.ACTION_SCREEN_OFF);
         filter.addAction(Intent.ACTION_HEADSET_PLUG);
+	    filter.addAction(SOUND_POWER_ON_MSG);
         mBroadcastReceiver = new FmServiceBroadcastReceiver();
         registerReceiver(mBroadcastReceiver, filter);
     }

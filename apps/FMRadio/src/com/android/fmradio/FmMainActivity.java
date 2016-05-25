@@ -68,7 +68,7 @@ import com.android.fmradio.views.FmSnackBar;
 import com.mediatek.fmradio.ext.ExtensionHelper;
 import com.mediatek.fmradio.ext.IFavoriteExt;
 /// @}
-
+import android.view.KeyEvent;
 /**
  * This class interact with user, provide FM basic function.
  */
@@ -1521,5 +1521,15 @@ public class FmMainActivity extends Activity implements FmFavoriteEditDialog.Edi
                 showToast(getString(com.mediatek.internal.R.string.denied_required_permission));
             }
         }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+    	//   LogUtils.d(TAG, "keyCode:"+keyCode);
+       if(keyCode == KeyEvent.KEYCODE_HEADSETHOOK) { 
+    	    seekStation(mCurrentStation, true); // false: previous station
+    		return true;
+    	}
+    return super.onKeyDown(keyCode, event);
     }
 }
