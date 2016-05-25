@@ -133,7 +133,7 @@ public class ProximitySensor implements AccelerometerListener.OrientationListene
     }
 
     public void onDialpadVisible(boolean visible) {
-        mDialpadVisible = visible;
+        mDialpadVisible = false;   //fix bug3647
         updateProximitySensorMode();
     }
 
