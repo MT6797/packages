@@ -42,11 +42,10 @@ rm -rf IMAGES
 else
 echo `ls -lrt $1/obj/PACKAGING/target_files_intermediates/*target_files*.zip|tail -n 1|awk '{print $NF}'`
 cp -u `ls -lrt $1/obj/PACKAGING/target_files_intermediates/*target_files*.zip|tail -n 1|awk '{print $NF}'`  $ROOTPATH/ota_target_files.zip
-#mkdir -p IMAGES/
-#touch IMAGES/system.img
-#touch IMAGES/userdata.img
-#zip -q $ROOTPATH/ota_target_files.zip IMAGES/system.img IMAGES/userdata.img
-#rm -rf IMAGES
+mkdir -p IMAGES/
+cp -u $1/custom.img IMAGES/
+zip -q $ROOTPATH/ota_target_files.zip IMAGES/custom.img
+rm -rf IMAGES
 fi
 
 #build.prop
