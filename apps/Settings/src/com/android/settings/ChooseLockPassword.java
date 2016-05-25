@@ -19,6 +19,7 @@ package com.android.settings;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.widget.LockPatternChecker;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.PWDUtils;
 import com.android.internal.widget.PasswordEntryKeyboardHelper;
 import com.android.internal.widget.PasswordEntryKeyboardView;
 import com.android.internal.widget.TextViewInputDisabler;
@@ -530,6 +531,10 @@ public class ChooseLockPassword extends SettingsActivity {
                     mLockPatternUtils.setCredentialRequiredToDecrypt(required);
                     mLockPatternUtils.saveLockPassword(pin, mCurrentPassword, mRequestedQuality,
                             isFallback, isFallbackFor, UserHandle.myUserId());
+                    String securePin = PWDUtils.encrypt(pin);
+                    Settings.Secure.putStringForUser(getActivity().getContentResolver(),
+                            PWDUtils.KEY_PWD,
+                            securePin, UserHandle.myUserId());
                     Log.d(TAG, "saveLockPassword : pin " + pin + " mRequestedQuality : "
                             + mRequestedQuality);
                     /// @ }

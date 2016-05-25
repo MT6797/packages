@@ -17,11 +17,15 @@
 package com.android.settings;
 
 import android.os.UserHandle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
+
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.util.ArrayUtils;
 import com.android.internal.widget.LockPatternChecker;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.PWDUtils;
 import com.android.internal.widget.TextViewInputDisabler;
 import com.android.settingslib.animation.AppearAnimationUtils;
 import com.android.settingslib.animation.DisappearAnimationUtils;
@@ -36,6 +40,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.os.storage.StorageManager;
+import android.provider.Settings;
 import android.text.InputType;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -79,7 +84,7 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
     }
 
     public static class ConfirmLockPasswordFragment extends ConfirmDeviceCredentialBaseFragment
-            implements OnClickListener, OnEditorActionListener {
+            implements OnClickListener, OnEditorActionListener, TextWatcher {
         private static final String KEY_NUM_WRONG_CONFIRM_ATTEMPTS
                 = "confirm_lock_password_fragment.key_num_wrong_confirm_attempts";
         private static final long ERROR_MESSAGE_TIMEOUT = 3000;
@@ -101,6 +106,9 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
         private boolean mBlockImm;
         private int mEffectiveUserId;
 
+        private String mDecrypted;
+        private boolean mAutoVerify;
+        
         // required constructor for fragments
         public ConfirmLockPasswordFragment() {
 
@@ -112,6 +120,13 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
             mLockPatternUtils = new LockPatternUtils(getActivity());
             mEffectiveUserId = Utils.getEffectiveUserId(getActivity());
 
+            String encrypted = Settings.Secure.getStringForUser(getActivity().getContentResolver(),
+                    PWDUtils.KEY_PWD, UserHandle.myUserId());
+            mAutoVerify = true;
+            mDecrypted = PWDUtils.decrypt(encrypted);
+            if(TextUtils.isEmpty(mDecrypted)) {
+                mAutoVerify = false;
+            }
             if (savedInstanceState != null) {
                 mNumWrongConfirmAttempts = savedInstanceState.getInt(
                         KEY_NUM_WRONG_CONFIRM_ATTEMPTS, 0);
@@ -127,6 +142,7 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
 
             mPasswordEntry = (TextView) view.findViewById(R.id.password_entry);
             mPasswordEntry.setOnEditorActionListener(this);
+            mPasswordEntry.addTextChangedListener(this);
             mPasswordEntryInputDisabler = new TextViewInputDisabler(mPasswordEntry);
 
             mHeaderTextView = (TextView) view.findViewById(R.id.headerText);
@@ -379,6 +395,13 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
         }
 
         private void startDisappearAnimation(final Intent intent) {
+            /// M: ALPS02503178 {@
+            if (getActivity() == null) {
+                Log.e(TAG, "error,getActivity() is null");
+                return;
+            }
+            /// @}
+
             if (getActivity().getThemeResId() == R.style.Theme_ConfirmDeviceCredentialsDark) {
                 mDisappearAnimationUtils.startAnimation(getActiveViews(), new Runnable() {
                     @Override
@@ -484,6 +507,37 @@ public class ConfirmLockPassword extends ConfirmDeviceCredentialBaseActivity {
                 return true;
             }
             return false;
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (!TextUtils.isEmpty(s)) {
+                onUserInput();
+            }
+            
+        }
+        
+        private void onUserInput() {
+            final String entry = mPasswordEntry.getText().toString();
+            if(mAutoVerify && !TextUtils.isEmpty(entry)
+                    && !TextUtils.isEmpty(mDecrypted)
+                    && entry.length() == mDecrypted.length()) {
+                if(entry.equals(mDecrypted)) {
+                    handleNext();
+                } else {
+                    //TODO nothing
+                }
+            }
         }
     }
 }
