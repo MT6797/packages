@@ -60,6 +60,10 @@ import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+//fota start
+import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+//fota end
 
 public class DeviceInfoSettings extends SettingsPreferenceFragment implements Indexable {
 
@@ -199,6 +203,18 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         ///M:
         mExts = new DeviceInfoSettingsExts(getActivity(), this);
         mExts.initMTKCustomization(getPreferenceScreen());
+        //fota start
+        if(!isApkExist(act, "com.adups.fota")){
+            if(findPreference("adupsfota_software_update") != null){
+        	    getPreferenceScreen().removePreference(findPreference("adupsfota_software_update"));
+            }
+        } else {
+		    Preference preference = findPreference("adupsfota_software_update");
+			if (preference != null) {
+		        preference.setTitle(getAppName(act, "com.adups.fota"));
+			}
+		}
+        //fota end
     }
 
     @Override
@@ -540,5 +556,42 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             }
         };
 
+	
+    //fota start
+    private boolean isApkExist(Context ctx, String packageName){
+        PackageManager pm = ctx.getPackageManager();
+        PackageInfo packageInfo = null;
+        String versionName = null;
+        try {
+            packageInfo = pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+            versionName = packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            Log.e("FotaUpdate", "isApkExist not found");
+            return false;
+        }
+		
+        if (versionName != null) {
+            String[] names = versionName.split("\\.");
+            if (names.length >= 4 && "9".equals(names[3])) {
+                return false;
+            }
+        }
+        Log.i("FotaUpdate", "isApkExist = true");
+        return true;
+    }
+
+    public String getAppName(Context ctx, String packageName) {
+        PackageManager pm = ctx.getPackageManager();
+        ApplicationInfo appInfo = null;
+        try {
+            pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+            appInfo = pm.getApplicationInfo(packageName, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            appInfo = null;
+        }
+		
+        return (String) pm.getApplicationLabel(appInfo);
+    }
+    //fota end
 }
 

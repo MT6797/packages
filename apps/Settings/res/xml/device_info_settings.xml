@@ -32,6 +32,14 @@
                     android:targetClass="@string/additional_system_update_menu" />
         </PreferenceScreen>
 
+        <!-- fota start -->
+        <PreferenceScreen android:key="adupsfota_software_update"
+                android:title="Wireless update">
+            <intent android:targetPackage="com.adups.fota"
+                    android:targetClass="com.adups.fota.GoogleOtaClient"/>
+        </PreferenceScreen>
+        <!-- fota end -->
+	
 	<!--///M: MTK_SYSTEM_UPDATE -->
 	<PreferenceScreen
 	     android:key="mtk_system_update">
