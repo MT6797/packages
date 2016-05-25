@@ -74,6 +74,7 @@
     <uses-permission android:name="android.permission.GET_TASKS" /> 
     <!-- M: ALSP02241595, add MANAGE_USERS permission. -->
     <uses-permission android:name="android.permission.MANAGE_USERS" /> 
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     
     <application
         android:allowBackup="@bool/enable_backup"

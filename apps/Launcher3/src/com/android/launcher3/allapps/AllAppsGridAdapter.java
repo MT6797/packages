@@ -30,6 +30,7 @@ import android.support.v4.view.accessibility.AccessibilityEventCompat;
 import android.net.Uri;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -462,6 +463,10 @@ public class AllAppsGridAdapter extends RecyclerView.Adapter<AllAppsGridAdapter.
                 icon.setLongPressTimeout(ViewConfiguration.get(parent.getContext())
                         .getLongPressTimeout());
                 icon.setFocusable(true);
+                if (Launcher.DISABLE_APPLIST_WHITE_BG) {
+                    ((BubbleTextView) icon).setTextColor(parent.getContext().getResources().getColor(
+                           R.color.quantum_panel_transparent_bg_text_color));
+                   }
                 return new ViewHolder(icon);
             }
             case PREDICTION_ICON_VIEW_TYPE: {
@@ -473,6 +478,10 @@ public class AllAppsGridAdapter extends RecyclerView.Adapter<AllAppsGridAdapter.
                 icon.setLongPressTimeout(ViewConfiguration.get(parent.getContext())
                         .getLongPressTimeout());
                 icon.setFocusable(true);
+                if (Launcher.DISABLE_APPLIST_WHITE_BG) {
+                    ((BubbleTextView) icon).setTextColor(parent.getContext().getResources().getColor(
+                           R.color.quantum_panel_transparent_bg_text_color));
+                   }
                 return new ViewHolder(icon);
             }
             case EMPTY_SEARCH_VIEW_TYPE:

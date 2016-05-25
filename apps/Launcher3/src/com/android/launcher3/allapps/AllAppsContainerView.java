@@ -324,7 +324,7 @@ public class AllAppsContainerView extends BaseContainerView implements DragSourc
         if (mItemDecoration != null) {
             mAppsRecyclerView.addItemDecoration(mItemDecoration);
         }
-
+        mAppsRecyclerView.setBackgroundResource(android.R.color.transparent);
         updateBackgroundAndPaddings();
     }
 
@@ -376,8 +376,18 @@ public class AllAppsContainerView extends BaseContainerView implements DragSourc
                 padding.right, 0);
         Rect bgPadding = new Rect();
         background.getPadding(bgPadding);
-        mContainerView.setBackground(background);
-        mRevealView.setBackground(background.getConstantState().newDrawable());
+        //add by liliang.bao begin 
+        if(Launcher.DISABLE_APPLIST_WHITE_BG) 
+        {
+        		mContainerView.setBackground(null);
+        		mRevealView.setBackground(null);
+        }
+        else
+        {
+        		mContainerView.setBackground(background);
+        		mRevealView.setBackground(background.getConstantState().newDrawable());
+        }
+        //add by liliang.bao begin
         mAppsRecyclerView.updateBackgroundPadding(bgPadding);
         mAdapter.updateBackgroundPadding(bgPadding);
 

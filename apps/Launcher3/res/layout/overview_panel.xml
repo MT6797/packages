@@ -48,6 +48,21 @@
         android:textAllCaps="true"
         android:textColor="@android:color/white"
         android:textSize="12sp" />
+    
+      <TextView
+        android:id="@+id/lockscreen_wallpaper_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/wallpaper_button"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_horizontal"
+        android:text="@string/lockscreen"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/settings_button"

@@ -74,6 +74,7 @@ import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.gallery3d.common.BitmapCropTask;
@@ -91,7 +92,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.mediatek.drm.OmaDrmStore;
-
+import java.io.InputStream;
+import android.content.ContentResolver;
 public class WallpaperPickerActivity extends WallpaperCropActivity {
     static final String TAG = "Launcher.WallpaperPickerActivity";
 
@@ -191,6 +193,10 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
         @Override
         public void onSave(final WallpaperPickerActivity a) {
             boolean finishActivityWhenDone = true;
+            //add modify by liliang.bao begin  set lockscreen wallpaper 
+            int wallPaperType = android.provider.Settings.System.getInt(a.getContentResolver(), "lockscreen_type", Launcher.WALLPAPER_TYPE);
+            if(Launcher.WALLPAPER_TYPE == wallPaperType)
+             {
             BitmapCropTask.OnBitmapCroppedHandler h = new BitmapCropTask.OnBitmapCroppedHandler() {
                 public void onBitmapCropped(byte[] imageBytes) {
                     Point thumbSize = getDefaultThumbnailSize(a.getResources());
@@ -201,6 +207,14 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
                 }
             };
             a.cropImageAndSetWallpaper(mUri, h, finishActivityWhenDone);
+          }else
+            {
+				saveLockScreenPic(a.getContentResolver(), mUri);
+				android.provider.Settings.System.putInt(a.getContentResolver(), "lockscreen_type", Launcher.WALLPAPER_TYPE); 
+				a.setResult(Activity.RESULT_OK);
+				a.finish();
+            }
+            //add modify by liliang.bao end
         }
         @Override
         public void onDelete(WallpaperPickerActivity a) {
@@ -240,7 +254,18 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
         }
         @Override
         public void onSave(WallpaperPickerActivity a) {
-            a.setWallpaper(Uri.fromFile(mFile), true);
+            // modify by liliang.bao begin  set lockscreen wallpaper 
+            int wallPaperType = android.provider.Settings.System.getInt(a.getContentResolver(), "lockscreen_type", Launcher.WALLPAPER_TYPE);
+            if(Launcher.WALLPAPER_TYPE == wallPaperType)
+            	a.setWallpaper(Uri.fromFile(mFile), true);
+            else
+            {
+				saveLockScreenPic(a.getContentResolver(), Uri.fromFile(mFile));
+				android.provider.Settings.System.putInt(a.getContentResolver(), "lockscreen_type", Launcher.WALLPAPER_TYPE); 
+				a.setResult(Activity.RESULT_OK);
+				a.finish();
+            }
+            //modify by liliang.bao end
         }
         @Override
         public boolean isSelectable() {
@@ -290,7 +315,18 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
         @Override
         public void onSave(WallpaperPickerActivity a) {
             boolean finishActivityWhenDone = true;
-            a.cropImageAndSetWallpaper(mResources, mResId, finishActivityWhenDone);
+            // modify by liliang.bao begin  set lockscreen wallpaper 
+            int wallPaperType = android.provider.Settings.System.getInt(a.getContentResolver(), "lockscreen_type", Launcher.WALLPAPER_TYPE);
+            if(Launcher.WALLPAPER_TYPE == wallPaperType)
+            		a.cropImageAndSetWallpaper(mResources, mResId, finishActivityWhenDone);
+            else
+            	{
+					saveLockScreenPic(mResources,mResId);
+					android.provider.Settings.System.putInt(a.getContentResolver(), "lockscreen_type", Launcher.WALLPAPER_TYPE); 
+					a.setResult(Activity.RESULT_OK);
+					a.finish();
+            	}
+            // modify by liliang.bao end
         }
         @Override
         public boolean isSelectable() {
@@ -341,6 +377,10 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
         }
         @Override
         public void onSave(WallpaperPickerActivity a) {
+        	 //add modify by liliang.bao begin  set lockscreen wallpaper 
+            int wallPaperType = android.provider.Settings.System.getInt(a.getContentResolver(), "lockscreen_type", Launcher.WALLPAPER_TYPE);
+           if(Launcher.WALLPAPER_TYPE == wallPaperType)
+            {
             try {
                 WallpaperManager.getInstance(a.getContext()).clear();
                 a.setResult(Activity.RESULT_OK);
@@ -348,6 +388,15 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
                 Log.w("Setting wallpaper to default threw exception", e);
             }
             a.finish();
+           }
+          else
+           {
+				saveLockScreenPic(a.getResources());
+				android.provider.Settings.System.putInt(a.getContentResolver(), "lockscreen_type", Launcher.WALLPAPER_TYPE); 
+				a.setResult(Activity.RESULT_OK);
+				a.finish();
+           }
+           //modify by liliang.bao end
         }
         @Override
         public boolean isSelectable() {
@@ -543,6 +592,10 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
         mSavedImages.loadThumbnailsAndImageIdList();
         populateWallpapersFromAdapter(mWallpapersView, mSavedImages, true);
 
+        //modify by liliang.bao begin
+       int wallPaperType = android.provider.Settings.System.getInt(getContentResolver(), "lockscreen_type", Launcher.WALLPAPER_TYPE);
+       if(Launcher.LOCKSCREEN_WALLPAPER_TYPE != wallPaperType)
+        {
         // Populate the live wallpapers
         final LinearLayout liveWallpapersView =
                 (LinearLayout) findViewById(R.id.live_wallpaper_list);
@@ -554,8 +607,10 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
                 initializeScrollForRtl();
                 updateTileIndices();
             }
-        });
-
+          });
+        }
+     //modify by liliang.bao end
+       
         // Populate the third-party wallpaper pickers
         final LinearLayout thirdPartyWallpapersView =
                 (LinearLayout) findViewById(R.id.third_party_wallpaper_list);
@@ -645,7 +700,12 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
                     }
                 });
         mSetWallpaperButton = findViewById(R.id.set_wallpaper_button);
-
+        //add by liliang.bao begin
+        if(Launcher.WALLPAPER_TYPE == wallPaperType)
+        	 ((TextView)mSetWallpaperButton).setText(R.string.wallpaper_instructions);
+        else
+        	((TextView)mSetWallpaperButton).setText(R.string.Set_lockscreen_wallpaper);
+      //add by liliang.bao end 
         // CAB for deleting items
         mActionModeCallback = new ActionMode.Callback() {
             // Called when the action mode is created; startActionMode() was called
@@ -1324,4 +1384,91 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
                context, uri, null, rotation, size.x, size.y, false, true, null);
         return cropTask.isOutOfSpecLimit();
     }
+    
+    private static void saveLockScreenPic(Resources res,int resid)
+    {
+   		InputStream ios = res.openRawResource(resid);
+   		String dir = "/data/data/com.android.launcher3/lockWallPaper";
+   		String savePath = dir + "/lockscreenwallpaper.jpg";
+   		File file = new File(dir);
+   		try {
+   			if (!file.exists()) {
+   				file.mkdir();
+   				Runtime.getRuntime().exec("chmod 775 " + dir).waitFor();
+   			}
+   			Log.e(TAG, "saveLockScreenPic begin");
+   			FileOutputStream fos = new FileOutputStream(savePath);
+   			byte[] buffer = new byte[32768];
+   			int amt;
+   			while ((amt = ios.read(buffer)) > 0) {
+   				fos.write(buffer, 0, amt);
+   			}
+   			ios.close();
+   			fos.close();
+   			if ((new File(savePath)).exists())
+   				Runtime.getRuntime().exec("chmod 755 " + savePath).waitFor();
+   			Log.e(TAG, "saveLockScreenPic end");
+   		} catch (Exception e) {
+   		}
+   		 
+   	}
+      
+      private static void saveLockScreenPic(Resources res)
+    {
+   	   Resources sysRes = Resources.getSystem();
+   	   int resId = sysRes.getIdentifier("default_wallpaper", "drawable", "android");
+   		InputStream ios = res.openRawResource(resId);
+   		String dir = "/data/data/com.android.launcher3/lockWallPaper";
+   		String savePath = dir + "/lockscreenwallpaper.jpg";
+   		File file = new File(dir);
+   		try {
+   			if (!file.exists()) {
+   				file.mkdir();
+   				Runtime.getRuntime().exec("chmod 775 " + dir).waitFor();
+   			}
+   			Log.e(TAG, "saveLockScreenPic begin");
+   			FileOutputStream fos = new FileOutputStream(savePath);
+   			byte[] buffer = new byte[32768];
+   			int amt;
+   			while ((amt = ios.read(buffer)) > 0) {
+   				fos.write(buffer, 0, amt);
+   			}
+   			ios.close();
+   			fos.close();
+   			if ((new File(savePath)).exists())
+   				Runtime.getRuntime().exec("chmod 755 " + savePath).waitFor();
+   			Log.e(TAG, "saveLockScreenPic end");
+   		} catch (Exception e) {
+   		}
+   		
+   	}
+      
+      private static void saveLockScreenPic(ContentResolver contentRes, Uri uri)
+    {
+   		try {
+   			InputStream ios = contentRes.openInputStream(uri);
+   			String dir = "/data/data/com.android.launcher3/lockWallPaper";
+   			String savePath = dir + "/lockscreenwallpaper.jpg";
+   			File file = new File(dir);
+
+   			if (!file.exists()) {
+   				file.mkdir();
+   				Runtime.getRuntime().exec("chmod 775 " + dir).waitFor();
+   			}
+   			Log.e(TAG, "saveLockScreenPic begin");
+   			FileOutputStream fos = new FileOutputStream(savePath);
+   			byte[] buffer = new byte[32768];
+   			int amt;
+   			while ((amt = ios.read(buffer)) > 0) {
+   				fos.write(buffer, 0, amt);
+   			}
+   			ios.close();
+   			fos.close();
+   			if ((new File(savePath)).exists())
+   				Runtime.getRuntime().exec("chmod 755 " + savePath).waitFor();
+   			Log.e(TAG, "saveLockScreenPic end");
+   		} catch (Exception e) {
+   		}
+   		
+   	}
 }

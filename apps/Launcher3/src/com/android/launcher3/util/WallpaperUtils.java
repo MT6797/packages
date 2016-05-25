@@ -25,6 +25,7 @@ import android.os.Build;
 import android.view.WindowManager;
 
 import com.android.launcher3.Utilities;
+import com.android.launcher3.R;
 
 /**
  * Utility methods for wallpaper management.
@@ -110,7 +111,7 @@ public final class WallpaperUtils {
 
             // We need to ensure that there is enough extra space in the wallpaper
             // for the intended parallax effects
-            final int defaultWidth, defaultHeight;
+            int defaultWidth, defaultHeight;
             if (res.getConfiguration().smallestScreenWidthDp >= 720) {
                 defaultWidth = (int) (maxDim * wallpaperTravelToScreenWidthRatio(maxDim, minDim));
                 defaultHeight = maxDim;
@@ -118,6 +119,11 @@ public final class WallpaperUtils {
                 defaultWidth = Math.max((int) (minDim * WALLPAPER_SCREENS_SPAN), maxDim);
                 defaultHeight = maxDim;
             }
+            //add by liliang.bao begin
+            if(res.getBoolean(R.bool.config_wallpaper_single_screen))
+            		defaultWidth = minDim;
+            //add by liliang.bao end
+
             sDefaultWallpaperSize = new Point(defaultWidth, defaultHeight);
         }
         return sDefaultWallpaperSize;

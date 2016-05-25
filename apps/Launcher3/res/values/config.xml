@@ -103,4 +103,7 @@
     
     <!-- Unread support -->
     <bool name="config_unreadSupport">true</bool>
+    
+    <bool name="config_wallpaper_single_screen">false</bool>
+    <bool name="enable_lockscreen_wallpaper">false</bool>
 </resources>

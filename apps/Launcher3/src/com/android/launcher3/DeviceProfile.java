@@ -25,6 +25,7 @@ import android.graphics.Paint.FontMetrics;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -97,6 +98,8 @@ public class DeviceProfile {
     private int searchBarSpaceWidthPx;
     private int searchBarSpaceHeightPx;
 
+    private static final float APP_ICON_SIZE_SCALE = 0.825f;
+    
     public DeviceProfile(Context context, InvariantDeviceProfile inv,
             Point minSize, Point maxSize,
             int width, int height, boolean isLandscape) {
@@ -142,7 +145,7 @@ public class DeviceProfile {
         allAppsIconTextSizePx = Utilities.pxFromDp(inv.iconTextSize, dm);
 
         // AllApps uses the original non-scaled icon size
-        allAppsIconSizePx = Utilities.pxFromDp(inv.iconSize, dm);
+        allAppsIconSizePx = Utilities.pxFromDp(inv.iconSize*APP_ICON_SIZE_SCALE, dm);
 
         // Determine sizes.
         widthPx = width;
@@ -190,7 +193,7 @@ public class DeviceProfile {
 
     private void updateIconSize(float scale, int drawablePadding, Resources res,
                                 DisplayMetrics dm) {
-        iconSizePx = (int) (Utilities.pxFromDp(inv.iconSize, dm) * scale);
+        iconSizePx = (int) (Utilities.pxFromDp(inv.iconSize*APP_ICON_SIZE_SCALE, dm) * scale);
         iconTextSizePx = (int) (Utilities.pxFromSp(inv.iconTextSize, dm) * scale);
         iconDrawablePaddingPx = drawablePadding;
         hotseatIconSizePx = (int) (Utilities.pxFromDp(inv.hotseatIconSize, dm) * scale);

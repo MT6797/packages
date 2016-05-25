@@ -375,6 +375,8 @@ public class Launcher extends Activity
     // launcher. Since there is no callback for when the activity has finished launching, enable
     // the press state and keep this reference to reset the press state when we return to launcher.
     private BubbleTextView mWaitingForResume;
+    public static final int WALLPAPER_TYPE = 0;
+    public static final int LOCKSCREEN_WALLPAPER_TYPE = 1;
 
     protected static HashMap<String, CustomAppWidget> sCustomAppWidgets =
             new HashMap<String, CustomAppWidget>();
@@ -1196,7 +1198,18 @@ public class Launcher extends Activity
                     + mOrientationChanged + ",mPagesAreRecreated = " + mPagesWereRecreated
                     + ", this = " + this);
         }
-
+         if(mPageIndicators != null)
+        LauncherLog.d(TAG, "  page_ind: "+mPageIndicators.getVisibility());
+        LauncherLog.d(TAG,"  isAllAppsVisible: "+isAllAppsVisible());
+        if(isAllAppsVisible())
+        {
+        	 mWorkspace.setVisibility(View.INVISIBLE);
+        	 if(mPageIndicators != null)
+        		 mPageIndicators.setVisibility(View.GONE);
+        }
+        else
+        	 mWorkspace.setVisibility(View.VISIBLE);
+        LauncherLog.d(TAG, "workspace visibile: "+mWorkspace.getVisibility()+"  apps_view: "+mAppsView.getVisibility());
         // Restore the previous launcher state
         if (mOnResumeState == State.WORKSPACE) {
             showWorkspace(false);
@@ -1641,12 +1654,35 @@ public class Launcher extends Activity
                 ///M.
 
                 if (!mWorkspace.isSwitchingState()) {
+                	   android.provider.Settings.System.putInt(getContentResolver(), "lockscreen_type", WALLPAPER_TYPE); //add by liliang.bao
                     onClickWallpaperPicker(arg0);
                 }
             }
         });
         wallpaperButton.setOnTouchListener(getHapticFeedbackTouchListener());
+        //add by liliang.bao begin set lockscreen wallpaper
+        View lockscreenWallpaperButton = findViewById(R.id.lockscreen_wallpaper_button);
+        lockscreenWallpaperButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                ///M. ALPS02034541, aviod wallpaper button can be click twice.
+                if (mWallpaperButtonEnable == true) {
+                    mWallpaperButtonEnable = false;
+                } else {
+                    return;
+                }
+                ///M.
 
+                if (!mWorkspace.isSwitchingState()) {
+                	   android.provider.Settings.System.putInt(getContentResolver(), "lockscreen_type", LOCKSCREEN_WALLPAPER_TYPE);
+                    onClickWallpaperPicker(arg0);
+                    
+                }
+            }
+        });
+        if(getResources().getBoolean(R.bool.enable_lockscreen_wallpaper))
+        	lockscreenWallpaperButton.setVisibility(View.VISIBLE);
+        //add by liliang.bao end
         View settingsButton = findViewById(R.id.settings_button);
         if (hasSettings()) {
             settingsButton.setOnClickListener(new OnClickListener() {

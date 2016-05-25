@@ -31,7 +31,8 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:singleLine">true</item>
+        <item name="android:singleLine">false</item>  
+        <item name="android:lines">2</item>
         <item name="android:ellipsize">marquee</item>
         <item name="android:textColor">@color/workspace_icon_text_color</item>
         <item name="android:shadowRadius">2.0</item>
