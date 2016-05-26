@@ -121,4 +121,6 @@
 <string name="otg_pass">OTG测试通过</string> 
 <string name="otg_out">OTG设备拔出</string> 
 <string name="led_rgb_test">通知灯红绿蓝测试</string> 
+<string name="fp_check_ok">指纹自检成功</string> 
+<string name="fp_check_fail">指纹自检失败</string>
 </resources>

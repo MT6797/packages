@@ -22,12 +22,18 @@ LOCAL_SRC_FILES := $(call all-subdir-java-files)
 LOCAL_PACKAGE_NAME := MMITestCn
 LOCAL_CERTIFICATE := platform
 LOCAL_JNI_SHARED_LIBRARIES += libfmjni
+LOCAL_STATIC_JAVA_LIBRARIES := fpextra
 
 
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PROGUARD_ENABLED:= disabled
 include $(BUILD_PACKAGE)
+##################################################
+include $(CLEAR_VARS)
 
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := fpextra:fpextralib.jar
+
+include $(BUILD_MULTI_PREBUILT)
 # ============================================================
 
 # Also build all of the sub-targets under this one: the shared library.

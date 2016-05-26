@@ -378,12 +378,13 @@ public class AutoTest extends Activity {
 		new LcdGreyChartTest(Test.ID.LCD_LEVEL, "LCD 灰色渐变测试", 600),
 		new LcdColorTest(Test.ID.LCD_WHITE, "LCD 白色测试", Color.WHITE, 600),
 		//new LightTest(Test.ID.KBD_BACKLIGHT,"按键灯测试",600),
+		new FlashLEDTest(Test.ID.CAMERA_LED, "摄像头闪光灯测试", 600),
+		new CameraTest(Test.ID.CAMERA_IMG, "主摄像头测试", 600, 0),
 		new KeypadTest(Test.ID.KEYPAD, "按键测试"),
 
 		new LightTest(Test.ID.BACKLIGHT, "LCD 背光测试", 600),
 
-		new FlashLEDTest(Test.ID.CAMERA_LED, "摄像头闪光灯测试", 600),
-		new CameraTest(Test.ID.CAMERA_IMG, "主摄像头测试", 600, 0),
+
 		new CameraTest(Test.ID.CAMERA_IMG_FRONT, "前摄像头测试", 600, 1),	
 		
 		new ChargerLedTest(Test.ID.CHARGER_LED, "通知灯测试"),	
@@ -406,7 +407,7 @@ public class AutoTest extends Activity {
 		new LightSensorTest(Test.ID.LIGHTSENSOR,"光感应"),
 		new AlsPsTest(Test.ID.ALSPS, "距离感应"),
 		new HallTest(Test.ID.HALL, "霍尔测试"),
-	//	new FpTest(Test.ID.FP, "指纹测试"),
+		new FpTest(Test.ID.FP, "指纹测试"),		
 		new SIMTest(Test.ID.SIM, "SIM卡测试"),
 		new MemorycardTest(Test.ID.MEMORYCARD, "内存卡测试"),
 		//new BatteryTempTest(Test.ID.TEMPBAT, "电池温度测试"),

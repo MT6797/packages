@@ -686,10 +686,7 @@ class KeypadTest extends Test {
         //通过判断设备是否有返回键、菜单键(不是虚拟键,是手机屏幕外的按键)来确定是否有navigation bar  
         boolean hasMenuKey = ViewConfiguration.get(activity)  
                 .hasPermanentMenuKey();  
-        boolean hasBackKey = KeyCharacterMap  
-                .deviceHasKey(KeyEvent.KEYCODE_BACK);  
-  
-        if (!hasMenuKey && !hasBackKey) {  
+        if (!hasMenuKey) {  
             // 做任何你需要做的,这个设备有一个导航栏  
             return true;  
         }  

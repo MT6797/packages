@@ -228,7 +228,8 @@ class TracaDisplayTest extends Test{
 			mDisplayString += "MMI: " + GetStringFromTrace(TracabilityStruct.ID.INFO_STATUS_MMI_TEST_I) + "\n";
 			mDisplayString += "FT: " + GetStringFromTrace(TracabilityStruct.ID.INFO_STATUS_FINAL_I) + "\n";
 			mDisplayString += "Date Code: " + GetHDTDownloadTime(TracabilityStruct.ID.INFO_DATE_PASS_HDT_I) + "\n";*/
-			mDisplayString += "TP状态:" + getTpStatus() + "\n";
+			if(!" ".equals(getTpStatus()))
+				mDisplayString += "TP状态:" + getTpStatus() + "\n";
 			
 			mState = END;
 			

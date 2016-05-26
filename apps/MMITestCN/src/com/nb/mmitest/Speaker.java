@@ -201,7 +201,9 @@ class SpeakerTest extends Test {
 			am = (AudioManager) mContext
 					.getSystemService(Context.AUDIO_SERVICE);
 
-			mMediaPlayer = new MediaPlayer();
+			if(mMediaPlayer == null)
+			{
+				mMediaPlayer = new MediaPlayer();
 
 			//mMediaPlayer.reset();
 			//mMediaPlayer.setVolume(1.0f, 1.0f);
@@ -225,6 +227,7 @@ class SpeakerTest extends Test {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
 			
 			tl = new TestLayout1(mContext, mName, getResource(R.string.speaker_test),
 					getResource(R.string.fail), getResource(R.string.pass));
@@ -267,5 +270,13 @@ class SpeakerTest extends Test {
 	    if (tl != null)
 			tl.showButtons();
 	}
-
+	@Override
+	public void Exit() {
+			if (mMediaPlayer != null) {
+				mMediaPlayer.stop();
+				mMediaPlayer.release();
+				mMediaPlayer = null;
+			}
+		super.Exit();
+	}
 }

@@ -190,7 +190,8 @@ class AlsPsTest extends Test implements SensorEventListener {
 			tl.setEnabledButtons(false, tl.brsk);
 			break;
 		case END:
-			mSensorManager.unregisterListener(this, mProximitySensor);
+			if(mSensorManager!=null)
+				mSensorManager.unregisterListener(this, mProximitySensor);
 			far2neer = 0;
 			near2far = 1;
 			temp = 0;

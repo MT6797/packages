@@ -122,6 +122,7 @@ public class ExecuteTest extends Activity {
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
+		currentTest.Exit();
 		Log.d(TAG, "onDestroy() currentTest = " + currentTest);
 	}
 
