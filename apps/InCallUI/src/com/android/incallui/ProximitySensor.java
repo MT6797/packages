@@ -21,6 +21,10 @@
 
 package com.android.incallui;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.PowerManager;
@@ -171,7 +175,7 @@ public class ProximitySensor implements AccelerometerListener.OrientationListene
         return !mPowerManager.isScreenOn();
     }
 
-    private void turnOnProximitySensor() {
+    public void turnOnProximitySensor() {
         if (mProximityWakeLock != null) {
             if (!mProximityWakeLock.isHeld()) {
                 Log.i(this, "Acquiring proximity wake lock");
@@ -182,7 +186,7 @@ public class ProximitySensor implements AccelerometerListener.OrientationListene
         }
     }
 
-    private void turnOffProximitySensor(boolean screenOnImmediately) {
+    public void turnOffProximitySensor(boolean screenOnImmediately) {
         if (mProximityWakeLock != null) {
             if (mProximityWakeLock.isHeld()) {
                 Log.i(this, "Releasing proximity wake lock");
@@ -262,9 +266,9 @@ public class ProximitySensor implements AccelerometerListener.OrientationListene
                     .add("ui", mUiShowing ? 1 : 0)
                     .add("aud", CallAudioState.audioRouteToString(audioMode))
                     .toString());
-
+            String hallState = readHallState();
             /// M: disable Proximity Sensor during VT Call
-            if (mIsPhoneOffhook && !screenOnImmediately && !isVideoCall) {
+            if (mIsPhoneOffhook && !screenOnImmediately && !isVideoCall&& "1".equals(hallState)) {
                 Log.d(this, "Turning on proximity sensor");
                 // Phone is in use!  Arrange for the screen to turn off
                 // automatically when the sensor detects a close object.
@@ -327,5 +331,23 @@ public class ProximitySensor implements AccelerometerListener.OrientationListene
             updateProximitySensorMode();
         }
         mCurVideoState = call.getVideoState();
+    }
+	static String readHallState()
+    {	
+    	try
+    	{
+        BufferedReader reader = new BufferedReader(new FileReader("/sys/class/input/input7/status"), 256);
+        try {
+        	String state = reader.readLine();
+        	Log.d("ProximitySensor", "bll====>hall state: "+state);
+            return state;
+        } finally {
+            reader.close();
+        } 
+    	}catch(Exception e)
+    	{
+    		
+    	}
+    	return "1";
     }
 }

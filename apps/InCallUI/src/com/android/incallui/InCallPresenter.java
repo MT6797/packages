@@ -81,7 +81,7 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-
+import android.os.SystemProperties;
 /**
  * Takes updates from the CallList and notifies the InCallActivity (UI)
  * of the changes.
@@ -148,6 +148,7 @@ public class InCallPresenter implements CallList.Listener,
     private InCallUiWfcUtils.RoveOutReceiver mRoveOutReceiver = null;
     /// @}
     private boolean mBoundAndWaitingForOutgoingCall;
+    private HallBroadcastReceiver mHallBroadcastReceiver;
 
     /**
      * If there is no actual call currently in the call list, this will be used as a fallback
@@ -260,7 +261,11 @@ public class InCallPresenter implements CallList.Listener,
             Preconditions.checkState(audioModeProvider == mAudioModeProvider);
             return;
         }
-
+        if("yes".equals(SystemProperties.get("ro.nb.hall","no")))
+        	{
+        			mHallBroadcastReceiver = HallBroadcastReceiver.getInstance(context);
+        			mHallBroadcastReceiver.register(context);
+        	}
         Preconditions.checkNotNull(context);
         mContext = context;
 
@@ -1481,7 +1486,7 @@ public class InCallPresenter implements CallList.Listener,
         }
     }
 
-    private boolean startUi(InCallState inCallState) {
+    public boolean startUi(InCallState inCallState) {
         /// M: Fix ALPS01782477. @{
         boolean isCallWaiting = mCallList.getActiveOrBackgroundCall() != null &&
                 mCallList.getIncomingCall() != null;
@@ -1502,6 +1507,8 @@ public class InCallPresenter implements CallList.Listener,
             }
         }
         /// @}
+        if("0".equals(ProximitySensor.readHallState()))
+        	 needShowUiImmediately = true;
 
         // If the screen is off, we need to make sure it gets turned on for incoming calls.
         // This normally works just fine thanks to FLAG_TURN_SCREEN_ON but that only works
@@ -1538,7 +1545,8 @@ public class InCallPresenter implements CallList.Listener,
                 mInCallActivity.overridePendingTransition(0, 0);
             }
             /// @}
-            mStatusBarNotifier.updateNotification(inCallState, mCallList);
+			if(mStatusBarNotifier!=null)
+            	mStatusBarNotifier.updateNotification(inCallState, mCallList);
         }
         return true;
     }
@@ -1589,7 +1597,8 @@ public class InCallPresenter implements CallList.Listener,
                 mCallList.removeListener(this);
             }
             mCallList = null;
-
+            if("yes".equals(SystemProperties.get("ro.nb.hall","no"))&&mHallBroadcastReceiver!=null)
+            		mHallBroadcastReceiver.unregister(mContext);
             mContext = null;
             mInCallActivity = null;
 
@@ -2303,5 +2312,31 @@ public class InCallPresenter implements CallList.Listener,
         }
         return false;
     }
-
+ public void setHallFragmentVisible(boolean show)
+    {
+    	if(mInCallActivity!=null)
+    	{
+    		mInCallActivity.getHallCallFragment().getView().setVisibility(show?View.VISIBLE:View.GONE);
+    		if(mInCallActivity.getCallCardFragment() != null)
+    			mInCallActivity.getCallCardFragment().getView().setVisibility(show?View.GONE:View.VISIBLE);
+    		//if(!isActivityStarted())
+    		//	startUi(InCallPresenter.getInstance().getInCallState());
+    		bringToForeground(false);
+    	}else
+    	{
+    		startUi(InCallPresenter.getInstance().getInCallState());
+    		Log.i(this, "mInCallActivity is null");
+    	}
+    }
+    
+    public void setWindowFullScreen(boolean show)
+    {
+    	if(mInCallActivity!=null)
+    	{
+    		if(show)
+    			mInCallActivity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    		else
+    			mInCallActivity.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    	}
+    }
 }

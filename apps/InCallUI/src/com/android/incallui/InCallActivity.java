@@ -29,6 +29,7 @@ import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -66,6 +67,7 @@ import com.android.incallui.Call.State;
 import com.mediatek.incallui.DMLockBroadcastReceiver;
 import com.mediatek.incallui.InCallUtils;
 /// @}
+import com.mediatek.incallui.StatusBarHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,7 +81,7 @@ import com.mediatek.incallui.ext.IInCallExt;
 import com.mediatek.incallui.recorder.PhoneRecorderUtils;
 import com.mediatek.incallui.wfc.InCallUiWfcUtils;
 /// @}
-
+import android.os.SystemProperties;
 /**
  * Main activity that the user interacts with while in a live call.
  */
@@ -104,6 +106,7 @@ public class InCallActivity extends Activity implements FragmentDisplayManager {
     private DialpadFragment mDialpadFragment;
     private ConferenceManagerFragment mConferenceManagerFragment;
     private FragmentManager mChildFragmentManager;
+    private HallCallFragment mHallCallFragment;
 
     private boolean mIsVisible;
     private AlertDialog mDialog;
@@ -199,6 +202,11 @@ public class InCallActivity extends Activity implements FragmentDisplayManager {
         mDMLockReceiver = DMLockBroadcastReceiver.getInstance(this);
         mDMLockReceiver.register(this);
         /// @}
+        if(mHallCallFragment == null)
+        {
+        	mHallCallFragment = (HallCallFragment)getFragmentManager()
+                    .findFragmentById(R.id.hallFragment);
+        }
 
         internalResolveIntent(getIntent());
 
@@ -357,6 +365,23 @@ public class InCallActivity extends Activity implements FragmentDisplayManager {
 
         InCallPresenter.getInstance().setThemeColors();
         InCallPresenter.getInstance().onUiShowing(true);
+	   if("yes".equals(SystemProperties.get("ro.nb.hall","no")))
+        {
+        	if("0".equals(ProximitySensor.readHallState()))
+        	{
+        		mHallCallFragment.getView().setVisibility(View.VISIBLE);
+        		if(mCallCardFragment!=null)
+        			mCallCardFragment.getView().setVisibility( View.GONE );
+        	}
+        	else
+        	{
+        		mHallCallFragment.getView().setVisibility(View.GONE);
+        		if(mCallCardFragment!=null)
+        			mCallCardFragment.getView().setVisibility(View.VISIBLE);
+        	}
+        }else
+        		mHallCallFragment.getView().setVisibility(View.GONE);
+
         // when incallactivity shown ,and it's video call never black screen.
         if(!mScreenTimeoutEnabled) {
             InCallPresenter.getInstance().enableScreenTimeout(mScreenTimeoutEnabled);
@@ -392,6 +417,7 @@ public class InCallActivity extends Activity implements FragmentDisplayManager {
         if (CallList.getInstance().getIncomingCall() != null) {
             dismissSelectAccountDialog();
             /// M: Fix ALPS01991506 we set CallCardFragment visible,before showAnswerUi
+	        mHallCallFragment.onShowAnswerUi(true);
             showCallCardFragment(true);
         }
         /// @}
@@ -500,6 +526,13 @@ public class InCallActivity extends Activity implements FragmentDisplayManager {
         } else if (fragment instanceof CallCardFragment) {
             mCallCardFragment = (CallCardFragment) fragment;
             mChildFragmentManager = mCallCardFragment.getChildFragmentManager();
+	Log.i(this, "mHallCallFragment: " + mHallCallFragment);
+
+	    if(mHallCallFragment != null)
+	    {
+        		mCallCardFragment.setHallCallFragment(mHallCallFragment);
+        		mHallCallFragment.setCallCardFragment(mCallCardFragment);
+	    }
         } else if (fragment instanceof ConferenceManagerFragment) {
             mConferenceManagerFragment = (ConferenceManagerFragment) fragment;
         } else if (fragment instanceof CallButtonFragment) {
@@ -1354,5 +1387,8 @@ public class InCallActivity extends Activity implements FragmentDisplayManager {
         this.mShowDialpadRequested = showDialpadRequested;
     }
     ///@}
-
+    public HallCallFragment getHallCallFragment()
+    {
+    	return mHallCallFragment;
+    }
 }

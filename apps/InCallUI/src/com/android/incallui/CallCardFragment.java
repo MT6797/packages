@@ -65,7 +65,7 @@ import com.mediatek.incallui.wrapper.FeatureOptionWrapper;
 
 import java.util.List;
 import java.util.Locale;
-
+import android.os.SystemProperties;
 /**
  * Fragment for call card.
  */
@@ -174,6 +174,7 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
     private CharSequence mPostResetCallStateLabel;
     private boolean mCallStateLabelResetPending = false;
     private Handler mHandler;
+	  private HallCallFragment mHallCallFragment;
 
     @Override
     public CallCardPresenter.CallCardUi getUi() {
@@ -552,6 +553,14 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
         showInternetCallLabel(isSipCall);
 
         setDrawableToImageView(mPhoto, photo);
+        
+        if(mHallCallFragment != null)
+         {
+        	if(!name.isEmpty())
+    		  mHallCallFragment.setName(name);
+        	else
+        	  mHallCallFragment.setName(number);
+        }
     }
 
     @Override
@@ -656,6 +665,9 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
         // Update the call state label and icon.
         setCallStateLabel(callStateLabel);
         if (!TextUtils.isEmpty(callStateLabel.getCallStateLabel())) {
+Log.i(this, "callStateLabel: " + callStateLabel.getCallStateLabel());
+		if(mHallCallFragment != null)
+        		  mHallCallFragment.setCallStatus(callStateLabel.getCallStateLabel().toString());
             if (state == Call.State.ACTIVE || state == Call.State.CONFERENCED) {
                 mCallStateLabel.clearAnimation();
             } else {
@@ -801,7 +813,8 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
             }
             String callTimeElapsed = DateUtils.formatElapsedTime(duration / 1000);
             mElapsedTime.setText(callTimeElapsed);
-
+	    if(mHallCallFragment != null)
+        	mHallCallFragment.setCallStatus(callTimeElapsed);
             String durationDescription =
                     InCallDateUtils.formatDuration(getView().getContext(), duration);
             mElapsedTime.setContentDescription(
@@ -858,6 +871,8 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
         CharSequence callStateLabel = null;  // Label to display as part of the call banner
 
         boolean hasSuggestedLabel = label != null;
+        if("yes".equals(SystemProperties.get("ro.nb.hall","no")))
+        	 hasSuggestedLabel = false;
         boolean isAccount = hasSuggestedLabel && !isGatewayCall;
         boolean isAutoDismissing = false;
 
@@ -955,6 +970,8 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
             default:
                 Log.wtf(this, "updateCallStateWidgets: unexpected call: " + state);
         }
+		if(mHallCallFragment!=null)
+        	mHallCallFragment.setHallMainBackground(state);
         return new CallStateLabel(callStateLabel, isAutoDismissing);
     }
 
@@ -1041,6 +1058,13 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
                     mFloatingActionButtonContainer.setVisibility(View.GONE);
                 }
             }
+			if(mHallCallFragment != null){
+            	if(enabled)
+            		mHallCallFragment.showEndCallUi(true);
+            	else
+            		mHallCallFragment.showEndCallUi(false);
+			}
+            
             mFloatingActionButton.setEnabled(enabled);
             updateFabPosition();
         }
@@ -1524,5 +1548,9 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
         // refer to the updateFabPosition() method.
         int endButtonSize = mIsDialpadShowing ? mFabSmallDiameter : mFabNormalDiameter;
         return endButtonSize / 2;
+    }
+	public void setHallCallFragment(HallCallFragment hallCallFragment)
+    {
+    	mHallCallFragment = hallCallFragment;
     }
 }

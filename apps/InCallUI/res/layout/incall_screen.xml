@@ -19,4 +19,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main" >
+    <FrameLayout
+        android:id="@+id/hall_call_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <fragment
+            android:id="@+id/hallFragment"
+            android:name="com.android.incallui.HallCallFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
 </FrameLayout>
