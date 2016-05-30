@@ -96,8 +96,8 @@
             <intent-filter android:priority="2">
                 <action android:name="android.intent.action.MMITEST" />
 				<!--action android:name="android.intent.action.BOOT_COMPLETED" /-->
-                <category android:name="android.intent.category.HOME" />
-                <action android:name="android.intent.action.MAIN"/>
+               <!-- <category android:name="android.intent.category.HOME" />
+                <action android:name="android.intent.action.MAIN"/>-->
             </intent-filter>
         </receiver>
          
