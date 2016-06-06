@@ -1309,10 +1309,10 @@ public class PhotoView extends GLView implements PlayEngine.OnFrameAvailableList
             // onDoubleTap happened on the second ACTION_DOWN.
             // We need to ignore the next UP event.
             mIgnoreUpEvent = true;
-            if (scale <= .75f || controller.isAtMinimalScale()) {
+            if (/*scale <= .75f || */controller.isAtMinimalScale()) {
                 /// M: [BUG.MODIFY] A black area show at the right side of picture.@{
                 /* controller.zoomIn(x, y, Math.max(1.0f, scale * 1.5f)); */
-                controller.zoomIn(x, y, Math.max(1.5f, Math.min(scale * 1.5f, 4.0f)));
+                controller.zoomIn(x, y, Math.max(0.5f, Math.min(scale * 1.5f, 4.0f)));
                 /// @}
             } else {
                 controller.resetToFullView();
