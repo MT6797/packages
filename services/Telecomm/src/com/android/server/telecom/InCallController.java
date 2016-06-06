@@ -679,9 +679,10 @@ public final class InCallController extends CallsManagerListenerBase {
         /// @}
 
         // If this is a single-SIM device, the "default SIM" will always be the only SIM.
+        //Set current SIM to respond SMS. Modify by CZ, fix bug 0003621.
         boolean isDefaultSmsAccount =
-                mCallsManager.getPhoneAccountRegistrar()
-                        .isUserSelectedSmsPhoneAccount(call.getTargetPhoneAccount());
+                /*mCallsManager.getPhoneAccountRegistrar()
+                        .isUserSelectedSmsPhoneAccount(call.getTargetPhoneAccount())*/true;
         if (call.isRespondViaSmsCapable() && isDefaultSmsAccount) {
             capabilities |= android.telecom.Call.Details.CAPABILITY_RESPOND_VIA_TEXT;
         }
