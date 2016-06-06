@@ -23,8 +23,10 @@
 
     <LinearLayout
         android:id="@+id/hall_main"
-        android:layout_width="248dip"
-        android:layout_height="248dip"
+        android:layout_width="258dip"
+        android:layout_height="258dip"
+	android:layout_marginTop="12dip"
+    	android:paddingLeft="6dip"
         android:layout_centerHorizontal="true"
         android:background="@drawable/hall_calling_back"
         android:orientation="vertical" >
