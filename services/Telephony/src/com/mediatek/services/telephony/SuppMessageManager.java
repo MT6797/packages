@@ -9,6 +9,7 @@ import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneFactory;
 import com.android.internal.telephony.gsm.SuppCrssNotification;
 import com.android.internal.telephony.gsm.SuppServiceNotification;
+import com.android.internal.telephony.imsphone.ImsPhoneConnection;
 import com.android.services.telephony.TelephonyConnection;
 import com.mediatek.telecom.TelecomManagerEx;
 
@@ -32,10 +33,10 @@ public class SuppMessageManager {
     private List<SuppMessageHandler> mSuppMessageHandlerList
                                 = new ArrayList<SuppMessageHandler>();
 
-    private HashMap<Phone, ArrayList<SuppServiceNotification>> mCachedSsnsMap =
-            new HashMap<Phone, ArrayList<SuppServiceNotification>>();
-    private HashMap<Phone, ArrayList<SuppCrssNotification>> mCachedCrssnsMap =
-            new HashMap<Phone, ArrayList<SuppCrssNotification>>();
+    private HashMap<Integer, ArrayList<SuppServiceNotification>> mCachedSsnsMap =
+            new HashMap<Integer, ArrayList<SuppServiceNotification>>();
+    private HashMap<Integer, ArrayList<SuppCrssNotification>> mCachedCrssnsMap =
+            new HashMap<Integer, ArrayList<SuppCrssNotification>>();
 
 
     public SuppMessageManager(ConnectionService connectionService) {
@@ -115,24 +116,24 @@ public class SuppMessageManager {
      */
     public void forceSuppMessageUpdate(TelephonyConnection c, Phone p) {
         Log.v(LOG_TAG, "forceSuppMessageUpdate for " + c + ", " + p + " phone " + p.getPhoneId());
-        ArrayList<SuppServiceNotification> ssnList = mCachedSsnsMap.get(p);
+        ArrayList<SuppServiceNotification> ssnList = mCachedSsnsMap.get(p.getPhoneId());
         if (ssnList != null) {
             Log.v(LOG_TAG, "forceSuppMessageUpdate()... for SuppServiceNotification for " + c
                     + " for phone " + p.getPhoneId());
             for (SuppServiceNotification ssn : ssnList) {
                 onSuppServiceNotification(ssn, p, c);
             }
-            mCachedSsnsMap.remove(p);
+            mCachedSsnsMap.remove(p.getPhoneId());
          }
 
-        ArrayList<SuppCrssNotification> crssnList = mCachedCrssnsMap.get(p);
+        ArrayList<SuppCrssNotification> crssnList = mCachedCrssnsMap.get(p.getPhoneId());
         if (crssnList != null) {
             Log.v(LOG_TAG, "forceSuppMessageUpdate()... for SuppCrssNotification for " + c
                     + " for phone " + p.getPhoneId());
             for (SuppCrssNotification crssn : crssnList) {
                 onCrssSuppServiceNotification(crssn, p, c);
             }
-            mCachedCrssnsMap.remove(p);
+            mCachedCrssnsMap.remove(p.getPhoneId());
          }
     }
 
@@ -229,6 +230,16 @@ public class SuppMessageManager {
         com.android.internal.telephony.Connection originalConnection = null;
         Connection connection = null;
         boolean normalCase = false;
+        ///M: AP temporarily workaround for SS notifycation in IMS MT case
+        /// noti.notificationType:0 means MO,1 means MT @{
+        originalConnection = getProperOriginalConnection(phone);
+        if (originalConnection != null && originalConnection.isIncoming()
+            && originalConnection instanceof ImsPhoneConnection) {
+            noti.notificationType = 1;
+            Log.v(LOG_TAG, "onSuppServiceNotification()... noti.notificationType "
+                + noti.notificationType);
+        }
+        /// @}
         if (noti.notificationType == 0) {       // for MO cases
             switch (noti.code) {
             case SuppServiceNotification.MO_CODE_CALL_IS_EMERGENCY:
@@ -269,7 +280,6 @@ public class SuppMessageManager {
         if (normalCase) {
             // the upper layer just show a toast, so here we just bypass it to Telecomm,
             // and do not check which connection it belongs to (get anyone).
-            originalConnection = getProperOriginalConnection(phone);
             connection = findConnection(originalConnection);
             if (connection != null) {
                 if (forceConn == null || forceConn == connection) {
@@ -287,14 +297,14 @@ public class SuppMessageManager {
 
     private void addSsnList(SuppServiceNotification noti, Phone phone) {
         Log.v(LOG_TAG, "addSsnList for " + phone + " phone " + phone.getPhoneId());
-        ArrayList<SuppServiceNotification> ssnList = mCachedSsnsMap.get(phone);
+        ArrayList<SuppServiceNotification> ssnList = mCachedSsnsMap.get(phone.getPhoneId());
         if (ssnList == null) {
             ssnList = new ArrayList<SuppServiceNotification>();
         } else {
-            mCachedSsnsMap.remove(phone);
+            mCachedSsnsMap.remove(phone.getPhoneId());
         }
         ssnList.add(noti);
-        mCachedSsnsMap.put(phone, ssnList);
+        mCachedSsnsMap.put(phone.getPhoneId(), ssnList);
     }
 
     /**
@@ -363,14 +373,14 @@ public class SuppMessageManager {
 
     private void addCrssnList(SuppCrssNotification noti, Phone phone) {
         Log.v(LOG_TAG, "addCrssnList for " + phone + " phone " + phone.getPhoneId());
-        ArrayList<SuppCrssNotification> crssnList = mCachedCrssnsMap.get(phone);
+        ArrayList<SuppCrssNotification> crssnList = mCachedCrssnsMap.get(phone.getPhoneId());
         if (crssnList == null) {
             crssnList = new ArrayList<SuppCrssNotification>();
         } else {
-            mCachedCrssnsMap.remove(phone);
+            mCachedCrssnsMap.remove(phone.getPhoneId());
         }
         crssnList.add(noti);
-        mCachedCrssnsMap.put(phone, crssnList);
+        mCachedCrssnsMap.put(phone.getPhoneId(), crssnList);
     }
 
     /**
