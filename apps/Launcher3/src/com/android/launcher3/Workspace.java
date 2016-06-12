@@ -289,6 +289,8 @@ public class Workspace extends PagedView
     boolean mShouldSendPageSettled;
     int mLastOverlaySroll = 0;
 
+    private String mRemovePackageName;  //add by liliang.bao fix bug3979
+
     // Handles workspace state transitions
     private WorkspaceStateTransitionAnimation mStateTransitionAnimation;
 
@@ -4505,7 +4507,7 @@ public class Workspace extends PagedView
         if (LauncherLog.DEBUG) {
             LauncherLog.d(TAG, "removeFinalItem: packageNames = " + packageNames);
         }
-
+        mRemovePackageName = packages.get(0);  //add by liliang.bao fix bug3979
         // Filter out all the ItemInfos that this is going to affect
         final HashSet<ItemInfo> infos = new HashSet<ItemInfo>();
         final HashSet<ComponentName> cns = new HashSet<ComponentName>();
@@ -4548,9 +4550,21 @@ public class Workspace extends PagedView
             final ViewGroup layout = layoutParent.getShortcutsAndWidgets();
 
             final HashMap<ItemInfo, View> children = new HashMap<ItemInfo, View>();
+	    final ArrayList<View> ExtShutcutList = new ArrayList<View>(); //add by liliang.bao fix bug3979
             for (int j = 0; j < layout.getChildCount(); j++) {
                 final View view = layout.getChildAt(j);
                 children.put((ItemInfo) view.getTag(), view);
+		//add by liliang.bao begin fix bug3979
+		if(view.getTag() instanceof ShortcutInfo)
+		  {
+			ShortcutInfo info = (ShortcutInfo) view.getTag();
+			LauncherLog.d(TAG, "mRemovePackageName  "+mRemovePackageName);
+			if(info.iconResource !=null)
+				LauncherLog.d(TAG, "removeItemsByComponentName  package:  "+info.iconResource.packageName);
+			if(info.iconResource != null && mRemovePackageName.equals(info.iconResource.packageName))
+				ExtShutcutList.add(view);
+		  }
+		//add by liliang.bao end
             }
 
             final ArrayList<View> childrenToRemove = new ArrayList<View>();
@@ -4593,6 +4607,8 @@ public class Workspace extends PagedView
             };
             LauncherModel.filterItemInfos(children.keySet(), filter);
 
+	  
+
             // Remove all the apps from their folders
             for (FolderInfo folder : folderAppsToRemove.keySet()) {
                 ArrayList<ShortcutInfo> appsToRemove = folderAppsToRemove.get(folder);
@@ -4610,7 +4626,14 @@ public class Workspace extends PagedView
                     mDragController.removeDropTarget((DropTarget) child);
                 }
             }
-
+		//add by liliang.bao begin
+            for (View child : ExtShutcutList) {
+                layoutParent.removeViewInLayout(child);
+                if (child instanceof DropTarget) {
+                    mDragController.removeDropTarget((DropTarget) child);
+                }
+            }
+		//add by liliang.bao end
             if (childrenToRemove.size() > 0) {
                 layout.requestLayout();
                 layout.invalidate();

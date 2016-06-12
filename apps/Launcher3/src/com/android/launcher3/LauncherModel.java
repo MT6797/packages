@@ -757,7 +757,6 @@ public class LauncherModel extends BroadcastReceiver
     static void updateItemsInDatabaseHelper(Context context, final ArrayList<ContentValues> valuesList,
             final ArrayList<ItemInfo> items, final String callingFunction) {
         final ContentResolver cr = context.getContentResolver();
-
         final StackTraceElement[] stackTrace = new Throwable().getStackTrace();
         Runnable r = new Runnable() {
             public void run() {
@@ -1165,7 +1164,22 @@ public class LauncherModel extends BroadcastReceiver
     static void deletePackageFromDatabase(Context context, final String pn,
             final UserHandleCompat user) {
         deleteItemsFromDatabase(context, getItemsByPackageName(pn, user));
-    }
+
+       //add by liliang.bao begin fix bug3979
+	ArrayList<ItemInfo> mExtShortCutList = new ArrayList<ItemInfo>();
+	 for (ItemInfo i: sBgItemsIdMap)
+            if (i instanceof ShortcutInfo) {
+                ShortcutInfo info = (ShortcutInfo) i;
+               	  if(info.iconResource != null && info.iconResource.packageName.equals(pn))
+			{
+    				mExtShortCutList.add(info);
+				LauncherLog.d(TAG, "deleteFolderContentsFromDatabase info = " + info);			
+			}
+		}
+	if(mExtShortCutList.size() > 0)
+	   deleteItemsFromDatabase(context, mExtShortCutList);
+        //add by liliang.bao end 
+}
 
     /**
      * Removes the specified item from the database
@@ -1185,6 +1199,7 @@ public class LauncherModel extends BroadcastReceiver
      */
     static void deleteItemsFromDatabase(Context context, final ArrayList<? extends ItemInfo> items) {
         final ContentResolver cr = context.getContentResolver();
+
         Runnable r = new Runnable() {
             public void run() {
                 for (ItemInfo item : items) {
