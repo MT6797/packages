@@ -157,7 +157,7 @@ public class MediaDetails implements Iterable<Entry<Integer, Object>> {
                 MediaDetails.INDEX_MAKE);
         setExifData(details, exif.getTag(ExifInterface.TAG_MODEL),
                 MediaDetails.INDEX_MODEL);
-        setExifData(details, exif.getTag(ExifInterface.TAG_APERTURE_VALUE),
+        setExifData(details, exif.getTag(ExifInterface.TAG_F_NUMBER),
                 MediaDetails.INDEX_APERTURE);
         setExifData(details, exif.getTag(ExifInterface.TAG_ISO_SPEED_RATINGS),
                 MediaDetails.INDEX_ISO);
