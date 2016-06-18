@@ -95,6 +95,7 @@ import com.mediatek.telephony.TelephonyManagerEx;
  * Misc utilities for the Phone app.
  */
 public class PhoneUtils {
+    public static final String EMERGENCY_ACCOUNT_HANDLE_ID = "E";
     private static final String LOG_TAG = "PhoneUtils";
     private static final boolean DBG = (PhoneGlobals.DBG_LEVEL >= 2);
 
@@ -2554,7 +2555,8 @@ public class PhoneUtils {
         /// M: CC093:  Get iccid from system property @{
         // when IccRecords is null, (updated as RILD is reinitialized).
         // [ALPS02312211] [ALPS02325107]
-        //String id = isEmergency ? "E" : prefix + String.valueOf(phone.getIccSerialNumber());
+        //String id = isEmergency ? EMERGENCY_ACCOUNT_HANDLE_ID : prefix +
+        //        String.valueOf(phone.getIccSerialNumber());
         String phoneIccId = null;
         if (!isEmergency) {
             phoneIccId = phone.getIccSerialNumber();
@@ -2563,7 +2565,8 @@ public class PhoneUtils {
                     phoneIccId : TelephonyManagerEx.getDefault().getSimSerialNumber(slotId);
             Log.d(LOG_TAG, "Non ECC PhoneAccountHandle mId: " + phoneIccId);
         }
-        String id = isEmergency ? "E" : prefix + String.valueOf(phoneIccId);
+        String id = isEmergency ? EMERGENCY_ACCOUNT_HANDLE_ID : prefix +
+                String.valueOf(phoneIccId);
         /// @}
         return makePstnPhoneAccountHandleWithPrefix(id, prefix, isEmergency);
     }
