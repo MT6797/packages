@@ -354,7 +354,7 @@ final class TelecomAccountRegistry {
                     isImsReg = imsManager.getImsRegInfo();
                     ///M: we need also check if current network type is LTE or LTE+
                     // to add VoLTE calling capability, if not remove the volte capability. @{
-                    int networkType = mPhone.getServiceState().getNetworkType();
+                    int networkType = mTelephonyManager.getNetworkType(mPhone.getSubId());
                     if (isImsReg && (networkType == TelephonyManager.NETWORK_TYPE_LTE ||
                             networkType == TelephonyManager.NETWORK_TYPE_LTEA)) {
                         extendedCapabilities |= PhoneAccount.CAPABILITY_VOLTE_CALLING;
@@ -504,7 +504,7 @@ final class TelecomAccountRegistry {
      * @param handle The {@link PhoneAccountHandle}.
      * @return {@code True} if an entry exists.
      */
-    private boolean hasAccountEntryForPhoneAccount(PhoneAccountHandle handle) {
+    boolean hasAccountEntryForPhoneAccount(PhoneAccountHandle handle) {
         for (AccountEntry entry : mAccounts) {
             if (entry.getPhoneAccountHandle().equals(handle)) {
                 return true;
