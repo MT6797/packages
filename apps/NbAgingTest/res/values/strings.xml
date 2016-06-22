@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Floating_windowActivity!</string>
+    <string name="app_name">老化测试</string>
+    <string name="title">勾选需要进行的测试项后点击下面的开始按钮进行测试</string>
+    <string name="vedioSpeak">视频和扬声器</string>
+    <string name="vedioReceive">视频和听筒</string>
+    <string name="Virbate">振动器</string>
+    <string name="micReceive">麦克风和听筒</string>
+    <string name="backCamera">后摄像头</string>
+    <string name="frontCamera">前摄像头</string>
+    <string name="testTime">持续时间:</string>
+    <string name="hour">小时</string>
+    <string name="min">分</string>
+    <string name="defaultHours">3</string>
+    <string name="defaultMins">0</string>
+    <string name="testResult">最后一次持续时间:</string>
+    <string name="start">开始测试</string>
+
+</resources>
