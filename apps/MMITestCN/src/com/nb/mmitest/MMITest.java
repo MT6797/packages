@@ -28,7 +28,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-
+import android.widget.EditText;
 import android.util.Log;
 import android.util.DisplayMetrics;
 
@@ -63,6 +63,10 @@ import android.net.wifi.WifiManager;
 import android.content.Intent;
 import android.content.IntentFilter;
 /*end add*/
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.view.LayoutInflater;
+import android.widget.Toast;
 public class MMITest extends Activity {
 	/** Called when the activity is first created. */
 
@@ -431,6 +435,9 @@ public class MMITest extends Activity {
 		LinearLayout llsk = new LinearLayout(this);
 		llsk.setOrientation(LinearLayout.HORIZONTAL);
 
+		LinearLayout slsk = new LinearLayout(this);
+		slsk.setOrientation(LinearLayout.HORIZONTAL);
+
 		TextView tvtitle = new TextView(this);
 		tvtitle.setGravity(Gravity.CENTER);
 		//tvtitle.setTypeface(Typeface.MONOSPACE, 1);
@@ -493,8 +500,11 @@ public class MMITest extends Activity {
 			ll.addView(tvmode, new LinearLayout.LayoutParams(
 					LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT, 0));
 		}
+
+		ll.addView(slsk, new LinearLayout.LayoutParams(
+				LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT, 2));
 		ll.addView(llsk, new LinearLayout.LayoutParams(
-				LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT, 3));
+				LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT, 2));
 
 		// TODO press OK or FAILED should have different behavior
 		blsk.setOnClickListener(new View.OnClickListener() {
@@ -512,8 +522,60 @@ public class MMITest extends Activity {
 			}
 		});
 
+		Button agingTestBtn = new Button(this);
+		Button resetBtn = new Button(this);
+		agingTestBtn.setText(this.getResources().getString(R.string.agingtest));
+		resetBtn.setText(this.getResources().getString(R.string.reset));
+
+		slsk.addView(agingTestBtn, llsklp);
+		slsk.addView(resetBtn, llsklp);
+		slsk.setGravity(Gravity.CENTER);
+
+		
+		// TODO press OK or FAILED should have different behavior
+		agingTestBtn.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent intent= new Intent();
+				intent.setAction("nb.action.agintTest");
+				startActivity(intent);
+
+			}
+		});
+
+		resetBtn.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				resetPhone();
+			}
+		});
+
 		setContentView(ll);
 
+	}
+	public void resetPhone()
+	{            LayoutInflater factory = LayoutInflater.from(MMITest.this);
+                     final View textEntryView = factory.inflate(R.layout.alert_dialog_text_entry, null);
+			final EditText pswEdt = (EditText)textEntryView.findViewById(R.id.password_edit);
+			new AlertDialog.Builder(MMITest.this)
+				.setMessage(R.string.resetTip)
+				.setView(textEntryView)
+				.setPositiveButton(android.R.string.ok,
+					new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog,int whichButton) {
+			Log.d("bll", " pswEdt.getText()  "+pswEdt.getText());
+							if("007".equals(pswEdt.getText().toString()))
+								sendBroadcast(new Intent("android.intent.action.MASTER_CLEAR"));
+							else
+								Toast.makeText(MMITest.this,MMITest.this.getResources().getString(R.string.password_error),Toast.LENGTH_SHORT).show();
+
+							}
+								})
+				.setNegativeButton(android.R.string.cancel,
+								new DialogInterface.OnClickListener() {
+									public void onClick(DialogInterface dialog,
+											int whichButton) {
+									}
+								}).create().show();
+		
 	}
 
 	class OprtModePolling extends Thread {
