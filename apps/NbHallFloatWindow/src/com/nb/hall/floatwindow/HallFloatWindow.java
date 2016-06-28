@@ -33,12 +33,13 @@ public class HallFloatWindow {
 	private final String SHARE_PRE = "com.nb.hall";
 	private final int AWAKE_INTERVAL_DEFAULT_MS = 10000;
 	private static boolean sAddFlag = false;
+        private final static Object mLock = new Object();
 	public HallFloatWindow(final Context context) {
 		this.mContext = context;
 		sWindowManager = (WindowManager) context
 				.getSystemService(Context.WINDOW_SERVICE);
 		mLayoutParams = new WindowManager.LayoutParams();
-		mLayoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+		mLayoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY;
 		mLayoutParams.gravity = Gravity.CENTER_HORIZONTAL
 				| Gravity.CENTER_VERTICAL;
 
@@ -55,13 +56,16 @@ public class HallFloatWindow {
 		KeyguardManager mKeyguardManager = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
 		if( mKeyguardManager.inKeyguardRestrictedInputMode())
 			mLayoutParams.userActivityTimeout = AWAKE_INTERVAL_DEFAULT_MS;
-		sMainView = LayoutInflater.from(context).inflate(R.layout.hall_float,
+		synchronized(mLock)
+		{
+       		Log.d("lqh", "sInstance is created ******");
+		View mainView = LayoutInflater.from(context).inflate(R.layout.hall_float,
 				null);
 		mViews = new ArrayList<View>();
 		View view = LayoutInflater.from(context).inflate(R.layout.hall_analog_clock,
 				null);
 		mViews.add(view);
-		mViewPager = (ViewPager) sMainView.findViewById(R.id.viewpager);
+		mViewPager = (ViewPager) mainView.findViewById(R.id.viewpager);
 		view = LayoutInflater.from(context).inflate(
 				R.layout.hall_clock_view, null);
 		mViews.add(view);
@@ -90,12 +94,17 @@ public class HallFloatWindow {
 			}
 		};
 
+		if(sAddFlag)
+			return;
 		mViewPager.setAdapter(mPagerAdapter);
 		if("0".equals(util.readHallState()))
 		{
-			sWindowManager.addView(sMainView, mLayoutParams);
+			sMainView = mainView;
+			sWindowManager.addView(mainView, mLayoutParams);
+			Log.d("lqh", "sInstance is created");
 			sAddFlag = true;
 		}
+	}
 
 		mSharePre = context.getSharedPreferences(SHARE_PRE, 0);
 		int item = mSharePre.getInt("item", 0);
@@ -118,17 +127,19 @@ public class HallFloatWindow {
 		public void onPageScrollStateChanged(int arg0) {
 		}
 	}
-	public static HallFloatWindow createFloatWindow(Context context) {
+	public   static HallFloatWindow createFloatWindow(Context context) {
 
 		sInstance = new HallFloatWindow(context);	
 	//	sInstance.notifyAll();
-		Log.d("lqh", "sInstance is created");
+		
 		return sInstance;
 	}
 	
-	public static void removeView()
+	public  static void removeView()
 	{
-		Log.d("lqh", "removeView----");
+		//Log.d("lqh", "removeView----");
+		synchronized(mLock)
+		{
 		if(sMainView != null && sWindowManager !=null&&sAddFlag)
 		{   
 			sWindowManager.removeView(sMainView);
@@ -137,5 +148,6 @@ public class HallFloatWindow {
 		sWindowManager = null;
 		sMainView = null;
 		sAddFlag = false;
+		}
 	}
 }
