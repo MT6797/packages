@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Веза је прекинута"</string>
 
     <string name="accept_incoming_and_disconnect_current">Прихватање овог позива ће прекинути тренутни позив.</string>
+
     <string name="add_voicemail_number">Додај број говорне поште</string>
+    <!-- WFC items -->
+    <string name="close">"Затвори"</string>
+    <string name="ok">"Потврди"</string>
+    <string name="no_thanks">"Не,хвала"</string>
+    <string name="wifi_wfc_dialog_top_wording">Честитамо, обавили сте први позив користећи позивање преко Wi-Fi-ja.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Када је приказан овај симбол на врху екрана, можете да обављате позиве и шаљете поруке преко Wi-Fi-ја. Позивање преко Wi-Fi-ја може трошити минуте у одређеним пакетима.</string>
+    <string name="wifi_title">Позивање преко Wi-Fi-ја и минути</string>
+    <string name="offer_dont_display">Немој ми поново приказивати</string>
+    <string name="view_networks">Прикажи мреже</string>
+    <string name="wfc_wifi_call_drop_summary">Грешка! Вероватно сте се нашли изван ваше Wi-Fi мреже током позива.\n \nЖелите ли да покушате да се поново повежете с вашом Wi-Fi мрежом да бисте довршили позив?</string>
+    <string name="call_drop">Ваш позив може бити прекинут</string>
+    <string name="call_drop_message">Скоро сте изван домета Wi-Fi покривености</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Сакриј мој видео</string>
+    <string name="showVideoPreview">Прикажи мој видео</string>
+    <string name="restartVideoPreview">Поново покрени локални видео</string>
+    <string name="video_call_downgrade_to_voice_call">Пребачено на гласовни позив</string>
+    <string name="video_call_downgrade_request">Пребацивање на гласовни позив</string>
+    <string name="video_call_upgrade_to_video_call">Пребачено на видео позив</string>
+    <string name="video_call_upgrade_to_video_call_failed">Пребацивање на видео позив није успело</string>
 </resources>

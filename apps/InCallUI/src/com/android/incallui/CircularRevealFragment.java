@@ -49,6 +49,7 @@ public class CircularRevealFragment extends Fragment {
 
     public static void startCircularReveal(FragmentManager fm, Point touchPoint,
             OnCircularRevealCompleteListener listener) {
+        Log.v(TAG, "[startCircularReveal]prepare animation");
         if (fm.findFragmentByTag(TAG) == null) {
             fm.beginTransaction().add(R.id.main,
                     new CircularRevealFragment(touchPoint, listener), TAG)
@@ -59,6 +60,7 @@ public class CircularRevealFragment extends Fragment {
     }
 
     public static void endCircularReveal(FragmentManager fm) {
+        Log.v(TAG, "[endCircularReveal]");
         final Fragment fragment = fm.findFragmentByTag(TAG);
         if (fragment != null) {
             fm.beginTransaction().remove(fragment).commitAllowingStateLoss();
@@ -137,10 +139,13 @@ public class CircularRevealFragment extends Fragment {
                         }
                     }
                 });
+                Log.v(TAG, "[onPreDraw]animation triggered");
                 animator.start();
                 return false;
             }
         });
+        Log.v(TAG, "[startOutgoingAnimation]invalidate to force refresh");
+        view.invalidate();
     }
 
     private Animator getRevealAnimator(Point touchPoint) {

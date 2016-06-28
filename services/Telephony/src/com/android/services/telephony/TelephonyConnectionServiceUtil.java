@@ -129,6 +129,11 @@ public class TelephonyConnectionServiceUtil {
     };
     /// @}
 
+    // for cell conn manager
+    private final BroadcastReceiver mCellConnMgrReceiver = new TcsBroadcastReceiver();
+    /// M: CC: PPL (Phone Privacy Lock Service)
+    private final BroadcastReceiver mPplReceiver = new TcsBroadcastReceiver();
+
     TelephonyConnectionServiceUtil() {
         mService = null;
         mContext = null;
@@ -157,6 +162,10 @@ public class TelephonyConnectionServiceUtil {
         /// M: ECC Retry @{
         mEccRetryHandler = null;
         /// @}
+        /// M: CC: PPL @{
+        IntentFilter intentFilter = new IntentFilter("com.mediatek.ppl.NOTIFY_LOCK");
+        mContext.registerReceiver(mPplReceiver, intentFilter);
+        /// @}
     }
 
     /**
@@ -173,6 +182,9 @@ public class TelephonyConnectionServiceUtil {
         mSpeechType = SpeechCodecType.fromInt(0);
         Log.d(this, "isHighDefAudio = " + mSpeechType.isHighDefAudio());
         /// @}
+        /// M: CC: PPL
+        mContext.unregisterReceiver(mPplReceiver);
+
     }
 
     /// M: ECC Retry @{
@@ -415,14 +427,14 @@ public class TelephonyConnectionServiceUtil {
     private void cellConnMgrRegisterForSubEvent() {
         IntentFilter intentFilter = new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
         intentFilter.addAction(TelephonyIntents.ACTION_SIM_STATE_CHANGED);
-        mContext.registerReceiver(mReceiver, intentFilter);
+        mContext.registerReceiver(mCellConnMgrReceiver, intentFilter);
     }
 
     /**
      * unregister broadcast Receiver.
      */
     private void cellConnMgrUnregisterForSubEvent() {
-        mContext.unregisterReceiver(mReceiver);
+        mContext.unregisterReceiver(mCellConnMgrReceiver);
     }
 
    /**
@@ -441,7 +453,7 @@ public class TelephonyConnectionServiceUtil {
      * Listen to intent of Airplane mode and Sim mode.
      * In case of Airplane mode off or Sim Hot Swap, dismiss SimErrorDialog
      */
-    private BroadcastReceiver mReceiver = new BroadcastReceiver() {
+    private class TcsBroadcastReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (isInitialStickyBroadcast()) {
@@ -449,21 +461,39 @@ public class TelephonyConnectionServiceUtil {
                 return;
             }
             String action = intent.getAction();
-            if (action.equals(Intent.ACTION_AIRPLANE_MODE_CHANGED)) {
-                Log.d(this, "SimErrorDialog finish due to ACTION_AIRPLANE_MODE_CHANGED");
-                mSimErrorDialog.dismiss();
-            } else if (action.equals(TelephonyIntents.ACTION_SIM_STATE_CHANGED)) {
-                String simStatus = intent.getStringExtra(IccCardConstants.INTENT_KEY_ICC_STATE);
-                int slotId = intent.getIntExtra(PhoneConstants.SLOT_KEY,
-                        SubscriptionManager.INVALID_SIM_SLOT_INDEX);
-                Log.d(this, "slotId: " + slotId + " simStatus: " + simStatus);
-                if ((slotId != SubscriptionManager.INVALID_SIM_SLOT_INDEX) &&
-                    (slotId == mCurrentDialSlotId) &&
-                        (simStatus.equals(IccCardConstants.INTENT_VALUE_ICC_ABSENT))) {
-                    Log.d(this, "SimErrorDialog finish due hot plug out of SIM " +
-                        (slotId + 1));
+            switch (action) {
+                /// M: CC: PPL @{
+                case "com.mediatek.ppl.NOTIFY_LOCK":
+                    Log.d(this, "Receives com.mediatek.ppl.NOTIFY_LOCK");
+                    for (android.telecom.Connection conn : mService.getAllConnections()) {
+                        if (conn instanceof CdmaConnection) {
+                            conn.onDisconnect();
+                        } else if (conn instanceof TelephonyConnection) {
+                            conn.onHangupAll();
+                            break;
+                        }
+                    }
+                    break;
+                /// @}
+                case Intent.ACTION_AIRPLANE_MODE_CHANGED:
+                    Log.d(this, "SimErrorDialog finish due to ACTION_AIRPLANE_MODE_CHANGED");
                     mSimErrorDialog.dismiss();
-                }
+                    break;
+                case TelephonyIntents.ACTION_SIM_STATE_CHANGED:
+                    String simState = intent.getStringExtra(IccCardConstants.INTENT_KEY_ICC_STATE);
+                    int slotId = intent.getIntExtra(PhoneConstants.SLOT_KEY,
+                            SubscriptionManager.INVALID_SIM_SLOT_INDEX);
+                    Log.d(this, "slotId: " + slotId + " simState: " + simState);
+                    if ((slotId != SubscriptionManager.INVALID_SIM_SLOT_INDEX) &&
+                            (slotId == mCurrentDialSlotId) &&
+                            (simState.equals(IccCardConstants.INTENT_VALUE_ICC_ABSENT))) {
+                        Log.d(this, "SimErrorDialog finish due hot plug out of SIM " +
+                                (slotId + 1));
+                        mSimErrorDialog.dismiss();
+                    }
+                    break;
+                default:
+                    break;
             }
         }
     };

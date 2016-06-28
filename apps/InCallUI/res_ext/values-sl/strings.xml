@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Povezava je prekinjena"</string>
 
     <string name="accept_incoming_and_disconnect_current">Če sprejmete ta klic, boste prekinili trenutni klic.</string>
+
     <string name="add_voicemail_number">Dodaj številko odzivnika</string>
+    <!-- WFC items -->
+    <string name="close">"Zapri"</string>
+    <string name="ok">"V redu"</string>
+    <string name="no_thanks">"Ne,hvala"</string>
+    <string name="wifi_wfc_dialog_top_wording">Čestitamo. Končali ste svoj prvi klic s funkcijo klicanja prek omrežja Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Ko na vrhu zaslona opazite ta simbol, lahko opravljate klice in pošiljate sporočila prek omrežja Wi-Fi. Za klice prek omrežja Wi-Fi bodo v nekaterih paketih morda uporabljene minute.</string>
+    <string name="wifi_title">Klicanje prek omrežja Wi-Fi in minute</string>
+    <string name="offer_dont_display">Tega ne kaži več</string>
+    <string name="view_networks">Prikaži omrežja</string>
+    <string name="wfc_wifi_call_drop_summary">Ojoj! Med klicem ste verjetno zapustili območje, kjer je na voljo omrežje Wi-Fi.\n \nAli želite poskusiti znova vzpostaviti povezavo z omrežjem Wi-Fi in končati klic?</string>
+    <string name="call_drop">Vaš klic bo morda prekinjen</string>
+    <string name="call_drop_message">Kmalu boste zunaj območja, kjer je na voljo Wi-FI</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Skrij moj video</string>
+    <string name="showVideoPreview">Pokaži moj video</string>
+    <string name="restartVideoPreview">Znova zaženi lokalni video</string>
+    <string name="video_call_downgrade_to_voice_call">Preklopljeno na glasovni klic</string>
+    <string name="video_call_downgrade_request">Preklapljanje na glasovni klic</string>
+    <string name="video_call_upgrade_to_video_call">Preklopljeno na videoklic</string>
+    <string name="video_call_upgrade_to_video_call_failed">Ni bilo mogoče preklopiti na videoklic</string>
 </resources>

@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"Nicht verbunden"</string>
 
     <string name="accept_incoming_and_disconnect_current">Durch Annehmen dieses Anrufs wird der aktuelle Anruf beendet.</string>
+
     <string name="add_voicemail_number">VM-Nummer hinzufügen</string>
+    <!-- WFC items -->
+    <string name="close">"Schließen"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Nein"</string>
+    <string name="wifi_wfc_dialog_top_wording">Herzlichen Glückwunsch, Sie haben Ihren ersten Anruf mittels WLAN-Anruf abgeschlossen.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Wenn Sie dieses Symbol im oberen Bereich Ihres Bildschirms sehen, können Sie per WLAN telefonieren und Mitteilungen versenden. WLAN-Anruf verbraucht bei bestimmten Plänen möglicherweise Minuten.</string>
+    <string name="wifi_title">WLAN-Anruf und Minuten</string>
+    <string name="offer_dont_display">Bitte nicht mehr anzeigen</string>
+    <string name="view_networks">Netzwerke anzeigen</string>
+    <string name="wfc_wifi_call_drop_summary">Ups! Scheinbar haben Sie während eines Anrufs die Reichweite Ihres WLAN-Netzwerks verlassen.\n \nMöchten Sie versuchen, zum Abschließen Ihres Telefonats erneut eine Verbindung zu Ihrem WLAN-Netzwerk herzustellen?</string>
+    <string name="call_drop">Ihr Anruf könnte unterbrochen werden</string>
+    <string name="call_drop_message">Sie sind fast außerhalb der Reichweite der WLAN-Abdeckung</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Mein Video ausblenden</string>
+    <string name="showVideoPreview">Mein Video anzeigen</string>
+    <string name="restartVideoPreview">Lokales Video neu starten</string>
+    <string name="video_call_downgrade_to_voice_call">Zu Sprachanruf gewechselt</string>
+    <string name="video_call_downgrade_request">Zu Sprachanruf wechseln</string>
+    <string name="video_call_upgrade_to_video_call">Zu Videoanruf gewechselt</string>
+    <string name="video_call_upgrade_to_video_call_failed">Wechsel zu Videoanruf fehlgeschlagen</string>
 </resources>

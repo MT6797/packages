@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"အဆက် ပြတ်သွား"</string>
 
     <string name="accept_incoming_and_disconnect_current">ဤခေါ်ဆိုမှုကို လက်ခံ ပါက လက်ရှိခေါ်ဆိုမှု ပြီးဆုံးသွားမည်။</string>
+
     <string name="add_voicemail_number">vm နံပါတ္ ထည့္ပါ</string>
+    <!-- WFC items -->
+    <string name="close">"ပိတ်ရန်"</string>
+    <string name="ok">"ကောင်းပြီ"</string>
+    <string name="no_thanks">မသိမ်းလိုပါ</string>
+    <string name="wifi_wfc_dialog_top_wording">ဂုဏ်ယူပါတယ်၊ သင်သည် Wi-Fi ခေါ်ဆိုမှုအသုံးပြု၍ ပထမဆုံး ခေါ်ဆိုမှုကို ပြီးစီးပါပြီ။</string>
+    <string name="wifi_wfc_dialog_bottom_wording">သင့်စခရင်၏ ထိပ်တွင် ဤသင်္ကေတကို တွေ့မြင်ရပါက Wi-Fi ပေါ်မှ ခေါ်ဆိုမှုနှင့် မက်ဆေ့ချ်ပို့ခြင်းတို့ကို ပြုလုပ်နိုင်ပါပြီ။ Wi-Fi ခေါ်ဆိုမှုသည် သက်ဆိုင်ရာအစီအစဉ်များအတိုင်း မိနစ်ဖြင့် အသုံးပြုနိုင်ပါသည်။</string>
+    <string name="wifi_title">Wi-Fi ခေါ်ဆိုမှုနှင့် မိနစ်များ</string>
+    <string name="offer_dont_display">ကျေးဇူးပြု၍ နောက်ထပ်မပြပါနှင့်</string>
+    <string name="view_networks">ကွန်ရက်များကို ပြပါ</string>
+    <string name="wfc_wifi_call_drop_summary">အိုး! ခေါ်ဆိုချိန်အတွင်း သင့် Wi-Fi ကွန်ရက်၏ အပြင်သို့ ရောက်သွားသည်။\n \n ခေါ်ဆိုမှုပြီးစီးရန် သင့် Wi-Fi ကွန်ရက်သို့ ပြန်လည်ချိတ်ဆက်၍ ကြိုးစားလိုပါသလား။</string>
+    <string name="call_drop">သင့်ခေါ်ဆိုမှု ကျသွားနိုင်သည်</string>
+    <string name="call_drop_message">သင်သည် Wi-Fi ကွန်ရက်ဖြန့်ကျက်မှု၏ ပြင်ပသို့ ရောက်လုပြီ</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">ကျွန်ုပ်၏ ဗီဒီယိုကို ဝှက်ပါ</string>
+    <string name="showVideoPreview">ကျွန်ုပ်၏ ဗီဒီယိုကို ပြပါ</string>
+    <string name="restartVideoPreview">စက်တွင်း ဗီဒီယိုကို ပြန်စတင်ပါ</string>
+    <string name="video_call_downgrade_to_voice_call">အသံခေါ်ဆိုမှုသို့ ပြောင်းထားသည်</string>
+    <string name="video_call_downgrade_request">အသံခေါ်ဆိုမှုသို့ ပြောင်းနေသည်</string>
+    <string name="video_call_upgrade_to_video_call">ဗီဒီယိုခေါ်ဆိုမှုသို့ ပြောင်းထားသည်</string>
+    <string name="video_call_upgrade_to_video_call_failed">ဗီဒီယိုခေါ်ဆိုမှုသို့ ပြောင်းရန် မအောင်မြင်ပါ</string>
 </resources>

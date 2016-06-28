@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Desconectado"</string>
 
     <string name="accept_incoming_and_disconnect_current">Aceitar esta chamda terminará a chamda atual.</string>
+
     <string name="add_voicemail_number">Adicionar número de vm</string>
+    <!-- WFC items -->
+    <string name="close">"Fechar"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Não,obrigado"</string>
+    <string name="wifi_wfc_dialog_top_wording">Parabéns, você completou sua primeira chamada usando chamada Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Quando você vê esse simbolo no topo da sua tela, você esta livre para fazer chamadas e mandar mensagens via Wi-Fi. Chamada Wi-Fi talvez leve alguns minutos em alguns planos.</string>
+    <string name="wifi_title">Chamada e minutos de Wi-Fi</string>
+    <string name="offer_dont_display">Favor não aparecer isso de novo.</string>
+    <string name="view_networks">Ver redes</string>
+    <string name="wfc_wifi_call_drop_summary">Ops! Você deve ter se movimentado para fora de alcance da sua rede Wi-Fi durante uma chamada. Você gostaria de tentar reconectar novamente á sua rede Wi-Fi para finalizar sua chamada?</string>
+    <string name="call_drop">Sua chamada talvez caia.</string>
+    <string name="call_drop_message">Você está quase fora de alcance da sua rede Wi-Fi.</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Esconder meu vídeo.</string>
+    <string name="showVideoPreview">Mostrar meu vídeo.</string>
+    <string name="restartVideoPreview">Recomeçar video Restart local video</string>
+    <string name="video_call_downgrade_to_voice_call">Trocado para chamada de voz</string>
+    <string name="video_call_downgrade_request">Trocando para chamada de voz</string>
+    <string name="video_call_upgrade_to_video_call">Trocado para chamada de vídeo.</string>
+    <string name="video_call_upgrade_to_video_call_failed">Falha ao trocar para chamada de vídeo.</string>
 </resources>

@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"تم قطع الاتصال"</string>
 
     <string name="accept_incoming_and_disconnect_current">قبول هذه المكالمة سيؤدي إلى إنهاء المكالمة الحالية.</string>
+
     <string name="add_voicemail_number">إضافة رقم VM</string>
+    <!-- WFC items -->
+    <string name="close">"إغلاق"</string>
+    <string name="ok">"موافق"</string>
+    <string name="no_thanks">"لا،شكرًا"</string>
+    <string name="wifi_wfc_dialog_top_wording">تهانينا، لقد أكملت مكالمتك الأولى باستخدام خدمة مكالمات Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">عندما ترى هذا الرمز في الجزء العلوي من شاشتك، فهذا يعني إمكانية إجراء مكالمات وإرسال رسائل عبر Wi-Fi. قد تستغرق مكالمات Wi-Fi دقائق في بعض الباقات.</string>
+    <string name="wifi_title">مكالمات Wi-Fi ودقائقها</string>
+    <string name="offer_dont_display">من فضلك لا تظهر لي ذلك مرة أخرى</string>
+    <string name="view_networks">عرض الشبكات</string>
+    <string name="wfc_wifi_call_drop_summary">عفوًا! لابد أنك خرجت من نطاق تغطية شبكة Wi-Fi أثناء إجراء مكالمة.\n \n هل تريد محاولة إعادة الاتصال بشبكة Wi-Fi لإنهاء المكالمة؟</string>
+    <string name="call_drop">قد يتم قطع المكالمة</string>
+    <string name="call_drop_message">أنت على وشك الخروج من نطاق تغطية Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">إخفاء الفيديو الخاص بي</string>
+    <string name="showVideoPreview">عرض الفيديو الخاص بي</string>
+    <string name="restartVideoPreview">إعادة تشغيل الفيديو المحلي</string>
+    <string name="video_call_downgrade_to_voice_call">تم التحويل إلى مكالمة صوتية</string>
+    <string name="video_call_downgrade_request">التحويل إلى مكالمة صوتية</string>
+    <string name="video_call_upgrade_to_video_call">تم التحويل إلى مكالمة فيديو</string>
+    <string name="video_call_upgrade_to_video_call_failed">فشل التحويل إلى مكالمة فيديو</string>
 </resources>

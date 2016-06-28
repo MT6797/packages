@@ -40,5 +40,27 @@
     <string name="call_status_disconnected">"Frakoblet"</string>
 
     <string name="accept_incoming_and_disconnect_current">Godtar du anropet vil det aktuelle anropet avsluttes.</string>
+
     <string name="add_voicemail_number">Legg til vm-nummer</string>
+
+    <!-- WFC items -->
+    <string name="close">"Lukk"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Neitakk"</string>
+    <string name="wifi_wfc_dialog_top_wording">Gratulerer, du har fullført den første samtalen din ved hjelp av Wi-Fi-anrop.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Når du ser dette symbolet på toppen av skjermen, kan du ringe og sende meldinger over Wi-Fi. Wi-Fi-anrop kan koste minutter med visse planer.</string>
+    <string name="wifi_title">Wi-Fi-anrop og minutter</string>
+    <string name="offer_dont_display">Ikke vis meg igjen</string>
+    <string name="view_networks">Se nettverk</string>
+    <string name="wfc_wifi_call_drop_summary">Ups! Du må ha blitt koblet fra Wi-Fi-nettverket under anropet.\n\nVil du prøve å koble til Wi-Fi-nettverket igjen for å fullføre anropet?</string>
+    <string name="call_drop">Samtalen kan fallute ut</string>
+    <string name="call_drop_message">Du er nesten utenfor dekningen til Wi-Fi-nettverket</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Skjul min video</string>
+    <string name="showVideoPreview">Vis min video</string>
+    <string name="restartVideoPreview">Start lokal video på nytt</string>
+    <string name="video_call_downgrade_to_voice_call">Byttet til taleanrop</string>
+    <string name="video_call_downgrade_request">Bytter til taleanrop</string>
+    <string name="video_call_upgrade_to_video_call">Byttet til videoanrop</string>
+    <string name="video_call_upgrade_to_video_call_failed">Klarte ikke å bytte til videoanrop</string>
 </resources>

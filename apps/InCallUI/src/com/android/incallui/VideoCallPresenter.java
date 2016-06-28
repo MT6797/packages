@@ -447,8 +447,10 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
                 " isVideoMode=" + isVideoMode());
 
         if (newState == InCallPresenter.InCallState.NO_CALLS) {
-            updateAudioMode(false);
-
+            ///M:fix for ALPS02707881
+            //updateAudioMode(false);
+            updateAudioMode(false, null);
+            ///@}
             if (isVideoMode()) {
                 exitVideoMode();
             }
@@ -802,6 +804,19 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
         //showVideoUi(newVideoState, call.getState());
         showVideoUi(call, newVideoState, call.getState());
         ///@}
+
+        ///M: fix bug for ALPS02681048, when 1A1H, click secondary call and rotate screen
+        //at same time, that will cause primary call change, then enter video mode set camera again,
+        // cause MA module crash, so when in hold state can't enter video mode again.
+        if(Call.State.ONHOLD == call.getState()) {
+            Log.d(this, "the call is onhold not set surface and camera");
+            mCurrentVideoState = newVideoState;
+            updateAudioMode(true, call);
+            maybeAutoEnterFullscreen(call);
+            return;
+        }
+        ///@}
+
         // Communicate the current camera to telephony and make a request for the camera
         // capabilities.
         if (videoCall != null) {
@@ -818,7 +833,7 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
             enableCamera(videoCall, isCameraRequired(newVideoState));
         }
         mCurrentVideoState = newVideoState;
-        updateAudioMode(true);
+        updateAudioMode(true, call);
 
         mIsVideoMode = true;
 
@@ -826,7 +841,8 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
     }
 
     //TODO: Move this into Telecom. InCallUI should not be this close to audio functionality.
-    private void updateAudioMode(boolean enableSpeaker) {
+    private void updateAudioMode(boolean enableSpeaker,Call call) {
+     //private void updateAudioMode(boolean enableSpeaker) {
         if (!isSpeakerEnabledForVideoCalls()) {
             Log.d(this, "Speaker is disabled. Can't update audio mode");
             return;
@@ -851,6 +867,13 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
         }
 
         int currentAudioMode = AudioModeProvider.getInstance().getAudioMode();
+
+        ///M:fix for ALPS02707881,updateAudioMode called from onStateChange and enterVideoMode,
+        // when enter video Mode, ignore pause video
+        if(call != null && CallUtils.isSingleVideoDirection(call.getVideoState())) {
+            return;
+        }
+        ///@}
 
         // Set audio mode to speaker if enableSpeaker is true and bluetooth or headset are not
         // connected and it's a video call.
@@ -903,7 +926,23 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
 
         mIsVideoMode = false;
     }
-
+    ///M:fix bug for ALPS02693758, when video and voice make conference, and the conference is hold,
+    // the sip server will send downgrade for the hold call , so we can't use mVideoCall to
+    // exitVideo mode.
+    private void exitVideoModeForCall(Call call) {
+        Log.d(this, "exitVideoModeForCall");
+        if(call == null){
+            Log.e(this, "exitVideoModeForCall the call is null return");
+            return;
+        }
+        enableCamera(call.getVideoCall(), false);
+        if(!Objects.equals(call,mVideoCall)) {
+            return;
+        }
+        showVideoUi(null, VideoProfile.STATE_AUDIO_ONLY, Call.State.ACTIVE);
+        InCallPresenter.getInstance().setFullScreen(false);
+        mIsVideoMode = false;
+    }
     /// M: add a call param for conference call.
     /// FIXME: the call param is somehow conflict with the remaining 2 params. need revise.
     /**
@@ -937,10 +976,11 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
         boolean transparent = callState == Call.State.INCOMING ||
                 callState == Call.State.DIALING;
 
-        if (call != null && CallUtils.isVideoCall(call) &&
-                (callState == Call.State.ONHOLD ||
-                (call.getDetails() != null &&
-                 call.isHeld()))) {
+        ///M : when call state is hold, we should set the picture
+        if (call != null && CallUtils.isVideoCall(call)
+                && (callState == Call.State.ONHOLD
+                || (call.getDetails() != null
+                && call.isHeld()))) {
             ui.showVideoViews(false, false, transparent);
             loadProfilePhotoAsync();
         } else {
@@ -1242,8 +1282,13 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
          * Google code:
          call.setSessionModificationState(Call.SessionModificationState.NO_REQUEST);
          */
-        // exit video mode
-        exitVideoMode();
+
+        ///M:fix bug for ALPS02693758, when video and voice make conference, and the conference is hold,
+        // the sip server will send downgrade for the hold call , so we can't use mVideoCall to
+        // exitVideo mode.
+        //exitVideoMode();
+        exitVideoModeForCall(call);
+        //@}
 
         /// M: disconnect surface if downgrade.
         if(call != null) {
@@ -1341,7 +1386,7 @@ public class VideoCallPresenter extends Presenter<VideoCallPresenter.VideoCallUi
         if (!mIsAutoFullscreenEnabled) {
             return;
         }
-        ///M: when call is held we should not enter to full screen @{
+        /// when call is held we should not enter to full screen @{
         if (call == null || (
                 call != null && (call.getState() != Call.State.ACTIVE ||
                 !CallUtils.isVideoCall(call)) ||

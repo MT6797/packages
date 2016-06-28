@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"Hubungan terputus"</string>
 
     <string name="accept_incoming_and_disconnect_current">Menerima panggilan ini akan mengakhiri panggilan aktif.</string>
+
     <string name="add_voicemail_number">Tambahkan nomor vm</string>
+    <!-- WFC items -->
+    <string name="close">"Tutup"</string>
+    <string name="ok">"Oke"</string>
+    <string name="no_thanks">"Tidak,terimakasih"</string>
+    <string name="wifi_wfc_dialog_top_wording">Selamat, Anda telah menyelesaikan panggilan pertama menggunakan panggilan Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Bila simbol ini terlihat di bagian atas layar, Anda dapat melakukan panggilan dan mengirim pesan melalui Wi-Fi. Panggilan Wi-Fi mungkin memerlukan waktu beberapa menit menggunakan paket tertentu.</string>
+    <string name="wifi_title">Panggilan dan Menit Wi-Fi</string>
+    <string name="offer_dont_display">Jangan tampilkan lagi</string>
+    <string name="view_networks">Lihat jaringan</string>
+    <string name="wfc_wifi_call_drop_summary">Ups! Anda harus keluar dari jaringan Wi-Fi selama melakukan panggilan.\n \nAnda ingin mencoba dan menyambung ulang ke jaringan Wi-Fi untuk menyelesaikan panggilan?</string>
+    <string name="call_drop">Panggilan Anda dapat terputus</string>
+    <string name="call_drop_message">Anda hampir keluar dari jangkauan Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Sembunyikan video</string>
+    <string name="showVideoPreview">Tampilkan video</string>
+    <string name="restartVideoPreview">Mulai ulang video lokal</string>
+    <string name="video_call_downgrade_to_voice_call">Dialihkan ke panggilan suara</string>
+    <string name="video_call_downgrade_request">Beralih ke panggilan suara</string>
+    <string name="video_call_upgrade_to_video_call">Dialihkan ke panggilan video</string>
+    <string name="video_call_upgrade_to_video_call_failed">Gagal beralih ke panggilan video</string>
 </resources>

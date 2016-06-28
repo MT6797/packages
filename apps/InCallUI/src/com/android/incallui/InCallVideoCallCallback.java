@@ -64,6 +64,13 @@ public class InCallVideoCallCallback extends VideoCall.Callback {
         Log.d(this, "[wasVideoCall]-->" + wasVideoCall);
         Log.d(this, "[isVideoCall]-->" + isVideoCall);
         ///@}
+        /// M: fix CR:ALPS02693003,handle concurrence local and remote request fail case. @{
+        if (mCall.getSessionModificationState() != Call.SessionModificationState.NO_REQUEST) {
+            Log.w(this, "onSessionModifyRequestReceived block remote request exist local request");
+            mCall.getVideoCall().sendSessionModifyResponse(new VideoProfile(mCall.getVideoState()));
+            return;
+        }
+        /// @}
         // Check for upgrades to video and downgrades to audio.
         if (wasVideoCall && !isVideoCall) {
             InCallVideoCallCallbackNotifier.getInstance().downgradeToAudio(mCall);
@@ -121,6 +128,14 @@ public class InCallVideoCallCallback extends VideoCall.Callback {
                     CallUtils.isVideoCall(responseProfile.getVideoState())){
                 mCall.setSessionModificationState(
                         Call.SessionModificationState.NO_REQUEST);
+                //show message when downgrade to voice failed
+                /// M: fix CR:ALPS02707358,shouldn't show "failed to switch video call" toast
+                /// when call is disconnecting or call has been disconnected. @{
+                if(Call.State.isConnectingOrConnected(mCall.getState())) {
+                    InCallPresenter.getInstance().showMessage(
+                            com.android.incallui.R.string.video_call_downgrade_to_voice_call_failed);
+                }
+                /// @}
                 Log.e(this, "onSessionModifyResponseReceived downgrade to audio call fail");
                 return;
             }

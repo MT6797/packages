@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"Εκτός σύνδεσης"</string>
 
     <string name="accept_incoming_and_disconnect_current">Η αποδοχή αυτής της κλήσης θα τερματίσει την τρέχουσα κλήση.</string>
+
     <string name="add_voicemail_number">Προσθήκη αριθμού vm</string>
+    <!-- WFC items -->
+    <string name="close">"Κλείσιμο"</string>
+    <string name="ok">"ΟΚ"</string>
+    <string name="no_thanks">"Όχιευχαριστώ"</string>
+    <string name="wifi_wfc_dialog_top_wording">Συγχαρητήρια, ολοκληρώσατε την πρώτη σας κλήση μέσω της λειτουργίας πραγματοποίησης κλήσεων μέσω Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Όταν βλέπετε αυτό το σύμβολο στο επάνω μέρος της οθόνης σας, μπορείτε να κάνετε κλήσεις και να στέλνετε μηνύματα μέσω Wi-Fi. Η λειτουργία κλήσεων μέσω Wi-Fi ενδέχεται να χρησιμοποιεί τα λεπτά με συγκεκριμένα προγράμματα.</string>
+    <string name="wifi_title">Πραγματοποίηση κλήσεων μέσω Wi-Fi και Λεπτά</string>
+    <string name="offer_dont_display">Να μην εμφανιστεί ξανά</string>
+    <string name="view_networks">Προβολή δικτύων</string>
+    <string name="wfc_wifi_call_drop_summary">Ουπς! Πρέπει να βγήκατε εκτός του δικτύου Wi-Fi σας κατά τη διάρκεια μιας κλήσης.\n \nΘέλετε να δοκιμάσετε να συνδεθείτε εκ νέου στο δίκτυο Wi-Fi σας για να ολοκληρώσετε την κλήση σας;</string>
+    <string name="call_drop">Μπορεί να γίνει πέσει η τηλεφωνική σύνδεση</string>
+    <string name="call_drop_message">Είστε σχεδόν εκτός του εύρους κάλυψης Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Απόκρυψη του βίντεό μου</string>
+    <string name="showVideoPreview">Εμφάνιση του βίντεό μου</string>
+    <string name="restartVideoPreview">Επανεκκίνηση τοπικού βίντεο</string>
+    <string name="video_call_downgrade_to_voice_call">Έγινε εναλλαγή σε φωνητική κλήση</string>
+    <string name="video_call_downgrade_request">Εναλλαγή σε φωνητική κλήση</string>
+    <string name="video_call_upgrade_to_video_call">Έγινε εναλλαγή σε βιντεοκλήση</string>
+    <string name="video_call_upgrade_to_video_call_failed">Η εναλλαγή σε βιντεοκλήση απέτυχε</string>
 </resources>

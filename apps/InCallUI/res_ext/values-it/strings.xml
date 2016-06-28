@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"Disconnesso"</string>
 
     <string name="accept_incoming_and_disconnect_current">Accettando questa chiamata si terminerà la chiamata corrente.</string>
+
     <string name="add_voicemail_number">Aggiuni numero casella vocale</string>
+    <!-- WFC items -->
+    <string name="close">"Chiudi"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"No,grazie"</string>
+    <string name="wifi_wfc_dialog_top_wording">Congratulazioni, hai appena completato la tua prima chiamata Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Quando vedi questo simbolo sulla parte superiore dello schermo, è possibile eseguire chiamate ed inviare messaggi tramite Wi-Fi. La chiamata Wi-Fi potrebbe comportare l’utilizzo di minuti con alcuni piani tariffari.</string>
+    <string name="wifi_title">Chiamata Wi-Fi e Minuti</string>
+    <string name="offer_dont_display">Non visualizzare più</string>
+    <string name="view_networks">Visualizza reti</string>
+    <string name="wfc_wifi_call_drop_summary">Ops! Probabilmente ci si è spostati al di fuori della propria rete Wi-Fi durante la chiamata.\n \nProvare a riconnettersi alla rete Wi-Fi per terminare la chiamata?</string>
+    <string name="call_drop">La linea potrebbe cadere</string>
+    <string name="call_drop_message">Sei quasi fuori il campo di portata Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Nascondi il mio video</string>
+    <string name="showVideoPreview">Mostra il mio video</string>
+    <string name="restartVideoPreview">Riavvia video locale</string>
+    <string name="video_call_downgrade_to_voice_call">Passato a chiamata vocale</string>
+    <string name="video_call_downgrade_request">Passaggio a chiamata vocale</string>
+    <string name="video_call_upgrade_to_video_call">Passato a videochiamata</string>
+    <string name="video_call_upgrade_to_video_call_failed">Impossibile passare a videochiamata</string>
 </resources>

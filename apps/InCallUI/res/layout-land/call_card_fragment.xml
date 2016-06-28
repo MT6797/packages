@@ -40,11 +40,12 @@
 
         <include layout="@layout/primary_call_info" />
 
-
-        <FrameLayout
+        <!-- M: [Video Call] The hold bar would cover the call button if in Framelayout-->
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
+            android:gravity="bottom"
             android:layout_height="match_parent" >
-
 
             <fragment android:name="com.android.incallui.CallButtonFragment"
                 android:id="@+id/callButtonFragment"
@@ -52,13 +53,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="@dimen/call_buttons_bottom_margin" />
-            <!-- Secondary "Call info" block, for the background ("on hold") call. -->
-            <!-- include layout="@layout/secondary_call_info"
+            <!-- Secondary "Call info" block, for the background ("on hold") call.
+            M: add "secondary caller info bottom margin" property -->
+            <include layout="@layout/secondary_call_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom" /> -->
-
-        </FrameLayout>
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/secondary_callerinfo_bottom_margin"/>
+        </LinearLayout>
+        <!-- M: [Video Call] The hold bar would cover the call button if in Framelayout-->
 
     </LinearLayout>
 
@@ -86,9 +89,6 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/photo" />
 
-        <!-- Secondary "Call info" block, for the background ("on hold") call. -->
-        <include layout="@layout/secondary_call_info" />
-
         <!-- M:[Voice Record]record icon -->
         <ImageView android:id="@+id/voiceRecorderIcon"
             android:layout_width="@dimen/incall_record_icon_size"
@@ -99,6 +99,13 @@
             android:visibility="gone" />
 
     </FrameLayout>
+    <!--M: fix bug for ALPS02699116,adjust position for VideoCallFragment make progress bar shown-->
+    <fragment android:name="com.android.incallui.VideoCallFragment"
+              android:layout_alignParentStart="true"
+              android:layout_gravity="start|center_vertical"
+              android:id="@+id/videoCallFragment"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" />
 
     <!-- Progress spinner, useful for indicating pending operations such as upgrade to video. -->
     <FrameLayout
@@ -121,12 +128,6 @@
 
     </FrameLayout>
 
-    <fragment android:name="com.android.incallui.VideoCallFragment"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="start|center_vertical"
-        android:id="@+id/videoCallFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
     <!-- Placeholder for the dialpad which is replaced with the dialpad fragment when shown. -->
     <FrameLayout

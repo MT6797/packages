@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"Szétkapcsolva"</string>
 
     <string name="accept_incoming_and_disconnect_current">A hívás fogadása bontja az aktuális hívást.</string>
+
     <string name="add_voicemail_number">Hangposta szám hozzáadása</string>
+    <!-- WFC items -->
+    <string name="close">"Bezárás"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Nem,köszönöm."</string>
+    <string name="wifi_wfc_dialog_top_wording">Gratulálunk első Wi-Fi hívásához.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Ha a képernyő tetején ezt a szimbólumot látja, akkor Wi-Fi hívást és üzenetküldést kezdeményezhet. A Wi-Fi hívás bizonyos előfizetéseknél percalapú használatot eredményezhet.</string>
+    <string name="wifi_title">Wi-Fi hívások és percek</string>
+    <string name="offer_dont_display">Többé ne jelenjen meg</string>
+    <string name="view_networks">Hálózatok megtekintése</string>
+    <string name="wfc_wifi_call_drop_summary">Hoppá! A hívás közben elhagyhatta a Wi-Fi hálózatot.\n \nSzeretne újra csatlakozni a Wi-Fi hálózathoz, hogy befejezhese a hívást?</string>
+    <string name="call_drop">Hívása lehet, hogy megszakad</string>
+    <string name="call_drop_message">A Wi-Fi zóna szélén tartózkodik</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Saját videó rejtése</string>
+    <string name="showVideoPreview">Saját videó mutatása</string>
+    <string name="restartVideoPreview">Helyi videó újraindítása</string>
+    <string name="video_call_downgrade_to_voice_call">Váltva hang alapú telefonra</string>
+    <string name="video_call_downgrade_request">Váltás hang alapú telefonra</string>
+    <string name="video_call_upgrade_to_video_call">Váltva videó hívásra</string>
+    <string name="video_call_upgrade_to_video_call_failed">Sikertelen videó hívásra váltás</string>
 </resources>
