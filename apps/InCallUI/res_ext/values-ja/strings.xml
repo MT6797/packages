@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"切断済み"</string>
 
     <string name="accept_incoming_and_disconnect_current">この通話を着信すると、現在の通話を終了します。</string>
+
     <string name="add_voicemail_number">VM番号を追加する</string>
+    <!-- WFC items -->
+    <string name="close">"閉じる"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"いいえ"</string>
+    <string name="wifi_wfc_dialog_top_wording">おめでとうございます。あなたはWi-Fi通話を使って、初回通話を完了しました。</string>
+    <string name="wifi_wfc_dialog_bottom_wording">画面上部にこの記号が表示されているとき、Wi-Fi経由で通話とメッセージ送信が可能です。 プランによっては、Wi-Fi通話は時間を消費することがあります。</string>
+    <string name="wifi_title">Wi-Fi通話と時間</string>
+    <string name="offer_dont_display">再度表示しない</string>
+    <string name="view_networks">ネットワークの表示</string>
+    <string name="wfc_wifi_call_drop_summary">おっと！ 通話中にWi-Fiネットワークの圏外に移動しました。\n \n通話を完了するため、Wi-Fiネットワークへの接続を再試行しますか？</string>
+    <string name="call_drop">通話が中断することがあります</string>
+    <string name="call_drop_message">ほぼWi-Fi圏外です</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">ビデオを非表示</string>
+    <string name="showVideoPreview">ビデオを表示</string>
+    <string name="restartVideoPreview">ローカルビデオを再開</string>
+    <string name="video_call_downgrade_to_voice_call">音声通話に切り替えました</string>
+    <string name="video_call_downgrade_request">音声通話に切り替えています</string>
+    <string name="video_call_upgrade_to_video_call">ビデオ通話に切り替えました</string>
+    <string name="video_call_upgrade_to_video_call_failed">ビデオ通話に切り替えることができませんでした</string>
 </resources>

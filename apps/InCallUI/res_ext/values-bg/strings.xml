@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"Няма връзка"</string>
 
     <string name="accept_incoming_and_disconnect_current">Приемането на това повикване ще прекъсне текущото повикване.</string>
+
     <string name="add_voicemail_number">Добави номер на гласова поща</string>
+    <!-- WFC items -->
+    <string name="close">"Затваряне"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Не,благодаря"</string>
+    <string name="wifi_wfc_dialog_top_wording">Поздравления, осъществихте първото си обаждане чрез Wi-Fi повикване.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Ако виждате този символ в горната част на екрана, можете да се обаждате и пращате съобщения през Wi-Fi. Wi-Fi обажданията използват минути с определени планове.</string>
+    <string name="wifi_title">Wi-Fi обаждания и минути</string>
+    <string name="offer_dont_display">Не показвай отново</string>
+    <string name="view_networks">Преглед на мрежите</string>
+    <string name="wfc_wifi_call_drop_summary">Опа! Явно сте излезли от Wi-Fi мрежата по време на разговора.\n \nЩе се опитате ли да се свържете отново с Wi-Fi мрежата, за да довършите разговора?</string>
+    <string name="call_drop">Разговорът може да прекъсне</string>
+    <string name="call_drop_message">Вие сте почти извън обхвата на Wi-Fi покритието</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Скриване на моето видео</string>
+    <string name="showVideoPreview">Показване на моето видео</string>
+    <string name="restartVideoPreview">Рестартиране на локалното видео</string>
+    <string name="video_call_downgrade_to_voice_call">Превключено към гласово обаждане</string>
+    <string name="video_call_downgrade_request">Превключване към гласово обаждане</string>
+    <string name="video_call_upgrade_to_video_call">Превключено към гласово обаждане</string>
+    <string name="video_call_upgrade_to_video_call_failed">Неуспешно превключване към гласово обаждане</string>
 </resources>

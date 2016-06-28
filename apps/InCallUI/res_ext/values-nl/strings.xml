@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Ontkoppeld"</string>
 
     <string name="accept_incoming_and_disconnect_current">Accepteren van dit gesprek beëindigt huidig gesprek.</string>
+
     <string name="add_voicemail_number">vm-nummer toevoegen</string>
+    <!-- WFC items -->
+    <string name="close">"Sluiten"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Nee,bedankt"</string>
+    <string name="wifi_wfc_dialog_top_wording">Gefeliciteerd, je hebt voor het eerst gebeld met Bellen via Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Als je dit symbool ziet bovenaan je scherm, kun je over Wi-Fi bellen en berichten sturen. Bellen via Wi-Fi kan bij bepaalde abonnementen minuten kosten.</string>
+    <string name="wifi_title">Bellen met Wi-Fi en minuten</string>
+    <string name="offer_dont_display">Dit niet opnieuw tonen</string>
+    <string name="view_networks">Netwerken weergeven</string>
+    <string name="wfc_wifi_call_drop_summary">Oeps! Je bent waarschijnlijk buiten je Wi-Fi-netwerk verplaatst tijdens een oproep.\n \nWil je proberen om je Wi-Fi-netwerk opnieuw te verbinden om je oproep af te ronden?</string>
+    <string name="call_drop">Je gesprek kan wegvallen</string>
+    <string name="call_drop_message">Je bent bijna buiten het dekkingsbereik van Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Mijn video verbergen</string>
+    <string name="showVideoPreview">Mijn video weergeven</string>
+    <string name="restartVideoPreview">Lokale video herstarten</string>
+    <string name="video_call_downgrade_to_voice_call">Overgeschakeld naar gesprek</string>
+    <string name="video_call_downgrade_request">Overschakelen naar gesprek</string>
+    <string name="video_call_upgrade_to_video_call">Overgeschakeld naar video-oproep</string>
+    <string name="video_call_upgrade_to_video_call_failed">Overschakelen naar video-oproep mislukt</string>
 </resources>

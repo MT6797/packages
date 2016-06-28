@@ -20,9 +20,13 @@
     <bool name="is_layout_landscape">true</bool>
     <!-- Height and width of the in-call buttons. -->
     <dimen name="in_call_button_dimension">40dp</dimen>
+    <!-- M: [Video Call] for landscape hold bar layout,
+     add "secondary caller info bottom margin" property,and
+     change call_buttons_bottom_margin: 30 => 25 -->
     <!-- Margin underneath the call buttons. This is used only in landscape mode and is sized
          so that the call buttons are center aligned with the end call button. -->
-    <dimen name="call_buttons_bottom_margin">30dp</dimen>
+    <dimen name="call_buttons_bottom_margin">25dp</dimen>
+    <dimen name="secondary_callerinfo_bottom_margin">10dp</dimen>
     <!--M: add different margin for landscape -->
     <dimen name="glowpadview_margin_bottom">-20dip</dimen>
 

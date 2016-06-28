@@ -439,7 +439,6 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
             mCall.setSessionModificationState(Call.SessionModificationState.
                     WAITING_FOR_UPGRADE_RESPONSE);
         }
-        getUi().setVideoPaused(pause);
     }
 
     private void updateUi(InCallState state, Call call) {
@@ -525,17 +524,12 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         final boolean canHangupAllHoldCalls = InCallUtils.canHangupAllHoldCalls();
         final boolean canHangupActiveAndAnswerWaiting = InCallUtils
                 .canHangupActiveAndAnswerWaiting();
-        /// M: [Voice Record] check if should display record
-        final boolean canRecordVoice = call
-                .can(android.telecom.Call.Details.CAPABILITY_VOICE_RECORD)
-                && !InCallUtils.isDMLocked()
-                && !CallUtils.isVideoCall(call);
+
         Log.d(this, "[updateButtonsState] showAddCall:" + showAddCall + " showMerge:"
                 + showMerge  + " showMute:"
                 + showMute + " canSetEct:"  + canSetEct + " canHangupAllCalls:"
                 + canHangupAllCalls + " canHangupAllHoldCalls:" + canHangupAllHoldCalls
-                + " canHangupActiveAndAnswerWaiting:" + canHangupActiveAndAnswerWaiting
-                + " canRecordVoice:" + canRecordVoice);
+                + " canHangupActiveAndAnswerWaiting:" + canHangupActiveAndAnswerWaiting);
         /// @}
 
         ui.showButton(BUTTON_AUDIO, true);
@@ -556,13 +550,6 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         ui.showButton(BUTTON_DIALPAD, true);
 
         ui.showButton(BUTTON_MERGE, showMerge);
-        /** M: [Voice Record] support voice recording @{ */
-        if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
-            ui.showButton(BUTTON_SWITCH_VOICE_RECORD, canRecordVoice);
-        } else {
-            ui.showButton(BUTTON_SWITCH_VOICE_RECORD, false);
-        }
-        /** @} */
 
         /// M: add other feature. @{
         ui.showButton(BUTTON_SET_ECT, canSetEct);
@@ -576,18 +563,6 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         /// @}
 
         ui.updateButtonStates();
-
-        /** M: [Voice Record] support voice recording @{ */
-        if (UserHandle.myUserId() == UserHandle.USER_OWNER && canRecordVoice) {
-            ui.configRecordingButton();
-        }
-        /** @} */
-
-        /** M: update PauseVideoButton @{ */
-        if (!isVideo && call.getVideoFeatures().supportsPauseVideo()) {
-            ui.updatePauseVideoButtonStatus();
-        }
-        /** @} */
     }
 
     public void refreshMuteState() {
@@ -651,11 +626,6 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         /// M: fix CR:ALPS02259658,"hang up active,answer waiting call"not display in 1A+1W @{
         void enableOverflowButton();
         /// @}
-
-        /**
-         * M: when downgrade to voice , we should update PauseVideo
-         */
-        void updatePauseVideoButtonStatus();
 
         void updateHideButtonStatus(boolean hide);
     }
@@ -799,16 +769,19 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         if (details == null) {
             currentHeldState = false;
         }
-        currentHeldState = call.hasProperty(android.telecom.Call.Details.PROPERTY_HELD);
 
-        final boolean showUpgradeToVideo = (!isVideo
-                && (call.can(android.telecom.Call.Details.CAPABILITY_SUPPORTS_VT_LOCAL_TX)
-                && call.can(android.telecom.Call.Details.CAPABILITY_SUPPORTS_VT_REMOTE_RX))
-                && call.getVideoFeatures().canUpgradeToVideoCall())
-                || ExtensionManager.getInCallButtonExt().isVideoCallCapable(call.getNumber());
+        currentHeldState = call.isHeld();
 
-        Log.d(this, "[updateVideoButtonUI] showUpgradeToVideo:" + showUpgradeToVideo
-                + "callState:" + callState);
+        final boolean showUpgradeToVideoEx = (!isVideo
+                && ExtensionManager.getInCallButtonExt().isVideoCallCapable(call.getNumber()));
+        final boolean showUpgradeToVideo = showUpgradeToVideoEx
+                || (!isVideo
+                    && (call.can(android.telecom.Call.Details.CAPABILITY_SUPPORTS_VT_LOCAL_TX)
+                    && call.can(android.telecom.Call.Details.CAPABILITY_SUPPORTS_VT_REMOTE_RX))
+                    && call.getVideoFeatures().canUpgradeToVideoCall());
+
+        Log.d(this, "[updateVideoButtonUI] showUpgradeToVideo: " + showUpgradeToVideo
+                + ", callState: " + callState);
 
         final boolean showUpgradeBtn = (showUpgradeToVideo
                 || call.getVideoFeatures().forceEnableVideo())
@@ -816,7 +789,9 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         final boolean showSwitchBtn = isVideo && isCallActive && !currentHeldState;
         final boolean showPauseVideoBtn = isVideo
                 && call.getVideoFeatures().supportsPauseVideo()
-                && isCallActive && !currentHeldState;
+                && isCallActive && !currentHeldState
+                /// M: we should not show pause button if no peer video from remote.
+                && VideoProfile.isReceptionEnabled(call.getVideoState());
         final boolean showHideLocalVideoBtn = isVideo
                 && call.getVideoFeatures().supportsHidePreview()
                 && isCallActive && !currentHeldState;
@@ -841,7 +816,7 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         // when pause video make one way  and only can receive video, we can't show
         // switch camera button
         final boolean isCameraOff = call.getVideoState() == VideoProfile.STATE_RX_ENABLED;
-        final boolean isRemoteCameraOff = call.getVideoState() == VideoProfile.STATE_TX_ENABLED;
+
         boolean showHold = !call.can(
                 android.telecom.Call.Details.CAPABILITY_SWAP_CONFERENCE)
               && call.can(android.telecom.Call.Details.CAPABILITY_SUPPORT_HOLD)
@@ -849,6 +824,12 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         if (isVideo) {
             showHold &= call.getVideoFeatures().supportsHold();
         }
+        // M: fix CR:ALPS02698355,don't show voice record when receive upgrade request.
+        // [Voice Record] check if should display record
+        final boolean canRecordVoice = call
+                .can(android.telecom.Call.Details.CAPABILITY_VOICE_RECORD)
+                && !InCallUtils.isDMLocked()
+                && !CallUtils.isVideoCall(call);
         //add canEnableVideoBtn flag to control showing hold button is avoid this case:
         //when there was a volte call, we can do some video action, during this action,
         //we can't show hold button. by another way if there was a voice call, it's
@@ -856,8 +837,7 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         ui.showButton(BUTTON_HOLD, showHold && canEnableVideoBtn);
         ui.showButton(BUTTON_UPGRADE_TO_VIDEO, showUpgradeBtn && canEnableVideoBtn);
         ui.showButton(BUTTON_SWITCH_CAMERA, showSwitchBtn && canEnableVideoBtn && !isCameraOff);
-        ui.showButton(BUTTON_PAUSE_VIDEO, showPauseVideoBtn && canEnableVideoBtn &&
-                !isRemoteCameraOff);
+        ui.showButton(BUTTON_PAUSE_VIDEO, showPauseVideoBtn && canEnableVideoBtn);
         /// M:add hide Local preview button and downgrade button
         ui.showButton(BUTTON_HIDE_LOCAL_VIDEO, showHideLocalVideoBtn && canEnableVideoBtn);
         ui.showButton(BUTTON_DOWNGRADE_TO_VOICE, showDowngradBtn && canEnableVideoBtn);
@@ -870,6 +850,27 @@ public class CallButtonPresenter extends Presenter<CallButtonPresenter.CallButto
         if (!canEnableVideoBtn) {
             ui.showButton(BUTTON_ADD_CALL, false);
         }
+
+        /** M: fix CR:ALPS02698355,don't show voice record when receive upgrade request.
+         * [Voice Record] support voice recording @{ */
+        if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
+            ui.showButton(BUTTON_SWITCH_VOICE_RECORD, canRecordVoice && canEnableVideoBtn);
+        } else {
+            ui.showButton(BUTTON_SWITCH_VOICE_RECORD, false);
+        }
+        /** @} */
+        if (showPauseVideoBtn && canEnableVideoBtn) {
+            /// Rx only: already set to paused state
+            /// Bidirectional: normal case, didn't press pause
+            /// Tx only / voice: the pause button would hide, no need update
+            ui.setVideoPaused(!VideoProfile.isBidirectional(call.getVideoState()));
+        }
+        /** M: fix CR:ALPS02698355,don't show voice record when receive upgrade request.
+         * [Voice Record] support voice recording @{ */
+        if (UserHandle.myUserId() == UserHandle.USER_OWNER && canRecordVoice && canEnableVideoBtn) {
+            ui.configRecordingButton();
+        }
+        /** @} */
     }
 
     @Override

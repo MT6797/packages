@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"បាន​ផ្ដាច់"</string>
 
     <string name="accept_incoming_and_disconnect_current">ទទួលការហៅនេះ​នឹងបញ្ចប់ការហៅ​ដែលកំពុងមាន​ឥឡូវនេះ។</string>
+
     <string name="add_voicemail_number">ថែម​លេខ vm</string>
+    <!-- WFC items -->
+    <string name="close">"បិទ​"</string>
+    <string name="ok">"យល់ព្រម"</string>
+    <string name="no_thanks">"ទេអរគុណ"</string>
+    <string name="wifi_wfc_dialog_top_wording">សូមអបអរសាទរ ដែលលោកអ្នកបានហៅទូរស័ព្ទដំបូងរបស់ លោកអ្នក ដោយប្រើការហៅទូរស័ព្ទ ដោយប្រព័ន្ធឥតខ្សែ (Wi-Fi calling) ។</string>
+    <string name="wifi_wfc_dialog_bottom_wording">នៅពេលលោកអ្នកឃើញនិមិត្តសញ្ញានេះ នៅផ្នែកខាងលើនៃ ផ្ទាំងបង្ហាញរូបភាព នោះលោកអ្នកអាចហៅទូរស័ព្ទចេញ និងផ្ញើរសារ ដោយប្រើ Wi-Fi បាន ។ ការប្រើការហៅទូរស័ព្ទ ដោយប្រព័ន្ធឥតខ្សែ (Wi-Fi calling) អាចប្រើចំនួននាទី ជាមួយគម្រោងផែនការ មួយចំនួន ។ </string>
+    <string name="wifi_title">ការប្រើការហៅទូរស័ព្ទ ដោយប្រព័ន្ធឥតខ្សែ (Wi-Fi calling) និងចំនួននាទី</string>
+    <string name="offer_dont_display">សូមកុំបង្ហាញខ្ញុំម្តងទៀត</string>
+    <string name="view_networks">មើលបណ្តាញ</string>
+    <string name="wfc_wifi_call_drop_summary">អ៊ូប ! លោកអ្នកបានចេញក្រៅ ដែនបណ្តាញប្រព័ន្ធឥតខ្សែ របស់លោកអ្នក នៅពេលកំពុងហៅទូរស័ព្ទចេញ ។ តើលោកអ្នក ចង់ព្យាយាម តភ្ជាប់ទៅបណ្តាញប្រព័ន្ធឥតខ្សែ របស់លោកអ្នក ឡើងវិញ ដើម្បីបញ្ចប់ការហៅទូរស័ព្ទរបស់លោកអ្នក ដែរឬទេ ?</string>
+    <string name="call_drop">កម្លាំងរលកនៃការហៅទូរស័ព្ទរបស់លោកអ្នក អាចធ្លាក់ចុះ ។</string>
+    <string name="call_drop_message">លោកអ្នក ស្ទើរតែចេញផុតទៅក្រៅដែនប្រព័ន្ធឥតខ្សែ ។</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">លាក់វីដេអូរបស់ខ្ញុំ</string>
+    <string name="showVideoPreview">បង្ហាញវីដេអូរបស់ខ្ញុំ</string>
+    <string name="restartVideoPreview">ចាប់ផ្តើមវីដេអូ នៅមូលដ្ឋាន ម្តងទៀត</string>
+    <string name="video_call_downgrade_to_voice_call">បានដូរទៅ ហៅទូរស័ព្ទ ជាសម្លេង</string>
+    <string name="video_call_downgrade_request">ការដូរទៅ ហៅទូរស័ព្ទ ជាសម្លេង</string>
+    <string name="video_call_upgrade_to_video_call">បានដូរទៅ ហៅទូរស័ព្ទ ជាវីដេអូ</string>
+    <string name="video_call_upgrade_to_video_call_failed">ដូរទៅ ហៅទូរស័ព្ទ ជាវីដេអូ មិនបាន</string>
 </resources>

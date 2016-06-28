@@ -2,6 +2,7 @@ package com.mediatek.incallui.videocall;
 
 import android.os.SystemClock;
 
+import android.telecom.VideoProfile;
 import com.android.incallui.Call;
 import com.android.incallui.CallList;
 import com.android.incallui.CallTimer;
@@ -194,10 +195,20 @@ public class VideoSessionController implements InCallPresenter.InCallStateListen
             return;
         }
 
-        //show message when upgrade to video success
-        InCallPresenter.getInstance().showMessage(
-                com.android.incallui.R.string.video_call_upgrade_to_video_call);
-
+        /// fix ALPS02681041,show message only when upgrade to video from voice call successfully.
+        /// M: [ALPS02671613] Changed to one-way state from 2-ways, nothing would happen, neither.
+        /// TODO: Currently no well-support to one-way video call, so change from/to
+        /// one-way video call success/fail would have no prompt.
+        /// M: fix CR:ALPS02707358,shouldn't show "failed to switch video call" toast
+        /// when call is disconnecting or call has been disconnected. @{
+        if (VideoProfile.isAudioOnly(call.getModifyVideoStateFrom()) &&
+                Call.State.isConnectingOrConnected(call.getState())) {
+            InCallPresenter.getInstance().showMessage(
+                    com.android.incallui.R.string.video_call_upgrade_to_video_call);
+        } else {
+            logd("onUpgradeToVideoSuccess call is disconnecting or call has been disconnected");
+        }
+        /// @}
         ///fix ALPS02497928,stop recording if switch to video call
         // requested by local.@{
         if (InCallPresenter.getInstance().isRecording()) {
@@ -218,9 +229,21 @@ public class VideoSessionController implements InCallPresenter.InCallStateListen
             return;
         }
 
-        //show message when upgrade to video fail
-        InCallPresenter.getInstance().showMessage(
-                com.android.incallui.R.string.video_call_upgrade_to_video_call_failed);
+        /// M: show message when upgrade to video fail
+        /// TODO: Currently no well-support to one-way video call, so change from/to
+        /// one-way video call success/fail would have no prompt.
+        /// Note: there's no way to change from audio to one-way. So no prompt for "pause fail"
+        /// neither. ref: [ALPS02704527]
+        /// M: fix CR:ALPS02707358,shouldn't show "failed to switch video call" toast
+        /// when call is disconnecting or call has been disconnected. @{
+        if (VideoProfile.isAudioOnly(call.getModifyVideoStateFrom()) &&
+                Call.State.isConnectingOrConnected(call.getState())) {
+            InCallPresenter.getInstance().showMessage(
+                    com.android.incallui.R.string.video_call_upgrade_to_video_call_failed);
+        } else {
+            logd("onUpgradeToVideoFail call is disconnecting or call has been disconnected");
+        }
+        /// @}
     }
 
     @Override
@@ -237,9 +260,15 @@ public class VideoSessionController implements InCallPresenter.InCallStateListen
         call.setSessionModificationState(Call.SessionModificationState.NO_REQUEST);
 
         //show message when downgrade to voice
-        InCallPresenter.getInstance().showMessage(
+        /// M: fix CR:ALPS02707358,shouldn't show "failed to switch video call" toast
+        /// when call is disconnecting or call has been disconnected. @{
+        if (Call.State.isConnectingOrConnected(call.getState())) {
+            InCallPresenter.getInstance().showMessage(
                 com.android.incallui.R.string.video_call_downgrade_to_voice_call);
-
+        } else {
+            logd("onDowngradeToAudio call is disconnecting or call has been disconnected");
+        }
+        /// @}
     }
 
     /**

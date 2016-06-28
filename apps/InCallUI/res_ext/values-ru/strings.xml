@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Отключен"</string>
 
     <string name="accept_incoming_and_disconnect_current">Принятие этого звонка приведет к завершению текущего звонка.</string>
+
     <string name="add_voicemail_number">Adăugare număr vm</string>
+    <!-- WFC items -->
+    <string name="close">"Закрыть"</string>
+    <string name="ok">"ОК"</string>
+    <string name="no_thanks">"Нет,спасибо"</string>
+    <string name="wifi_wfc_dialog_top_wording">Поздравляем! Вы совершили свой первый вызов через Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Если вы видите этот символ в верхней части экрана, вы можете выполнять вызовы и отправлять сообщения через Wi-Fi. С некоторыми тарифными планами вызов через Wi-Fi может занять несколько минут.</string>
+    <string name="wifi_title">Вызов через Wi-Fi и время в минутах</string>
+    <string name="offer_dont_display">Не показывать снова</string>
+    <string name="view_networks">Просмотреть сети</string>
+    <string name="wfc_wifi_call_drop_summary">Ой! Возможно, во время вызова вы вышли за пределы действия сети Wi-Fi.\n \nПовторить попытку повторного подключения к сети Wi-Fi, чтобы завершить вызов?</string>
+    <string name="call_drop">Возможно, ваш вызов сброшен</string>
+    <string name="call_drop_message">Вы находитесь почти вне зоны покрытия Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Скрыть мое видео</string>
+    <string name="showVideoPreview">Отобразить мое видео</string>
+    <string name="restartVideoPreview">Перезапустить локальное видео</string>
+    <string name="video_call_downgrade_to_voice_call">Переключено на голосовой вызов</string>
+    <string name="video_call_downgrade_request">Переключение на голосовой вызов</string>
+    <string name="video_call_upgrade_to_video_call">Переключено на видеовызов</string>
+    <string name="video_call_upgrade_to_video_call_failed">Не удалось переключиться на видеовызов</string>
 </resources>

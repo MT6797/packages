@@ -42,4 +42,24 @@
     <string name="accept_incoming_and_disconnect_current">Si acceptes aquesta trucada, finalitzarà la trucada actual.</string>
 
     <string name="add_voicemail_number">Afeg. núm. correu de veu</string>
+    <!-- WFC items -->
+    <string name="close">"Tanca"</string>
+    <string name="ok">"D\'acord"</string>
+    <string name="no_thanks">"No,gràcies"</string>
+    <string name="wifi_wfc_dialog_top_wording">Felicitats, heu completat la primera trucada amb les trucades Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Si veieu aquest símbol a la part superior de la pantalla, vol dir que podeu fer trucades i enviar missatges a través del Wi-Fi. Les trucades Wi-Fi poden consumir minuts en funció del contracte.</string>
+    <string name="wifi_title">Trucades Wi-Fi i minuts</string>
+    <string name="offer_dont_display">"No m'ho tornis a mostrar"</string>
+    <string name="view_networks">Mostra les xarxes</string>
+    <string name="wfc_wifi_call_drop_summary">Ups! Segurament us heu desplaçat fora de la xarxa Wi-Fi durant una trucada.\n \nVoleu provar de tornar a connectar-vos a la xarxa Wi-Fi per finalitzar la trucada?</string>
+    <string name="call_drop">La trucada es pot interrompre</string>
+    <string name="call_drop_message">"Sou pràcticament fora de l'abast de la cobertura Wi-Fi"</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Amaga el meu vídeo</string>
+    <string name="showVideoPreview">Mostra el meu vídeo</string>
+    <string name="restartVideoPreview">Reinicia el vídeo local</string>
+    <string name="video_call_downgrade_to_voice_call">"S'ha passat a trucada de veu"</string>
+    <string name="video_call_downgrade_request">Passant a trucada de veu</string>
+    <string name="video_call_upgrade_to_video_call">"S'ha passat a trucada de vídeo"</string>
+    <string name="video_call_upgrade_to_video_call_failed">"No s'ha pogut passar a trucada de vídeo"</string>
 </resources>

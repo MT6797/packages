@@ -63,4 +63,8 @@
     <string name="video_call_downgrade_request">正在切换为语音电话</string>
     <string name="video_call_upgrade_to_video_call">切换为视频电话</string>
     <string name="video_call_upgrade_to_video_call_failed">升级为视频电话失败</string>
+    <string name="video_call_downgrade_to_voice_call_failed">切换语音通话失败</string>
+    <string name="close">"关闭"</string>
+    <string name="ok">"确定"</string>
+    <string name="no_thanks">"不用了"</string>
 </resources>

@@ -40,4 +40,26 @@
     <string name="call_status_disconnected">"منقطع"</string>
 
     <string name="accept_incoming_and_disconnect_current">اس کال کو قبول کرنے سے موجودہ کال ختم ہو جائے گی۔</string>
+
+    <string name="add_voicemail_number">صوتی میل نمبر شامل کریں۔</string>
+    <!-- WFC items -->
+    <string name="close">بندکریں</string>
+    <string name="ok">"ٹھیک ہے"</string>
+    <string name="no_thanks">نہیںشکریہ</string>
+    <string name="wifi_wfc_dialog_top_wording">مبارک ہو، آپ نے Wi-Fi کالنگ کا استعمال کرتے ہوئے اپنی پہلی کال مکمل کرلی ہے۔</string>
+    <string name="wifi_wfc_dialog_bottom_wording">جب آپ کو اپنے اسکرین کے سب سے اوپر یہ علامت نظر آئے تو، آپ Wi-Fi پر کالیں کرسکتے اور پیغامات بھیج سکتے ہیں۔ Wi-Fi کالنگ بعض پلانز کے ساتھ منٹوں کا استعمال کرسکتے ہیں۔</string>
+    <string name="wifi_title">Wi-Fi کالنگ اور منٹس</string>
+    <string name="offer_dont_display">براہ کرم مجھے دوبارہ نہ دکھائیں</string>
+    <string name="view_networks">نیٹ ورکس دیکھیں</string>
+    <string name="wfc_wifi_call_drop_summary">افوہ! آپ کال کے دوران Wi-Fi نیٹ ورک سے باہر چلے گئے ہوں گے۔\n \nکیا آپ اپنی کال مکمل کرنے کے لیے اپنے Wi-Fi نیٹ ورک سے دوبارہ جڑنے کی کوشش کرنا چاہیں گے؟</string>
+    <string name="call_drop">آپ کی کال ڈراپ ہوسکتی ہے</string>
+    <string name="call_drop_message">آپ تقریباً Wi-Fi کوریج کی رینج سے باہر ہیں</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">میرا ویڈیو چھپائیں</string>
+    <string name="showVideoPreview">میرا ویڈیو دکھائیں</string>
+    <string name="restartVideoPreview">مقامی ویڈیو دوبارہ شروع کریں</string>
+    <string name="video_call_downgrade_to_voice_call">صوتی کال پر سوئچ کیا</string>
+    <string name="video_call_downgrade_request">صوتی کال پر سوئچ کررہا ہے</string>
+    <string name="video_call_upgrade_to_video_call">ویڈیو کال پر سوئچ کیا</string>
+    <string name="video_call_upgrade_to_video_call_failed">ویڈیو کال میں تبدیل ہونے میں ناکام۔</string>
 </resources>

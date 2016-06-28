@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Ühendus on katkestatud"</string>
 
     <string name="accept_incoming_and_disconnect_current">Luba selle kõnel lõpetada praegune kõne.</string>
+
     <string name="add_voicemail_number">Lisa vm number</string>
+    <!-- WFC items -->
+    <string name="close">"Sulge"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Ei,tänan"</string>
+    <string name="wifi_wfc_dialog_top_wording">Õnnitleme, olete helistanud esimest korda, kasutades WiFi-kõnet.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Kui te näete seda sümbolit oma ekraani ülaosas, saate Wi-Fi kaudu helistada ja sõnumeid saata. WiFi-kõnedeks saab kasutada minutipõhiseid pakette.</string>
+    <string name="wifi_title">WiFi-kõned ja minutid</string>
+    <string name="offer_dont_display">Ära seda enam kuva</string>
+    <string name="view_networks">Kuva võrgud</string>
+    <string name="wfc_wifi_call_drop_summary">Oih! Võimalik, et olete helistamise ajal WiFi leviulatusest väljunud.\nKas soovite uuesti WiFi-võrguga ühendust luua, et kõne lõpetada?</string>
+    <string name="call_drop">Teie kõne võib katkeda</string>
+    <string name="call_drop_message">Te olete peaaegu WiFi leviulatusest väljas</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Peida minu video</string>
+    <string name="showVideoPreview">Kuva minu video</string>
+    <string name="restartVideoPreview">Taaskäivita kohalik video</string>
+    <string name="video_call_downgrade_to_voice_call">Ümberlülitus häälkõnele</string>
+    <string name="video_call_downgrade_request">Ümberlülitumine häälkõnele</string>
+    <string name="video_call_upgrade_to_video_call">Ümberlülitus videokõnele</string>
+    <string name="video_call_upgrade_to_video_call_failed">Ümberlülitus videokõnele ebaõnnestus</string>
 </resources>

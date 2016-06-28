@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"מנותק"</string>
 
     <string name="accept_incoming_and_disconnect_current">קבלת השיחה הזו תנתק את השיחה הנוכחית.</string>
+
     <string name="add_voicemail_number">הוסף מספר תא קולי</string>
+    <!-- WFC items -->
+    <string name="close">"סגור"</string>
+    <string name="ok">"אישור"</string>
+    <string name="no_thanks">"לא,תודה"</string>
+    <string name="wifi_wfc_dialog_top_wording">ברכותינו - השלמת את השיחה הראשונה שלך באמצעות התקשרות דרך רשת Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">כאשר סמל זה מופיע בראש המסך, באפשרותך לבצע שיחות ולשלוח הודעות דרך רשת Wi-Fi. התקשרות דרך רשת Wi-Fi מנצלת דקות שימוש בתוכניות מסוימות.</string>
+    <string name="wifi_title">התקשרות דרך רשת Wi-Fi ודקות שימוש</string>
+    <string name="offer_dont_display">אל תציג שוב</string>
+    <string name="view_networks">הצג רשתות</string>
+    <string name="wfc_wifi_call_drop_summary">אופס! ככל הנראה יצאת מאזור הקליטה של רשת ה-Wi-Fi במהלך שיחה.\n \nהאם ברצונך לנסות ולהתחבר מחדש לרשת ה-Wi-Fi כדי לסיים את השיחה?</string>
+    <string name="call_drop">השיחה עלולה להתנתק</string>
+    <string name="call_drop_message">כמעט יצאת מטווח הכיסוי של רשת ה-Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">הסתר את שידור הווידאו</string>
+    <string name="showVideoPreview">הצג את שידור הווידאו</string>
+    <string name="restartVideoPreview">התחל שידור וידאו מקומי מחדש</string>
+    <string name="video_call_downgrade_to_voice_call">עברת לשיחה קולית</string>
+    <string name="video_call_downgrade_request">עובר לשיחה קולית</string>
+    <string name="video_call_upgrade_to_video_call">עברת לשיחת וידאו</string>
+    <string name="video_call_upgrade_to_video_call_failed">המעבר לשיחת וידאו נכשל</string>
 </resources>

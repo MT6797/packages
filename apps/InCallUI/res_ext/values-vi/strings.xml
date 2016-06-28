@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Đã ngắt kết nối"</string>
 
     <string name="accept_incoming_and_disconnect_current">Chấp nhận cuộc gọi này sẽ kết thúc cuộc gọi hiện hành.</string>
+
     <string name="add_voicemail_number">Thêm số vm</string>
+    <!-- WFC items -->
+    <string name="close">"Đóng"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Không,cảmơn"</string>
+    <string name="wifi_wfc_dialog_top_wording">Xin chúc mừng, bạn đã hoàn tất cuộc gọi đầu tiên bằng cách gọi  qua Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Khi thấy biểu tượng này ở phía trên màn hình, bạn có thể thực hiện các cuộc gọi và gửi tin nhắn qua Wi-Fi. Gọi qua Wi-Fi có thể sử dụng số phút với một số gói thuê bao.</string>
+    <string name="wifi_title">Gọi qua Wi-Fi và số phút</string>
+    <string name="offer_dont_display">Xin đừng hiển thị lại</string>
+    <string name="view_networks">Xem mạng</string>
+    <string name="wfc_wifi_call_drop_summary">Rất tiếc! Bạn phải di chuyển ra ngoài mạng Wi-Fi trong khi gọi.\n \nBạn có muốn thử và kết nối lại mạng Wi-Fi để hoàn tất cuộc gọi?</string>
+    <string name="call_drop">Cuộc gọi của bạn có thể bị gián đoạn</string>
+    <string name="call_drop_message">Bạn hầu như ở ngoài phạm vi phủ sóng Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Ẩn video của tôi</string>
+    <string name="showVideoPreview">Hiện video của tôi</string>
+    <string name="restartVideoPreview">Khởi động lại video nội bộ</string>
+    <string name="video_call_downgrade_to_voice_call">Chuyển sang gọi thoại</string>
+    <string name="video_call_downgrade_request">Đang chuyển sang gọi thoại</string>
+    <string name="video_call_upgrade_to_video_call">Đã chuyển sang gọi video</string>
+    <string name="video_call_upgrade_to_video_call_failed">Không thể chuyển sang gọi video</string>
 </resources>

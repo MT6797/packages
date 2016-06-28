@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"डिस्कनेक्ट है"</string>
 
     <string name="accept_incoming_and_disconnect_current">इस कॉल को स्वीकार करने पर चालू कॉल समाप्त हो जाएगा।</string>
+
     <string name="add_voicemail_number">vm नंबर जोड़ें</string>
+    <!-- WFC items -->
+    <string name="close">"बंदकरें"</string>
+    <string name="ok">"ठीक है"</string>
+    <string name="no_thanks">"नहीं,रहनेदें"</string>
+    <string name="wifi_wfc_dialog_top_wording">बधाइयाँ, आपने Wi-Fi कॉलिंग का उपयोग करके अपना पहला कॉल पूरा कर लिया है।</string>
+    <string name="wifi_wfc_dialog_bottom_wording">जब आप अपने स्क्रीन के शीर्ष पर यह चिह्न देखते हैं, आप Wi-Fi के माध्यम से कॉल करने और संदेश भेजने में सक्षम होते हैं। Wi-Fi कॉलिंग कुछ ख़ास प्लान में मिनटों का उपयोग कर सकता है।</string>
+    <string name="wifi_title">Wi-Fi कॉलिंग और मिनट</string>
+    <string name="offer_dont_display">कृपया मुझे फिर से नहीं दिखाएँ</string>
+    <string name="view_networks">नेटवर्क देखें</string>
+    <string name="wfc_wifi_call_drop_summary">ओह! आप कॉल के दौरान अपने Wi-Fi नेटवर्क से बाहर चले गए होंगे।\n \nक्या आप कॉल पूरा करने के लिए अपने Wi-Fi नेटवर्क से पुनः कनेक्ट होना चाहेंगे?</string>
+    <string name="call_drop">आपका कॉल अचानक समाप्त हो सकता है</string>
+    <string name="call_drop_message">आप Wi-Fi कवरेज रेंज के लगभग बाहर हैं</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">मेरा वीडियो छिपाएँ</string>
+    <string name="showVideoPreview">मेरा वीडियो दिखाएँ</string>
+    <string name="restartVideoPreview">स्थानीय वीडियो पुनः आरंभ करें</string>
+    <string name="video_call_downgrade_to_voice_call">वॉयस कॉल में परिवर्तित</string>
+    <string name="video_call_downgrade_request">वॉयस कॉल में परिवर्तित हो रहा है</string>
+    <string name="video_call_upgrade_to_video_call">वीडियो कॉल में परिवर्तित</string>
+    <string name="video_call_upgrade_to_video_call_failed">वीडियो कॉल में परिवर्तित होने में विफल</string>
 </resources>

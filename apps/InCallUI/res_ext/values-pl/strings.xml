@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Odłączone"</string>
 
     <string name="accept_incoming_and_disconnect_current">Zaakceptowanie tego połączenia spowoduje zakończenie bieżącego połączenia.</string>
+
     <string name="add_voicemail_number">Dodaj numer poczty głosowej</string>
+    <!-- WFC items -->
+    <string name="close">"Zamknij"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Nie,dziękuję"</string>
+    <string name="wifi_wfc_dialog_top_wording">Gratulacje, zakończono pierwszą rozmowę w ramach usługi Połączenia Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Gdy na górze ekranu widoczny jest ten symbol, można nawiązywać połączenia i wysyłać wiadomości przez sieć Wi-Fi. W przypadku niektórych planów taryfowych usługa Połączenia Wi-Fi może zużywać dostępne minuty.</string>
+    <string name="wifi_title">Połączenia Wi-Fi i minuty</string>
+    <string name="offer_dont_display">Nie pokazuj ponownie</string>
+    <string name="view_networks">Wyświetl sieci</string>
+    <string name="wfc_wifi_call_drop_summary">Niestety! Urządzenie musiało znaleźć się podczas połączenia poza zasięgiem sieci Wi-Fi.\n \nCzy chcesz podjąć próbę ponownego połączenia z siecią Wi-Fi w celu zakończenia połączenia?</string>
+    <string name="call_drop">Połączenie może zostać przerwane</string>
+    <string name="call_drop_message">Jesteś prawie poza zasięgiem sieci Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Ukryj moje wideo</string>
+    <string name="showVideoPreview">Pokaż moje wideo</string>
+    <string name="restartVideoPreview">Uruchom ponownie wideo lokalne</string>
+    <string name="video_call_downgrade_to_voice_call">Przełączono na połączenie głosowe</string>
+    <string name="video_call_downgrade_request">Przełączanie na połączenie głosowe</string>
+    <string name="video_call_upgrade_to_video_call">Przełączono na połączenie wideo</string>
+    <string name="video_call_upgrade_to_video_call_failed">Nie można przełączyć na połączenie wideo</string>
 </resources>

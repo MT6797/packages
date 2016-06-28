@@ -92,4 +92,9 @@ public class CallUtils {
         return videoState | VideoProfile.STATE_PAUSED;
     }
 
+    public static boolean isSingleVideoDirection(int videoState) {
+        return videoState == VideoProfile.STATE_TX_ENABLED
+                || videoState  == VideoProfile.STATE_RX_ENABLED;
+    }
+
 }

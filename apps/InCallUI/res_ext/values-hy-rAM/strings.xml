@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Անջատված է"</string>
 
     <string name="accept_incoming_and_disconnect_current">Այս կանչի ընդունումը կավարտի ընթացիկ կանչը:</string>
+
     <string name="add_voicemail_number">Ավելացնել ձայնային փոստի համար</string>
+    <!-- WFC items -->
+    <string name="close">"Փակել"</string>
+    <string name="ok">"Լավ"</string>
+    <string name="no_thanks">"Ոչ,շնորհակալություն"</string>
+    <string name="wifi_wfc_dialog_top_wording">Շնորհավորում ենք, կատարեցիք ձեր առաջին զանգը՝ Wi-Fi զանգի միջոցով:</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Երբ տեսնում եք այս նշանը ձեր էկրանի վերևի մասում, կարող եք Wi-Fi-ով զանգեր կատարել և հաղորդագրություններուղարկել: Wi-Fi զանգը կարող է օգտագործել ձեր րոպեները՝ ըստ որոշ սակագնային պլանների: </string>
+    <string name="wifi_title">Wi-Fi զանգ և րոպեներ</string>
+    <string name="offer_dont_display">Կրկին չցուցադրել</string>
+    <string name="view_networks">Դիտել ցանցերը</string>
+    <string name="wfc_wifi_call_drop_summary">Սխալ: Հնարավոր է զանգի ընթացքում դուք դուրս եք եկել ձեր Wi-Fi ցանցի տարածքից:\n \nԿցանկանա՞ք փորձել կրկին կապակցվել ձեր Wi-Fi ցանցին` զանգն ավարտելու համար:</string>
+    <string name="call_drop">Ձեր զանգը կարող է ավարտվել</string>
+    <string name="call_drop_message">Դուք գրեթե դուրս եք եկել Wi-Fi ռադիոծածկույթի տարածքից</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Թաքցնել իմ վիդեոն</string>
+    <string name="showVideoPreview">Ցուցադրել իմ վիդեոն</string>
+    <string name="restartVideoPreview">Վերագործարկել տեղային վիդեոն</string>
+    <string name="video_call_downgrade_to_voice_call">Փոխարկվեց ձայնային զանգի</string>
+    <string name="video_call_downgrade_request">Փոխարկվում է ձայնային զանգի</string>
+    <string name="video_call_upgrade_to_video_call">Փոխարկվեց տեսազանգի</string>
+    <string name="video_call_upgrade_to_video_call_failed">Չհաջողվեց փոխարկել տեսազանգի</string>
 </resources>

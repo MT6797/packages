@@ -141,6 +141,14 @@ public class AnswerPresenter extends Presenter<AnswerPresenter.AnswerUi>
     @Override
     public void onUpgradeToVideo(Call call) {
         Log.d(this, "onUpgradeToVideo: " + this + " call=" + call);
+        ///M: fixbug for ALPS02690396, when user receive upgrade request and he do swap call at
+        //same time, answer ui can't dismiss all the time.
+        boolean isUpgradePending = isVideoUpgradePending(call);
+        if(!isUpgradePending) {
+            Log.e(this, "can't do upgrade video in unexpectable condition");
+            return;
+        }
+        ///@}
         /// M: fix ALPS02518886,not process the video call request if multiple call exist.@{
         if (!call.getVideoFeatures().canUpgradeToVideoCall()) {
             return;
@@ -154,7 +162,10 @@ public class AnswerPresenter extends Presenter<AnswerPresenter.AnswerUi>
             //return;
             ///@}
         }
-        boolean isUpgradePending = isVideoUpgradePending(call);
+        ///M: fixbug for ALPS02690396, when user receive upgrade request and he do swap call at
+        //same time, answer ui can't dismiss all the time.
+        //boolean isUpgradePending = isVideoUpgradePending(call);
+        ///@}
         InCallPresenter inCallPresenter = InCallPresenter.getInstance();
         if (isUpgradePending
                 && inCallPresenter.getInCallState() == InCallPresenter.InCallState.INCOMING) {

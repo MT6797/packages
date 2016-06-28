@@ -41,4 +41,26 @@
     <string name="call_status_disconnected">"Diputuskan sambungan"</string>
 
     <string name="accept_incoming_and_disconnect_current">Menerima panggilan ini akan menamatkan panggilan semasa.</string>
+
+    <string name="add_voicemail_number">Tambahkan nombor mel suara.</string>
+    <!-- WFC items -->
+    <string name="close">"Tutup"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Tidak,terimakasih"</string>
+    <string name="wifi_wfc_dialog_top_wording">Tahniah, anda telah selesaikan panggilan pertama anda menggunakan panggilan Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Apabila anda melihat simbol ini di sebelah atas skrin, anda boleh membuat panggilan dan menghantar mesej melalui Wi-Fi. Panggilan Wi-Fi mungkin menggunakan minit dengan pelan tertentu.</string>
+    <string name="wifi_title">Panggilan Wi-Fi dan Minit</string>
+    <string name="offer_dont_display">Jangan tunjukkan kepada saya lagi</string>
+    <string name="view_networks">Lihat rangkaian</string>
+    <string name="wfc_wifi_call_drop_summary">Op! Anda mesti telah keluar daripada rangkaian Wi-Fi anda semasa membuat panggilan.\n \nAnda ingin cuba menyambung semula ke rangkaian Wi-Fi anda untuk menyelesaikan panggilan?</string>
+    <string name="call_drop">Panggilan anda boleh terputus</string>
+    <string name="call_drop_message">Anda hampir berada di luar liputan Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Sembunyikan video saya</string>
+    <string name="showVideoPreview">Tunjukkan video saya</string>
+    <string name="restartVideoPreview">Mulakan semula video setempat</string>
+    <string name="video_call_downgrade_to_voice_call">Ditukarkan ke panggilan suara</string>
+    <string name="video_call_downgrade_request">Menukar ke panggilan suara</string>
+    <string name="video_call_upgrade_to_video_call">Ditukarkan ke panggilan video</string>
+    <string name="video_call_upgrade_to_video_call_failed">Gagal menukar ke panggilan video</string>
 </resources>
