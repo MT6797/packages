@@ -41,4 +41,26 @@
     <string name="call_status_disconnected">Getrennt</string>
 
     <string name="accept_incoming_and_disconnect_current">Annahme dieses Anrufs beendet den momentanen Anruf</string>
+
+    <string name="add_voicemail_number">Sprachmailboxnummer hinzufügen.</string>
+    <!-- WFC items -->
+    <string name="close">Schließen</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">Neindanke</string>
+    <string name="wifi_wfc_dialog_top_wording">Glückwunsch zu Ihrem ersten Wi-Fi-Anruf!</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Wenn dieses Symbol oben im Display erscheint, können Sie über Wi-Fi telefonieren und Mitteilungen versenden. Wi-Fi-Anrufe können je nach Datentarif Minuten verbrauchen.</string>
+    <string name="wifi_title">Wi-Fi-Anrufe und Minuten</string>
+    <string name="offer_dont_display">Dies nicht noch einmal anzeigen</string>
+    <string name="view_networks">Netzwerke anzeigen</string>
+    <string name="wfc_wifi_call_drop_summary">Hoppla! Anscheinend haben Sie sich im laufenden Gespräch aus der Reichweite Ihres Wi-Fi-Netzwerks entfernt.\n \nMöchten Sie sich zum Fortsetzen des Gespräches wieder mit Ihrem Wi-Fi-Netzwerk verbinden?</string>
+    <string name="call_drop">Ihr Anruf kann unterbrochen werden.</string>
+    <string name="call_drop_message">Sie verlassen Ihre Wi-Fi-Abdeckung.</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Mein Videobild verbergen</string>
+    <string name="showVideoPreview">Mein Videobild anzeigen</string>
+    <string name="restartVideoPreview">Lokales Videobild neu starten</string>
+    <string name="video_call_downgrade_to_voice_call">Zu Sprachanruf umgeschaltet</string>
+    <string name="video_call_downgrade_request">Zu Sprachanruf umschalten</string>
+    <string name="video_call_upgrade_to_video_call">Zu Videoanruf umgeschaltet</string>
+    <string name="video_call_upgrade_to_video_call_failed">Umschalten zu Videoanruf nicht möglich</string>
 </resources>

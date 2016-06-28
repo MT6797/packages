@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"Yhteys katkaistu"</string>
 
     <string name="accept_incoming_and_disconnect_current">Tämän puhelun hyväksyminen lopettaa nykyisen puhelun.</string>
+
     <string name="add_voicemail_number">Lisää virtuaalikoneen numero</string>
+    <!-- WFC items -->
+    <string name="close">"Sulje"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Eikiitos"</string>
+    <string name="wifi_wfc_dialog_top_wording">Onnittelut. Olet soittanut ensimmäisen puhelusi käyttämällä Wi-Fi-puhelua.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Kun näet tämän symbolin näytön yläosassa, voit soittaa puheluita ja lähettää viestejä Wi-Fi-yhteydellä. Wi-Fi-puhelu voi käyttää minuutteja määrätyn datasopumuksen mukaisesti.</string>
+    <string name="wifi_title">Wi-Fi-puhelu ja minuutit</string>
+    <string name="offer_dont_display">Älä näytä minulle uudelleen</string>
+    <string name="view_networks">Näytä verkkoja</string>
+    <string name="wfc_wifi_call_drop_summary">Oho! Sinun on täytynyt siirtyä Wi-Fi-verkkosi ulkopuolelle puhelun aikana.\n \nHaluatko kokeilla Wi-Fi-verkon yhdistämistä uudelleen lopetaaksesi puhelun?</string>
+    <string name="call_drop">Puhelusi voi keskeytyä</string>
+    <string name="call_drop_message">Olet melkein Wi-Fi-verkon toiminta-alueen ulkopuolella</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Piilota videoni</string>
+    <string name="showVideoPreview">Näytä videoni</string>
+    <string name="restartVideoPreview">Käynnistä paikallinen video uudelleen</string>
+    <string name="video_call_downgrade_to_voice_call">Vaihdettu äänipuheluun</string>
+    <string name="video_call_downgrade_request">Vaihdetaan äänipuheluun</string>
+    <string name="video_call_upgrade_to_video_call">Vaihdettu videopuheluun</string>
+    <string name="video_call_upgrade_to_video_call_failed">Videopuheluun vaihtaminen epäonnistui</string>
 </resources>

@@ -29,7 +29,8 @@ import android.telecom.CallAudioState;
 import android.telecom.InCallService;
 import com.mediatek.incallui.InCallUtils;
 import com.mediatek.incallui.ext.ExtensionManager;
-
+import android.net.Uri;
+import android.telephony.PhoneNumberUtils;
 /**
  * Used to receive updates about calls from the Telecomm component.  This service is bound to
  * Telecomm while there exist calls which potentially require UI. This includes ringing (incoming),
@@ -51,9 +52,14 @@ public class InCallServiceImpl extends InCallService {
     @Override
     public void onCallAdded(Call call) {
         ///M: FIXME when in upgrade progress, we can't add another call in CallList. @{
-        if (CallList.getInstance().getVideoUpgradeRequestCall() != null
-                || CallList.getInstance().getSendingVideoUpgradeRequestCall() != null) {
+        // M: FIXME : work around for [ALPS02696713],ECC shouldn't be disconnected
+        // when requesting for vilte call.
+        if ((CallList.getInstance().getVideoUpgradeRequestCall() != null ||
+                CallList.getInstance().getSendingVideoUpgradeRequestCall() != null)
+                && !isEmergency(call)) {
             call.disconnect();
+            Log.d(this, "[Debug][CC][InCallUI][OP][Hangup][null][null]" +
+                "auto disconnect call while upgrading to video");
             InCallUtils.showOutgoingFailMsg(getApplicationContext(), call);
         } else {
             CallList.getInstance().onCallAdded(call);
@@ -134,5 +140,13 @@ public class InCallServiceImpl extends InCallService {
         CallList.getInstance().clearOnDisconnect();
         InCallPresenter.getInstance().tearDown();
     }
+
+    /// M: fix CR:ALPS02696713,can not dial ECC when requesting for vilte call. @{
+    private boolean isEmergency(Call call) {
+        Uri handle = call.getDetails().getHandle();
+        return PhoneNumberUtils.isEmergencyNumber(
+                handle == null ? "" : handle.getSchemeSpecificPart());
+    }
+    /// @}
 
 }

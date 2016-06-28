@@ -67,7 +67,7 @@
     <string name="accept_incoming_and_disconnect_current">Accepting this call will end the current call.</string>
 
     <string name="add_voicemail_number">Add voice mail number.</string>
-     <!-- WFC items -->
+    <!-- WFC items -->
     <string name="wifi_wfc_dialog_top_wording">Congratulations, you\'ve complete your first call using Wi-Fi calling.</string>
     <string name="wifi_wfc_dialog_bottom_wording">When you see this symbol at the top of your screen, you are able to make calls and send messages over Wi-Fi. Wi-Fi calling may use minutes with certain plans.</string>
     <string name="wifi_title">Wi-Fi Calling and Minutes </string>
@@ -87,4 +87,5 @@
     <string name="video_call_downgrade_request">Switching to voice call</string>
     <string name="video_call_upgrade_to_video_call">Switched to video call</string>
     <string name="video_call_upgrade_to_video_call_failed">Failed to switch to video call</string>
+    <string name="video_call_downgrade_to_voice_call_failed">Failed to switch to voice call</string>
 </resources>

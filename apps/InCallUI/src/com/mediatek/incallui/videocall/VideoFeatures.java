@@ -12,6 +12,7 @@ import com.android.incallui.InCallPresenter;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 /**
  * M: management for video call features.
  */
@@ -71,14 +72,25 @@ public class VideoFeatures {
     /**
      * M: check the current call can upgrade to video call or not
      *
-     * @return true if it is volte call or for other operator's needs
+     * @return false if without subject call, active and hold call with the same account which
+     * belongs to some operator, else depends on whether it is not a CS Call.
      */
     public boolean canUpgradeToVideoCall() {
-        if (mCall != null && !isCsCall()
-                && UNSUPPORT_MULTI_VIDEO_OPERATOR_LIST.contains(getOperatorName(mCall))) {
-            //FIXME: support vilte call only 1 Active call exist if belongs to
-            // some designated operator.
-            return CallList.getInstance().getActiveAndHoldCallsCount() == 1;
+        if (mCall == null) {
+            return false;
+        }
+
+        if (UNSUPPORT_MULTI_VIDEO_OPERATOR_LIST.contains(getOperatorName(mCall))) {
+            //FIXME: support vilte capability when multi calls exist with different accounts.
+            if (CallList.getInstance().getBackgroundCall() == null
+                    || !Objects.equals(mCall.getTelecommCall().getDetails().getAccountHandle(),
+                    CallList.getInstance().getBackgroundCall().getTelecommCall().getDetails()
+                            .getAccountHandle())) {
+                return !isCsCall();
+            } else {
+                // return false if Active and Hold Calls from the same account
+                return false;
+            }
         }
 
         return !isCsCall();

@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"Atjungta"</string>
 
     <string name="accept_incoming_and_disconnect_current">Priėmus šį skambutį, bus baigtas dabartinis skambutis.</string>
+
     <string name="add_voicemail_number">Pridėti vm numerį</string>
+    <!-- WFC items -->
+    <string name="close">"Uždaryti"</string>
+    <string name="ok">"Gerai"</string>
+    <string name="no_thanks">"Ne,ačiū"</string>
+    <string name="wifi_wfc_dialog_top_wording">Sveikiname, Jūs pirmą kartą paskambinote, naudodamiesi „Wi-Fi“ skambučių funkcija.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Kai ekrano viršuje matote šį simbolį, galite skambinti ir siųsti žinutes, naudodami „Wi-Fi“. Turint tam tikrus planus, „Wi-Fi“ skambučiams gali būti naudojamos minutės.</string>
+    <string name="wifi_title">„Wi-Fi“ skambučiai ir minutės</string>
+    <string name="offer_dont_display">Daugiau neberodyti</string>
+    <string name="view_networks">Peržiūrėti tinklus</string>
+    <string name="wfc_wifi_call_drop_summary">Oi! Skambučio metu atsidūrėte už savo „Wi-Fi“ tinklo veikimo zonos ribų.\n \nAr norite pabandyti iš naujo prisijungti prie savo „Wi-Fi“ tinklo ir baigti savo skambutį?</string>
+    <string name="call_drop">Jūsų skambutis gali būti nutrauktas</string>
+    <string name="call_drop_message">Jūs esate beveik už „Wi-Fi“ veikimo zonos ribų</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Slėpti savo vaizdą</string>
+    <string name="showVideoPreview">Rodyti mano vaizdą</string>
+    <string name="restartVideoPreview">Vėl rodyti vietos vaizdą</string>
+    <string name="video_call_downgrade_to_voice_call">Įjungtas balso skambutis</string>
+    <string name="video_call_downgrade_request">Įjungiamas balso skambutis</string>
+    <string name="video_call_upgrade_to_video_call">Įjungtas vaizdo skambutis</string>
+    <string name="video_call_upgrade_to_video_call_failed">Nepavyko įjungti vaizdo skambučio</string>
 </resources>

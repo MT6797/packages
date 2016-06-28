@@ -575,6 +575,9 @@ public class Call {
         if (hasChanged) {
             CallList.getInstance().onSessionModificationStateChange(this, state);
         }
+
+        /// add for ALPS02681041, record every time modify call video state.
+        mModifyVideoStateFrom = getVideoState();
     }
 
     private void setModifyToVideoState(int newVideoState) {
@@ -824,7 +827,9 @@ public class Call {
      * @return true if held.
      */
     public boolean isHeld() {
-        return hasProperty(android.telecom.Call.Details.PROPERTY_HELD);
+        //untill now this feature is not ready, so only return false.
+        //return hasProperty(android.telecom.Call.Details.PROPERTY_HELD);
+        return false;
     }
 
 
@@ -841,7 +846,11 @@ public class Call {
     }
     ///@}
 
+    /// M: for ALPS02681041. record every time modify call video state. @{
+    private int mModifyVideoStateFrom = VideoProfile.STATE_AUDIO_ONLY;
 
-
-
+    public int getModifyVideoStateFrom() {
+        return mModifyVideoStateFrom;
+    }
+    /// @}
 }

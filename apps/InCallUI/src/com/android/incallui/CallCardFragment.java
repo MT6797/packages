@@ -72,6 +72,7 @@ import java.util.Locale;
 public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPresenter.CallCardUi>
         implements CallCardPresenter.CallCardUi {
     private static final String TAG = "CallCardFragment";
+    private static final String IMS_MERGED_SUCCESSFULLY = "IMS_MERGED_SUCCESSFULLY";
 
     /**
      * Internal class which represents the call state label which is to be applied.
@@ -174,7 +175,10 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
     private CharSequence mPostResetCallStateLabel;
     private boolean mCallStateLabelResetPending = false;
     private Handler mHandler;
-
+    //M: for bug ALPS02695153, when rotate screen , we should store progress show status.
+    private static final String KEY_PROGRESS_SPINNER_STATUS = "key_progress_spinner_status";
+    private int mProgressSpinnerShownStatus = View.GONE;
+    ///@}
     @Override
     public CallCardPresenter.CallCardUi getUi() {
         return this;
@@ -198,6 +202,13 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
                 R.dimen.end_call_floating_action_button_diameter);
         mFabSmallDiameter = getResources().getDimensionPixelOffset(
                 R.dimen.end_call_floating_action_button_small_diameter);
+        ///M: for bug ALPS02695153, when rotate screen , we should store progress show status.
+        if (savedInstanceState != null) {
+            mProgressSpinnerShownStatus = savedInstanceState.
+                    getInt(KEY_PROGRESS_SPINNER_STATUS);
+        }
+        ///@}
+
     }
 
     @Override
@@ -253,6 +264,15 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
         mCallButtonsContainer = view.findViewById(R.id.callButtonFragment);
         mInCallMessageLabel = (TextView) view.findViewById(R.id.connectionServiceMessage);
         mProgressSpinner = view.findViewById(R.id.progressSpinner);
+
+        ///M: for bug ALPS02695153, when rotate screen , we should store progress show status.
+        if(mProgressSpinner != null && mProgressSpinnerShownStatus != View.GONE) {
+            Log.d(this,"the mProgressSpinnerShownStatus is->"+mProgressSpinnerShownStatus);
+            mProgressSpinner.setVisibility(mProgressSpinnerShownStatus);
+            getPresenter().setSpinnerShowing(mProgressSpinnerShownStatus == View.VISIBLE ? true :
+                    false);
+        }
+        ///@}
 
         mFloatingActionButtonContainer = view.findViewById(
                 R.id.floating_end_call_action_button_container);
@@ -326,7 +346,14 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
     public void setProgressSpinnerVisible(boolean visible) {
         mProgressSpinner.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
-
+    ///M: for bug ALPS02695153, when rotate screen , we should store progress show status.
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_PROGRESS_SPINNER_STATUS, mProgressSpinner != null ?
+                mProgressSpinner.getVisibility(): View.GONE);
+    }
+    ///@}
     /**
      * Sets the visibility of the primary call card.
      * Ensures that when the primary call card is hidden, the video surface slides over to fill the
@@ -454,6 +481,11 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
                 return true;
             }
         });
+        /// M: [ALPS02673351] [Video Call] If in fullscreen mode and the whole view has
+        /// no changes, this onPreDraw() would never be called. Such as held video call. @{
+        Log.v(TAG, "[setCallCardVisible]invalidate to force refresh");
+        getView().invalidate();
+        /// @}
     }
 
     /**
@@ -945,7 +977,10 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
                 break;
             case Call.State.DISCONNECTED:
                 callStateLabel = disconnectCause.getLabel();
-                if (TextUtils.isEmpty(callStateLabel)) {
+                // M:fix CR:ALPS02584915,UI show error when merge conference call.
+                if (TextUtils.isEmpty(callStateLabel) && !IMS_MERGED_SUCCESSFULLY.equals
+                        (disconnectCause.getReason())) {
+                    Log.d(this," disconnect reason is not ims merged successfully");
                     callStateLabel = context.getString(R.string.card_title_call_ended);
                 }
                 break;

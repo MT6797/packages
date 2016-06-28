@@ -457,7 +457,11 @@ public class CallCardPresenter extends Presenter<CallCardPresenter.CallCardUi>
             mSpinnerShowing = show;
         }
     }
-
+    ///M: for bug ALPS02695153, when rotate screen , we should store progress show status.
+    public void setSpinnerShowing(boolean shown){
+        mSpinnerShowing = shown;
+    }
+    ///@}
     /**
      * Determines if the manage conference button should be visible, based on the current primary
      * call.
@@ -1215,7 +1219,7 @@ public class CallCardPresenter extends Presenter<CallCardPresenter.CallCardUi>
          boolean isPaused = VideoProfile.isPaused(videoState);
          boolean isCallActive = callState == Call.State.ACTIVE;
          boolean isHeld = call.isHeld();
-         boolean isShowVideoDisplay = !isPaused && isCallActive && !isHeld;;
+         boolean isShowVideoDisplay = !isPaused && isCallActive && !isHeld;
 
          Log.d(this, "[hidePhotoWithVideoUi] videoState is->" + videoState
                  + " callState is-->" + callState + " held-->" + isHeld

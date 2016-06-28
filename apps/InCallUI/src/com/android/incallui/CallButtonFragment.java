@@ -300,12 +300,8 @@ public class CallButtonFragment
                         mSwitchCameraButton.isSelected() /* useFrontFacingCamera */);
                 break;
             case R.id.pauseVideoButton:
-                /// M: if preview is hide ,can't pause @{
-                if (!mHideOrShowLocalVideoButton.isSelected()) {
                     getPresenter().pauseVideoClicked(
                             !mPauseVideoButton.isSelected() /* pause */);
-                }
-                /// @}
                 break;
             case R.id.overflowButton:
                 if (mOverflowPopup != null) {
@@ -1122,20 +1118,4 @@ public class CallButtonFragment
         mHideOrShowLocalVideoButton.setContentDescription(title);
         updatePopMenuItemTitle(BUTTON_HIDE_LOCAL_VIDEO, title);
     }
-
-    /**
-     * M: updatePauseVideoButtonStatus ,this will used when you pause video,
-     * and peer also did the same thing , that call will downgrade to volte.
-     */
-    @Override
-    public void updatePauseVideoButtonStatus() {
-        if (mPauseVideoButton.isSelected()) {
-            mPauseVideoButton.setSelected(false);
-            String titleName = getResources().getString(R.string.onscreenPauseVideoText);
-            mPauseVideoButton.setContentDescription(titleName);
-            updatePopMenuItemTitle(BUTTON_PAUSE_VIDEO, titleName);
-        }
-    }
-
-
 }

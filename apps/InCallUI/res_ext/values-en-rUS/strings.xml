@@ -38,4 +38,26 @@
     <string name="call_status_dialing">Dialing</string>
     <string name="call_status_disconnecting">Disconnecting</string>
     <string name="call_status_disconnected">Disconnected</string>
+
+    <string name="add_voicemail_number">Add voice mail number.</string>
+    <!-- WFC items -->
+    <string name="close">Close</string>
+    <string name="ok">OK</string>
+    <string name="no_thanks">Nothanks</string>
+    <string name="wifi_wfc_dialog_top_wording">Congratulations, you\'ve complete your first call using Wi-Fi calling.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">When you see this symbol at the top of your screen, you are able to make calls and send messages over Wi-Fi. Wi-Fi calling may use minutes with certain plans.</string>
+    <string name="wifi_title">Wi-Fi Calling and Minutes</string>
+    <string name="offer_dont_display">Please do not show me again</string>
+    <string name="view_networks">View networks</string>
+    <string name="wfc_wifi_call_drop_summary">Oops! You must have move outside of your Wi-Fi network during a call.\n \nWould you like to try and reconnect to your Wi-Fi network to finish your call?</string>
+    <string name="call_drop">Your call may drop</string>
+    <string name="call_drop_message">You are almost outside the range of Wi-Fi coverage</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Hide my video</string>
+    <string name="showVideoPreview">Show my video</string>
+    <string name="restartVideoPreview">Restart local video</string>
+    <string name="video_call_downgrade_to_voice_call">Switched to voice call</string>
+    <string name="video_call_downgrade_request">Switching to voice call</string>
+    <string name="video_call_upgrade_to_video_call">Switched to video call</string>
+    <string name="video_call_upgrade_to_video_call_failed">Failed to switch to video call</string>
 </resources>

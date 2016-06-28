@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Deconectat"</string>
 
     <string name="accept_incoming_and_disconnect_current">Acceptarea acestui apel va încheia apelul curent.</string>
+
     <string name="add_voicemail_number">Adăugare număr vm</string>
+    <!-- WFC items -->
+    <string name="close">"Închideţi"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Nu,mulţumesc"</string>
+    <string name="wifi_wfc_dialog_top_wording">Felicitări, aţi finalizat primul dvs. apel utilizând apelarea prin Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Atunci când vedeţi acest simbol în partea de sus a ecranului, puteţi să efectuaţi apeluri şi să trimiteţi mesaje prin Wi-Fi. Este posibil ca apelarea prin Wi-Fi să utilizeze minute în cazul anumitor planuri tarifare.</string>
+    <string name="wifi_title">Minute şi apelare prin Wi-Fi</string>
+    <string name="offer_dont_display">Nu se mai afişează</string>
+    <string name="view_networks">Vizualizare reţele</string>
+    <string name="wfc_wifi_call_drop_summary">Hopa! Probabil aţi ieşit din zona de acoperire a reţelei Wi-Fi în timpul unui apel.\n \nDoriţi să încercaţi să vă reconectaţi la reţeaua Wi-Fi pentru a termina apelul?</string>
+    <string name="call_drop">Este posibil ca apelul să se întrerupă</string>
+    <string name="call_drop_message">Sunteţi aproape să ieşiţi din zona de acoperire Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Se ascunde apelul meu video</string>
+    <string name="showVideoPreview">Se afişează apelul meu video</string>
+    <string name="restartVideoPreview">Repornire apel video local</string>
+    <string name="video_call_downgrade_to_voice_call">Comutare la apel vocal</string>
+    <string name="video_call_downgrade_request">Se comută la apelul vocal</string>
+    <string name="video_call_upgrade_to_video_call">Comutare la apel video</string>
+    <string name="video_call_upgrade_to_video_call_failed">Comutarea la apelul video nu a reuşit</string>
 </resources>

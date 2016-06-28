@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Odpojené"</string>
 
     <string name="accept_incoming_and_disconnect_current">Prijatím tohto hovoru bude ukončený aktuálny hovor.</string>
+
     <string name="add_voicemail_number">Pridať číslo vm</string>
+    <!-- WFC items -->
+    <string name="close">"Zavrieť"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Nie,ďakujem"</string>
+    <string name="wifi_wfc_dialog_top_wording">Gratulujeme vám k prvému úplnému hovoru volaním cez sieť Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Ak sa vám v hornej časti obrazovky zobrazí tento symbol, cez sieť Wi-Fi môžete vykonávať hovory a posielať správy.  Volanie cez Wi-Fi môže čerpať minúty podľa určitých plánov.</string>
+    <string name="wifi_title">Volanie cez Wi-Fi a minúty</string>
+    <string name="offer_dont_display">Nezobrazovať mi toto hlásenie znova</string>
+    <string name="view_networks">Zobraziť siete</string>
+    <string name="wfc_wifi_call_drop_summary">Ejha! Počas hovoru sa musíte presunúť mimo sieť Wi-Fi.l.\n \nChcete znova skúsiť pripojiť sa k sieti Wi-Fi, aby ste dokončili svoj hovor?</string>
+    <string name="call_drop">Váš hovor môže byť prerušený</string>
+    <string name="call_drop_message">Ste takmer mimo dosahu pokrytia sieťou Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Skryť moje video</string>
+    <string name="showVideoPreview">Ukázať moje video</string>
+    <string name="restartVideoPreview">Reštartovať miestne video</string>
+    <string name="video_call_downgrade_to_voice_call">Prepnuté na hlasový hovor</string>
+    <string name="video_call_downgrade_request">Prepína sa na hlasový hovor</string>
+    <string name="video_call_upgrade_to_video_call">Prepnuté na hlasový hovor</string>
+    <string name="video_call_upgrade_to_video_call_failed">Nepodarilo sa prepnúť na hlasový hovor</string>
 </resources>

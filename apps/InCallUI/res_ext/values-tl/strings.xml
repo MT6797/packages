@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Hindi nakakonekta"</string>
 
     <string name="accept_incoming_and_disconnect_current">Ang pagtanggap ng tawag na ito ay magtatapos sa kasalukuyang tawag.</string>
+
     <string name="add_voicemail_number">Idagdag ang numerong vm</string>
+    <!-- WFC items -->
+    <string name="close">"Isara"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Hindina,salamat"</string>
+    <string name="wifi_wfc_dialog_top_wording">Congratulations, nakumpleto mo ang una mong tawag gamit ang pagtawag sa Wi-Fi.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Kapag nakita mo ang simbolong ito sa tuktok ng screen mo, makakatawag ka at makakapagpadala ng mga mensahe gamit ang Wi-Fi. Maaaring gumamit ng minuto ang pagtawag sa Wi-Fi sa ilang mga plano.</string>
+    <string name="wifi_title">Pagtawag sa Wi-Fi at Mga Minuto</string>
+    <string name="offer_dont_display">Mangyaring huwag ako muling ipakita</string>
+    <string name="view_networks">Tingnan ang mga network</string>
+    <string name="wfc_wifi_call_drop_summary">Ay! Maaaring lumabas ka sa iyong Wi-Fi network habang tumatawag.\n \nGusto mo bang subukan at muling kumonekta sa iyong Wi-Fi network para tapusin ang tawag mo?</string>
+    <string name="call_drop">Maaaring maputol ang tawag mo</string>
+    <string name="call_drop_message">Halos nasa labas ka na ng nasasakop ng iyong Wi-Fi</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Itago ang aking video</string>
+    <string name="showVideoPreview">Ipakita ang aking video</string>
+    <string name="restartVideoPreview">Simulan muli ang lokal na video</string>
+    <string name="video_call_downgrade_to_voice_call">Lumipat sa voice call</string>
+    <string name="video_call_downgrade_request">Lumilipat sa voice call</string>
+    <string name="video_call_upgrade_to_video_call">Lumipat sa video call</string>
+    <string name="video_call_upgrade_to_video_call_failed">Nabigong lumipat sa video call</string>
 </resources>

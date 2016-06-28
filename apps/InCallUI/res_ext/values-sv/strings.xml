@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Frånkopplad"</string>
 
     <string name="accept_incoming_and_disconnect_current">Om detta samtal accepteras så avslutas det nuvarande samtalet.</string>
+
     <string name="add_voicemail_number">Lägg till röstbrevlådenummer</string>
+    <!-- WFC items -->
+    <string name="close">"Stäng"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Nejtack"</string>
+    <string name="wifi_wfc_dialog_top_wording">Gratulerar! Du har slutfört ditt första Wi-Fi-samtal.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">När denna symbol visas uppe på skärmen kan du ringa samtal och skicka meddelanden via Wi-Fi. Det kan ta några minuter att ringa Wi-Fi-samtal med vissa telefonabonnemang.</string>
+    <string name="wifi_title">Wi-Fi-samtal och minuter</string>
+    <string name="offer_dont_display">Visa inte igen</string>
+    <string name="view_networks">Visa nätverk</string>
+    <string name="wfc_wifi_call_drop_summary">Hoppsan! Du måste ha förflyttat dig utanför ditt Wi-Fi-nätverk under ett samtal.\n\nVill du försöka återansluta till ditt Wi-Fi-nätverk för att slutföra samtalet?</string>
+    <string name="call_drop">Ditt samtal kan avbrytas</string>
+    <string name="call_drop_message">Du är nästan utanför ditt Wi-Fi-nätverks räckvidd</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Dölj min video</string>
+    <string name="showVideoPreview">Visa min video</string>
+    <string name="restartVideoPreview">Starta om lokal video</string>
+    <string name="video_call_downgrade_to_voice_call">Växlat till röstsamtal</string>
+    <string name="video_call_downgrade_request">Växlat till röstsamtal</string>
+    <string name="video_call_upgrade_to_video_call">Växlat till videosamtal</string>
+    <string name="video_call_upgrade_to_video_call_failed">Växling till videosamtal misslyckades</string>
 </resources>

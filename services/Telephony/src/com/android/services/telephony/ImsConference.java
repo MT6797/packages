@@ -324,7 +324,13 @@ public class ImsConference extends Conference {
         }
         /// @}
 
-        capabilities = applyVideoCapabilities(capabilities, mConferenceHost.getConnectionCapabilities());
+        /// M: ALPS02690398, take away the capabilities for video conference.
+        /// There is no operator support VT conference currently, but this function will
+        /// apply the host connection capabilities to conference.
+        /// Mark this line to avoid the wrong VT capabilities for conference.
+        /// Once VT conference is supported, this line should be un-mark. @{
+        //capabilities = applyVideoCapabilities(capabilities, mConferenceHost.getConnectionCapabilities());
+        /// @}
         /// M : For WFC, @{
         capabilities = applyWifiCapabiliities(capabilities);
         /// @}

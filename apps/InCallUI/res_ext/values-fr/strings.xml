@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"Déconnecté"</string>
 
     <string name="accept_incoming_and_disconnect_current">"Accepter cet appel mettra fin à l'appel en cours."</string>
+
     <string name="add_voicemail_number">Ajouter numéro mv</string>
+    <!-- WFC items -->
+    <string name="close">"Fermer"</string>
+    <string name="ok">"OK"</string>
+    <string name="no_thanks">"Non,merci"</string>
+    <string name="wifi_wfc_dialog_top_wording">Félicitations, vous avez effectué votre premier appel avec Wi-Fi Calling.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Lorsque vous voyez ce symbole dans la partie supérieure de votre écran, vous pouvez passer des appels et envoyer des messages sur Wi-Fi. Wi-Fi Calling peut utiliser des minutes avec certains forfaits.</string>
+    <string name="wifi_title">Wi-Fi Calling et minutes</string>
+    <string name="offer_dont_display">Ne plus afficher</string>
+    <string name="view_networks">Afficher les réseaux</string>
+    <string name="wfc_wifi_call_drop_summary">"Oups ! Vous vous êtes sûrement déplacé à l'extérieur de votre réseau Wi-Fi pendant un appel.\n \nSouhaitez-vous essayer de vous reconnecter à votre réseau Wi-Fi pour terminer votre appel ?"</string>
+    <string name="call_drop">Votre appel peut être interrompu</string>
+    <string name="call_drop_message">"Vous êtes quasiment à l'extérieur de la portée de couverture du Wi-Fi"</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Masquer ma vidéo</string>
+    <string name="showVideoPreview">Afficher ma vidéo</string>
+    <string name="restartVideoPreview">Redémarrer vidéo locale</string>
+    <string name="video_call_downgrade_to_voice_call">Basculé vers appel vocal</string>
+    <string name="video_call_downgrade_request">Basculement vers appel vocal</string>
+    <string name="video_call_upgrade_to_video_call">Basculé vers appel vidéo</string>
+    <string name="video_call_upgrade_to_video_call_failed">Échec du basculement vers appel vidéo</string>
 </resources>

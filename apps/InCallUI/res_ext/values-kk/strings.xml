@@ -41,4 +41,26 @@
     <string name="call_status_disconnected">"Ажыратылған"</string>
 
     <string name="accept_incoming_and_disconnect_current">Бұл қоңырауды қабылдау ағымдағы қоңырауды аяқтайды.</string>
+
+    <string name="add_voicemail_number">Дауыстық пошта нөмірін қосыңыз.</string>
+    <!-- WFC items -->
+    <string name="close">"Жабу"</string>
+    <string name="ok">"Жарайды"</string>
+    <string name="no_thanks">Жоқ,рахмет</string>
+    <string name="wifi_wfc_dialog_top_wording">Құттықтаймыз, Wi-Fi қоңырауымен алғашқы қоңырауыңыз аяқталды.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Экран үстінде осы таңбаны көрген кезде Wi-Fi арқылы қоңыраулар шалуға және хабарлар жіберуге болады. Wi-Fi қоңырауында белгілі бір жоспарлармен минуттар пайдаланылуы мүмкін.</string>
+    <string name="wifi_title">Wi-Fi қоңырауы және минуттары</string>
+    <string name="offer_dont_display">Маған қайта көрсетпеңіз</string>
+    <string name="view_networks">Желілерді көру</string>
+    <string name="wfc_wifi_call_drop_summary">Қап! Қоңырау барысында Wi-Fi желісінен алыстау қажет.\n \nҚоңырауды аяқтау үшін Wi-Fi желісін пайдалану және қайта қосылу керек пе?</string>
+    <string name="call_drop">Қоңырау үзілуі мүмкін</string>
+    <string name="call_drop_message">Сіз Wi-Fi қамту аймағы сыртындасыз</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Менің бейнемді жасыру</string>
+    <string name="showVideoPreview">Менің бейнемді көрсету</string>
+    <string name="restartVideoPreview">Жергілікті бейнені қайта іске қосу</string>
+    <string name="video_call_downgrade_to_voice_call">Дауыстық қоңырауға ауыстырылды</string>
+    <string name="video_call_downgrade_request">Дауыстық қоңырауға ауыстыру</string>
+    <string name="video_call_upgrade_to_video_call">Бейне қоңырауға ауыстырылды</string>
+    <string name="video_call_upgrade_to_video_call_failed">Бейне қоңырауға ауыстыру сәтсіз болды.</string>
 </resources>

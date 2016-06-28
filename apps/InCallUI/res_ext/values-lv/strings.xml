@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"Atvienots"</string>
 
     <string name="accept_incoming_and_disconnect_current">Apstiprinot šo zvanu, tiks beigts pašreizējais zvans.</string>
+
     <string name="add_voicemail_number">Pievienot vm numuru</string>
+    <!-- WFC items -->
+    <string name="close">"Aizvērt"</string>
+    <string name="ok">"Labi"</string>
+    <string name="no_thanks">"Nē,paldies!"</string>
+    <string name="wifi_wfc_dialog_top_wording">Apsveicam. Veicāt pirmo zvanu, izmantojot Wi-Fi zvanīšanu.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Kad ekrāna augšpusē redzat šo simbolu, iespējams veikt zvanus un sūtīt īsziņas, izmantojot Wi-Fi. Wi-Fi zvanīšana, izmantojot noteikta veida plānu, var aizņemt dažas minūtes.</string>
+    <string name="wifi_title">Wi-Fi zvanīšana un minūtes</string>
+    <string name="offer_dont_display">Vairs nerādīt</string>
+    <string name="view_networks">Skatīt tīklus</string>
+    <string name="wfc_wifi_call_drop_summary">Ai! Zvana laikā jums ir jāpārvietojas ārpus Wi-Fi tīkla.\n \nVai vēlaties mēģināt un atkārtoti izveidot savienojumu ar Wi-Fi tīklu, lai pabeigtu zvanu?</string>
+    <string name="call_drop">Zvans var tikt izbeigts</string>
+    <string name="call_drop_message">Atrodaties gandrīz ārpus Wi-Fi pārklājuma diapazona</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Slēpt manu video</string>
+    <string name="showVideoPreview">Rādīt manu video</string>
+    <string name="restartVideoPreview">Restartēt lokālo video</string>
+    <string name="video_call_downgrade_to_voice_call">Pārslēgts uz balss zvanu</string>
+    <string name="video_call_downgrade_request">Notiek pārslēgšana uz balss zvanu</string>
+    <string name="video_call_upgrade_to_video_call">Pārslēgts uz video zvanu</string>
+    <string name="video_call_upgrade_to_video_call_failed">Neizdevās pārslēgt uz video zvanu</string>
 </resources>

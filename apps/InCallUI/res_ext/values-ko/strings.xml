@@ -41,5 +41,26 @@
     <string name="call_status_disconnected">"연결 끊김"</string>
 
     <string name="accept_incoming_and_disconnect_current">이 통화를 수락하면 현재 통화가 종료됩니다. </string>
+
     <string name="add_voicemail_number">vm 번호 추가</string>
+    <!-- WFC items -->
+    <string name="close">"닫기"</string>
+    <string name="ok">"확인"</string>
+    <string name="no_thanks">"아니요"</string>
+    <string name="wifi_wfc_dialog_top_wording">축하합니다! Wi-Fi 통화를 사용하여 첫 통화를 완료하셨습니다.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">이 기호가 화면 맨 위에 표시되면 Wi-Fi로 전화를 걸고 메시지를 보낼 수 있습니다. 일부 요금제의 경우 Wi-Fi 통화로 통화 시간이 소모됩니다.</string>
+    <string name="wifi_title">Wi-Fi 통화 및 통화 시간</string>
+    <string name="offer_dont_display">다시 보지 않기</string>
+    <string name="view_networks">네트워크 보기</string>
+    <string name="wfc_wifi_call_drop_summary">이런! 통화 중에 Wi-Fi 네트워크 범위 밖으로 이동한 것 같습니다.\n \nWi-Fi 네트워크에 다시 연결을 시도하여 통화를 마치시겠습니까?</string>
+    <string name="call_drop">통화가 끊길 수 있습니다.</string>
+    <string name="call_drop_message">Wi-Fi 수신 범위를 벗어나기 직전입니다.</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">내 비디오 숨기기</string>
+    <string name="showVideoPreview">내 비디오 표시</string>
+    <string name="restartVideoPreview">로컬 비디오 다시 시작</string>
+    <string name="video_call_downgrade_to_voice_call">음성 통화로 전환됨</string>
+    <string name="video_call_downgrade_request">음성 통화로 전환 중</string>
+    <string name="video_call_upgrade_to_video_call">영상 통화로 전환됨</string>
+    <string name="video_call_upgrade_to_video_call_failed">영상 통화로 전환하는 데 실패함</string>
 </resources>

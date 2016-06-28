@@ -40,5 +40,26 @@
     <string name="call_status_disconnected">"Bağlantı kesildi"</string>
 
     <string name="accept_incoming_and_disconnect_current">Bu aramanın kabul edilmesi geçerli aramayı sona erdirecektir.</string>
+
     <string name="add_voicemail_number">Sesli posta numarası ekle</string>
+    <!-- WFC items -->
+    <string name="close">"Kapat"</string>
+    <string name="ok">"Tamam"</string>
+    <string name="no_thanks">"Hayır,teşekkürler"</string>
+    <string name="wifi_wfc_dialog_top_wording">Tebrikler, Wi-Fi arama kullanarak ilk aramanızı tamamladınız.</string>
+    <string name="wifi_wfc_dialog_bottom_wording">Ekranınızın üst kısmında bu sembolü gördüğünüzde Wi-Fi üzerinden arama yapabilir ve mesaj gönderebilirsiniz. Wi-Fi arama bazı tarifelerde dakikaları kullanabilir.</string>
+    <string name="wifi_title">Wi-Fi Arama ve Dakikalar</string>
+    <string name="offer_dont_display">Lütfen tekrar gösterme</string>
+    <string name="view_networks">Ağları görüntüle</string>
+    <string name="wfc_wifi_call_drop_summary">Sorun var! Bir arama sırasında Wi-Fi ağınızın dışına çıkmış olmalısınız.\n \nAramanızı tamamlamak için Wi-Fi ağınıza tekrar bağlanmayı denemek ister misiniz?</string>
+    <string name="call_drop">Aramanız kesilebilir.</string>
+    <string name="call_drop_message">Neredeyse Wi-Fi kapsama alanının dışındasınız.</string>
+    <!-- M: Video Call-->
+    <string name="hideVideoPreview">Görüntümü gizle</string>
+    <string name="showVideoPreview">Görüntümü göster</string>
+    <string name="restartVideoPreview">Yerel görüntüyü yeniden başlat</string>
+    <string name="video_call_downgrade_to_voice_call">Sesli aramaya geçildi</string>
+    <string name="video_call_downgrade_request">Sesli aramaya geçiliyor</string>
+    <string name="video_call_upgrade_to_video_call">Görüntülü aramaya geçildi</string>
+    <string name="video_call_upgrade_to_video_call_failed">Görüntülü aramaya geçilemedi</string>
 </resources>
