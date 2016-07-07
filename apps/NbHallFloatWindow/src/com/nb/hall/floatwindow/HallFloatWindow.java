@@ -39,7 +39,7 @@ public class HallFloatWindow {
 		sWindowManager = (WindowManager) context
 				.getSystemService(Context.WINDOW_SERVICE);
 		mLayoutParams = new WindowManager.LayoutParams();
-		mLayoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY;
+		mLayoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
 		mLayoutParams.gravity = Gravity.CENTER_HORIZONTAL
 				| Gravity.CENTER_VERTICAL;
 
