@@ -256,7 +256,7 @@ public class FmService extends Service implements FmRecorder.OnRecorderStateChan
             Log.d(TAG, "onReceive, action = " + action + " / command = " + command);
 	      if(SOUND_POWER_ON_MSG.equals(action))
 		{
-		   initService(975);
+		   initService(971);
 		   if (!mIsServiceInited) {
                     	Log.d(TAG, "===onReceive, mIsServiceInited is false");
                     	return;
