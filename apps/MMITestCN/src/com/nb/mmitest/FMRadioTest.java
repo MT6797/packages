@@ -127,8 +127,8 @@ class FMRadioTest extends Test {
 
 	private MediaPlayer mMP = null;
 	private AudioManager mAM = null;
-	private int FIXED_STATION_FREQ = 1036; // 1036 * 100k Hz
-	private String FIXED_STATION_FREQ_STR = "103.6";
+	private int FIXED_STATION_FREQ = 971; // 971 * 100k Hz
+	private String FIXED_STATION_FREQ_STR = "97.1";
 
 	// Audio Manager parameters
 	private String AUDIO_PATH_LOUDSPEAKER = "AudioSetForceToSpeaker=1";

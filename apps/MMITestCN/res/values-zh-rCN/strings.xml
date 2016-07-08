@@ -21,7 +21,7 @@
 <string name="headset_detect">耳机检测</string>
 <string name="headset_left_detect">耳机左声道测试</string>
 <string name="headset_right_detect">耳机右声道测试.</string>
-<string name="fm_tip">收音机频率 103.6 MHz</string>
+<string name="fm_tip">收音机频率 97.1 MHz</string>
 <string name="headset_ok">有线耳机及收音机测试通过!\n请拔出耳机.</string>
 <string name="heaset_fail">有线耳机检测失败</string>
 <string name="pls_charger_insert">请插入充电器</string>
