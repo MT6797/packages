@@ -39,7 +39,7 @@ public class HallFloatWindow {
 		sWindowManager = (WindowManager) context
 				.getSystemService(Context.WINDOW_SERVICE);
 		mLayoutParams = new WindowManager.LayoutParams();
-		mLayoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
+		mLayoutParams.type = WindowManager.LayoutParams.TYPE_VOLUME_OVERLAY;
 		mLayoutParams.gravity = Gravity.CENTER_HORIZONTAL
 				| Gravity.CENTER_VERTICAL;
 
@@ -52,7 +52,7 @@ public class HallFloatWindow {
 		mLayoutParams.width = Math.min(point.x, point.y);
 		mLayoutParams.height = Math.max(point.x, point.y);
 		mLayoutParams.flags = WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
-				| WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED;
+				| WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED|WindowManager.LayoutParams.FLAG_FULLSCREEN;
 		KeyguardManager mKeyguardManager = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
 		if( mKeyguardManager.inKeyguardRestrictedInputMode())
 			mLayoutParams.userActivityTimeout = AWAKE_INTERVAL_DEFAULT_MS;

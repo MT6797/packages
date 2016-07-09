@@ -8,14 +8,25 @@ import android.util.Log;
 
 public class util {
 
-    static String readHallState()
+   static String readHallState()
     {	
     	try
     	{
-        BufferedReader reader = new BufferedReader(new FileReader("/sys/class/input/input7/status"), 256);
+    	  int pos =0;
+    	  BufferedReader reader;
+    	 for(int i=0; i < 10; i++)
+    	 {
+    		 reader = new BufferedReader(new FileReader("/sys/class/input/input"+i+"/name"), 256);
+    		 if("cover".equals(reader.readLine()))
+    		 {
+    			 pos = i;
+    			 break;
+    		 }
+    	 }
+        reader = new BufferedReader(new FileReader("/sys/class/input/input"+pos+"/status"), 256);
         try {
         	String state = reader.readLine();
-        		Log.d("lqh", "bll====>hall state: "+state);
+        	Log.d("lqh", "bll====>pos:"+pos+"  hall state: "+state);
             return state;
         } finally {
             reader.close();
