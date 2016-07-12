@@ -283,7 +283,12 @@ public class SimPreferenceDialog extends Activity {
                 holder = (ViewHolder) rowView.getTag();
             }
 
-            holder.label.setText(getItem(position));
+            if(position == 0)
+            	holder.label.setText(getItem(1));
+	     else if(position == 1)
+		 holder.label.setText(getItem(0));
+	     else
+		holder.label.setText(getItem(position));
             holder.swatch.getPaint().setColor(mTintArr[position]);
             holder.swatch.getPaint().setStyle(Paint.Style.FILL_AND_STROKE);
             holder.icon.setVisibility(View.VISIBLE);
