@@ -84,6 +84,8 @@ import com.mediatek.internal.telephony.RadioManager;
 
 import com.mediatek.phone.PhoneInterfaceManagerEx;
 import com.mediatek.settings.TelephonyUtils;
+import com.mediatek.phone.ext.ExtensionManager;
+
 
 import java.util.Set;
 /**
@@ -522,6 +524,10 @@ public class PhoneGlobals extends ContextWrapper {
                     hac == SettingsConstants.HAC_ENABLED
                             ? SettingsConstants.HAC_VAL_ON : SettingsConstants.HAC_VAL_OFF);
         }
+
+       /// add for OP01 plugin roaming auto test @{
+       ExtensionManager.getSsRoamingServiceExt().registerSsRoamingReceiver(this);
+       ///@}
     }
 
     /**

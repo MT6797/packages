@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">Промена тренутно није доступна. Покушајте поново касније.</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g> привремено неће радити, а у случају било ког подразумеваног позива, SMS поруке, података на <xliff:g id="last_default_sim">%s</xliff:g> биће одговарајуће промењени у <xliff:g id="new_default_sim">%s</xliff:g>.</string>
     <string name="default_call_switch_err_msg1">Није могуће променити жељену SIM картицу за позиве</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G (аутоматски)</string>
 </resources>

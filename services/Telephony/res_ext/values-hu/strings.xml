@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">A váltás ideiglenesen nem elérhető. Kérjük, próbálja később.</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g> ideiglenesen nem működik. Minden alapértelmezett hívás, SMS és adatkapcsolat ennek megfelelően innen: <xliff:g id="last_default_sim">%s</xliff:g> a következőre vált: <xliff:g id="new_default_sim">%s</xliff:g>.</string>
     <string name="default_call_switch_err_msg1">Nem lehet a hívásokhoz előnyben részesített SIM-re váltani</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G (automatikus mód)</string>
 </resources>

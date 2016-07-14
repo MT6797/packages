@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">Der Switch steht vorübergehend nicht zur Verfügung. Bitte versuchen Sie es später noch einmal.</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g> funktioniert vorübergehend nicht. Sprachanrufe, SMS, Daten werden entsprechend von <xliff:g id="last_default_sim">%s</xliff:g> auf <xliff:g id="new_default_sim">%s</xliff:g> umgeschaltet.</string>
     <string name="default_call_switch_err_msg1">Bevorzugte SIM kann nicht für Anrufe umgeschaltet werden.</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G(Auto)</string>
 </resources>

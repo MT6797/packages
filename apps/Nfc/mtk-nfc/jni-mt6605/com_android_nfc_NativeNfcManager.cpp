@@ -39,6 +39,14 @@
 
 #include "com_android_nfc.h"
 
+//---------------------------
+// Android sys trace
+//---------------------------
+#ifdef NFC_JNI_ATRACE
+#define ATRACE_TAG ATRACE_TAG_INPUT
+#include <cutils/trace.h>
+#endif
+
 /****************************************************************************
  * Define
  ****************************************************************************/
@@ -147,12 +155,13 @@ extern          int     gDefaultRoute; //L migration
 #define QUICK_ENABLE_CFG "/system/etc/nfc.cfg"
 #define QUICK_ENABLE_APP_SYNC   "/sdcard/mtknfcSyncQuickMode"
 #define QUICK_ENABLE_CFG_NAME "QUICK_ENABLE"
-#define ACFD_CFG_NAME "E2_BIN"
-static bool quick_enable_mode = FALSE;  // for Quick Enable MODE
-static bool dta_quick_mode = FALSE;  // for  check dat flow
-
-
-
+#define E2_ACFD_CFG_NAME "E2_BIN"
+#define E3_ACFD_CFG_NAME "E3_BIN"
+#define NFC_BOOTUP_RTY 3
+static bool quick_enable_mode = FALSE;  /* for Quick Enable MODE */
+static bool dta_quick_mode = FALSE;  /* for  check dat flow */
+static bool gNfcSlept = FALSE; /* for NFC enter sleep mode */
+static bool gNfc_ACFD_mode = FALSE;  /* for NFC enter ACFD polling */
 #endif
 
 //DTA2
@@ -823,16 +832,12 @@ void android_nfc_print_debuglog_array(UINT8* data, UINT32 length)
 //----------------------------------------------------
 static void *nfc_jni_mtk_client_thread(void *arg)
 {
-#define MAX_SOCKET_FAIL_RETRY_CNT 10
     struct nfc_jni_native_data *nat;
     JNIEnv *e;
     JavaVMAttachArgs thread_args;
     MTK_NFC_MSG_T *prmsg = NULL;
     int i4ReadLen = 0;
     int result = FALSE;
-    int ClientFirstStart = 1;
-    int socketRetryCount = 0;
-    int ret;
 
     nat = (struct nfc_jni_native_data *)arg;
 
@@ -858,32 +863,11 @@ static void *nfc_jni_mtk_client_thread(void *arg)
         result = android_nfc_jni_recv_msg(&prmsg);
         if (result != TRUE) // error case
         {
-            if(ClientFirstStart & (socketRetryCount++ < MAX_SOCKET_FAIL_RETRY_CNT))
-            {
-                //ALPS02608301 , for the issue socket server accept fail , but socket client can't aware it
-                ALOGD("socket client receive fail , do socket reconnect,socketRetryCount %d\n",socketRetryCount);
-                android_nfc_socket_deinit();
-
-                if((android_nfc_socket_init()) == TRUE)
-                {
-                    ALOGE("reconnect success,resend MTK_NFC_INIT_REQ");
-                    if ((android_nfc_jni_send_msg(MTK_NFC_INIT_REQ, 0, NULL)) == FALSE)
-                    {
-                        ALOGE("send MTK_NFC_INIT_REQ fail");
-                    }
-                }
-                continue;
-            }
-            else
-            {
-                nat->running = FALSE;
-                break; // exit loop
-            }
-
+            nat->running = FALSE;
+            break; // exit loop
         }
         switch(prmsg->type)
         {
-            ClientFirstStart = 0;
             case MTK_NFC_INIT_RSP:
             {
                 s_mtk_nfc_init_rsp *prInitRsp = NULL;
@@ -1138,6 +1122,9 @@ static void *nfc_jni_mtk_client_thread(void *arg)
             }
             case MTK_NFC_DEV_ACTIVATE_NTF:
             {
+                #ifdef NFC_JNI_ATRACE
+                ATRACE_BEGIN("MTK_NFC_JNI_DEV_ACTIVATE_NTF");
+                #endif
                 s_mtk_nfc_service_dev_activate_ntf_t *prDevActivateNtf = NULL;
 
                 ALOGD("JNI-CLIENT: MTK_NFC_DEV_ACTIVATE_NTF");
@@ -1573,6 +1560,10 @@ static void *nfc_jni_mtk_client_thread(void *arg)
 
             case MTK_NFC_JNI_NOTIFY_HCE_DATA_RSP:
             {
+#ifdef NFC_JNI_ATRACE
+                ATRACE_BEGIN("MTK_NFC_JNI_NOTIFY_HCE_DATA_RSP");
+#endif
+
                 mtk_nfc_ee_notify_host_emu_data_t * prRsp = NULL;
                 ALOGD("JNI-CLIENT: MTK_NFC_JNI_NOTIFY_HCE_DATA_RSP");
                 prRsp = (mtk_nfc_ee_notify_host_emu_data_t *)((UINT8*)prmsg + sizeof(MTK_NFC_MSG_T));
@@ -1585,6 +1576,10 @@ static void *nfc_jni_mtk_client_thread(void *arg)
                     memcpy(&(hceNative.notify_hce_data), prRsp, sizeof(mtk_nfc_ee_notify_host_emu_data_t));
                     pthread_create( &th, NULL, nfc_jni_notify_host_emu_data, (void *) &hceNative );
                 }
+#ifdef NFC_JNI_ATRACE
+                ATRACE_END();
+#endif
+
                 break;
             }
             /// -- HCE [END]
@@ -1759,21 +1754,11 @@ void nfc_jni_doDepExchange_callback(void *pContext, NFCSTATUS status)
     ALOGD("%s: sem_post_count =  %d", __FUNCTION__, sem_post_count);
 }
 #endif
-
-static void force_clear_all_resource(nfc_jni_native_data *nat)
+void kill_mtk_thread(nfc_jni_native_data *nat)
 {
     int ret;
     void *status;
 
-    ALOGD("force_clear_all_resource...\n");
-
-    // - clear socket interface
-    android_nfc_socket_deinit();
-
-    // - force killing nfcmw process
-    android_nfc_daemon_deinit();
-
-    // - force killing mtk client thread
     if ((nat != NULL) && (nat->thread != -1))
     {
         /* Wake up the read thread so it can exit */
@@ -1791,6 +1776,23 @@ static void force_clear_all_resource(nfc_jni_native_data *nat)
         }
         nat->thread = -1;
     }
+
+}
+
+static void force_clear_all_resource(nfc_jni_native_data *nat)
+{
+
+    ALOGD("force_clear_all_resource...\n");
+
+    // - clear socket interface
+    android_nfc_socket_deinit();
+
+    // - force killing nfcmw process
+    android_nfc_daemon_deinit();
+
+    // - force killing mtk client thread
+    kill_mtk_thread(nat);
+
 
     // release Tag resource
     if(nfc_jni_ndef_buf != NULL)
@@ -1873,6 +1875,11 @@ void kill_mtk_client(nfc_jni_native_data *nat)
     {
         // force clear all resource
         force_clear_all_resource(nat);
+    }
+    else
+    {
+        // - force killing mtk client thread
+        kill_mtk_thread(nat);
     }
 
     #ifdef KILL_ZOMBIE_PROCESS
@@ -1962,10 +1969,6 @@ static int nfc_jni_initialize(struct nfc_jni_native_data *nat)
         }
 
         driverConfigured = TRUE;
-    }
-    else
-    {
-        ALOGE("driverConfigured\n");
     }
 
     /* ***************************************** */
@@ -2073,15 +2076,25 @@ static int nfc_jni_initialize(struct nfc_jni_native_data *nat)
 
     ALOGI("NFC Initialized");
 #ifdef MTK_NFC_QUICK_SUPPORT
-    if(dta_mode == FALSE){
-        if (quick_enable_mode == FALSE) {
-            ALOGD("[QE] load config file\n");
-            quick_enable_mode = quickEnable_cfg_check();
-            ALOGD("[QE] %s: quick_enable_mode =%d",__FUNCTION__,quick_enable_mode);
-        }else{
+    if(dta_mode == FALSE)
+    {
+        if (gNfcSlept == TRUE || gNfc_ACFD_mode == TRUE)
+        {
             // init Quick Enable flow , when NFC setting off --> NFC Enter idle status
             nfc_jni_mtc_mos_mode(FALSE);
-            nfc_jni_deactivate(nat, 0); // 0: idle, 1/2: sleep, 3:discovery
+            ret = nfc_jni_deactivate(nat, 0); // 0: idle, 1/2: sleep, 3:discovery
+            // nfc_jni_deactivate Status (0: success, 1: fail)
+            if (ret != 0)
+            {
+                ALOGE("send MTK_NFC_Deactivate_REQ fail\n");
+                result = FALSE;
+                goto clean_and_return;
+            }
+            else
+            {
+                gNfcSlept = FALSE;
+                gNfc_ACFD_mode = FALSE;
+            }
         }
     }
 #endif
@@ -2099,6 +2112,11 @@ static int nfc_jni_initialize(struct nfc_jni_native_data *nat)
         if(nat)
         {
             kill_mtk_client(nat); // notice: need to clear working callback data first
+            // clear control flag
+            driverConfigured = FALSE;
+            quick_enable_mode = FALSE;
+            gNfcSlept = FALSE;
+            gNfc_ACFD_mode = FALSE;
         }
     }
 
@@ -2128,7 +2146,8 @@ static bool check_dta_quick_mode()
     {
         ALOGE("%s: can not open dta file", __FUNCTION__);
         return FALSE;// FALSE;
-    }else
+    }
+    else
     {
         fclose(fp);
         return TRUE;
@@ -2196,64 +2215,71 @@ static int nfc_jni_deinitialize(struct nfc_jni_native_data *nat)
     struct timespec ts;
     struct nfc_jni_callback_data cb_data;
     bool NFC_FULL_POWER_CARD_MODE = false;
-    bool nfc_goto_sleep = false;
-    ALOGD("%s,opMode:%d ,dta_mode :%d ,quick_mode :%d",__FUNCTION__,nat->rDiscoverConfig.u1OpMode,dta_mode,quick_enable_mode);
+
+ALOGD("%s,opMode:%d ,dta_mode :%d ,quick_mode :%d",__FUNCTION__,nat->rDiscoverConfig.u1OpMode,dta_mode,quick_enable_mode);
     if (dta_mode == FALSE) {
         ALOGD("%s,Normal flow !",__FUNCTION__);
-        if (MODE_CARD == nat->rDiscoverConfig.u1OpMode) {
-            ALOGD("%s,Enter only card mode and  do phone shutdown special flow !",__FUNCTION__);
-            /*Enter only card mode and  do phone shutdown special flow*/
-            // 1.Support NFC_FULL_POWER_CARD_MODE for PICC flow
-            NFC_FULL_POWER_CARD_MODE = ACFD_cfg_check();
-            if (TRUE == NFC_FULL_POWER_CARD_MODE) {
+    if (MODE_CARD == nat->rDiscoverConfig.u1OpMode) {
+        ALOGD("%s,Enter only card mode and  do phone shutdown special flow !",__FUNCTION__);
+        /*Enter only card mode and  do phone shutdown special flow*/
+        // 1.Support NFC_FULL_POWER_CARD_MODE for PICC flow
+        NFC_FULL_POWER_CARD_MODE = ACFD_cfg_check();
+        if (TRUE == NFC_FULL_POWER_CARD_MODE) {
+            gNfc_ACFD_mode = TRUE;
+            ALOGD("[K5]Start NFC_FULL_POWER_CARD_MODE && De-Initialization\n");
+            //get NFC mode
+            ALOGD("[K5]De-Initialization OpMode =%d", nat->rDiscoverConfig.u1OpMode);
+            //u10pMode ==2 , Enter only card mode
 
-                ALOGD("[K5]Start NFC_FULL_POWER_CARD_MODE && De-Initialization\n");
-                //get NFC mode
-                ALOGD("[K5]De-Initialization OpMode =%d", nat->rDiscoverConfig.u1OpMode);
-                //u10pMode ==2 , Enter only card mode
+            ALOGD("[K5] Enter host off only Card mode ");
+            //1.set card mode polling
+            //2.send PNFC 407,1 Enter PICC Flow
+            //3.don't kill nfcstackp
+            // card mode
+            nfc_jni_enable_discovery_with_info(nat, gDiscoveryInfo);
 
-                ALOGD("[K5] Enter host off only Card mode ");
-                //1.set card mode polling
-                //2.send PNFC 407,1 Enter PICC Flow
-                //3.don't kill nfcstackp
-                // card mode
-                nfc_jni_enable_discovery_with_info(nat, gDiscoveryInfo);
+            // send PNFC 407,1
+            result = nfc_jni_picc_mode();
+            ALOGD("[K5] nfc_jni_picc_mode() result:%d ", result);
+            //direct return , do nothig....
+            ALOGD("[K5] Don't kill nfcstackp !");
+            return TRUE;
+        }
 
-                // send PNFC 407,1
-                result = nfc_jni_picc_mode();
-                ALOGD("[K5] nfc_jni_picc_mode() result:%d ", result);
-                //direct return , do nothig....
-                ALOGD("[K5] Don't kill nfcstackp !");
-                return TRUE;
-            }
-
-            }else if(MODE_IDLE == nat->rDiscoverConfig.u1OpMode){
-                ALOGD("%s,Enter NFC Setting off flow !",__FUNCTION__);
-                /*Enter NFC Setting off flow*/
+    }else if(MODE_IDLE == nat->rDiscoverConfig.u1OpMode){
+        ALOGD("%s,Enter NFC Setting off flow !",__FUNCTION__);
+        /*Enter NFC Setting off flow*/
+        // 1. read nfc.cfg for quick enable mode ON/OFF
+        // 2. enter mtc mos mode
 #ifdef MTK_NFC_QUICK_SUPPORT
+        if(FALSE == quick_enable_mode)
+        {
+            quick_enable_mode = quickEnable_cfg_check();
+        }
 
             if (TRUE == quick_enable_mode)
             {
-                ALOGD("[QE] %s quick_enable = %d",__FUNCTION__,quick_enable_mode);
-                ALOGD("[QE]NFC Deinitialized");
-                ALOGD("[QE]Check EM/DTA sync flow ");
+            ALOGD("[QE] %s quick_enable = %d",__FUNCTION__,quick_enable_mode);
+            ALOGD("[QE]NFC Deinitialized");
+            ALOGD("[QE]Check EM/DTA sync flow ");
 
-                if (FALSE == dta_quick_mode){
-                    dta_quick_mode =check_dta_quick_mode();
-                }
+            if (FALSE == dta_quick_mode){
+                dta_quick_mode =check_dta_quick_mode();
+            }
 
-                if(TRUE == dta_quick_mode){
-                    ALOGD("[QE]Enter EM/DTA/Normal deinit flow ");
-                    dta_nfc_jni_set_dta_quick_mode(FALSE);
-                    dta_quick_mode=FALSE;
-                    quick_enable_mode=FALSE;
+            if(TRUE == dta_quick_mode){
+                ALOGD("[QE]Enter EM/DTA/Normal deinit flow ");
+                dta_nfc_jni_set_dta_quick_mode(FALSE);
+                dta_quick_mode=FALSE;
+                quick_enable_mode=FALSE;
             }else{
+
                 ALOGD("[QE] NFC De-Initialization nothing ...NFC Enter MTC Mos Mode Start.");
                 nfc_jni_mtc_mos_mode(TRUE);
                 result = nfc_jni_enable_discovery_with_info(nat,gDiscoveryInfo);
                 ALOGD("[QE]%s: Enter NFC sleep Mode: result %d",__FUNCTION__,result);
-                nfc_goto_sleep = TRUE;
-//              return TRUE;
+                gNfcSlept = TRUE;
+                //return TRUE;
             }
 
         }
@@ -2320,7 +2346,7 @@ static int nfc_jni_deinitialize(struct nfc_jni_native_data *nat)
     {
         ALOGE("Failed to create semaphore (errno=0x%08x)\n", errno);
     }
-    if(FALSE == nfc_goto_sleep) {
+    if(FALSE == gNfcSlept) {
         // kill mtk client thread & nfcstackp child process
         kill_mtk_client(nat);
 
@@ -2489,7 +2515,9 @@ bool nfc_jni_enable_discovery_with_info(struct nfc_jni_native_data * nat,
         //reader mode only
         if (info.reader_mode)
         {
-            nat->rDiscoverConfig.u1OpMode = MODE_READER;
+            //ALPS02515660, info.reader_mode is Google native support for reader, u1OpMode is mtk trunkey solution, the both should function match
+            //modified from "u1OpMode = MODE_READER" to "u1OpMode &= MODE_READER"
+            nat->rDiscoverConfig.u1OpMode &= MODE_READER;
             ALOGD("%s u1OpMode, %d (reader mode only)", __FUNCTION__,nat->rDiscoverConfig.u1OpMode);
         }
         else
@@ -2671,7 +2699,7 @@ int nfc_jni_deactivate(struct nfc_jni_native_data *nat, int type){
     if(cb_data.status != 0)
     {
         ALOGE("nfc_jni_deactivate fail, stauts: %d\n", cb_data.status);
-        goto clean_and_return;
+        //goto clean_and_return;
     }
 
     result = cb_data.status;
@@ -4339,6 +4367,10 @@ clean_and_return:
 
 static void * nfc_jni_notify_host_emu_data (void * arg)
 {
+#ifdef NFC_JNI_ATRACE
+    ATRACE_BEGIN("MTK_NFC_JNI_HOST_EMU_DATA");
+#endif
+
     jobject j_data = NULL;
     JNIEnv* e = NULL;
     INT32 length;
@@ -4410,12 +4442,19 @@ clean_and_return:
     native_data->vm->DetachCurrentThread ();
 
     ALOGD ("[HCE] %s: exit", __FUNCTION__);
+#ifdef NFC_JNI_ATRACE
+        ATRACE_END();
+#endif
 
     return NULL;
 }
 
 static bool nfc_jni_send_raw_frame( UINT8 *data, UINT32 length)
 {
+#ifdef NFC_JNI_ATRACE
+    ATRACE_BEGIN("MTK_NFC_JNI_SEND_RAW_FRAME");
+#endif
+
     bool response = false;
     int  result   = FALSE;
     struct nfc_jni_callback_data cb_data;
@@ -4510,6 +4549,9 @@ clean_and_return:
     nfc_cb_data_deinit(&cb_data);
 
     ALOGD ("[HCE] %s: exit", __FUNCTION__);
+#ifdef NFC_JNI_ATRACE
+        ATRACE_END();
+#endif
 
     return response;
 
@@ -5029,6 +5071,9 @@ static void nfc_jni_dev_activate_ntf_callback(void *pContext,
             ALOGD("nat is NULL");
         }
         /// -- HCE [END]
+        #endif
+        #ifdef NFC_JNI_ATRACE
+        ATRACE_END();
         #endif
     }
     else
@@ -6164,6 +6209,7 @@ static jboolean com_android_nfc_NfcManager_initialize(JNIEnv *e, jobject o)
 {
     struct nfc_jni_native_data *nat = NULL;
     int init_result = JNI_FALSE;
+    int i=0;
     jboolean result;
 
     memset(g_llcp_cb_data, 0x00, (sizeof(struct nfc_jni_callback_data*)*NFC_LLCP_SERVICE_NUM*NFC_LLCP_ACT_END));
@@ -6274,8 +6320,14 @@ static jboolean com_android_nfc_NfcManager_initialize(JNIEnv *e, jobject o)
     exported_nat = nat;
 
     /* Perform the initialization */
+    for (i=0 ;i<NFC_BOOTUP_RTY ;i++) {
     init_result = nfc_jni_initialize(nat);
-
+        ALOGD("%s: retry_cnt:%d init_result :%d",__FUNCTION__,i,init_result);
+        if(init_result == TRUE)
+        {
+            break;
+        }
+    }
     CONCURRENCY_UNLOCK();
 
     ALOGD("com_android_nfc_NfcManager_initialize result is %d", init_result);
@@ -6324,11 +6376,11 @@ static jintArray com_android_nfc_NfcManager_doGetSecureElementList(JNIEnv *e, jo
     uint8_t i;
     bool fgPollingWasEnabled = false;
     int  result = -1;
+    int swp_number = 1;
+
+    CONCURRENCY_LOCK();
 
     TRACE("******  Get Secure Element List ******");
-    
-    CONCURRENCY_LOCK();
-    
     TRACE("com_android_nfc_NfcManager_doGetSecureElementList()");
 
     /* Retrieve native structure address */
@@ -6385,8 +6437,10 @@ static jintArray com_android_nfc_NfcManager_doGetSecureElementList(JNIEnv *e, jo
             {
                 ALOGE("%s: data: %d", __FUNCTION__, data);
             }
-            if (1 == data)
+            if (1 == data || 2 == data)
             {
+                /*  data 1 is SWP1, data 2 is SWP2 by Thomas-CH  */
+                swp_number = data;
                 gSwpTestInNormalMode = TRUE;
                 fscanf(fp, ",%d",&patternNum);
                 ALOGE("%s: patternNum: %d", __FUNCTION__, patternNum);
@@ -6409,8 +6463,21 @@ static jintArray com_android_nfc_NfcManager_doGetSecureElementList(JNIEnv *e, jo
         //return JNI
         g_SeCount = 1;
         list = e->NewIntArray(g_SeCount * 2);
-        SEInfor[0] = 1;
-        SEInfor[1] = 1;
+
+        TRACE("SWP Test use channel %d", swp_number);
+        if(swp_number == 1)
+        {
+            /*  Return SWP1 by Thomas-CH  */
+            SEInfor[0] = 1;
+            SEInfor[1] = 1;
+        }
+        else
+        {
+            /*  Return SWP2 by Thomas-CH  */
+            SEInfor[0] = 2;
+            SEInfor[1] = 2;
+        }
+
         e->SetIntArrayRegion(list, 0, g_SeCount * 2, (jint*)SEInfor);
     }
     else
@@ -7627,7 +7694,6 @@ static jboolean com_android_nfc_NfcManager_doDownload(JNIEnv *e, jobject o)
         nat->fgPollingEnabled = FALSE;
 
         com_android_nfc_NfcManager_deinitialize(e,o);
-
         return response;
     }
 #endif
@@ -9076,8 +9142,8 @@ static bool ACFD_cfg_check()
                 continue;
             }
             strncpy(value, ptr, buffersize);
-            //ALOGE("%s = %s", name,value);
-            if(strncmp(name, ACFD_CFG_NAME, buffersize) == 0)
+            ALOGE("%s = %s", name,value);
+            if((strncmp(name, E2_ACFD_CFG_NAME, buffersize) == 0) || (strncmp(name, E3_ACFD_CFG_NAME, buffersize) == 0))
             {
                 if (strcmp(value,"ACFD_POLLING") == 0){
                     cfg=TRUE;

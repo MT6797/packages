@@ -994,7 +994,10 @@ public class NfcService implements DeviceHostListener {
         public void setForegroundDispatch(PendingIntent intent,
                 IntentFilter[] filters, TechListParcel techListsParcel) {
             NfcPermissions.enforceUserPermissions(mContext);
-
+            if (!mForegroundUtils.isInForeground(Binder.getCallingUid())) {
+                Log.e(TAG, "setForegroundDispatch: Caller not in foreground.");
+                return;
+            }
             // Short-cut the disable path
             if (intent == null && filters == null && techListsParcel == null) {
                 mNfcDispatcher.setForegroundDispatch(null, null, null);
@@ -1127,6 +1130,10 @@ public class NfcService implements DeviceHostListener {
             Log.e(TAG, "================================");
             Log.e(TAG, "====  setReaderMode  flags:" + flags);
 
+            if (!mForegroundUtils.isInForeground(Binder.getCallingUid())) {
+                Log.e(TAG, "setReaderMode: Caller not in foreground.");
+                return;
+            }
             synchronized (NfcService.this) {
                 if (flags != 0) {
                     try {

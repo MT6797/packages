@@ -269,7 +269,10 @@ class HeadsetPhoneState {
                     mSignal = 0;
                 } else if (signalStrength.isGsm()) {
                     mSignal = signalStrength.getLteLevel();
-                    if (mSignal == SignalStrength.SIGNAL_STRENGTH_NONE_OR_UNKNOWN) {
+                    ///M: Check if the phone camps on GSM or LTE.
+                    ///   "EvdoDbm == -7" is LTE signal; otherwise, it is GSM.
+                    //if (mSignal == SignalStrength.SIGNAL_STRENGTH_NONE_OR_UNKNOWN) {
+                    if(signalStrength.getEvdoDbm() != -7) {
                         mSignal = gsmAsuToSignal(signalStrength);
                     } else {
                         // SignalStrength#getLteLevel returns the scale from 0-4

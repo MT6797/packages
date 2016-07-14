@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">Ang switch ay pansamantalang hindi available. Mangyaring subukan muli maya-maya.</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g> ay pansamantalang hindi gagana, at anumang default na Tawag, SMS, Data sa <xliff:g id="last_default_sim">%s</xliff:g> ay mababago tungo sa <xliff:g id="new_default_sim">%s</xliff:g> ayon sa pagkakasunod-sunod.</string>
     <string name="default_call_switch_err_msg1">Hindi mai-switch ang piniling SIM para sa tawag</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G (auto mode)</string>
 </resources>

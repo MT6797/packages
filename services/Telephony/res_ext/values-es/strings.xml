@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">El conmutador no está disponible temporalmente. Inténtelo de nuevo en otro momento.</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g> no funcionará temporalmente y cualquier llamada, SMS y datos predeterminados en <xliff:g id="last_default_sim">%s</xliff:g>se cambiarán a <xliff:g id="new_default_sim">%s</xliff:g> en consecuencia.</string>
     <string name="default_call_switch_err_msg1">No se puede cambiar la tarjeta SIM preferida para llamadas</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G (automático)</string>
 </resources>

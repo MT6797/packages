@@ -148,4 +148,8 @@
 
     <!-- Add for VILTE -->
     <string name="vilte_srvcc_tip">网络原因，切换至语音通话。</string>
+
+    <!--add cmcc om network mode Start-->
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G(自动)</string>
+    <!--add cmcc om network mode End-->
 </resources>

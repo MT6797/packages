@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">The switch is temporarily unavailable. Please try again later.</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g> will not work for the moment, in case of a fault Call, SMS, Data on <xliff:g id="last_default_sim">%s</xliff:g> will be changed to <xliff:g id="new_default_sim">%s</xliff:g> accordingly.</string>
     <string name="default_call_switch_err_msg1">Cannot switch preferred SIM for calls during the call.</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G(Auto)</string>
 </resources>
