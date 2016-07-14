@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">A chave está temporariamente indisponível. Tente novamente mais tarde.</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="”last_default_sim”">%s</xliff:g>  não irá funcionar temporariamente, e se houver qualquer chamada padrão , SMS, Dados no <xliff:g id="last_default_sim">%s</xliff:g> serão alterados em  <xliff:g id="new_default_sim">%s</xliff:g> em conformidade.</string>
     <string name="default_call_switch_err_msg1">Não é possível mudar SIM preferido para chamadas.</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G (modo automático)</string>
 </resources>

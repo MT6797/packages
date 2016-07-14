@@ -34,6 +34,7 @@ import com.mediatek.phone.PhoneFeatureConstants.FeatureOption;
 import com.mediatek.phone.ext.ExtensionManager;
 import com.mediatek.phone.ext.IMobileNetworkSettingsExt;
 import com.mediatek.settings.Enhanced4GLteSwitchPreference;
+import com.mediatek.settings.MobileNetworkSettingsOmEx;
 import com.mediatek.settings.TelephonyUtils;
 import com.mediatek.settings.cdma.CdmaNetworkSettings;
 import com.mediatek.settings.cdma.TelephonyUtilsEx;
@@ -464,6 +465,9 @@ public class MobileNetworkSettings extends PreferenceActivity implements
         if (DBG) log("onCreate:+");
         setTheme(R.style.Theme_Material_Settings);
         super.onCreate(icicle);
+        /// Add for cmcc open market @{
+        mOmEx = new MobileNetworkSettingsOmEx(this);
+        /// @}
 
         mHandler = new MyHandler();
         mUm = (UserManager) getSystemService(Context.USER_SERVICE);
@@ -539,6 +543,9 @@ public class MobileNetworkSettings extends PreferenceActivity implements
                 mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
         /// M: For plugin to unregister listener
         mExt.unRegister();
+        /// Add for cmcc open market @{
+        mOmEx.unRegister();
+        /// @}
     }
 
     @Override
@@ -870,6 +877,9 @@ public class MobileNetworkSettings extends PreferenceActivity implements
         if (mButtonEnabledNetworks != null) {
             log("Enter plug-in update updateNetworkTypeSummary - Enabled again!");
             mExt.updateNetworkTypeSummary(mButtonEnabledNetworks);
+            /// Add for cmcc open market @{
+            mOmEx.updateNetworkTypeSummary(mButtonEnabledNetworks);
+            /// @}
         }
         /// @}
     }
@@ -1197,6 +1207,9 @@ public class MobileNetworkSettings extends PreferenceActivity implements
         mExt.updateNetworkTypeSummary(mButtonPreferredNetworkMode);
         mExt.customizePreferredNetworkMode(mButtonPreferredNetworkMode, mPhone.getSubId());
         /// @}
+        /// Add for cmcc open market @{
+        mOmEx.updateNetworkTypeSummary(mButtonPreferredNetworkMode);
+        /// @}
     }
 
     private void UpdateEnabledNetworksValueAndSummary(int NetworkMode) {
@@ -1323,6 +1336,9 @@ public class MobileNetworkSettings extends PreferenceActivity implements
             mExt.updateNetworkTypeSummary(mButtonEnabledNetworks);
             log("customizePreferredNetworkMode mButtonEnabledNetworks.");
             mExt.customizePreferredNetworkMode(mButtonEnabledNetworks, mPhone.getSubId());
+            /// Add for cmcc open market @{
+            mOmEx.updateNetworkTypeSummary(mButtonEnabledNetworks);
+            /// @}
         }
         /// @}
     }
@@ -1454,6 +1470,8 @@ public class MobileNetworkSettings extends PreferenceActivity implements
     // -------------------- Mediatek ---------------------
     // M: Add for plug-in
     private IMobileNetworkSettingsExt mExt;
+    // M: Add for cmcc open market
+    private MobileNetworkSettingsOmEx mOmEx;
     /// M: add for plmn list
     public static final String BUTTON_PLMN_LIST = "button_plmn_key";
     private static final String BUTTON_CDMA_ACTIVATE_DEVICE_KEY = "cdma_activate_device_key";
@@ -1565,6 +1583,9 @@ public class MobileNetworkSettings extends PreferenceActivity implements
             mExt.initOtherMobileNetworkSettings(this, mPhone.getSubId());
         }
         mExt.initMobileNetworkSettings(this, convertTabToSlot(mCurrentTab));
+        /// @}
+        /// Add for cmcc open market @{
+        mOmEx.initMobileNetworkSettings(this, convertTabToSlot(mCurrentTab));
         /// @}
 
         updateScreenStatus();
@@ -1730,6 +1751,10 @@ public class MobileNetworkSettings extends PreferenceActivity implements
             mExt.customizePreferredNetworkMode(preference, mPhone.getSubId());
             log("Enter plug-in update updateLTEModeStatus.");
             mExt.updateLTEModeStatus(preference);
+            /// @}
+            /// Add for cmcc open market @{
+            mOmEx.updateLTEModeStatus(preference);
+            /// @}
         }
     }
 

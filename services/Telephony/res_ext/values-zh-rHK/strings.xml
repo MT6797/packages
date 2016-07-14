@@ -146,4 +146,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">暫時不能切換。請稍後再試。</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g>將暫時不能使用，而如有任何默認通話，短訊，數據於<xliff:g id="last_default_sim">%s</xliff:g>上將從而切換到<xliff:g id="new_default_sim">%s</xliff:g>上。</string>
     <string name="default_call_switch_err_msg1">不能切換通話建議SIM卡</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G（自動）</string>
 </resources>

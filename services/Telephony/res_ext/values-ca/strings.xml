@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">"L'interruptor no està disponible temporalment. Torneu-ho a provar més tard."</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g> no funcionarà temporalment i, en conseqüència, per defecte qualsevol SMS, trucada, dades en el <xliff:g id="last_default_sim">%s</xliff:g> es passaran al <xliff:g id="new_default_sim">%s</xliff:g>.</string>
     <string name="default_call_switch_err_msg1">No es pot canviar de SIM preferit per a les trucades.</string>
+    <string name="preferred_network_mode_cmcc_om">2G/3G/4G (automàtic)</string>
 </resources>

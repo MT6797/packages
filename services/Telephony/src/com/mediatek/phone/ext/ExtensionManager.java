@@ -55,6 +55,7 @@ public final class ExtensionManager {
     private static ITelephonyConnectionServiceExt sTelephonyConnectionServiceExt;
     private static IEmergencyDialerExt sEmergencyDialerExt;
     private static IIncomingCallExt sIncomingCallExt;
+    private static ISsRoamingServiceExt sSsRoamingServiceExt;
 
     private ExtensionManager() {
     }
@@ -213,5 +214,26 @@ public final class ExtensionManager {
             }
         }
         return sIncomingCallExt;
+    }
+
+    /**
+    * ISsRoamingServiceExt for OP01 roaming receiver.
+    *
+    * @return ISsRoamingServiceExt
+    */
+    public static ISsRoamingServiceExt getSsRoamingServiceExt() {
+        if (sSsRoamingServiceExt == null) {
+            synchronized (ISsRoamingServiceExt.class) {
+                if (sSsRoamingServiceExt == null) {
+                    sSsRoamingServiceExt = (ISsRoamingServiceExt) MPlugin.createInstance(
+                            ISsRoamingServiceExt.class.getName(), PhoneGlobals.getInstance());
+                    if (sSsRoamingServiceExt == null) {
+                        sSsRoamingServiceExt = new DefaultSsRoamingServiceExt();
+                    }
+                    log("[getIncomingCallExt] create ext instance: " + sIncomingCallExt);
+                }
+            }
+        }
+        return sSsRoamingServiceExt;
     }
 }

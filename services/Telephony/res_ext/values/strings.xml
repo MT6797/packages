@@ -235,4 +235,8 @@
 
     <!-- Add for VILTE -->
     <string name="vilte_srvcc_tip">Network reason, switched to voice call.</string>
+
+    <!--add cmcc om network mode Start-->
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G(Auto)</string>
+    <!--add cmcc om network mode End-->
 </resources>

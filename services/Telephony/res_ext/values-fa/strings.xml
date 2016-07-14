@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">سوییچ موقتاً در دسترس نیست. لطفاً بعداً دوباره امتحان کنید.</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g> موقتاً کار نمی کند و اگر تماس پیش فرض، پیامک و داده ها در <xliff:g id="last_default_sim">%s</xliff:g> باشد بر همین اساس به <xliff:g id="new_default_sim">%s</xliff:g> تغییر می کند.</string>
     <string name="default_call_switch_err_msg1">سیم کارت برگزیده برای تماس جابجا نشد</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G (حالت خودکار)</string>
 </resources>

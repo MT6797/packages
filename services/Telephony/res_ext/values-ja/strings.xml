@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">スイッチが一時的に利用できません。 後でもう一度試してください。</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g>は一時的に動作しません。そして<xliff:g id="last_default_sim">%s</xliff:g>にデフォルトの通話、SMS、データがあれば、<xliff:g id="new_default_sim">%s</xliff:g>に変更されます。</string>
     <string name="default_call_switch_err_msg1">通話優先SIMに切り替えられません。</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G （自動）</string>
 </resources>

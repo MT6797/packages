@@ -134,4 +134,5 @@
     <string name="can_not_switch_enhanced_4g_lte_mode_tips">스위치를 일시적으로 사용할 수 없습니다. 나중에 다시 시도하십시오.</string>
     <string name="change_cdma_capability_dialog"><xliff:g id="last_default_sim">%s</xliff:g>이(가) 일시적으로 작동하지 않으며, <xliff:g id="last_default_sim">%s</xliff:g>의 기본 통화, SMS, 데이터가 <xliff:g id="new_default_sim">%s</xliff:g>(으)로 변경되면 이에 따라 작동하지 않습니다.</string>
     <string name="default_call_switch_err_msg1">통화용으로 기본 설정된 SIM을 전환할 수 없습니다.</string>
+    <string name="preferred_network_mode_cmcc_om">4G/3G/2G (자동 모드)</string>
 </resources>
