@@ -345,6 +345,7 @@ public class CallCardPresenter extends Presenter<CallCardPresenter.CallCardUi>
         ui.updateColors();
         /// @}
         displayPhotoWithVideoUi(mPrimary);
+	sendCallActiviteForHallView(0);
     }
 
     @Override
@@ -519,13 +520,28 @@ public class CallCardPresenter extends Presenter<CallCardPresenter.CallCardUi>
         } else if (!isPrimaryCallActive()) {
             ui.setPrimaryCallElapsedTime(false, 0);
             mCallTimer.cancel();
+	     sendCallActiviteForHallView(0);
         } else {
             final long callStart = mPrimary.getConnectTimeMillis();
             final long duration = System.currentTimeMillis() - callStart;
             ui.setPrimaryCallElapsedTime(true, duration);
+	    sendCallActiviteForHallView(duration);
         }
     }
-
+   private final String NB_CALL_ACTION="nb.intent.action.PHONE_ACTIVE";
+   private void sendCallActiviteForHallView(long callActiveTime)
+		{
+			 String name = getNameForCall(mPrimaryContactInfo);
+            		 String number = getNumberForCall(mPrimaryContactInfo);
+			 Intent intent = new Intent(NB_CALL_ACTION);  
+			 intent.putExtra("name",name);
+			 intent.putExtra("number",number);
+			 intent.putExtra("activeTime", callActiveTime);
+			 if(mPrimary!=null)
+			 	intent.putExtra("callState", mPrimary.getState());
+			 Log.d(this, "sendCallActiviteForHallView "+" activeTime:"+callActiveTime);
+               		 mContext.sendBroadcast(intent); 
+		}
     public void onCallStateButtonTouched() {
         Intent broadcastIntent = ObjectFactory.getCallStateButtonBroadcastIntent(mContext);
         if (broadcastIntent != null) {
