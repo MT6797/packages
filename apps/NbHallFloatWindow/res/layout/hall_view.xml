@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".HallFloatActivity" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="@dimen/main_screen_width"
+        android:layout_height="@dimen/main_screen_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top"
+        android:paddingLeft="@dimen/margin_left"
+         >
+    </android.support.v4.view.ViewPager>
+
+    <include
+        android:id="@+id/hall_call_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/hall_call_view"
+        android:visibility="gone" />
+
+</RelativeLayout>

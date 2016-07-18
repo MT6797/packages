@@ -9,4 +9,5 @@
     <dimen name="widget_label_font_size">16sp</dimen>
     <dimen name="margin_top">36dip</dimen>
     <dimen name="margin_left">6dip</dimen>
+    <dimen name="end_call_floating_action_button_diameter">72dp</dimen>
 </resources>

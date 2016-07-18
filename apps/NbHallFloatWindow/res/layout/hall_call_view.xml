@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+-->
+
+
+<!-- TODO(klp): move out to separate file -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/hall_main"
+        android:layout_width="@dimen/main_screen_width"
+        android:layout_height="@dimen/main_screen_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top"
+        android:background="@drawable/hall_calling_back"
+        android:orientation="vertical"
+        android:paddingLeft="6dip" >
+
+        <RelativeLayout
+            android:id="@+id/callCardLine"
+            android:layout_width="match_parent"
+            android:layout_height="100dip" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/callStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dip" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dip" />
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dip"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/hall_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:gravity="top|center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_no_image_automirrored"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.nb.hall.floatwindow.NbSlidingTab
+        android:id="@+id/nbSlidlingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/hall_main"
+        android:layout_below="@id/callCardLine"
+        android:orientation="horizontal" >
+    </com.nb.hall.floatwindow.NbSlidingTab>
+
+    <FrameLayout
+        android:id="@+id/floating_end_call_action_button_container"
+        android:layout_width="@dimen/end_call_floating_action_button_diameter"
+        android:layout_height="@dimen/end_call_floating_action_button_diameter"
+        android:layout_alignBottom="@id/hall_main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dip"
+        android:background="@drawable/fab_red"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/end_call_action_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/end_call_background"
+            android:scaleType="center"
+            android:src="@drawable/fab_ic_end_call" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/end_call_view"
+        android:layout_width="@dimen/end_call_floating_action_button_diameter"
+        android:layout_height="@dimen/end_call_floating_action_button_diameter"
+        android:layout_alignBottom="@id/hall_main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dip"
+        android:background="@drawable/hall_ended"
+        android:visibility="gone" >
+    </ImageView>
+
+</RelativeLayout>

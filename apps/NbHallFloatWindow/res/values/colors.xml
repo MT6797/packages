@@ -30,4 +30,5 @@
     
     <color name="transparent_background">#00000000</color>
     <color name="black">#ff000000</color>
+    <color name="end_call_touch_feedback_tint">#dddddd</color>
 </resources>

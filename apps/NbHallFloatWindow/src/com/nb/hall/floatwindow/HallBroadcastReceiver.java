@@ -16,43 +16,40 @@ import android.view.animation.Animation;
 import android.os.SystemProperties;
 import android.app.StatusBarManager;
 
-
-
 public class HallBroadcastReceiver extends BroadcastReceiver {
 
-	 @Override
-	    public void onReceive(Context context, Intent intent) {
-		    TelephonyManager tm = (TelephonyManager)context.getSystemService(Service.TELEPHONY_SERVICE); 
-		    int callStatus = tm.getCallState();
-		  //  Log.d("lqh", "FloatWindow  call status:"+callStatus);
-		    if(callStatus != TelephonyManager.CALL_STATE_IDLE||"1".equals(SystemProperties.get("sys.config.mmitest", "0")))
-		    {
-			HallFloatWindow.removeView();	
-		    	return;
-		    }
-		    
-	        String action = intent.getAction();
-	        Log.d("lqh", "FloatWindow action:"+action);
-	        if (action.equals("android.intent.action.ORBIT_FLEX")) {
-	           int state = intent.getExtras().getInt("state");
-	          // Log.d("lqh", "FloatWindow hall state:"+state);
-	           if("1".equals(util.readHallState()))
-	            {
-				HallFloatWindow.removeView();	
-	            }else
-	            {
-			   HallFloatWindow.createFloatWindow(context);
-	            }
-	        }else if(action.equals(Intent.ACTION_BOOT_COMPLETED)||action.equals(TelephonyManager.ACTION_PHONE_STATE_CHANGED))
-	        {
-	        	if("1".equals(util.readHallState()))
-	        	{
-				HallFloatWindow.removeView();	
-	        	}
-	        	else
-	        	{
-				HallFloatWindow.createFloatWindow(context);
-	        	}
-	        }
-	 }	 
+	private final String TAG = "HallBroadcastReceiver";
+	@Override
+	public void onReceive(Context context, Intent intent) {
+		if ("1".equals(SystemProperties.get("sys.config.mmitest", "0"))) {
+			HallFloatWindow.removeView();
+			return;
+		}
+
+		String action = intent.getAction();
+		Log.d(TAG, "FloatWindow action:" + action);
+		if (action.equals("android.intent.action.ORBIT_FLEX")) {
+			int state = intent.getExtras().getInt("state");
+			Log.d(TAG, "FloatWindow hall state:" + state);
+			if ("1".equals(util.readHallState())) {
+				Log.d(TAG, "11111");
+				HallFloatWindow.removeView();
+			} else {
+				HallFloatWindow instance = HallFloatWindow.getInstance();
+				if(instance == null)
+					HallFloatWindow.createFloatWindow(context);
+				Log.d(TAG, "2222");
+			}
+		} else if (action.equals(Intent.ACTION_BOOT_COMPLETED)) {
+			Intent service = new Intent(context, PhoneStatusService.class);
+			context.startService(service);
+			if ("1".equals(util.readHallState())) {
+				HallFloatWindow.removeView();
+			} else {
+				HallFloatWindow instance = HallFloatWindow.getInstance();
+				if(instance == null)
+					HallFloatWindow.createFloatWindow(context);
+			}
+		} 
+	}
 }
