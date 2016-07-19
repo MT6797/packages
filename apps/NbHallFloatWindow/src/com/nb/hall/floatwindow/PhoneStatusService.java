@@ -90,7 +90,7 @@ public class PhoneStatusService extends Service {
 				sName = util.getContactNameFromPhoneBook(context, sPhoneNumber);
 				sIsOutgoingCall = true;
 				sCallElapseTime =0;
-				sIsCalling = true;
+				//sIsCalling = true;
 				Log.d(TAG, "=outgoing phone==>call name:"+sName+"   phonenumber:"+sPhoneNumber);
 			} else if(intent.getAction().equals("nb.intent.action.PHONE_ACTIVE")){
 				//mHander.sendEmptyMessageDelayed(UPDATE_TIME_MSG, 1000);
