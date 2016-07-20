@@ -49,7 +49,7 @@ public class HallFloatWindow {
 		this.mContext = context;
 		sWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
 		mLayoutParams = new WindowManager.LayoutParams();
-		mLayoutParams.type = WindowManager.LayoutParams.TYPE_STATUS_BAR_PANEL;
+		mLayoutParams.type = WindowManager.LayoutParams.TYPE_NAVIGATION_BAR_PANEL;
 		mLayoutParams.gravity = Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL;
 
 		mLayoutParams.screenOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
@@ -58,7 +58,7 @@ public class HallFloatWindow {
 		display.getRealSize(point);
 		mLayoutParams.width = Math.min(point.x, point.y);
 		mLayoutParams.height = Math.max(point.x, point.y);
-		mLayoutParams.flags =  WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_FULLSCREEN;
+		mLayoutParams.flags =  WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_FULLSCREEN|WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
 
 		mLayoutParams.userActivityTimeout = AWAKE_INTERVAL_DEFAULT_MS;
 
