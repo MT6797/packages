@@ -76,7 +76,8 @@ public class HallFloatWindow {
 
 		mSharePre = context.getSharedPreferences(SHARE_PRE, 0);
 		int item = mSharePre.getInt("item", 0);
-		mViewPager.setCurrentItem(item);
+		if(mViewPager!=null)
+			mViewPager.setCurrentItem(item);
 	}
 
 	public class MyOnPageChangeListener implements OnPageChangeListener {
