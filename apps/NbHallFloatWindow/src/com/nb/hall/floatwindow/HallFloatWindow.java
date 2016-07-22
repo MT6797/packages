@@ -1,6 +1,7 @@
 package com.nb.hall.floatwindow;
 
 import java.util.ArrayList;
+
 import android.app.KeyguardManager;
 import android.app.Service;
 import android.app.WallpaperManager;
@@ -44,6 +45,7 @@ public class HallFloatWindow {
 	private NbSlidingTab mNbSlidingTab;
 	private TextView mNameText, mNumberText, mCallElapseTImeText;
 	private View mEndCallContainer;
+	private boolean mCallHookFlag = false;
 
 	public HallFloatWindow(final Context context) {
 		this.mContext = context;
@@ -157,7 +159,7 @@ public class HallFloatWindow {
 						+ PhoneStatusService.sIsOutgoingCall + "  sIsActive: " + PhoneStatusService.sIsActive
 						+ " isComing: " + PhoneStatusService.sIsIncomingCall);
 		synchronized (mLock) {
-			if (PhoneStatusService.sIsCalling||isCalling()) {
+			if (isCalling()) {
 				if (mViewPager == null || mCallView == null)
 					return;
 				mViewPager.setVisibility(View.GONE);
@@ -165,7 +167,7 @@ public class HallFloatWindow {
 				if (PhoneStatusService.sIsIncomingCall) {
 					mEndCallContainer.setVisibility(View.GONE);
 					mNbSlidingTab.setVisibility(View.VISIBLE);
-				} else if (PhoneStatusService.sIsOutgoingCall || PhoneStatusService.sIsActive) {
+				} else if (PhoneStatusService.sIsOutgoingCall || PhoneStatusService.sIsActive||mCallHookFlag) {
 					mEndCallContainer.setVisibility(View.VISIBLE);
 					mNbSlidingTab.setVisibility(View.GONE);
 				}
@@ -215,11 +217,25 @@ public class HallFloatWindow {
 			sAddFlag = false;
 		}
 	}
-    private boolean isCalling()  //当刚开机时，PhoneStatusService服务还为启动时，即开电话，PhoneStatusService.sIsCalling可能是false,所以通过此函数加强判断
+    private boolean isCalling()  //当刚开机时，PhoneStatusService服务还为启动时，即打电话，所以通过此函数加强判断
     {
     	TelephonyManager tManager = (TelephonyManager) mContext.getSystemService(Service.TELEPHONY_SERVICE);
     	if(TelephonyManager.CALL_STATE_IDLE == tManager.getCallState())
+    	{
+    		mCallHookFlag = false;
     		return false;
+    	}
+    	else if(TelephonyManager.CALL_STATE_OFFHOOK == tManager.getCallState())
+    	{
+    		mCallHookFlag =true;
+    	}
+    	
+    	if(!PhoneStatusService.sIsCalling) //防止服务不存在，重新启动
+    	{
+    		Intent service = new Intent(mContext, PhoneStatusService.class);
+    		mContext.startService(service);
+    		Log.d(TAG, "restart PhoneStatusService");
+    	}
     	return true;
     }
 }
