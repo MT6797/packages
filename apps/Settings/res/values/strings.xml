@@ -694,6 +694,11 @@
     <!-- Fingerprint enrollment and settings --><skip />
     <!-- Title shown for menu item that launches fingerprint settings or enrollment [CHAR LIMIT=22] -->
     <string name="security_settings_fingerprint_preference_title">Fingerprint</string>
+
+    <!--add by microarray begin-->
+    <string name="security_settings_fingerprint_calibration_preference_title">Fingerprint Calibration</string>
+    <!--add by microarray end-->
+
     <!-- Fingerprint managment category title - configuration options for managing enrolled fingerprints [CHAR LIMIT=22] -->
     <string name="fingerprint_manage_category_title">Manage fingerprints</string>
     <!-- Fingerprint category title - configuration options for managing fingerprint enrollment [CHAR LIMIT=22] -->

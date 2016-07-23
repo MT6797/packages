@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">FprintMA</string>
+    <string name="ma_dlg_warn">Warnning</string>
+    <string name="ma_dlg_error">Error</string>
+    <string name="ma_dlg_msg">Information</string>
+    <string name="ma_dlg_yes">Confirm</string>
+    <string name="ma_dlg_no">Cancel</string>
+    
+    <string name="ma_fprint_open_neg1">Open device failed.</string>
+    <string name="ma_fprint_open_neg2">Memory not enough</string>
+    <string name="ma_fprint_open_neg3">Open DB failed.</string>
+    <string name="ma_fprint_open_neg4">Open table failed.</string>
+    
+    <string name="ma_fprint_initfactory_neg1">Memory not enough</string>
+    <string name="ma_fprint_initfactory_neg2">Capture failed</string>
+    <string name="ma_fprint_initfactory_neg3">Save data failed</string>
+    <string name="ma_fprint_initfactory_neg4">Init lib failed</string>
+    <string name="ma_fprint_initfactory_neg5">SPI communication error</string>
+    
+    <string name="ma_fprint_initboot_neg1">Not capture data</string>
+    <string name="ma_fprint_initboot_neg2">Load data failed</string>
+    <string name="ma_fprint_initboot_neg3">SPI communication error</string>
+    
+    <string name="ma_fprint_enroll_neg1">Capture failed</string>
+    <string name="ma_fprint_enroll_neg2">Register failed</string>
+    <string name="ma_fprint_enroll_neg3">Part fit</string>
+    <string name="ma_fprint_enroll_neg4">Timeout</string>
+    
+    <string name="ma_fprint_match_neg1">Capture failed</string>
+    <string name="ma_fprint_match_neg2">Match failed</string>
+    <string name="ma_fprint_match_neg3">Part fit</string>
+    <string name="ma_fprint_match_neg4">Timeout</string>
+
+    <string name="ma_dlg_del_touch">Are you sure delete the finger？</string>
+    <string name="ma_dlg_finger_full">Fingerprint is full</string>
+    
+    <string name="ma_settings">Settings</string>
+    <string name="ma_set_finger_title">TouchID</string>
+    <string name="ma_set_finger_use">TouchID use:</string>
+    <string name="ma_set_finger_unlock">Fingerprint unlock</string>
+    <string name="ma_set_finger_add">Add finger</string>
+    <string name="ma_set_finger_capture">Capture</string>
+    
+    <string name="ma_enroll_add_finger">Add Finger</string>
+    <string name="ma_enroll_finger">Enroll Finger</string>
+    <string name="ma_enroll_cancel">Cancel</string>
+    <string name="ma_enroll_alter">Alter area</string>
+    <string name="ma_enroll_fid">Finger</string>
+    <string name="ma_enroll_succ">Enroll successed</string>
+    <string name="ma_enroll_fail">Enroll failed</string>
+    <string name="ma_enroll_place">Place your Finger</string>
+    <string name="ma_enroll_lift">Lift your Finger</string>
+    <string name="ma_enroll_repeat">Lift and reset your finger on finger print module repeatedly.</string>
+    <string name="ma_enroll_adjust">Shake hands posture adjustment</string>
+    <string name="ma_enroll_go_obtain">Continue to adjust, obtaining fingerprint edge</string>
+    <string name="ma_enroll_go_on">Continue</string>
+    
+    <string name="ma_factory_title">Fingerprint calibration</string>
+    <string name="ma_factory_wait_pre_finish">The last initFactory not finish, Please wait ......</string>
+     <string name="ma_factory_wait_pre_finish_failed">The last initFactory wait timeout, please try again.</string>
+    <string name="ma_factory_begin">Begin fingerprint calibration</string>
+    <string name="ma_factory_prompt">Don\'t touch finger print</string>
+    <string name="ma_factory_capture_begin">initFactory start, Please wait ......</string>
+    <string name="ma_factory_capture_stop">initFactory finish</string>
+    <string name="ma_factory_turn_to_capture_page">Turn to capture test page</string>
+    <string name="ma_factory_pass">Fingerprint calibration is successful, please exit！</string>
+    <string name="ma_factory_progress">Progress(%):</string>
+    
+    <string name="ma_capture_title">Image capture</string>
+    <string name="ma_capture_tip_init">Put your finger on finger print module to detecte performance</string>
+    <string name="ma_capture_place">If test passed, will turn to main ui.</string>
+    <string name="ma_capture_pass">Fingerprint detection is successful, please take the next step!</string>
+    <string name="ma_capture_grade">Grade:</string>
+	
+    <string name="ma_replace_pwd_init">Fingerprint calibration</string>
+    <string name="test_success">Success</string>
+    <string name="test_failed">Failed</string>
+    <string name="ma_factory_wait_finish">Finger print is calibrating, please wait......</string>
+    <string name="hy_calibrating_title">Don\'t touch fingerprint sensor</string>
+    <string name="hy_calibrating_title_desc">Please wait while the calibration completes...</string>
+</resources>

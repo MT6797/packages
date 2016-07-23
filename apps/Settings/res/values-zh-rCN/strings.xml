@@ -314,6 +314,11 @@
     <string name="cdma_security_settings_summary" msgid="6068799952798901542">"设置我的位置、屏幕解锁和凭据存储锁定"</string>
     <string name="security_passwords_title" msgid="2930627259125138363">"密码"</string>
     <string name="security_settings_fingerprint_preference_title" msgid="2488725232406204350">"指纹"</string>
+
+    <!--add by microarray begin-->
+    <string name="security_settings_fingerprint_calibration_preference_title">指纹校准</string>
+    <!--add by microarray end-->
+
     <string name="fingerprint_manage_category_title" msgid="8293801041700001681">"管理指纹"</string>
     <string name="fingerprint_usage_category_title" msgid="8438526918999536619">"将指纹用于以下用途："</string>
     <string name="fingerprint_add_title" msgid="1926752654454033904">"添加指纹"</string>
@@ -2872,5 +2877,6 @@
    <string name="navigation_bar_hide">导航栏能被隐藏</string>
    <string name="navigation_bar_title">导航栏</string>
    <string name="navigation_bar_select">设置虚拟导航栏组合</string>
-   <string name="navigation_bar_drop_status_bar">:下拉通知栏</string>
+   <string name="navigation_bar_drop_status_bar">:下拉通知栏</string>   
+
 </resources>

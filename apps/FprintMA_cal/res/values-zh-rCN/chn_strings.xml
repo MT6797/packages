@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FprintMA</string>
+    
+    <string name="ma_dlg_warn">警告</string>
+    <string name="ma_dlg_error">错误</string>
+    <string name="ma_dlg_msg">提示</string>
+    <string name="ma_dlg_yes">确定</string>
+    <string name="ma_dlg_no">取消</string>
+    
+    <string name="ma_fprint_open_neg1">打开设备失败</string>
+    <string name="ma_fprint_open_neg2">内存不足</string>
+    <string name="ma_fprint_open_neg3">打开数据库失败</string>
+    <string name="ma_fprint_open_neg4">创建数据库表失败</string>
+    
+    <string name="ma_fprint_initfactory_neg1">内存不足</string>
+    <string name="ma_fprint_initfactory_neg2">采集数据失败</string>
+    <string name="ma_fprint_initfactory_neg3">保存数据失败</string>
+    <string name="ma_fprint_initfactory_neg4">初始化库失败</string>
+    <string name="ma_fprint_initfactory_neg5">SPI通讯错误</string>
+    
+    <string name="ma_fprint_initboot_neg1">未采集数据</string>
+    <string name="ma_fprint_initboot_neg2">加载数据失败</string>
+    <string name="ma_fprint_initboot_neg3">SPI通讯错误</string>
+    
+    <string name="ma_fprint_enroll_neg1">采图失败</string>
+    <string name="ma_fprint_enroll_neg2">注册失败</string>
+    <string name="ma_fprint_enroll_neg3">部分接触</string>
+    <string name="ma_fprint_enroll_neg4">操作超时</string>
+    
+    <string name="ma_fprint_match_neg1">采图失败</string>
+    <string name="ma_fprint_match_neg2">匹配失败</string>
+    <string name="ma_fprint_match_neg3">部分接触</string>
+    <string name="ma_fprint_match_neg4">操作超时</string>    
+
+    <string name="ma_dlg_del_touch">确认删除已注册数据吗？</string>
+    <string name="ma_dlg_finger_full">指纹已满</string>
+    
+    <string name="ma_settings">设置</string>
+    <string name="ma_set_finger_title">TouchID</string>
+    <string name="ma_set_finger_use">将TouchID用于</string>
+    <string name="ma_set_finger_unlock">指纹解锁</string>
+    <string name="ma_set_finger_add">添加指纹</string>    
+    <string name="ma_set_finger_capture">采集</string>
+    
+    <string name="ma_enroll_add_finger">添加指纹</string>    
+    <string name="ma_enroll_finger">注册指纹</string>
+    <string name="ma_enroll_cancel">取消</string>
+    <string name="ma_enroll_alter">换个区域</string>
+    <string name="ma_enroll_fid">指纹</string>
+    <string name="ma_enroll_succ">注册成功</string>
+    <string name="ma_enroll_fail">注册失败</string>
+    <string name="ma_enroll_place">放置手指</string>
+    <string name="ma_enroll_lift">移开手指</string>
+    <string name="ma_enroll_repeat">将手指放在指纹模组上再移开，重复此步骤。</string>
+    <string name="ma_enroll_adjust">调整握手姿势</string>
+    <string name="ma_enroll_go_obtain">继续调整，获取指纹边缘</string>
+    <string name="ma_enroll_go_on">继续</string>
+
+    <string name="ma_factory_title">指纹校准</string>
+    <string name="ma_factory_wait_pre_finish">上次工厂初始化未完成，请稍等......</string>
+    <string name="ma_factory_wait_pre_finish_failed">上次工厂初始化等待超时，请重试.</string>
+    <string name="ma_factory_begin">准备指纹校准</string>
+    <string name="ma_factory_prompt">请不要接触指纹模组</string>
+    <string name="ma_factory_capture_begin">工厂初始化开始，请等待......</string>
+    <string name="ma_factory_capture_stop">工厂初始化结束</string>
+    <string name="ma_factory_turn_to_capture_page">转向指纹测试界面</string>
+    <string name="ma_factory_pass">指纹校准成功，请按返回键退出！</string>
+    <string name="ma_factory_progress">进度(%):</string>
+
+    <string name="ma_capture_title">图像采集</string>
+    <string name="ma_capture_tip_init">请将手指放在指纹模组上检测性能</string>
+    <string name="ma_capture_place">若检测通过会自动跳转到主界面</string>
+    <string name="ma_capture_pass">指纹检测成功，请进行下一步操作！</string>
+    <string name="ma_capture_grade">分数:</string>
+
+    <string name="ma_replace_pwd_init">指纹校准</string>
+    <string name="test_success">成功</string>
+    <string name="test_failed">失败</string>
+    <string name="hy_calibrating_title">请不要接触指纹模组</string>
+    <string name="hy_calibrating_title_desc">指纹校准中，请等待......</string>
+</resources>

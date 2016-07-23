@@ -40,7 +40,7 @@ import android.widget.TextView;
 
 import com.android.settings.ChooseLockSettingsHelper;
 import com.android.settings.R;
-
+import java.io.File;
 /**
  * Activity which handles the actual enrolling for fingerprint.
  */
@@ -68,6 +68,11 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
      * fingerprint sensor.
      */
     private static final int ICON_TOUCH_COUNT_SHOW_UNTIL_DIALOG_SHOWN = 3;
+
+    /*add by microarray begin*/
+    private static final int MICROARRAY_FINGERPRINT_DOWN = 1102;
+    private static final int MICROARRAY_FINGERPRINT_UP = 1103;
+    /*add by microarray end*/
 
     private ProgressBar mProgressBar;
     private ImageView mFingerprintAnimator;
@@ -239,8 +244,22 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
 
 
     @Override
-    public void onEnrollmentHelp(CharSequence helpString) {
-        mErrorText.setText(helpString);
+    public void onEnrollmentHelp(int helpMsgId,CharSequence helpString) {
+        /*modify by microarray begin*/
+        //mErrorText.setText(helpString);
+	if(helpMsgId == MICROARRAY_FINGERPRINT_DOWN){
+	    mErrorText.removeCallbacks(mErrorCancelRunnable);
+	    mErrorText.postDelayed(mTouchAgainRunnable, HINT_TIMEOUT_DURATION);
+	    showError(helpString);
+	   // showError(helpString);
+	} else if (helpMsgId == MICROARRAY_FINGERPRINT_UP) {
+	    mErrorText.removeCallbacks(mTouchAgainRunnable);
+	    mErrorText.postDelayed(mErrorCancelRunnable, HINT_TIMEOUT_DURATION);
+	    //clearError();
+	} else {
+	    showError(helpString);
+	}
+        /*modify by microarray end*/
     }
 
     @Override
@@ -253,10 +272,16 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
     public void onEnrollmentProgressChange(int steps, int remaining) {
         updateProgress(true /* animate */);
         updateDescription();
-        clearError();
         animateFlash();
-        mErrorText.removeCallbacks(mTouchAgainRunnable);
-        mErrorText.postDelayed(mTouchAgainRunnable, HINT_TIMEOUT_DURATION);
+	/*modify by microarray begin*/
+       	File file=new File("/dev/madev0");    
+    	if(!file.exists())
+	{
+		clearError();
+		mErrorText.removeCallbacks(mTouchAgainRunnable);
+		mErrorText.postDelayed(mTouchAgainRunnable, HINT_TIMEOUT_DURATION);
+	}
+	/*modify by microarray end*/       
     }
 
     private void updateProgress(boolean animate) {
@@ -295,11 +320,12 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
                     .setDuration(200)
                     .setInterpolator(mLinearOutSlowInInterpolator)
                     .start();
-        } else {
+        }  else {
             mErrorText.animate().cancel();
             mErrorText.setAlpha(1f);
             mErrorText.setTranslationY(0f);
         }
+	
     }
 
     private void clearError() {
@@ -377,6 +403,13 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
         @Override
         public void run() {
             showError(getString(R.string.security_settings_fingerprint_enroll_lift_touch_again));
+        }
+    };
+
+    private final Runnable mErrorCancelRunnable = new Runnable() {
+        @Override
+        public void run() {
+	   clearError();
         }
     };
 

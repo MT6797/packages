@@ -121,7 +121,7 @@ public class FingerprintEnrollSidecar extends Fragment {
         @Override
         public void onEnrollmentHelp(int helpMsgId, CharSequence helpString) {
             if (mListener != null) {
-                mListener.onEnrollmentHelp(helpString);
+                mListener.onEnrollmentHelp(helpMsgId,helpString);
             }
         }
 
@@ -141,7 +141,7 @@ public class FingerprintEnrollSidecar extends Fragment {
     };
 
     public interface Listener {
-        void onEnrollmentHelp(CharSequence helpString);
+        void onEnrollmentHelp(int helpMsgId, CharSequence helpString);
         void onEnrollmentError(CharSequence errString);
         void onEnrollmentProgressChange(int steps, int remaining);
     }

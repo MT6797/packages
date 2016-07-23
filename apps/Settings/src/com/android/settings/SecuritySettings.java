@@ -79,9 +79,8 @@ import com.mediatek.settings.UtilsExt;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
-
+import java.io.File;
 /**
  * Gesture lock pattern settings.
  */
@@ -103,6 +102,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_ADVANCED_SECURITY = "advanced_security";
     private static final String KEY_MANAGE_TRUST_AGENTS = "manage_trust_agents";
     private static final String KEY_FINGERPRINT_SETTINGS = "fingerprint_settings";
+    private static final String KEY_FINGERPRINT_CALIBRATION = "fingerprint_calibration";
 
     private static final int SET_OR_CHANGE_LOCK_METHOD_REQUEST = 123;
     private static final int CHANGE_TRUST_AGENT_SETTINGS = 126;
@@ -262,7 +262,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
             maybeAddFingerprintPreference(securityCategory);
             addTrustAgentSettings(securityCategory);
         }
-
+	
         // lock after preference
         mLockAfter = (ListPreference) root.findPreference(KEY_LOCK_AFTER_TIMEOUT);
         if (mLockAfter != null) {
@@ -383,6 +383,32 @@ public class SecuritySettings extends SettingsPreferenceFragment
         return root;
     }
 
+    /*add by microarray begin*/
+    private void fingerprintCalibrationPerence(PreferenceGroup securityCategory) {
+	Preference mFpCalibrationPreference = new Preference(securityCategory.getContext());
+        mFpCalibrationPreference.setKey(KEY_FINGERPRINT_CALIBRATION);
+        mFpCalibrationPreference.setTitle(R.string.security_settings_fingerprint_calibration_preference_title);
+
+	securityCategory.addPreference(mFpCalibrationPreference);
+    }
+
+    private void startFPCalibration(){
+        try{
+	   String packageName = "ma.calibrate";
+	   String classname = "ma.calibrate.FactoryActivity";
+           String action = "android.intent.action.MAIN";
+           Intent mIntent = new Intent();
+           ComponentName comp = new ComponentName(packageName,classname);
+           mIntent.setComponent(comp);
+           mIntent.setAction(action);
+           mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	   startActivity(mIntent);
+        } catch (Exception e) {
+        
+	}
+    }
+    /*add by microarray end*/
+
     private void maybeAddFingerprintPreference(PreferenceGroup securityCategory) {
         FingerprintManager fpm = (FingerprintManager) getActivity().getSystemService(
                 Context.FINGERPRINT_SERVICE);
@@ -408,6 +434,14 @@ public class SecuritySettings extends SettingsPreferenceFragment
         intent.setClassName("com.android.settings", clazz);
         fingerprintPreference.setIntent(intent);
         securityCategory.addPreference(fingerprintPreference);
+
+	/*add by microarray begin*/
+	File file=new File("/dev/madev0");    
+    	if(file.exists())
+	{		
+		fingerprintCalibrationPerence(securityCategory);        	
+	}
+	/*add by microarray end*/
     }
 
     private void addTrustAgentSettings(PreferenceGroup securityCategory) {
@@ -677,6 +711,8 @@ public class SecuritySettings extends SettingsPreferenceFragment
         }
     }
 
+    
+
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         final String key = preference.getKey();
@@ -694,7 +730,10 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 startActivity(mTrustAgentClickIntent);
                 mTrustAgentClickIntent = null;
             }
-        } else {
+        } else if (KEY_FINGERPRINT_CALIBRATION.equals(key)){         
+	   android.util.Log.d("JTAG","start Calibration..");
+	   startFPCalibration();
+        }else {
             // If we didn't handle it, let preferences handle it.
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
