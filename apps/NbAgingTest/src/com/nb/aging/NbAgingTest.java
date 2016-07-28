@@ -170,7 +170,10 @@ public class NbAgingTest extends Activity {
 	@Override
 	public void onStop() {
 		if (videoView != null)
+		{
+			videoView.stopPlayback();
 			wm.removeView(videoView);
+		}
 		if (mElapseTimeText != null)
 			wm.removeView(mElapseTimeText);
 		if (mVibrate != null)
@@ -181,6 +184,7 @@ public class NbAgingTest extends Activity {
 		mHander.removeMessages(UPDATE_TIME_MSG);
 		mHander.removeMessages(AUDIO_MODE_MSG);
 		mHander.removeMessages(CAMERA_CHANGE_MSG);
+		mAm.setMode(AudioManager.MODE_NORMAL);
 		super.onStop();
 		Log.d(TAG, "onStop");
 
