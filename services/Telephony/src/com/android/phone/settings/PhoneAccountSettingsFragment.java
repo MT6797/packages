@@ -355,7 +355,13 @@ public class PhoneAccountSettingsFragment extends PreferenceFragment
                 if (isSim1 != isSim2) {
                     retval = isSim1 ? -1 : 1;
                 }
-
+		if(retval == 0)
+		{
+			int phoneid1 = getPhoneId(account1);
+			int phoneid2 = getPhoneId(account2);
+			Log.d(LOG_TAG, "phoneid1 = " + phoneid1+"   phoneid2:"+phoneid2);
+			retval = phoneid1 > phoneid2 ? 1 : -1;
+		}
                 // Then order by package
                 if (retval == 0) {
                     String pkg1 = account1.getAccountHandle().getComponentName().getPackageName();
@@ -781,4 +787,25 @@ public class PhoneAccountSettingsFragment extends PreferenceFragment
             }
         }
     };
+
+	 private int getPhoneId(PhoneAccount account)
+	{
+		boolean isMultiSimDevice = mTelephonyManager.isMultiSimEnabled();
+	        if (account.hasCapabilities(PhoneAccount.CAPABILITY_SIM_SUBSCRIPTION)) {
+                if (isMultiSimDevice) {
+                    SubscriptionInfo subInfo = mSubscriptionManager.getActiveSubscriptionInfo(
+                            mTelephonyManager.getSubIdForPhoneAccount(account));
+
+                    if (subInfo != null) {
+
+                            int phoneId = SubscriptionManager.from(
+                                    getActivity()).getPhoneId(
+                                            subInfo.getSubscriptionId());
+                           return phoneId;
+                        }
+                      /// @}
+                    }
+                }
+		return -1;
+	}
 }
