@@ -893,6 +893,8 @@ public class CallCardPresenter extends Presenter<CallCardPresenter.CallCardUi>
      * Gets the name to display for the call.
      */
     private static String getNameForCall(ContactCacheEntry contactInfo) {
+	if(contactInfo == null)
+		return "";
         if (TextUtils.isEmpty(contactInfo.name)) {
             return contactInfo.number;
         }
@@ -903,6 +905,8 @@ public class CallCardPresenter extends Presenter<CallCardPresenter.CallCardUi>
      * Gets the number to display for a call.
      */
     private static String getNumberForCall(ContactCacheEntry contactInfo) {
+	if(contactInfo == null)
+		return "";
         // If the name is empty, we use the number for the name...so dont show a second
         // number in the number field
         if (TextUtils.isEmpty(contactInfo.name)) {
