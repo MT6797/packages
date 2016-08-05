@@ -587,13 +587,13 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
 
         setDrawableToImageView(mPhoto, photo);
         
-        if(mHallCallFragment != null)
+     /*   if(mHallCallFragment != null)
          {
         	if(!name.isEmpty())
     		  mHallCallFragment.setName(name);
         	else
         	  mHallCallFragment.setName(number);
-        }
+        }*/
     }
 
     @Override
