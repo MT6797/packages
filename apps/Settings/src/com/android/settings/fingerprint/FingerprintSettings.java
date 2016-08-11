@@ -184,10 +184,12 @@ public class FingerprintSettings extends SubSettings {
                     break;
                     case MSG_FINGER_AUTH_SUCCESS:
                         mFingerprintCancel = null;
+                       
                         highlightFingerprintItem(msg.arg1);
-                        retryFingerprint();
+                       // retryFingerprint();
                     break;
                     case MSG_FINGER_AUTH_FAIL:
+                          
                         // No action required... fingerprint will allow up to 5 of these
                     break;
                     case MSG_FINGER_AUTH_ERROR:
@@ -232,11 +234,13 @@ public class FingerprintSettings extends SubSettings {
                     }
                 break;
             }
-            retryFingerprint(); // start again
+            //retryFingerprint(); // start again
         }
 
         private void retryFingerprint() {
+          
             if (!mInFingerprintLockout) {
+               
                 mFingerprintCancel = new CancellationSignal();
                 mFingerprintManager.authenticate(null, mFingerprintCancel, 0 /* flags */,
                         mAuthCallback, null);
@@ -368,7 +372,7 @@ public class FingerprintSettings extends SubSettings {
 
         private void updatePreferences() {
             createPreferenceHierarchy();
-            retryFingerprint();
+            //retryFingerprint();
         }
 
         @Override
@@ -521,7 +525,7 @@ public class FingerprintSettings extends SubSettings {
             @Override
             public void run() {
                 mInFingerprintLockout = false;
-                retryFingerprint();
+                //retryFingerprint();
             }
         };
 

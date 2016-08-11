@@ -41,6 +41,7 @@ import android.widget.TextView;
 import com.android.settings.ChooseLockSettingsHelper;
 import com.android.settings.R;
 import java.io.File;
+import android.util.Log;
 /**
  * Activity which handles the actual enrolling for fingerprint.
  */
@@ -70,6 +71,7 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
     private static final int ICON_TOUCH_COUNT_SHOW_UNTIL_DIALOG_SHOWN = 3;
 
     /*add by microarray begin*/
+    private static final int MA_HINT_TIMEOUT_DURATION = 800;
     private static final int MICROARRAY_FINGERPRINT_DOWN = 1102;
     private static final int MICROARRAY_FINGERPRINT_UP = 1103;
     /*add by microarray end*/
@@ -247,7 +249,7 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
     public void onEnrollmentHelp(int helpMsgId,CharSequence helpString) {
         /*modify by microarray begin*/
         //mErrorText.setText(helpString);
-	if(helpMsgId == MICROARRAY_FINGERPRINT_DOWN){
+	/*if(helpMsgId == MICROARRAY_FINGERPRINT_DOWN){
 	    mErrorText.removeCallbacks(mErrorCancelRunnable);
 	    mErrorText.postDelayed(mTouchAgainRunnable, HINT_TIMEOUT_DURATION);
 	    showError(helpString);
@@ -255,10 +257,13 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
 	} else if (helpMsgId == MICROARRAY_FINGERPRINT_UP) {
 	    mErrorText.removeCallbacks(mTouchAgainRunnable);
 	    mErrorText.postDelayed(mErrorCancelRunnable, HINT_TIMEOUT_DURATION);
-	    //clearError();
-	} else {
+	    clearError();
+	} else {*/
 	    showError(helpString);
-	}
+            //Log.d("ma","111111111111111"+helpString);
+            mErrorText.postDelayed(mErrorCancelRunnable, MA_HINT_TIMEOUT_DURATION);
+           
+	//}
         /*modify by microarray end*/
     }
 
@@ -405,6 +410,8 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
             showError(getString(R.string.security_settings_fingerprint_enroll_lift_touch_again));
         }
     };
+
+   
 
     private final Runnable mErrorCancelRunnable = new Runnable() {
         @Override

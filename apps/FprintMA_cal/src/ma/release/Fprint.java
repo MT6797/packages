@@ -68,6 +68,7 @@ public class Fprint {
 		Jnifp.dbClose(); 
 		ret = Jnifp.close();
 		Util.dprint("JTAG", "close ret=" + ret);
+                Util.dprint("ma", "close ret=" + ret);
 		return ret;
 	}
 

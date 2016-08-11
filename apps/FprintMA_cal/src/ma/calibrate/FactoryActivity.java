@@ -190,7 +190,8 @@ public class FactoryActivity extends Activity implements OnClickListener {
                 // int time = (i == 0 || i >1) ? 1000 : 100;
                 // Util.sleep(time);
             }
-            // Fprint.close();
+             Fprint.close();
+
         }
     }
 
