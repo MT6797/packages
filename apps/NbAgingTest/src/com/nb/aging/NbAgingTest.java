@@ -260,7 +260,8 @@ public class NbAgingTest extends Activity {
 					int dy = (int) event.getRawY() - lastY;
 					params.x = paramX + dx;
 					params.y = paramY + dy;
-					wm.updateViewLayout(videoView, params);
+					if(videoView != null)
+						wm.updateViewLayout(videoView, params);
 					break;
 				}
 				return true;
