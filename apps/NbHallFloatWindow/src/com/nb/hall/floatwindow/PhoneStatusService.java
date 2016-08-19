@@ -94,12 +94,14 @@ public class PhoneStatusService extends Service {
 				Log.d(TAG, "=outgoing phone==>call name:"+sName+"   phonenumber:"+sPhoneNumber);
 			} else if(intent.getAction().equals("nb.intent.action.PHONE_ACTIVE")){
 				//mHander.sendEmptyMessageDelayed(UPDATE_TIME_MSG, 1000);
-							
+				if(intent.getStringExtra("name")!=null)
+				{
+					sName = intent.getStringExtra("name");
+				}			
 				if(!sIsIncomingCall) 
 				{
 					if(intent.getStringExtra("number")!=null)
 					{
-						sName = intent.getStringExtra("name");
 						sPhoneNumber = intent.getStringExtra("number");
 					}	
 					mCallState = intent.getIntExtra("callState",0);

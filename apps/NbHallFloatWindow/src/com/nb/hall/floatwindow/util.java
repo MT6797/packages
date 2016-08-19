@@ -40,15 +40,21 @@ public class util {
 
 	public static String getContactNameFromPhoneBook(Context context, String phoneNum) {
 		String contactName = "";
-		if(phoneNum==null||"".equals(phoneNum))
-			return "";
-		ContentResolver cr = context.getContentResolver();
-		Cursor pCur = cr.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
-				ContactsContract.CommonDataKinds.Phone.NUMBER + " = ?", new String[] { phoneNum }, null);
-		if (pCur.moveToFirst()) {
-			contactName = pCur.getString(pCur.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
-			pCur.close();
-		}
-		return contactName;
-	}
+        String phone1 = new StringBuffer(phoneNum.subSequence(0, 3)).append(" ").append(phoneNum.substring(3, 7))  
+                .append(" ").append(phoneNum.substring(7, 11)).toString();  
+        String phone2 = new StringBuffer(phoneNum.subSequence(0, 3)).append("-").append(phoneNum.substring(3, 7))  
+                .append("-").append(phoneNum.substring(7, 11)).toString();
+        ContentResolver cr =context.getContentResolver();  
+        Cursor pCur = cr.query(  
+                ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,  
+                ContactsContract.CommonDataKinds.Phone.NUMBER + " in(?,?,?)", new String[] {  
+                        phoneNum, phone1, phone2 }, null);  
+        if (pCur!=null && pCur.moveToFirst()) {  
+            contactName = pCur  
+                    .getString(pCur  
+                            .getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));  
+            pCur.close();  
+        }  
+        return contactName;  
+    } 
 }
