@@ -4045,6 +4045,10 @@ public class Launcher extends Activity
     }
 
     public View getOrCreateQsbBar() {
+	//add by liliang.bao begin
+	 if(!getResources().getBoolean(R.bool.enable_search_box))
+		 return null;
+	 //add by liliang.bao end
         if (mLauncherCallbacks != null && mLauncherCallbacks.providesSearch()) {
             return mLauncherCallbacks.getQsbBar();
         }

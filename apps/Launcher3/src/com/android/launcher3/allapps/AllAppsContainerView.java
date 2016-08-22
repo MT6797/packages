@@ -420,6 +420,10 @@ public class AllAppsContainerView extends BaseContainerView implements DragSourc
             lp.leftMargin = searchBarBounds.left - backgroundPadding.left;
             lp.topMargin = searchBarBounds.top - backgroundPadding.top;
             lp.rightMargin = (getMeasuredWidth() - searchBarBounds.right) - backgroundPadding.right;
+	//add by liliang.bao begin
+	 if(!getResources().getBoolean(R.bool.enable_search_box))
+			lp.height=0;
+	 //add by liliang.bao end
             mSearchBarContainerView.requestLayout();
         }
     }

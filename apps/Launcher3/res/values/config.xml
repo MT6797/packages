@@ -106,4 +106,5 @@
     
     <bool name="config_wallpaper_single_screen">false</bool>
     <bool name="enable_lockscreen_wallpaper">false</bool>
+    <bool name="enable_search_box">false</bool>
 </resources>
