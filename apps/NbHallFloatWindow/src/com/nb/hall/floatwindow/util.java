@@ -40,7 +40,7 @@ public class util {
 
 	public static String getContactNameFromPhoneBook(Context context, String phoneNum) {
 		String contactName = "";
-	if(phoneNum.length() < 8)
+	if(phoneNum.length() < 11)
 		return contactName;
         String phone1 = new StringBuffer(phoneNum.subSequence(0, 3)).append(" ").append(phoneNum.substring(3, 7))  
                 .append(" ").append(phoneNum.substring(7, 11)).toString();  

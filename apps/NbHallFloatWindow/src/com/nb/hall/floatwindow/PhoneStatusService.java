@@ -93,11 +93,7 @@ public class PhoneStatusService extends Service {
 				//sIsCalling = true;
 				Log.d(TAG, "=outgoing phone==>call name:"+sName+"   phonenumber:"+sPhoneNumber);
 			} else if(intent.getAction().equals("nb.intent.action.PHONE_ACTIVE")){
-				//mHander.sendEmptyMessageDelayed(UPDATE_TIME_MSG, 1000);
-				if(intent.getStringExtra("name")!=null)
-				{
-					sName = intent.getStringExtra("name");
-				}			
+				//mHander.sendEmptyMessageDelayed(UPDATE_TIME_MSG, 1000);			
 				if(!sIsIncomingCall) 
 				{
 					if(intent.getStringExtra("number")!=null)
@@ -105,11 +101,24 @@ public class PhoneStatusService extends Service {
 						sPhoneNumber = intent.getStringExtra("number");
 					}	
 					mCallState = intent.getIntExtra("callState",0);
-					Log.d(TAG, "=activite==>call name:"+sName+"   phonenumber:"+sPhoneNumber+"  mCallState:"+mCallState);	
+	
 					long activeTime = intent.getLongExtra("activeTime",0)/1000;
 					if(mCallState == ACTIVE && activeTime!=0)  //防止多通电话同时在线，其中一通挂断
 						sCallElapseTime = activeTime;
 				}
+				if(intent.getStringExtra("name")!=null)//防止名字和号码一致
+				{
+					String tempName = intent.getStringExtra("name");
+					String tempPhoneNumber="";
+					if(tempName !=null)
+						tempName = tempName.replaceAll(" ","");
+					if(sPhoneNumber!=null)
+					 	tempPhoneNumber = sPhoneNumber.replaceAll(" ","");
+					if(!tempName.equals(tempPhoneNumber))
+						sName = intent.getStringExtra("name");
+					
+				}
+				Log.d(TAG, "=activite==>call name:"+sName+"   phonenumber:"+sPhoneNumber+"  mCallState:"+mCallState);
 			}else{
 				TelephonyManager tManager = (TelephonyManager) getSystemService(Service.TELEPHONY_SERVICE);
 				switch (tManager.getCallState()) {
