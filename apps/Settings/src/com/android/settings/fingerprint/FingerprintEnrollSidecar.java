@@ -25,6 +25,7 @@ import android.os.CancellationSignal;
 import android.os.Handler;
 
 import com.android.settings.ChooseLockSettingsHelper;
+import android.util.Log;		
 
 /**
  * Sidecar fragment to handle the state around fingerprint enrollment.
@@ -63,6 +64,13 @@ public class FingerprintEnrollSidecar extends Fragment {
 
     @Override
     public void onStop() {
+    try {
+        if(!getActivity().isChangingConfigurations()){
+           Thread.sleep(1000);
+         }	
+     } catch (InterruptedException e) {
+	e.printStackTrace();
+         }
         super.onStop();
         if (!getActivity().isChangingConfigurations()) {
             cancelEnrollment();
@@ -79,6 +87,7 @@ public class FingerprintEnrollSidecar extends Fragment {
     }
 
     private void cancelEnrollment() {
+     Log.d("ma","sidecar---cancelEnrollment");
         mHandler.removeCallbacks(mTimeoutRunnable);
         if (mEnrolling) {
             mEnrollmentCancel.cancel();

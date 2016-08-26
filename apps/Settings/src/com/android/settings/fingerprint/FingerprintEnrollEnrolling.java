@@ -42,6 +42,9 @@ import com.android.settings.ChooseLockSettingsHelper;
 import com.android.settings.R;
 import java.io.File;
 import android.util.Log;
+import android.content.BroadcastReceiver;
+import android.content.IntentFilter;
+import android.content.Context;
 /**
  * Activity which handles the actual enrolling for fingerprint.
  */
@@ -134,8 +137,9 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
         mIndicatorBackgroundActivatedColor
                 = getColor(R.color.fingerprint_indicator_background_activated);
         mRestoring = savedInstanceState != null;
+      
     }
-
+ 
     @Override
     protected void onStart() {
         super.onStart();
@@ -170,6 +174,13 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
 
     @Override
     protected void onStop() {
+    try {
+        if (!isChangingConfigurations()){
+           Thread.sleep(1000);
+        }
+     } catch (InterruptedException e) {
+	e.printStackTrace();
+         }
         super.onStop();
         mSidecar.setListener(null);
         stopIconAnimation();
@@ -289,6 +300,8 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
 	/*modify by microarray end*/       
     }
 
+    
+    
     private void updateProgress(boolean animate) {
         int progress = getProgress(
                 mSidecar.getEnrollmentSteps(), mSidecar.getEnrollmentRemaining());
