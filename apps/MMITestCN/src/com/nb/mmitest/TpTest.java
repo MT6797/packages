@@ -124,7 +124,7 @@ class TpTest1 extends Test {
 
 	TestLayout1 tl;
 
-	private int tolerance = (Lcd.width() == 1080)?180:80; //16;// 8;
+	private int tolerance = (Lcd.width() == 1080)?180:(Lcd.width() == 1440)?230:80; //16;// 8;
 
 	private int mGoodLinesCount;
 
@@ -231,7 +231,7 @@ class TpTest1 extends Test {
 		case INIT: //
 
 			mTimeIn.start();
-
+			Log.d("bll","Lcd.width():"+Lcd.width()+"  Lcd.height:"+Lcd.height());
 			// result will be set to false if the pen goes out of the shapes
 			Result = NOT_TESTED;
 			if (MMITest.mode == MMITest.AUTO_MODE && false) {
@@ -653,7 +653,7 @@ class TpTest2 extends Test {
 
 	TestLayout1 tl;
 
-	private int tolerance = (Lcd.width() == 1080)?200:100; //16;// 8;
+	private int tolerance = (Lcd.width() == 1080)?200:(Lcd.width() == 1440)?250:100; //16;// 8;
 
 	private int mGoodLinesCount;
 

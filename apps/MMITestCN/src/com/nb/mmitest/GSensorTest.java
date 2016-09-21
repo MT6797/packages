@@ -389,7 +389,13 @@ class GSensorTest extends Test implements SensorEventListener {
             	offset = 90;
             	border = 30;
             	textSize = 40;
-            }
+            }else if(Lcd.width() == 1440)
+	    {
+            	length = 500;
+            	offset = 120;
+            	border = 45;
+            	textSize = 60;
+	    }
             paint.setAntiAlias(true);
             paint.setColor(Color.BLACK);
             paint.setStyle(Paint.Style.FILL);
