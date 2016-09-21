@@ -200,7 +200,7 @@ public class NbAgingTest extends Activity {
 	private void createElapseTimeView() {
 
 		mElapseTimeText = new TextView(this);
-		mElapseTimeText.setTextSize(36);
+		mElapseTimeText.setTextSize(30);
 		params = new WindowManager.LayoutParams();
 
 		params.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
