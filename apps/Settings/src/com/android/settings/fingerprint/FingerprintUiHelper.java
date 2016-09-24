@@ -88,6 +88,12 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
     }
 
     @Override
+    public void onAuthenticationFailedAttempts(int failedAttempts) {
+        /*showError(mIcon.getResources().getString(
+                R.string.fingerprint_not_recognized));*/
+    }
+
+    @Override
     public void onAuthenticationSucceeded(FingerprintManager.AuthenticationResult result) {
         mIcon.setImageResource(R.drawable.ic_fingerprint_success);
         mCallback.onAuthenticated();

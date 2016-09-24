@@ -147,6 +147,10 @@ public class FingerprintSettings extends SubSettings {
             };
 
             @Override
+            public void onAuthenticationFailedAttempts(int failedAttempts) {
+            };
+
+            @Override
             public void onAuthenticationError(int errMsgId, CharSequence errString) {
                 mHandler.obtainMessage(MSG_FINGER_AUTH_ERROR, errMsgId, 0, errString)
                         .sendToTarget();
