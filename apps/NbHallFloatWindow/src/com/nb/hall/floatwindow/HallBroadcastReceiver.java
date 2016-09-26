@@ -21,7 +21,7 @@ public class HallBroadcastReceiver extends BroadcastReceiver {
 	private final String TAG = "HallBroadcastReceiver";
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		if ("1".equals(SystemProperties.get("sys.config.mmitest", "0"))) {
+	/*	if ("1".equals(SystemProperties.get("sys.config.mmitest", "0"))) {
 			HallFloatWindow.removeView();
 			return;
 		}
@@ -50,6 +50,6 @@ public class HallBroadcastReceiver extends BroadcastReceiver {
 				if(instance == null)
 					HallFloatWindow.createFloatWindow(context);
 			}
-		} 
+		} */
 	}
 }
