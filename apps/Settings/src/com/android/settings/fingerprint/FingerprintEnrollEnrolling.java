@@ -74,7 +74,7 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
     private static final int ICON_TOUCH_COUNT_SHOW_UNTIL_DIALOG_SHOWN = 3;
 
     /*add by microarray begin*/
-    private static final int MA_HINT_TIMEOUT_DURATION = 800;
+    private static final int MA_HINT_TIMEOUT_DURATION = 2500;
     private static final int MICROARRAY_FINGERPRINT_DOWN = 1102;
     private static final int MICROARRAY_FINGERPRINT_UP = 1103;
     /*add by microarray end*/
@@ -259,22 +259,14 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
     @Override
     public void onEnrollmentHelp(int helpMsgId,CharSequence helpString) {
         /*modify by microarray begin*/
-        //mErrorText.setText(helpString);
-	/*if(helpMsgId == MICROARRAY_FINGERPRINT_DOWN){
-	    mErrorText.removeCallbacks(mErrorCancelRunnable);
-	    mErrorText.postDelayed(mTouchAgainRunnable, HINT_TIMEOUT_DURATION);
+	android.util.Log.d("JTAG","show tips222");
+	if(helpMsgId != MICROARRAY_FINGERPRINT_UP && helpMsgId != MICROARRAY_FINGERPRINT_DOWN){
 	    showError(helpString);
-	   // showError(helpString);
-	} else if (helpMsgId == MICROARRAY_FINGERPRINT_UP) {
-	    mErrorText.removeCallbacks(mTouchAgainRunnable);
-	    mErrorText.postDelayed(mErrorCancelRunnable, HINT_TIMEOUT_DURATION);
-	    clearError();
-	} else {*/
-	    showError(helpString);
-            //Log.d("ma","111111111111111"+helpString);
-            mErrorText.postDelayed(mErrorCancelRunnable, MA_HINT_TIMEOUT_DURATION);
-           
-	//}
+	    //mErrorText.removeCallbacks(mErrorCancelRunnable);
+            //mErrorText.postDelayed(mErrorCancelRunnable, MA_HINT_TIMEOUT_DURATION);
+	} else if(helpMsgId == MICROARRAY_FINGERPRINT_DOWN){
+	     clearError();
+	}
         /*modify by microarray end*/
     }
 
@@ -293,9 +285,9 @@ public class FingerprintEnrollEnrolling extends FingerprintEnrollBase
        	File file=new File("/dev/madev0");    
     	if(!file.exists())
 	{
-		clearError();
-		mErrorText.removeCallbacks(mTouchAgainRunnable);
-		mErrorText.postDelayed(mTouchAgainRunnable, HINT_TIMEOUT_DURATION);
+		//clearError();
+		//mErrorText.removeCallbacks(mTouchAgainRunnable);
+		//mErrorText.postDelayed(mTouchAgainRunnable, HINT_TIMEOUT_DURATION);
 	}
 	/*modify by microarray end*/       
     }
