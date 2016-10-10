@@ -563,7 +563,9 @@ public class SettingsAppWidgetProvider extends AppWidgetProvider {
                                 mode = Settings.Secure.LOCATION_MODE_BATTERY_SAVING;
                                 break;
                             case Settings.Secure.LOCATION_MODE_BATTERY_SAVING:
-                                mode = Settings.Secure.LOCATION_MODE_HIGH_ACCURACY;
+				//by ningbaoqi fix bug 4623 begin
+                                mode = Settings.Secure.LOCATION_MODE_SENSORS_ONLY;
+				//by ningbaoqi fix bug 4623 end
                                 break;
                             case Settings.Secure.LOCATION_MODE_SENSORS_ONLY:
                                 mode = Settings.Secure.LOCATION_MODE_OFF;
