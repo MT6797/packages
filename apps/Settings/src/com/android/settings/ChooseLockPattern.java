@@ -453,8 +453,13 @@ public class ChooseLockPattern extends SettingsActivity {
 
         @Override
         public void onResume() {
+            //fix by ningbaoqi begin
             super.onResume();
-            mLockPatternView.enableInput();
+	    if(mUiStage==Stage.ChoiceConfirmed||mUiStage==Stage.FirstChoiceValid) {
+                       mLockPatternView.disableInput();
+            }else{
+            mLockPatternView.enableInput();}
+	    //fix by ningbaoqi end
         }
 
         @Override
