@@ -273,7 +273,8 @@ public class GrantPermissionsActivity extends OverlayTouchActivity
     private int computePermissionGrantState(PackageInfo callingPackageInfo,
             String permission, int permissionPolicy) {
         boolean permissionRequested = false;
-
+	if(permission == null)
+		return PERMISSION_DENIED;
         for (int i = 0; i < callingPackageInfo.requestedPermissions.length; i++) {
             if (permission.equals(callingPackageInfo.requestedPermissions[i])) {
                 permissionRequested = true;
