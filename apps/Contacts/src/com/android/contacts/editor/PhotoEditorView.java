@@ -300,7 +300,10 @@ public class PhotoEditorView extends LinearLayout implements Editor {
 
     public void disableTriangleAffordance() {
         Log.d(TAG, "disableTriangleAffordance");
-        mChangeButton.setClickable(false);
+        //Fix bug.Null pointer exception
+        if(null != mChangeButton) {
+            mChangeButton.setClickable(false);
+        }
     }
     /** @} */
 }
